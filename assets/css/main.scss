@@ -507,7 +507,7 @@ body.theme-base-01 {
 
 header.main-header { 
   background-color: #2B444D;
-  padding: 1em 0;
+  /*padding: 1em 0;*/
   /*@include MQ(M) { padding: 2em 0; }*/
 }
 footer.main-footer {
@@ -650,7 +650,7 @@ div.post {
     padding-bottom: 2em;  
   }
 
-  h1{
+  h1, h3{
     font-family: $header-font;
   }
 
@@ -679,12 +679,12 @@ span.post-date {
 --------------------------------- */
 .related {
   padding-top: 1em;
-  padding-bottom: 1em;
-  border-top: 1px solid $base-05;
+  /*padding-bottom: 1em;*/
+  /*border-top: 1px solid $base-05;*/
 
   @include MQ(M) {
     padding-top: 2em;
-    padding-bottom: 2em;
+    /*padding-bottom: 2em;*/
   }
 }
 .related  h4 {
@@ -725,6 +725,7 @@ span.post-date {
   display: table;
   width: 100%;
   position: relative;
+  margin-top: 32px;
 
   @include MQ(M) {    
     height: 80px;
