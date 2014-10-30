@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<div id="home" class="page-content wc-container">
+	<div class="posts">
+  		{% for post in site.posts limit:10 %}
+  			<div class="post">
+    			<h3 class="post-title">
+			      <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">
+			        {{ post.title }}
+			      </a>
+    			</h3>
+
+    			<span class="post-date">{{ post.date | date_to_string }}</span>    			
+  				<p>
+	  				{{ post.description }}	
+  				</p>
+  				<p>
+  					<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" title="{{ post.title}}">
+  						Read More
+					</a>
+  				</p>
+  			</div>
+  		{% endfor %}
+	</div>
+	<div class="post-footer">
+		<div class="column-full"><a href="{{ '/blog' | prepend: site.baseurl | prepend: site.url }}">Blog archive</a></div>
+	</div>
+</div>
