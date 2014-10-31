@@ -503,8 +503,6 @@ body.theme-base-01 {
 
 header.main-header { 
   background-color: #2B444D;
-  /*padding: 1em 0;*/
-  /*@include MQ(M) { padding: 2em 0; }*/
 }
 footer.main-footer {
   padding: 1em 0;
@@ -582,7 +580,6 @@ pre {
   }
 }
 
-/*p > code {box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.5);}*/
 
 .highlight {
   margin-bottom: 1em;
@@ -675,12 +672,8 @@ span.post-date {
 --------------------------------- */
 .related {
   padding-top: 1em;
-  /*padding-bottom: 1em;*/
-  /*border-top: 1px solid $base-05;*/
-
   @include MQ(M) {
     padding-top: 2em;
-    /*padding-bottom: 2em;*/
   }
 }
 .related  h4 {
