@@ -6,22 +6,21 @@ description: Here I'lll show how to create a custom page for alfresco site which
 categories: jekyll update
 ---
 
-Here I want to explain how to create a custom page for a site which points to any folder you want inside your repository. It will have kind of the same bejaviour as My Files button, but more intelligent =). For example let's pretend that inside site's document library each user has a user's folder which name matches the user's name.
+Here I want to explain how to create a custom site page which points to any folder you want inside your repository. It will have kind of the same behaviour as My Files button but more intelligent. For example let's pretend that inside site's document library each user has a user's folder which name matches the user's name.
 
-The idea is to create a custom site page with the same components as the document library site, but with widgets which call a Java-backed WebScript to search for a specific folder inside repository. It's as simple as it sounds, but when you do it for the first time it seems quite hard, especially when you are not an Alfresco ninja. We can split the task in three simple steps:
+The idea is to create a custom site page with the same components as the document library site, but with widgets which call a Java-backed WebScript to search for a specific folder inside repository. It's as simple as it sounds, but when you do it for the first time it seems quite hard, especially if you are not an Alfresco ninja. We can split the task in three simple steps:
 
 1. Create a custom page. 
 2. Create a webscript which returns the NodeRef of the folder.
-3. Link Page and webscript together.
+3. Link page and webscript together.
 
 Let's start.
 
 ## Create Page
 
-By default inside any Alfresco site you have three pages: Dashboard, Document library, Site members. To create a new page you can use this Alfresco tutorial: [Add a new page to Alfresco Share][add-page-tutorial] or follow this steps. Please don't forget that these steps should be done in share project. Create these files:
+By default inside any Alfresco site you have three visible pages: Dashboard, Document library, Site members. To create a new page you can use an Alfresco tutorial: [Add a new page to Alfresco Share][add-page-tutorial] or follow this steps. Please don't forget that these steps should be done in share project. Create these files:
 
 * **Page definition** - /alfresco/web-extension/site-data/pages/_my-document-library.xml_
-
 {% highlight xml%}
 <page>
   <title>My Document Library</title>
