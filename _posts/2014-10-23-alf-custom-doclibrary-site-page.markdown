@@ -48,11 +48,11 @@ But this page is not linked to your site yet. To link it add this part to `share
 
 {% highlight xml%}
 <!-- Add a custom page type -->
-  <config evaluator="string-compare" condition="SitePages">
-    <pages>
-      <page id="my-document-library">my-document-library</page>
-    </pages>
-  </config>
+<config evaluator="string-compare" condition="SitePages">
+  <pages>
+    <page id="my-document-library">my-document-library</page>
+  </pages>
+</config>
 {% endhighlight xml%}
 
 And then from site-customization page just drag and drop created page from Availabe Site Pages to Current Site Pages.
@@ -63,13 +63,13 @@ First step is done!
 
 Please have a look [Alfresco-wiki page][webscript-wiki] for more information about webscripts.
 
-This WebScript will search for the folder you are looking for and return it's nodeRef.
+This WebScript will search for the folder you are looking for and then return it's nodeRef.
 
 First we need to create a webscript description file. Let's call the webscript getNodeRef.
 
 {% highlight xml%}
 <webscript>
-  <shortname>Returns nodeRef of the folder</shortname>
+  <shortname>Returns nodeRef of some folder</shortname>
   <description>Returns nodeRef of some folder</description>
   <format default="json"/>
   <lifecycle>draft_public_api</lifecycle>
@@ -78,42 +78,41 @@ First we need to create a webscript description file. Let's call the webscript g
 </webscript>
 {% endhighlight xml%}
 
-Finally Java. Create GetNodeRef class in /src/main/java/org/alfresco/mywebscript/. The whole class you can find on gitHub, here I'll write just the main method which do all the work:
+Finally Java. Create GetNodeRef class in /src/main/java/org/alfresco/mywebscript/. The whole class you can find on gitHub, here I'll write just the main method which does all the work:
 
 {% highlight java %}
-  public void execute(WebScriptRequest req, WebScriptResponse res) {
-    JSONObject json = new JSONObject();
-    String userName = req.getParameter("username");
-    NodeRef documentLibrary = siteService.getContainer("somesite", "documentlibrary");
+public void execute(WebScriptRequest req, WebScriptResponse res) {
+  JSONObject json = new JSONObject();
+  String userName = req.getParameter("username");
+  NodeRef documentLibrary = siteService.getContainer("somesite", "documentlibrary");
 
-    try  {
-      if ("admin".equals(userName))
-        json.put("nodeRef", documentLibrary.toString());
-      else  {
-        NodeRef userNodeRef = fileFolderService.searchSimple(documentLibrary, userName);
-        json.put("nodeRef", userNodeRef.toString());
-      }
-      res.getWriter().write(json.toString());
+  try  {
+    if ("admin".equals(userName))
+      json.put("nodeRef", documentLibrary.toString());
+    else  {
+      NodeRef userNodeRef = fileFolderService.searchSimple(documentLibrary, userName);
+      json.put("nodeRef", userNodeRef.toString());
     }
-    catch (Exception e) {
-      throw new WebScriptException("Unexpected exception", e);
-    }
+    res.getWriter().write(json.toString());
   }
+  catch (Exception e) {
+    throw new WebScriptException("Unexpected exception", e);
+  }
+}
 {% endhighlight java %}
 
-And let's add some Spring magic which will link your class with webscript. In `service-context.xml` add new bean:
+And let's add some Spring magic which will link your class with the webscript. In `service-context.xml` add a new bean:
 
 {% highlight xml %}
 <bean id="webscript.getNodeRef.get" class="org.alfresco.mywebscript.GetNodeRef" parent="webscript">
-  <property name="serviceRegistry" ref="ServiceRegistry"/>
 </bean>
 {% endhighlight xml %}
 
-Now you can test webscript, just go to  http://localhost:8080/alfresco/s/api/mywebscript/getnoderef?param=admin and you should have a response with a nodeRef. Please don't forget to create the folders inside site's document library.
+Now you can test the webscript, just go to  http://localhost:8080/alfresco/s/api/mywebscript/getnoderef?param=admin and you should have a response with a nodeRef. Please don't forget to create the folders inside site's document library otherwise you'll have an exception.
 
 ## Link Page and webscript together
 
-To link them we need to rewrite myfiles component. This component will call a webscript and show the folder with nodeRef which webscript returned.
+To link them we need to rewrite *myfiles* component. This component will call a webscript and show the folder with nodeRef which webscript returned.
 
 Copy following files:
 
@@ -121,7 +120,7 @@ Copy following files:
 * myfiles.get.html.ftl
 * myfiles.get.js
 
-to the **site-webscripts/components/myDocumentLibrary** folder and rename them to *myDocumentLibrary* for example.
+to the **site-webscripts/components/myDocumentLibrary** folder and rename them to `myDocumentLibrary` for example.
 
  Now let's change them a bit.
 
@@ -142,9 +141,7 @@ to the **site-webscripts/components/myDocumentLibrary** folder and rename them t
 <#include "/org/alfresco/components/form/form.dependencies.inc">
 {% endhighlight xml %}
 
-* **myDocumentLibrary.get.js**
-
-Add a method which will call a webscript.
+* **myDocumentLibrary.get.js** - add a method which will call a webscript.
 
 {% highlight javascript %}
 function callWS(wsParamValue){
@@ -167,7 +164,7 @@ And pass it's value to the rootNode variable in the beginning of the file, which
 var rootNode = callWS(user.name);
 {% endhighlight javascript %}
 
-The last step is to modify the widget, so that it will call a new one. In the template-instance, created on the first step change the documentlist_v2 component:
+The last step is to modify the widget call so that it will call a new one. In the template-instance, created on the first step change the documentlist_v2 component:
 
 {% highlight xml%}
 <component>
