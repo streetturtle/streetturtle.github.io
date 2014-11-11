@@ -211,7 +211,7 @@ header.main-header {
 
   ul {
     width: 100%;
-    text-align: center;
+    text-align: right;
     padding: 15px;
   }
   ul li {       
@@ -715,8 +715,6 @@ span.post-date {
 --------------------------------- */
 .post-footer {
   
-  border-top: 1px solid #444;
-  border-bottom: 1px solid #444;
   height: 40px;
   display: table;
   width: 100%;
