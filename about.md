@@ -4,13 +4,9 @@ title: About
 permalink: /about/
 ---
 
-Bonjour a tous! Here is [MIET site][mietSite] 
+Bonjour a tous!
 
-Et c'est moi
+I'm a software developer born in Moscow and currenlty living in Geneva, Switzerland.
+Here I want to share some of my knowledge which hopefully could help somebody one day.
 
 ![My helpful screenshot]({{ site.url }}/assets/ava.jpg)
-
-Bonjour a tous! Here is [MIET site][mietSite]
-
-[mietSite]: http://eng.miet.ru/
-
