@@ -78,7 +78,7 @@ First we need to create a webscript description file. Let's call the webscript g
 </webscript>
 {% endhighlight xml%}
 
-Finally Java. Create GetNodeRef class in /src/main/java/org/alfresco/mywebscript/. The whole class you can find on gitHub, here I'll write just the main method which does all the work:
+Finally Java. Create GetNodeRef class in /src/main/java/org/alfresco/mywebscript/. The whole class you can find on gitHub, here I'll just write  the main method which does all the work:
 
 {% highlight java %}
 public void execute(WebScriptRequest req, WebScriptResponse res) {
@@ -108,7 +108,7 @@ And let's add some Spring magic which will link your class with the webscript. I
 </bean>
 {% endhighlight xml %}
 
-Now you can test the webscript, just go to  http://localhost:8080/alfresco/s/api/mywebscript/getnoderef?param=admin and you should have a response with a nodeRef. Please don't forget to create the folders inside site's document library otherwise you'll have an exception.
+Now you can test the webscript, just go to  http://localhost:8080/alfresco/s/api/mywebscript/getnoderef?param=admin and you should have a response with a nodeRef. Don't forget to create the folders inside site's document library otherwise you'll have an exception.
 
 ## Link Page and webscript together
 
@@ -116,9 +116,9 @@ To link them we need to rewrite *myfiles* component. This component will call a 
 
 Copy following files:
 
-* myfiles.get.desc.xml
-* myfiles.get.html.ftl
-* myfiles.get.js
+* myDocumentLibrary.get.desc.xml
+* myDocumentLibrary.get.html.ftl
+* myDocumentLibrary.get.js
 
 to the **site-webscripts/components/myDocumentLibrary** folder and rename them to `myDocumentLibrary` for example.
 
@@ -141,7 +141,7 @@ to the **site-webscripts/components/myDocumentLibrary** folder and rename them t
 <#include "/org/alfresco/components/form/form.dependencies.inc">
 {% endhighlight xml %}
 
-* **myDocumentLibrary.get.js** - add a method which will call a webscript.
+* **myDocumentLibrary.get.js** - add a method which will call a webscript:
 
 {% highlight javascript %}
 function callWS(wsParamValue){
@@ -164,7 +164,7 @@ And pass it's value to the rootNode variable in the beginning of the file, which
 var rootNode = callWS(user.name);
 {% endhighlight javascript %}
 
-The last step is to modify the widget call so that it will call a new one. In the template-instance, created on the first step change the documentlist_v2 component:
+The last step is to modify the widget call so that it will call a new one. In the template-instance created on the first step change the documentlist_v2 component:
 
 {% highlight xml%}
 <component>
