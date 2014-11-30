@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Alfresco custom document library site page"
+title:  "Alfresco: custom document library site page"
 date:   2014-10-23 19:17:52
-description: Here I'll show how to create a custom page for alfresco site which points on some folder inside document library.
+description: Here I'll show how to create a custom page for alfresco site which points to some folder inside document library.
 categories: jekyll update
 ---
 
@@ -177,9 +177,10 @@ The last step is to modify the widget call so that it will call a new one. In th
 </component>
 {% endhighlight xml%}
 
-And that's it! The whole project you can find on the github.
+And that's it! The whole project you can find on the [github].
 
 Cheers!
 
 [add-page-tutorial]: http://docs.alfresco.com/4.1/tasks/tutorial-share-add-page.html
 [webscript-wiki]: https://wiki.alfresco.com/wiki/Web_Scripts
+[github]: https://github.com/streetturtle/Alfresco/tree/master/PageSiteExample
