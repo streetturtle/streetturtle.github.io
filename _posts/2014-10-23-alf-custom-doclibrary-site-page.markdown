@@ -8,7 +8,7 @@ categories: jekyll update
 
 Here I want to explain how to create a custom site page which points to any folder you want inside your repository. It will have kind of the same behaviour as My Files button but more intelligent. For example let's pretend that inside site's document library each user has a user's folder which name matches the user's name.
 
-The idea is to create a custom site page with the same components as the document library site, but with widgets which call a Java-backed WebScript to search for a specific folder inside repository. It's as simple as it sounds, but when you do it for the first time it seems quite hard, especially if you are not an Alfresco ninja. We can split the task in three simple steps:
+The idea is to copy a document library page and change some components to make them open a folder inside document library. To get the name of this folder we will use a Java-backed webscript which will search for it inside document library and return it's nodeRef. It's as simple as it sounds, but when you do it for the first time it seems quite hard, especially if you are not an Alfresco ninja. We can split the task in three simple steps:
 
 1. Create a custom page. 
 2. Create a webscript which returns the NodeRef of the folder.
@@ -18,7 +18,7 @@ Let's start.
 
 ## Create Page
 
-By default inside any Alfresco site you have three visible pages: Dashboard, Document library, Site members. To create a new page you can use an Alfresco tutorial: [Add a new page to Alfresco Share][add-page-tutorial] or follow this steps. Please don't forget that these steps should be done in share project. Create these files:
+By default inside any Alfresco site you have three visible pages: Dashboard, Document library, Site members. To create a new page you can use an Alfresco tutorial: [Add a new page to Alfresco Share][add-page-tutorial] or follow these steps. Please don't forget that it should be done in share project. Create following files:
 
 * **Page definition** - /alfresco/web-extension/site-data/pages/_my-document-library.xml_
 {% highlight xml%}
@@ -37,7 +37,7 @@ By default inside any Alfresco site you have three visible pages: Dashboard, Doc
 * **FreeMaker template** - /alfresco/web-extension/site-data/template/my-document-library.ftl.
 Copy this one from `documentlibrary.ftl` as well.
 
-That's it! The page is created, you can view it on http://localhost:8081/share/page/my-document-library. Since we copied templates from documentlibrary it will look exactly the same as Document Library page. But with broken title, which would be something like `page.myDocLib.title`, to fix it update the properties:
+That's it! The page is created, you can view it on _http://localhost:8081/share/page/my-document-library_. Since we copied templates from documentlibrary it will look exactly the same as Document Library page. But with broken title, which would be something like `page.myDocLib.title`, to fix it update the properties file:
 
 {% highlight properties%}
 #My Personal Library
@@ -55,7 +55,7 @@ But this page is not linked to your site yet. To link it add this part to `share
 </config>
 {% endhighlight xml%}
 
-And then from site-customization page just drag and drop created page from Availabe Site Pages to Current Site Pages.
+And then on site-customization page just drag and drop created page from Availabe Site Pages to Current Site Pages.
 
 First step is done!
 
@@ -65,7 +65,7 @@ Please have a look [Alfresco-wiki page][webscript-wiki] for more information abo
 
 This WebScript will search for the folder you are looking for and then return it's nodeRef.
 
-First we need to create a webscript description file. Let's call the webscript getNodeRef.
+First we need to create a webscript description file.
 
 {% highlight xml%}
 <webscript>
@@ -78,7 +78,7 @@ First we need to create a webscript description file. Let's call the webscript g
 </webscript>
 {% endhighlight xml%}
 
-Finally Java. Create GetNodeRef class in /src/main/java/org/alfresco/mywebscript/. The whole class you can find on gitHub, here I'll just write  the main method which does all the work:
+Finally Java. Create GetNodeRef class under /src/main/java/org/alfresco/mywebscript/. The whole class you can find on gitHub, here I'll just write the main method which does all the work:
 
 {% highlight java %}
 public void execute(WebScriptRequest req, WebScriptResponse res) {
@@ -101,7 +101,7 @@ public void execute(WebScriptRequest req, WebScriptResponse res) {
 }
 {% endhighlight java %}
 
-And let's add some Spring magic which will link your class with the webscript. In `service-context.xml` add a new bean:
+And now let's add some Spring magic which will link your class with the webscript. In `service-context.xml` add a new bean:
 
 {% highlight xml %}
 <bean id="webscript.getNodeRef.get" class="org.alfresco.mywebscript.GetNodeRef" parent="webscript">
@@ -116,11 +116,11 @@ To link them we need to rewrite *myfiles* component. This component will call a 
 
 Copy following files:
 
-* myDocumentLibrary.get.desc.xml
-* myDocumentLibrary.get.html.ftl
-* myDocumentLibrary.get.js
+* myFiles.get.desc.xml
+* myFiles.get.html.ftl
+* myFiles.get.js
 
-to the **site-webscripts/components/myDocumentLibrary** folder and rename them to `myDocumentLibrary` for example.
+to the **site-webscripts/components/myDocumentLibrary** folder and rename them to `myDocumentLibrary`.
 
  Now let's change them a bit.
 
