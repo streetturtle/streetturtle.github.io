@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Alfresco: Automatic site creation"
+title:  "Alfresco: automatic site creation"
 date:   2014-11-30 16:48:45
 categories:
 description: In this post is described how to create an alfresco sites using simple webscript.

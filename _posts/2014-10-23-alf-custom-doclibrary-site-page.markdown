@@ -6,7 +6,11 @@ description: Here I'll show how to create a custom page for alfresco site which 
 categories: jekyll update
 ---
 
-Here I want to explain how to create a custom site page which points to any folder you want inside your repository. It will have kind of the same behaviour as My Files button but more intelligent. For example let's pretend that inside site's document library each user has a user's folder which name matches the user's name.
+Here I want to explain how to create a custom site page:
+
+![My helpful screenshot]({{ site.url }}/assets/MyPersLibrary.jpg)
+
+which points to any folder you want inside your repository. It will have kind of the same behaviour as My Files button. For example let's pretend that each user has it's own folder which name matches the username.
 
 The idea is to copy a document library page and change some components to make them open a folder inside document library. To get the name of this folder we will use a Java-backed webscript which will search for it inside document library and return it's nodeRef. It's as simple as it sounds, but when you do it for the first time it seems quite hard, especially if you are not an Alfresco ninja. We can split the task in three simple steps:
 
