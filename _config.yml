@@ -4,8 +4,8 @@
  #baseurl: /home
 
 # Site live URL
-url: http://127.0.0.1:4000
-# url: http://streetturtle.github.io
+# url: http://127.0.0.1:4000
+url: http://streetturtle.github.io
 
 # Localhost 
 # url: http://127.0.0.1:4000  
