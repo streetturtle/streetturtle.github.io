@@ -639,11 +639,11 @@ div.post {
   padding-bottom: 1em;
   border-bottom: 1px $base-05 solid;
   background-color: #444;
-  padding: 20px 20px 10px;
+  padding: 10px 20px 10px;
   border-radius: 10px;
   @include MQ(M) {
 
-    padding-bottom: 2em;  
+    padding-bottom: 5px;  
   }
 
   h1, h3{
@@ -662,7 +662,7 @@ span.post-date {
   @include font-size(12px);
   overflow: hidden;
   display: block;
-  padding: 1em 0;
+  padding: 5px 0;
 
   @include MQ(M) {
     @include font-size(16px);
