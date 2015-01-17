@@ -4,6 +4,8 @@ title:  "Alfresco: set environment from command line"
 date:   2014-12-02 16:48:45
 categories:
 description: This post describes how to change Alfresco environment for DB connection using command line arguments.
+tags:
+- alfresco
 ---
 
 In `module-context.xml` add following bean:

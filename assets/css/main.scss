@@ -384,7 +384,7 @@ div.page-content {
       @include font-size(14px);
       color: $color-2; 
       line-height: 1.6;
-      background: url(./images/bullet.svg);
+      /*background: url(./images/bullet.svg);*/
       background-repeat: no-repeat;
       background-position: 0 6px;
       padding: 0 0 5px 15px;
@@ -459,7 +459,7 @@ div.page-content {
 }
 
 .no-svg div.page-content ul li {
-  background: url(./images/bullet.png);
+  /*background: url(./images/bullet.png);*/
   @include font-size(13px);
   color: $color-2; 
   line-height: 1.6;
@@ -642,7 +642,6 @@ div.post {
   padding: 10px 20px 10px;
   border-radius: 10px;
   @include MQ(M) {
-
     padding-bottom: 5px;  
   }
 
@@ -654,8 +653,8 @@ div.post {
   &:last-child {
     border-bottom: none;
   }
-}
-span.post-date {
+
+/*span.post-date {
   line-height: 1.6;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -663,9 +662,35 @@ span.post-date {
   overflow: hidden;
   display: block;
   padding: 5px 0;
+  text-align: right;
 
   @include MQ(M) {
     @include font-size(16px);
+  }*/
+
+  div.post-meta-inf{
+    
+border: 1px solid #C9C6C3;
+border-width: 1px 0;
+/*color: #666;
+font-size: 12px;
+line-height: 20px;*/
+margin: 0 0 20px;
+padding: 1px 0;
+/*text-transform: uppercase;*/
+    
+    ul{
+      border-left: 1px solid #bbb;
+      display: inline;
+      margin-left: 15px;
+      padding: 0 0 0 10px;
+    }
+    ul > li{
+      display: inline;
+      /*list-style-type: none;
+      padding-right: 20px;
+      float: left;*/
+    }
   }
 }
 

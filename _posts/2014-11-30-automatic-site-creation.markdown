@@ -4,6 +4,8 @@ title:  "Alfresco: automatic site creation"
 date:   2014-11-30 16:48:45
 categories:
 description: In this post is described how to create an alfresco sites using simple webscript.
+tags: 
+- alfresco
 ---
 
 Usually when you develop some new features for Alfresco you need to completely clean the project. Which is not so good since you will loose all manually created things such us users or sites. In case of users you can integrate Alfresco with () But for sites it could be quite complicated to manually recreate them, especially when you have more than 5 sites. In this post I'd like to show how to create sites automatically when Alfresco starts. So that you could be sure that your sites are in place.
