@@ -1,5 +1,4 @@
-_site/*
-!_site/tag
+_site/
 .DS_Store
 .*.swp
 .idea
