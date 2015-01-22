@@ -658,6 +658,10 @@ div.post {
     border-bottom: none;
   }
 
+	p.readMore{
+			text-align: right;
+	}
+
 /*span.post-date {
   line-height: 1.6;
   letter-spacing: 2px;
@@ -698,8 +702,8 @@ div.post {
 
     time {
       display: inline;
-padding: 4px 25px 0px 0;
-float: right;
+			padding: 4px 25px 0px 0;
+			float: right;
     }
   }
 }
