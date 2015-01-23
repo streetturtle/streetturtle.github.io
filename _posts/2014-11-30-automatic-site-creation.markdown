@@ -48,20 +48,6 @@ try {
 }
 {% endhighlight java %}
 
-## Create a webscript description file:
-
-{% highlight xml %}
-<webscript>
-  <shortname>Sites creation</shortname>
-  <description>This webscript creates sites</description>
-  <url>/org/init/create-sites</url>
-  <authentication>admin</authentication>
-  <lifecycle>draft_public_api</lifecycle>
-</webscript>
-{% endhighlight xml %}
-
-Done! So now you'll just need to run the webscript by going to [http://localhost:8080/alfresco/service/org/init/create-sites](http://localhost:8080/alfresco/service/org/init/create-sites) and your site is created. 
-
 ## CSRF Policy
 
 In the latest versions of Alfresco (4+ versions) developers introduced CSRF Policy, more details here: [Introducing the CSRFPolicy in Alfresco Share]. For this site creation method it means that you'll need to pass one more parameter in post request header which you can get from `HTTPClient` after login. 
@@ -83,6 +69,8 @@ Please also notice that token you get is encoded, so you need to decode it:
 {% highlight java %}
 URLDecoder.decode(cookie.getValue(), "UTF-8");
 {% endhighlight java %}
+
+Done! So now you'll just need to run the webscript by going to [http://localhost:8080/alfresco/service/org/init/create-sites](http://localhost:8080/alfresco/service/org/init/create-sites) and your site is created. 
 
 ## Some problems
 
