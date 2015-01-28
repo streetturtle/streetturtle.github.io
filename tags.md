@@ -11,7 +11,7 @@ Bonjour a tous!
 		<h1>Tags</h1>  
 		<ul>
 			{% for tag in site.tags %}
-			<li><a href="/tags/{{ tag[0] }}">{{ tag[0] }}</a></li>
+			<li><a href="/tag/{{ tag[0] }}">{{ tag[0] }}</a></li>
 			{% endfor %}
 		</ul>
 	</div>
