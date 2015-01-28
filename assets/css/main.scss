@@ -201,7 +201,12 @@ header.main-header {
   border-top: 5px $base-00 solid;
   font-family: $header-font;
 
-  h1, h2 { text-align: center; color: inherit;}
+	img{
+		float:left;
+		margin-top: 4px;
+	}
+	
+  h1, h2 { text-align: right; color: inherit;}
   a { 
     color: inherit;
     &:hover, &:active, &:focus {

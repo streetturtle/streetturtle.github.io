@@ -1,0 +1,18 @@
+---
+layout: default
+title: Tags 
+
+---
+
+Bonjour a tous!
+
+<div class="page-content wc-container">
+	<div class="post">
+		<h1>Tags</h1>  
+		<ul>
+			{% for tag in site.tags %}
+			<li><a href="/tags/{{ tag[0] }}">{{ tag[0] }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
