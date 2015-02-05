@@ -63,7 +63,7 @@ id: "FCTSRCH_FACET_DOCUMENT_TYPE",
 
 To check the config parameters refer to the documentation: [FacetFilfters config parameters].
 
-In my case the document type name is several words split by space. To make solr search for the whole phrase and create whole prhase facet you need to add this part `.__.u` to the facet Qname. And also make sure that tokenised in the content mdel is true or both, so that the string is not tokenised before being indexed:
+In my case the document type name is several words split by space. To make solr search for the whole phrase and create whole prhase facet you need to add this part `.__.u` to the facet Qname. And also make sure that tokenised in the content model is set to `false` or `both`, so that the string is not tokenised before being indexed:
 
 {% highlight xml %}
 <property name="ef:typeName">

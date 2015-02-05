@@ -10,9 +10,9 @@ tags:
 
 ## Comments
 
-Usually regular expressions are very long and could be almost unreadable. Even if you wrote it by yourself sometime ago. In such cases comments are very useful. To use it you need to turn on [free-spacing mode](http://www.regular-expressions.info/freespacing.html) by adding `x` modifier to your expression. Comment starts with hashtag `#`. Let's parse date in this format YYYY/MM/DD (year should be between 1000 and 2012 and assume all months have 30 days). 
+Usually regular expressions are very long and could be almost unreadable. Even if you wrote it by yourself sometime ago. In such cases comments are very useful. To use it you need to turn on [free-spacing mode](http://www.regular-expressions.info/freespacing.html) by adding `x` modifier to your expression. Comment starts with a hashtag `#`. Let's parse date in this format: YYYY/MM/DD (year should be between 1000 and 2012 and assume all months have 30 days). 
 
-    (1\d{3}|20(0\d|1[0-2]))\/(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|30)
+    (1\d{3}|20(0\d|1[0-2]))\/(0[1-9]|1[0-2])\/(0[1-9]|[012]\d|30)
 		
 And the same regex with comments:
 
@@ -32,10 +32,10 @@ And the same regex with comments:
 
 ## Lookahead assertions
 
-Sometimes it is needed to match something which is followed by something else. But not include this following something else in the match. For such cases **lookahead** assertion is what you need. There are two types of lookahead assertion:
+Sometimes it's needed to match something which is followed by something else. But not include this following something else in the match. For such cases **lookahead** assertion is what you need. There are two types of lookahead assertion:
 
- * positive `(?=regex)` - matches only if it followed by regex
- * negative `(?!regex)` - matches if it followed NOT by regex
+ * positive `(?=regex)` - matches only if it is followed by regex
+ * negative `(?!regex)` - matches if it is followed NOT by regex
 
 Let's have a look on a simple example. 
 
