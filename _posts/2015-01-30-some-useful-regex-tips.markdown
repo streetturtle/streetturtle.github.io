@@ -16,19 +16,21 @@ Usually regular expressions are very long and could be almost unreadable. Even i
 		
 And the same regex with comments:
 
-    (1\d{3}          # 1000-1999
-    |                # or
-    20(0\d|1[0-2]))  # 20 (01-09 or 10-12)
-    \/               # slash, months after
-    (0[1-9]          # 01-09
-    |                # or     
-    1[0-2])          # 10-12 
-    \/               # slash, days after
-    (0[1-9]          # 01-09
-    |                # or
-    [12]\d           # 10-29
-    |                # or 
-    30)              # 30
+{% highlight bash %}
+(1\d{3}          # 1000-1999
+|                # or
+20(0\d|1[0-2]))  # 20 (01-09 or 10-12)
+\/               # slash, months after
+(0[1-9]          # 01-09
+|                # or     
+1[0-2])          # 10-12 
+\/               # slash, days after
+(0[1-9]          # 01-09
+|                # or
+[12]\d           # 10-29
+|                # or 
+30)              # 30
+{% endhighlight bash %}
 
 ## Lookahead assertions
 
@@ -48,7 +50,7 @@ index.html
 model.xml
 model.properties
 contentModel.xml
-{% endhighlight %}
+{% endhighlight bash %}
 
 and you want to find all names of xml files but do not include the _.xml_ part. Of course you can use simple pattern `^[a-z]+\.xml$` but then the _.xml_ part will be included in the match. To have only filename use this pattern: `^[a-z]+(?=.xml$)`.
 
