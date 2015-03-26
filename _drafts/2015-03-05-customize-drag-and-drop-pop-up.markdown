@@ -25,7 +25,7 @@ So let's start.
 The easiest one is to change colors. You should add your custom .css file to the upload folder TODO. Let's name it `dnd-upload-custom.css`. If you check the original file - `dnd-upload.css` you'll notice that names of classes TODO we are interesting in are TODO and TODO. So let's swap them in just created files:
 
 {% highlight css %}
-{% endhightlight css%}
+{% endhighlight css%}
 
 To include this file in alfresco copy-paste `dnd-upload.html.ftl` and it to css dependencies:
 
