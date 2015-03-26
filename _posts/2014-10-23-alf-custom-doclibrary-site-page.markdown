@@ -26,7 +26,8 @@ Let's start.
 
 By default inside any Alfresco site you have three visible pages: Dashboard, Document library, Site members. To create a new page you can use an Alfresco tutorial: [Add a new page to Alfresco Share][add-page-tutorial] or follow these steps. Please don't forget that it should be done in share project. Create following files:
 
-* **Page definition** - /alfresco/web-extension/site-data/pages/_my-document-library.xml_
+* **Page definition** - /share-amp/src/main/amp/config/alfresco/web-extension/site-data/pages/_my-document-library.xml_
+
 {% highlight xml%}
 <page>
   <title>My Document Library</title>
@@ -38,12 +39,18 @@ By default inside any Alfresco site you have three visible pages: Dashboard, Doc
 </page>
 {% endhighlight xml%}
 
-* **Template-Instance definition** - /alfresco/web-extension/site-data/template-instances/_my-document-library.xml_. For the moment you can just copy it from `documentlibrary.xml` template-instance. 
+* **Template-Instance definition** - /share-amp/src/main/amp/config/alfresco/web-extension/site-data/template-instances/_my-document-library.xml_. For the moment you can just copy it from `documentlibrary.xml` template-instance. 
 
-* **FreeMaker template** - /alfresco/web-extension/site-data/template/my-document-library.ftl.
+* **FreeMaker template** - /share-amp/src/main/amp/config/alfresco/web-extension/site-data/template/_my-document-library.ftl_.
 Copy this one from `documentlibrary.ftl` as well.
 
-That's it! The page is created, you can view it on _http://localhost:8081/share/page/my-document-library_. Since we copied templates from documentlibrary it will look exactly the same as Document Library page. But with broken title, which would be something like `page.myDocLib.title`, to fix it update the properties file:
+At the end the folder structure should like this:
+
+![My helpful screenshot]({{ site.url }}/assets/customPage.png)
+
+That's it! The page is created, you can view it on [http://localhost:8080/share/page/my-document-library](http://localhost:8080/share/page/my-document-library). 
+
+Since we copied templates from documentlibrary it will look exactly the same as Document Library page. But with broken title, which would be something like `page.myDocLib.title`, to fix it update the properties file:
 
 {% highlight properties%}
 #My Personal Library
