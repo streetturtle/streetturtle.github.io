@@ -44,7 +44,7 @@ By default inside any Alfresco site you have three visible pages: Dashboard, Doc
 * **FreeMaker template** - /share-amp/src/main/amp/config/alfresco/web-extension/site-data/template/_my-document-library.ftl_.
 Copy this one from `documentlibrary.ftl` as well.
 
-At the end the folder structure should like this:
+At the end the folder structure should look like this:
 
 ![My helpful screenshot]({{ site.url }}/assets/customPage.png)
 
