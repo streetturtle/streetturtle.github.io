@@ -2,6 +2,7 @@
 layout: post
 title:  "Customize drag-and-drop component"
 date:   2015-03-05 16:23:45
+comments: true
 categories:
 description: Probably you even didn't have enough time to have a look on pop-up window because in case of successfull upload it immediately hides. Which is quite sad because it could show a bit more to the user than just a status of upload. I will show how to improve this component and get a bit more from it. This article is split in two parts. This one covers the UI changes. The second one will show how to extend functionality of upload webscript. I'll post a link to it here when it would be written.   
 tags: 
