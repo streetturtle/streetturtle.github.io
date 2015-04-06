@@ -76,9 +76,9 @@ First step is done!
 
 Please have a look [Alfresco-wiki page][webscript-wiki] for more information about webscripts.
 
-This WebScript will search for the folder you are looking for and then return it's nodeRef.
+This WebScript will be called by created page and return the nodeRef of the folder which name is the same as the username of logged user.
 
-First we need to create a webscript description file.
+First we need to create a webscript description file: /repo-amp/src/main/amp/config/alfresco/extension/templates/webscripts/getUserNodeRefWS.get.desc.xml with following content:
 
 {% highlight xml%}
 <webscript>
@@ -91,7 +91,7 @@ First we need to create a webscript description file.
 </webscript>
 {% endhighlight xml%}
 
-Finally Java. Create GetNodeRef class under /src/main/java/org/alfresco/mywebscript/. The whole class you can find on gitHub, here I'll just write the main method which does all the work:
+Java. Create GetUserNodeRefWS.java class under /repo-amp/src/main/java/org/alfresco/webscript/. The whole class you can find on gitHub, here I'll just write the main method which does all the work:
 
 {% highlight java %}
 public void execute(WebScriptRequest req, WebScriptResponse res) {
