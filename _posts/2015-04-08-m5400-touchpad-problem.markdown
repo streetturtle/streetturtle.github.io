@@ -21,6 +21,6 @@ Then select _Device Settings_, Synaptic TouchPad... device and press _Settings_,
 
 Then I disabled everything except Two-Finger Scrolling option and also changed sensitivity of Palm Check because I think that touchpad wasn't working because it wasn't able to distinguish palm from finger sometimes and was blocking touchpad. 
 
-After these manipulation touchpad start to work much more better!
+After this manipulation touchpad start to work much more better!
 
 Cheers!
