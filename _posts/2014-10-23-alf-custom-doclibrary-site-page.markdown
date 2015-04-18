@@ -2,6 +2,7 @@
 layout: post
 title:  "Custom document library site page"
 date:   2014-10-23 19:17:52
+comments: true
 description: Here I'll show how to create a custom page for alfresco site which points to some folder inside document library.
 categories: jekyll update
 tags: 

@@ -2,6 +2,7 @@
 layout: post
 title:  "Connect to alfresco database"
 date:   2015-02-13 16:23:45
+comments: true
 categories:
 description: For better understanding of Alfresco sometimes it's needed to see Alfresco tables. Here I'm showing how to connect to Alfresco Postgres database on a server and to h2 database during development.
 tags: 

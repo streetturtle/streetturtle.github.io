@@ -2,6 +2,7 @@
 layout: post
 title:  "Some useful regex tips"
 date:   2015-01-30 21:00:52
+comments: true
 description: Recently I've started discovering some new features of regular expressions which I didn't know before. Here I want to share some of these discoveries. Also I would like to write some useful patterns which are needed sometimes, but to write them from scratch could take some time.
 categories: 
 tags: 

@@ -2,6 +2,7 @@
 layout: post
 title:  "Wipe alfresco database"
 date:   2015-01-06 16:23:45
+comments: true
 categories:
 description: Here I'm showing how to wipe alfresco database.
 tags: 

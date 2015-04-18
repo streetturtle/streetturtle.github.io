@@ -2,6 +2,7 @@
 layout: post
 title:  "Custom facets in alfresco 5.0.a"
 date:   2015-01-20 9:53:52
+comments: true
 description: Alfresco 5.0.a is the first version with faceted search support. By default it supports 7 facets. Here I'll show how to add custom facets on custom metadata.
 categories: 
 tags: 

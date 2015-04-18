@@ -2,6 +2,7 @@
 layout: post
 title:  "Set environment from command line"
 date:   2014-12-02 16:48:45
+comments: true
 categories:
 description: This post describes how to change Alfresco environment for DB connection using command line arguments.
 tags:

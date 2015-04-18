@@ -2,6 +2,7 @@
 layout: post
 title:  "Automatic site creation"
 date:   2014-11-30 16:48:45
+comments: true
 categories:
 description: During development I quite often purge Alfresco database and after each purge I need to manually recreate all the content that has been deleted such as sites, peoples, folders and so on. In this post I'd like to show how to create sites automatically with a simple webscript.
 tags: 

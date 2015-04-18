@@ -2,6 +2,7 @@
 layout: post
 title:  "Enable document view event for RM audit"
 date:   2015-02-19 16:23:45
+comments: true
 categories:
 description: I was quite surised when discovered that out-the-box alfresco RM doesn't audit document view action. After suffering for a while I've finally managed to turn it on!
 tags: 
