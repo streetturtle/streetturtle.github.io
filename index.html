@@ -3,37 +3,50 @@ layout: default
 ---
 
 <div id="home" class="page-content wc-container">
-	<div class="posts">
-		<div class="post">
-			{% for post in site.posts limit:10 %}
-				<h3 class="post-title">
-					<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">
-						{{ post.title }}
-					</a>
-				</h3>
+  <div class="posts">
+    <div class="rightpanel">
+      <div class="inner">
+        <ul>
+          <li><h4>Tags</h4></li>
+          {% assign sorted_tags = (site.tags | sort:0) %}
+          {% for tag in sorted_tags %}
+            <li><a href="/tag/{{ tag[0] }}">{{ tag[0] }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+      
+    <div class="post">
+      {% for post in site.posts limit:10 %}
+        <h3 class="post-title">
+          <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">
+            {{ post.title }}
+          </a>
+        </h3>
 
-				<div class="post-meta-inf">
-					<ul>
-						{% for tag in post.tags %}
-							<li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
-						{% endfor %}
-					</ul>
-					<time>{{ post.date | date_to_string }}</time>
-				</div>
+        <div class="post-meta-inf">
+          <ul>
+            {% for tag in post.tags %}
+              <li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
+            {% endfor %}
+          </ul>
+          <time>{{ post.date | date_to_string }}</time>
+        </div>
 
-				<p>
-					{{ post.description }}
-				</p>
-				<p class="readMore">
-					<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" title="{{ post.title}}">
-						Read More
-					</a>
-				</p>
-			{% endfor %}
-		</div>
-	</div>
-	<div class="post-footer">
-		<div class="column-full"><a href="{{ '/blog' | prepend: site.baseurl | prepend: site.url }}">Blog archive</a>
-		</div>
-	</div>
+        <p>
+          {{ post.description }}
+        </p>
+        <p class="readMore">
+          <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" title="{{ post.title}}">
+            Read More
+          </a>
+        </p>
+      {% endfor %}
+    </div>
+  </div>
+    
+  <div class="post-footer">
+    <div class="column-full"><a href="{{ '/blog' | prepend: site.baseurl | prepend: site.url }}">Blog archive</a>
+    </div>
+  </div>
 </div>

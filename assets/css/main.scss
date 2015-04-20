@@ -633,6 +633,22 @@ code {
   border-radius: 0;
 }
 
+
+.rightpanel {
+    float: right;
+    width:25%
+  }
+.inner {
+  position:fixed;
+  ul li{
+    list-style-type: none;
+    background: none !important;
+    padding: 0 !important;
+    h4{
+      color: #444444 !important;
+    }
+  }
+} 
 /* --------------------------------
 
 Post styles
@@ -640,11 +656,12 @@ Post styles
 --------------------------------- */
 
 div.posts {
-
-  .div.post {
-    
-  }
+  .post {
+    width:72%;
+  }  
+ 
 }
+
 div.post {
   padding-top: .5em;
   padding-bottom: 1em;
@@ -717,6 +734,7 @@ div.post {
 			float: right;
     }
   }
+    
 }
 
 /* --------------------------------
