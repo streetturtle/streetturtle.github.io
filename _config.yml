@@ -27,8 +27,8 @@ harmony:
   # Profile links, leave blank to ignore
   social: 
     github: streetturtle
-    facebook: streetturtle
-    instagram: streetturtle
+    stackoverflow: streetturtle
+    linkedin: linkedin
   # Toggle disclaimer in footer
   show_disclaimer: true
 

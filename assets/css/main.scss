@@ -303,8 +303,8 @@ footer.main-footer {
     width: 32px;
     height: 32px;
     background: $base-07;
-    background-image: url("./images/socials-icons.svg");
-    background-size: 224px 64px;
+//    background-image: url("./images/socials-icons.svg");
+//    background-size: 224px 64px;
     border-radius: 0.25em;
     @include transition(background-color 0.2s);
     border-bottom-color: transparent;
@@ -322,12 +322,29 @@ footer.main-footer {
   }
 
   li a.github {
-    background-position: -32px 0;
+//    background-position: -32px 0;
+    background-image: url("./images/social/githubGr.svg");
     &:hover {
-      background-position: -32px -32px;
+//      background-position: -32px -32px;
+        background-image: url("./images/social/githubWh.svg");
+
     }
   }
 
+  li a.stackoverflow {
+    background-image: url("./images/social/stackoverflowGr.svg");
+    &:hover {
+    background-image: url("./images/social/stackoverflowWh.svg");
+    }
+  }
+    
+  li a.linkedin {
+    background-image: url("./images/social/linkedinGr.svg");
+    &:hover {
+    background-image: url("./images/social/linkedinWh.svg");
+    }
+  }
+   
   li a.facebook {
     background-position: -64px 0;
     &:hover {

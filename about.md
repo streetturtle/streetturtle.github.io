@@ -14,7 +14,3 @@ Here I want to share some of my knowledge which hopefully could help somebody on
 ### This blog
 
 It was made on [GitHub Pages](https://pages.github.com/) using [Jekyll](http://jekyllrb.com/) with modified [Harmony](http://jekyllthemes.org/themes/harmony/) theme and [Disqus](https://disqus.com/) as a comments system.
-
-### Contact me
-
-You can find me on [LinkedIn](https://www.linkedin.com/pub/pavel-makhov/56/a6a/546) / [StackOverflow](http://stackoverflow.com/users/1252056/streetturtle)
