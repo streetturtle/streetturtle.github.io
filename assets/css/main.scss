@@ -826,6 +826,25 @@ div.post {
   }
 }
 
+
+/* -----------------------------------
+
+  Unfound
+
+--------------------------------------*/
+div.unfound{
+    padding-top: .5em;
+  padding-bottom: 1em;
+  border-bottom: 1px $base-05 solid;
+  background-color: #444;
+  padding: 10px 20px 10px;
+  border-radius: 10px;
+  @include MQ(M) {
+    padding-bottom: 5px;  
+  }
+}
+
+
 /* -----------------------------------
 
   Table
