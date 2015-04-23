@@ -303,8 +303,6 @@ footer.main-footer {
     width: 32px;
     height: 32px;
     background: $base-07;
-//    background-image: url("./images/socials-icons.svg");
-//    background-size: 224px 64px;
     border-radius: 0.25em;
     @include transition(background-color 0.2s);
     border-bottom-color: transparent;
@@ -322,12 +320,9 @@ footer.main-footer {
   }
 
   li a.github {
-//    background-position: -32px 0;
     background-image: url("./images/social/githubGr.svg");
     &:hover {
-//      background-position: -32px -32px;
         background-image: url("./images/social/githubWh.svg");
-
     }
   }
 
@@ -345,36 +340,21 @@ footer.main-footer {
     }
   }
    
-  li a.facebook {
-    background-position: -64px 0;
+  li a.instagram {
+    background-image: url("./images/social/instagramGr.svg");
     &:hover {
-      background-position: -64px -32px;
+    background-image: url("./images/social/instagramWh.svg");
     }
   }
-
-  li a.dribble {
-    background-position: -96px 0;
+   
+  li a.lastfm {
+    background-image: url("./images/social/lastfmGr.svg");
     &:hover {
-      background-position: -96px -32px;
+    background-image: url("./images/social/lastfmWh.svg");
     }
   }
-
-  li a.google {
-    background-position: -128px 0;
-    &:hover {
-      background-position: -128px -32px;
-    }
-  }
-
-  li a.pinterest {
-      background-position: -196px 0;
-      &:hover {
-        background-position: -196px -32px;
-      }
-    }
-  }
-}
-
+ }}
+  
 .no-svg footer.main-footer ul.social-media li a {
   width: 32px;
     height: 32px;
@@ -706,20 +686,6 @@ div.post {
 	p.readMore{
 			text-align: right;
 	}
-
-/*span.post-date {
-  line-height: 1.6;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  @include font-size(12px);
-  overflow: hidden;
-  display: block;
-  padding: 5px 0;
-  text-align: right;
-
-  @include MQ(M) {
-    @include font-size(16px);
-  }*/
 
   div.post-meta-inf{
     border: 1px solid #C9C6C3;

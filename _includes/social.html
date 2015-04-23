@@ -26,37 +26,25 @@
     </li>
     {% endif %}
   
+
+    {% if site.harmony.social.instagram %}
+    <li>
+        <a title="{{ site.harmony.social.instagram }} on Instagram" 
+            href="https://www.linkedin.com/in/{{ site.harmony.social.instagram }}" 
+            class="instagram wc-img-replace" target="_blank">Instagram</a>
+    </li>
+    {% endif %}
   
-    {% if site.harmony.social.facebook %}
+
+    {% if site.harmony.social.lastfm %}
     <li>
-        <a title="{{ site.harmony.social.facebook }} on Facebook" 
-            href="https://facebook.com/{{ site.harmony.social.facebook }}" 
-            class="facebook wc-img-replace" target="_blank">Facebook</a>
+        <a title="{{ site.harmony.social.lastfm }} on LinkedIn" 
+            href="https://www.linkedin.com/in/{{ site.harmony.social.lastfm }}" 
+            class="lastfm wc-img-replace" target="_blank">LastFm</a>
     </li>
     {% endif %}
-
-    {% if site.harmony.social.gplus %}
-    <li>
-        <a title="{{ site.harmony.social.gplus }} on Google Plus" 
-            href="https://plus.google.com/{{ site.harmony.social.gplus }}" 
-            class="google wc-img-replace" target="_blank">Google</a>
-    </li>
-    {% endif %}
-
-    {% if site.harmony.social.dribble %}
-    <li>
-        <a title="{{ site.harmony.social.dribble }} on Dribble" 
-            href="https://dribbble.com/{{ site.harmony.social.dribble }}" 
-            class="dribble wc-img-replace" target="_blank">Dribble</a>
-    </li> 
-    {% endif %}
-
-    {% if site.harmony.social.pinterest %}
-    <li>
-        <a title="{{ site.harmony.social.pinterest }} on Pinterest" 
-            href="https://www.pinterest.com/{{ site.harmony.social.pinterest }}" 
-            class="pinterest wc-img-replace" target="_blank">Pinterest</a>
-    </li> 
-    {% endif %}
+  
+  
+    
 
 </ul>
