@@ -20,7 +20,23 @@ Then logout and login selecting Awesome wm in available shells.
 
 ### Startup application
 
-The simpliest way is to add `awful.util.spawn_with_shell("clipit")` to your _rc.lua_.
+One of the simpliest way is to add following section to your _rc.lua_:
+
+{% highlight lua %}
+-- {{{ StartUp applications
+function run_once(cmd)
+  findme = cmd
+  firstspace = cmd:find(" ")
+  if firstspace then
+    findme = cmd:sub(0, firstspace-1)
+  end
+  awful.util.spawn_with_shell("pgrep -u $USER -x " .. findme .. " > /dev/null || (" .. cmd .. ")")
+end
+
+run_once("clipit")
+run_once("hamster-indicator")
+-- }}}
+{% endhighlight lua %}
 
 ### Java applications (SQL Developer)
 
