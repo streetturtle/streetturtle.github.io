@@ -23,7 +23,6 @@ Then logout and login selecting Awesome wm in available shells.
 One of the simpliest way is to add following section to your _rc.lua_:
 
 {% highlight lua %}
--- {{{ StartUp applications
 function run_once(cmd)
   findme = cmd
   firstspace = cmd:find(" ")
@@ -35,7 +34,6 @@ end
 
 run_once("clipit")
 run_once("hamster-indicator")
--- }}}
 {% endhighlight lua %}
 
 ### Java applications (SQL Developer)
