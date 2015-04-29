@@ -6,3 +6,5 @@ _site/
 *~
 bourbon/
 Gemfile.lock
+/_site/tag/alfresco/index.html
+/_site/tag/database/index.html
