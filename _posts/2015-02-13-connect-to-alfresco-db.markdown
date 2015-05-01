@@ -4,13 +4,20 @@ title:  "Connect to alfresco database"
 date:   2015-02-13 16:23:45
 comments: true
 categories:
-description: For better understanding of Alfresco sometimes it's needed to see Alfresco tables. Here I'm showing how to connect to Alfresco Postgres database on a server and to h2 database during development.
+description: For better understanding of Alfresco sometimes it's needed to see Alfresco tables. Here I'm showing how to connect to Alfresco Postgre database on a server and to h2 database during development.
 tags: 
 - alfresco
 - database
 ---
 
-## Connection to PostgresSQL 
+## Connection to PostgreSQL (IDE)
+
+You can easily connect to Alfresco database using database IDE, [pgAdmin](http://www.pgadmin.org/) for example. But I prefer to use Intellij's [0xdbe](https://www.jetbrains.com/dbe/).
+All neccessary information you can find in alfresco-global.properties file (host, port, login and password). 
+
+![Screenshot]({{ site.url }}/assets/0xdbeSettings.png)
+
+## Connection to PostgreSQL (SSH)
 
 First you need to stop Alfresco and start PostgreSQL server:
 

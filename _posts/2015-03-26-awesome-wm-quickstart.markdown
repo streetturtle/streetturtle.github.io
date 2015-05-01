@@ -10,6 +10,8 @@ tags:
 - ubuntu
 ---
 
+### Installation and Configuration files
+
 First of all you need to install it:
 
 {% highlight bash %}
@@ -17,6 +19,15 @@ sudo apt-get install awesome fonts-font-awesome awesome-extra
 {% endhighlight basj %}
 
 Then logout and login selecting Awesome wm in available shells.
+
+Awesome uses `/etc/xdg/awesome/rc.lua` file which could be overriden by `~/.config/awesome/rc.lua`. So we need to copy original file to your home folder.
+
+{% highlight bash%}
+mkdir -p ~/.config/awesome/
+cp /etc/xdg/awesome/rc.lua ~/.config/awesome/
+{% endhighlight bash%}
+
+From now all changes should be done with rc.lua which is under your home directory.
 
 ### Startup application
 
