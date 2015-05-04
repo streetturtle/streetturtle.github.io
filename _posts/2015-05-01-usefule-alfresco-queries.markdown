@@ -50,6 +50,15 @@ where qn.ns_id = ns.id
 group by audit_creator;
 {% endhighlight sql%}
 
+## Number of users
+
+{% highlight sql%}
+select count(*)
+from alf_node nd, alf_qname qn
+where nd.type_qname_id = qn.id
+  and qn.local_name = 'person';
+{% endhighlight sql%}
+
 ## List of users
 
 This query returns list of users from the Alfresco database:
