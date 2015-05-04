@@ -22,9 +22,9 @@ This query will return number of nodes which have _cm:content_ type:
 select count(*) as cm_content_nodes
 from alf_node nd, alf_qname qn, alf_namespace ns
 where qn.ns_id = ns.id
-and nd.type_qname_id = qn.id
-and ns.uri = 'http://www.alfresco.org/model/content/1.0'
-and qn.local_name = 'content';
+  and nd.type_qname_id = qn.id
+  and ns.uri = 'http://www.alfresco.org/model/content/1.0'
+  and qn.local_name = 'content';
 {% endhighlight sql%}
 
 To get number of folders (which have _cm:folder_ type) replace `content` by `folder`. To see all available types run following queries:
@@ -38,14 +38,29 @@ For custom types change qname and namespace.
 
 ## Number of uploaded documents by person
 
-This query returns list of people and number of documents uploaded by them:
+This query returns list of users and number of documents uploaded by them:
 
 {% highlight sql%}
 select audit_creator as uploaded_by, count(*) as doc_uploads
 from alf_node nd, alf_qname qn, alf_namespace ns
 where qn.ns_id = ns.id
-and nd.type_qname_id = qn.id
-and ns.uri = 'http://www.alfresco.org/model/content/1.0'
-and qn.local_name = 'content'
+  and nd.type_qname_id = qn.id
+  and ns.uri = 'http://www.alfresco.org/model/content/1.0'
+  and qn.local_name = 'content'
 group by audit_creator;
 {% endhighlight sql%}
+
+## List of users
+
+This query returns list of users from the Alfresco database:
+
+{% highlight sql %}
+select np1.string_value as first_name, np2.string_value as last_name, np3.string_value as username
+from alf_node_properties np1, alf_node_properties np2, alf_node_properties np3
+where np1.qname_id in (select id from alf_qname where local_name in ('firstName'))
+  and np2.qname_id in (select id from alf_qname where local_name in ('lastName'))
+  and np3.qname_id in (select id from alf_qname where local_name in ('userName'))
+  and np1.node_id = np2.node_id
+  and np1.node_id = np3.node_id
+order by 1;
+{% endhighlight sql %}
