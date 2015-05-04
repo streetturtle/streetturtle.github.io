@@ -36,7 +36,7 @@ select * from alf_qname;     -- qnames
 
 For custom types change qname and namespace.
 
-## Number of uploaded documents by person
+## Number of uploaded documents per person
 
 This query returns list of users and number of documents uploaded by them:
 
