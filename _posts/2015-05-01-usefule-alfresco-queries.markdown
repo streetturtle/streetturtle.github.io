@@ -55,8 +55,14 @@ group by audit_creator;
 This query returns list of users from the Alfresco database:
 
 {% highlight sql %}
-select np1.string_value as first_name, np2.string_value as last_name, np3.string_value as username
-from alf_node_properties np1, alf_node_properties np2, alf_node_properties np3
+select 
+  np1.string_value as first_name, 
+  np2.string_value as last_name, 
+  np3.string_value as username
+from 
+  alf_node_properties np1, 
+  alf_node_properties np2, 
+  alf_node_properties np3
 where np1.qname_id in (select id from alf_qname where local_name in ('firstName'))
   and np2.qname_id in (select id from alf_qname where local_name in ('lastName'))
   and np3.qname_id in (select id from alf_qname where local_name in ('userName'))
