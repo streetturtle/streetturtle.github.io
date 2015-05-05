@@ -1,7 +1,7 @@
 ---
 ---
 
-// Import reset 
+// Import reset
 @import "partials/reset";
 
 // Import colors, fonts etc...
@@ -13,11 +13,11 @@
 // Import layout mixin
 @import "partials/layout";
 
-// Import syntax 
+// Import syntax
 @import "partials/syntax";
 
 
-/* -------------------------------- 
+/* --------------------------------
 
  Primary style
 
@@ -68,7 +68,7 @@ body {
 
 --------------------------------- */
 
-h1, h2, h3, h4, h5, h6 { 
+h1, h2, h3, h4, h5, h6 {
   line-height: 1.6;
 }
 
@@ -161,10 +161,10 @@ em, i { font-style: italic; }
 
 --------------------------------- */
 
-// default 
+// default
 
 a.default-anchor {
-  
+
   text-decoration: none;
   border-bottom: 1px solid transparent;
   color: $base-08;
@@ -191,7 +191,7 @@ header.main-header, footer.main-footer {
   p,address {
     @include font-size(12px);
     @include MQ(M) {
-      @include font-size(14px);        
+      @include font-size(14px);
     }
   }
 }
@@ -205,9 +205,9 @@ header.main-header {
 		float:left;
 		margin-top: 4px;
 	}
-	
+
   h1, h2 { text-align: right; color: inherit;}
-  a { 
+  a {
     color: inherit;
     &:hover, &:active, &:focus {
       border-bottom-color: transparent;
@@ -219,7 +219,7 @@ header.main-header {
     text-align: right;
     padding: 15px;
   }
-  ul li {       
+  ul li {
     display: inline-block;
     position:relative;
     color: $base-08;
@@ -231,7 +231,7 @@ header.main-header {
     width: 15px;
   }
 
-  ul li a { 
+  ul li a {
     display:inline-block;
     color: inherit;
     border-bottom: 2px transparent solid;
@@ -274,7 +274,7 @@ footer.main-footer {
       height: 2px;
       background: $base-07;
       overflow: hidden;
-  } 
+  }
 
   ul.menu {
     padding: 0 0 1em 0;
@@ -282,9 +282,9 @@ footer.main-footer {
       @include font-size(12px);
       line-height: 1.6;
       display: inline;
-      padding-right: 10px;        
+      padding-right: 10px;
       @include MQ(M) {
-        @include font-size(16px);          
+        @include font-size(16px);
       }
     }
   }
@@ -296,7 +296,7 @@ footer.main-footer {
  ul.social-media {
   text-align:left;
   padding: 0 0 10px 0;
-  li { 
+  li {
     display:inline-block;
   }
   li > a {
@@ -311,12 +311,12 @@ footer.main-footer {
       background-color: $base-08;
     }
   }
-    
+
   li a.twitter {
     background-position: 0 0;
       &:hover {
         background-position: 0 -32px;
-    } 
+    }
   }
 
   li a.github {
@@ -332,21 +332,21 @@ footer.main-footer {
     background-image: url("./images/social/stackoverflowWh.svg");
     }
   }
-    
+
   li a.linkedin {
     background-image: url("./images/social/linkedinGr.svg");
     &:hover {
     background-image: url("./images/social/linkedinWh.svg");
     }
   }
-   
+
   li a.instagram {
     background-image: url("./images/social/instagramGr.svg");
     &:hover {
     background-image: url("./images/social/instagramWh.svg");
     }
   }
-   
+
   li a.lastfm {
     background-image: url("./images/social/lastfmGr.svg");
     &:hover {
@@ -354,7 +354,7 @@ footer.main-footer {
     }
   }
  }}
-  
+
 .no-svg footer.main-footer ul.social-media li a {
   width: 32px;
     height: 32px;
@@ -377,14 +377,14 @@ div.page-content {
   @include MQ(M) {
     min-height: 400px;
   }
-}    
+}
 
 div.page-content {
-  ul {       
+  ul {
     padding: 0 0 1em 0;
     li {
       @include font-size(14px);
-      color: $color-2; 
+      color: $color-2;
       line-height: 1.6;
       background: url(./images/bullet.svg);
       background-repeat: no-repeat;
@@ -392,22 +392,22 @@ div.page-content {
       padding: 0 0 5px 15px;
       margin-left: 0;
     }
-    @include MQ(M){        
-      li {         
-        @include font-size(16px);  
+    @include MQ(M){
+      li {
+        @include font-size(16px);
         line-height: 1.5;
-        background-position: 0 7px; 
+        background-position: 0 7px;
       }
     }
   }
-  ol { 
+  ol {
     @include font-size(12px);
     // padding-top: 1em;
     padding-bottom: 1em;
     list-style: decimal;
     margin-left: 0;
     li {
-      color: $color-2; 
+      color: $color-2;
       line-height: 1.6;
       padding: 0 0 5px 0px;
       margin-left: 2em;
@@ -415,9 +415,9 @@ div.page-content {
     }
     @include MQ(M){
       @include font-size(16px);
-      li { 
+      li {
         line-height: 1.5;
-        background-position: 0 7px; 
+        background-position: 0 7px;
       }
     }
   }
@@ -425,10 +425,10 @@ div.page-content {
   dl {
     padding-bottom: 1em;
     dt, dd {
-      @include font-size(12px);  
-      line-height: 1.5;        
+      @include font-size(12px);
+      line-height: 1.5;
     }
-    
+
     dt {
       font-weight: bold;
       padding-bottom: 5px;
@@ -443,19 +443,19 @@ div.page-content {
       padding-left: 10px;
     }
 
-    @include MQ(M) {        
+    @include MQ(M) {
       dt, dd {
         @include font-size(16px);
-        line-height: 1.6;        
+        line-height: 1.6;
       }
     }
   }
 
   p {
-    margin-bottom: 1em;      
+    margin-bottom: 1em;
   }
 
-  h1, h2, h3, h4, h5, h6 { 
+  h1, h2, h3, h4, h5, h6 {
     padding-bottom: 5px;
   }
 }
@@ -463,19 +463,19 @@ div.page-content {
 .no-svg div.page-content ul li {
   background: url(./images/bullet.png);
   @include font-size(13px);
-  color: $color-2; 
+  color: $color-2;
   line-height: 1.6;
   background-repeat: no-repeat;
   background-position: 0 6px;
   padding: 0 0 5px 15px;
   margin-left: 0;
-} 
+}
 
 // Theme base 01
 body.theme-base-01 {
-  
+
   a {
-    @extend .default-anchor;   
+    @extend .default-anchor;
   }
 
   footer.main-footer {
@@ -486,7 +486,7 @@ body.theme-base-01 {
 
   header.main-header {
     color: #D8D2CB;
-    ul li { 
+    ul li {
       color: $base-08;
     }
   }
@@ -504,7 +504,7 @@ body.theme-base-01 {
 
 --------------------------------- */
 
-header.main-header { 
+header.main-header {
   background-color: #2B444D;
   /*padding: 1em 0;*/
   /*@include MQ(M) { padding: 2em 0; }*/
@@ -548,7 +548,7 @@ Code snippets
 code, pre {
   font-family: Menlo, Monaco, "Courier New", monospace;
 }
-code {  
+code {
   padding: .25em .5em;
   font-size: 85%;
   color: $base-08;
@@ -563,15 +563,15 @@ pre {
   padding: 1em;
   @include font-size(12px);
   line-height: 1.4;
-  white-space: pre;
-  white-space: pre-wrap;
+  // white-space: pre;
+  // white-space: pre-wrap;
   word-break: break-all;
-  word-wrap: break-word;
+  // word-wrap: break-word;
   /*background-color: $color-white;*/
   /*background-color: #333;*/
   background-color: #2c2c2c;
   /*border: 1px solid $base-05;*/
-  border-radius: 5px;  
+  border-radius: 5px;
   overflow-y: auto;
 
         box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.5);
@@ -599,7 +599,33 @@ code {
   pre {
     margin-bottom: 0;
   }
+  pre::-webkit-scrollbar-track
+  {
+  	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  	border-radius: 10px;
+  	background-color: #F5F5F5;
+  }
+
+  pre::-webkit-scrollbar-track-piece
+  {
+    background-color: #2C2C2C;
+  }
+
+  pre::-webkit-scrollbar
+  {
+  	height: 10px;
+  	background-color: #F5F5F5;
+  }
+
+  pre::-webkit-scrollbar-thumb
+  {
+  	border-radius: 4px;
+  	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  	background-color: #555;
+  }
 }
+
+
 
 .highlight, img, p > pre, p > code, p > nobr > code, li > code, h5 > code, .note > code { background-color: #333; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.5); -moz-box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.5); box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.5); }
 /*.highlight { margin: 1em 0; width: 100%; overflow: auto; }*/
@@ -646,7 +672,7 @@ code {
       color: #444444 !important;
     }
   }
-} 
+}
 /* --------------------------------
 
 Post styles
@@ -656,8 +682,8 @@ Post styles
 div.posts {
   .post {
     width:72%;
-  }  
- 
+  }
+
 }
 
 div.post {
@@ -668,7 +694,7 @@ div.post {
   padding: 10px 20px 10px;
   border-radius: 10px;
   @include MQ(M) {
-    padding-bottom: 5px;  
+    padding-bottom: 5px;
   }
 
   h1, h3{
@@ -697,7 +723,7 @@ div.post {
     margin: 0 0 20px;
     /*padding: 1px 0;*/
     /*text-transform: uppercase;*/
-    
+
     ul{
       /*border-left: 1px solid #bbb;*/
       display: inline;
@@ -718,7 +744,7 @@ div.post {
 			float: right;
     }
   }
-    
+
 }
 
 /* --------------------------------
@@ -767,18 +793,18 @@ div.post {
 
 --------------------------------- */
 .post-footer {
-  
+
   height: 40px;
   display: table;
   width: 100%;
   position: relative;
   margin-top: 32px;
 
-  @include MQ(M) {    
+  @include MQ(M) {
     height: 80px;
   }
 
-  .column-1, .column-2, .column-3, .column-full {    
+  .column-1, .column-2, .column-3, .column-full {
     padding-top: 10px;
     @include MQ(M) {
       padding-top: 30px;
@@ -787,7 +813,7 @@ div.post {
     a,span {
       @include font-size(12px);
       @include MQ(M) {
-        @include font-size(16px);        
+        @include font-size(16px);
       }
     }
   }
@@ -824,7 +850,7 @@ div.unfound{
   padding: 10px 20px 10px;
   border-radius: 10px;
   @include MQ(M) {
-    padding-bottom: 5px;  
+    padding-bottom: 5px;
   }
 }
 
