@@ -79,3 +79,5 @@ where np1.qname_id in (select id from alf_qname where local_name in ('firstName'
   and np1.node_id = np3.node_id
 order by 1;
 {% endhighlight sql %}
+
+More queries are coming! Stay tuned =)
