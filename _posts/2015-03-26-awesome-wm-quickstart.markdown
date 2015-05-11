@@ -18,6 +18,10 @@ First of all you need to install it:
 sudo apt-get install awesome fonts-font-awesome awesome-extra
 {% endhighlight basj %}
 
+ - `awesome` is basically awesome itself
+ - `awesome extra` is some additional lua libraries with which you can create widgets for example
+ - `fonts-font-awesome` not sure what is it
+
 Then logout and login selecting Awesome wm in available shells.
 
 Awesome uses `/etc/xdg/awesome/rc.lua` file which could be overriden by `~/.config/awesome/rc.lua`. So we need to copy original file to your home folder.
