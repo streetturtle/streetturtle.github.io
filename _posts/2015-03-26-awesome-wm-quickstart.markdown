@@ -4,23 +4,25 @@ title:  "Awesome wm quickstart"
 date:   2015-03-26 16:23:45
 comments: true
 categories:
-description: I am big fan of Ubuntu, but I've never liked the Unity shell, so I was using a Gnome shell mostly. But recently I decided to switch to the Awesome window manager. I watched few videos of it and I quite liked the idea of being able to control size and number of windows per workspace. So I've installed it and here want to share some of my problems with solutions.    
-tags: 
+description: I am big fan of Ubuntu, but I've never liked the Unity shell, so I was using a Gnome shell mostly. But recently I decided to switch to the Awesome window manager. I watched few videos of it and I quite liked the idea of being able to control size and number of windows per workspace. So I've installed it and here want to share some of my problems with solutions.
+tags:
 - awesome wm
 - ubuntu
 ---
 
 ### Installation and Configuration files
 
-First of all you need to install it:
+First of all you need to install it, note that in default repositries only version 3.4 available, but the latest one is 3.5.6:
 
 {% highlight bash %}
+sudo add-apt-repository ppa:klaus-vormweg/awesome
+sudo apt-get update
 sudo apt-get install awesome fonts-font-awesome awesome-extra
-{% endhighlight basj %}
+{% endhighlight bash %}
 
- - `awesome` is basically awesome itself
- - `awesome extra` is some additional lua libraries with which you can create widgets for example
- - `fonts-font-awesome` not sure what is it
+ - `awesome` - basically awesome itself
+ - `awesome extra` - some additional lua libraries with which you can create widgets for example
+ - `fonts-font-awesome` - not sure what is it =)
 
 Then logout and login selecting Awesome wm in available shells.
 
@@ -70,6 +72,3 @@ and change it to:
 {% highlight bash%}
 wmname LG3D & /opt/sqldeveloper/sqldeveloper.sh
 {% endhighlight bash%}
-
-
-
