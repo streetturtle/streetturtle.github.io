@@ -43,16 +43,42 @@ For custom types change qname and namespace.
 This one will return human readable document name, username of creator and date when this document was created:
 
 {% highlight sql %}
-select nd.audit_creator as creator, np.string_value as document_name, nd.audit_created as created_on
-from alf_node as nd, alf_node_properties as np, alf_namespace ns, alf_qname qn
-where nd.id=np.node_id
-and qn.ns_id = ns.id
-and nd.type_qname_id = qn.id
-and ns.uri = 'http://www.alfresco.org/model/content/1.0'
-and qn.local_name = 'content'
-and np.qname_id = 29
-and nd.audit_created > '2015-05-06 14:59:00';
+select nd.audit_creator as creator, 
+       np.string_value as document_name, 
+       nd.audit_created as created_on
+  from alf_node as nd, alf_node_properties as np, 
+       alf_namespace ns, alf_qname qn, alf_qname qn1
+ where nd.id=np.node_id
+   and qn.ns_id = ns.id
+   and nd.type_qname_id = qn.id
+   and ns.uri = 'http://www.alfresco.org/model/content/1.0'
+   and qn.local_name = 'content'
+   and qn1.ns_id = ns.id
+   and np.qname_id = qn1.id
+   and qn1.local_name = 'name'
+   and nd.audit_created > '2015-05-06 14:59:00';
 {% endhighlight sql %}
+
+Please note that it only works with `cm:content` types of document. If you did modification to the model and created some custom type, let's say `ep:content`, then you need to run this query:
+
+{% highlight sql%}
+select nd.audit_creator as creator, 
+       np.string_value as document_name, 
+       nd.audit_created as created_on
+  from alf_node as nd, alf_node_properties as np, 
+       alf_namespace ns, alf_namespace ns1, 
+       alf_qname qn, alf_qname qn1
+ where nd.id=np.node_id
+   and qn.ns_id = ns.id
+   and nd.type_qname_id = qn.id
+   and ns.uri = 'http://www.mycomp.com/model/epersonnel/1.0' -- change namespace
+   and qn.local_name = 'content'
+   and ns1.uri = 'http://www.alfresco.org/model/content/1.0'
+   and np.qname_id = qn1.id
+   and qn1.ns_id = ns1.id
+   and qn1.local_name = 'name'
+   and nd.audit_created > '2015-05-06 14:59:00';
+{% endhighlight sql%}
 
 ## Number of uploaded documents per person
 
@@ -95,8 +121,7 @@ from
 where np1.qname_id in (select id from alf_qname where local_name in ('firstName'))
   and np2.qname_id in (select id from alf_qname where local_name in ('lastName'))
   and np3.qname_id in (select id from alf_qname where local_name in ('userName'))
-  and np1.node_id = np2.node_id
-  and np1.node_id = np3.node_id
+  and np1.node_id = np2.node_id and np1.node_id = np3.node_id
 order by 1;
 {% endhighlight sql %}
 
