@@ -125,4 +125,32 @@ where np1.qname_id in (select id from alf_qname where local_name in ('firstName'
 order by 1;
 {% endhighlight sql %}
 
+## Get node's properties
+
+{% highlight sql %}
+with tt as (
+    select
+      node_id,
+      boolean_value,
+      coalesce(string_value,
+               case
+                 when long_value != 0 then cast(long_value as TEXT)
+                 when float_value != 0 then cast(float_value as TEXT)
+                 when double_value != 0 then cast(double_value as TEXT)
+               end) as value,
+      ns.uri as namespace,
+      qn.local_name as qname
+    from
+      alf_node_properties np,
+      alf_qname qn,
+      alf_namespace ns
+    where np.qname_id =  qn.id
+      and qn.ns_id = ns.id)
+select * from tt
+where qname = 'name'
+  and namespace = 'http://www.alfresco.org/model/content/1.0'
+  and VALUE = 'Document name';
+where node_id = 19304; -- by node id
+{% endhighlight sql %}
+
 More queries are coming! Stay tuned =)
