@@ -34,9 +34,9 @@ cp /etc/xdg/awesome/rc.lua ~/.config/awesome/
 
 From now all changes should be done with rc.lua which is under your home directory.
 
-### Two screens
+### Two screens (swam screens)
 
-By default when I logged in first time with using awesome screens were swaped, so left one was on the right and right on the left. If I were using Gnome Shell swap them back would be easier, just using Displays application, but in awesome it should be done manually. To see what screens you have, you need to run `xrandr`. You'll see name of the screen with applied parameters and then available options, such as screen resolutions and FPS. It would be something like this (I replaced some parts with `...`):
+By default when I logged in first time using awesome screens were swaped, so left one was on the right and right on the left. If I were using Gnome Shell swap them back would be easier, just using Displays application, but in awesome it should be done manually. To see what screens you have, you need to run `xrandr`. You'll see name of the screen with applied parameters and then available options, such as screen resolutions and FPS. It would be something like this (I replaced some parts with `...`):
 
 {% highlight bash %}
 Screen 0: minimum 8 x 8, current 3840 x 1200, maximum 32767 x 32767
@@ -52,11 +52,25 @@ VGA1 connected 1920x1200+1920+0 (normal left inverted right x axis y axis) 518mm
 VIRTUAL1 disconnected (normal left inverted right x axis y axis)
 {% endhighlight bash %}
 
-From this output we can see that I have two monitors, one is connected using HDMI port and another using VGA. HDMI is at the top left position (1920x1200+**0+0**) and VGA in on top right (1920x1200+***1920+0**). To swap then in my case I need to run:
+From this output we can see that I have two monitors, one is connected using HDMI port and another using VGA. HDMI is at the top left position (1920x1200+**0+0**) and VGA in on top right (1920x1200+***1920+0**). To swap them in my case I need to run:
  
     xrandr --output VGA1 --left-of HDMI1
     
 Done!
+
+### Themes
+
+There are two types of themes: for awesome: which basically applies to top panel, widgets and for applications: GTK themes.
+
+Regarding GTK themes to check available ones you need to install `lxappearace` application which allows you to change theme:
+
+{% highlight bash %}
+sudo apt-get install lxappearance
+{% endhighlight bash %}
+
+Personally I like adwaita dark theme, so I download it and put in /usr/share/themes. And then I choose it from available themes in lxappearance:
+
+![My helpful screenshot]({{ site.url }}/assets/lxappearance.png)
 
 ### Startup application
 
