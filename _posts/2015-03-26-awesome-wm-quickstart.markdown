@@ -17,12 +17,11 @@ First of all you need to install it, note that in default repositries only versi
 {% highlight bash %}
 sudo add-apt-repository ppa:klaus-vormweg/awesome
 sudo apt-get update
-sudo apt-get install awesome fonts-font-awesome awesome-extra
+sudo apt-get install awesome awesome-extra
 {% endhighlight bash %}
 
  - `awesome` - basically awesome itself
  - `awesome extra` - some additional lua libraries with which you can create widgets for example
- - `fonts-font-awesome` - not sure what is it =)
 
 Then logout and login selecting Awesome wm in available shells.
 
@@ -34,6 +33,30 @@ cp /etc/xdg/awesome/rc.lua ~/.config/awesome/
 {% endhighlight bash%}
 
 From now all changes should be done with rc.lua which is under your home directory.
+
+### Two screens
+
+By default when I logged in first time with using awesome screens were swaped, so left one was on the right and right on the left. If I were using Gnome Shell swap them back would be easier, just using Displays application, but in awesome it should be done manually. To see what screens you have, you need to run `xrandr`. You'll see name of the screen with applied parameters and then available options, such as screen resolutions and FPS. It would be something like this (I replaced some parts with `...`):
+
+{% highlight bash %}
+Screen 0: minimum 8 x 8, current 3840 x 1200, maximum 32767 x 32767
+DP1 disconnected (normal left inverted right x axis y axis)
+HDMI1 connected primary 1920x1200+0+0 (normal left inverted right x axis y axis) 518mm x 324mm
+   1920x1200      60.0*+
+   1920x1080      50.0  
+   ...
+VGA1 connected 1920x1200+1920+0 (normal left inverted right x axis y axis) 518mm x 324mm
+   1920x1200      60.0*+
+   1920x1080      60.0  
+   ...
+VIRTUAL1 disconnected (normal left inverted right x axis y axis)
+{% endhighlight bash %}
+
+From this output we can see that I have two monitors, one is connected using HDMI port and another using VGA. HDMI is at the top left position (1920x1200+**0+0**) and VGA in on top right (1920x1200+***1920+0**). To swap then in my case I need to run:
+ 
+    xrandr --output VGA1 --left-of HDMI1
+    
+Done!
 
 ### Startup application
 
