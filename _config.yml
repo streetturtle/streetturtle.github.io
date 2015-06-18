@@ -23,6 +23,7 @@ harmony:
 
   # Google Analytics key, leave blank to ignore
   google_analytics_key: UA-57641651-1
+  yandex_metrika_key: 30785898
 
   # Profile links, leave blank to ignore
   social: 
