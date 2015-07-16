@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 ---
 <div class="page-content wc-container">
 
@@ -11,7 +11,7 @@ layout: default
           {% if tag == page.tag %}
           <li class="archive_list">
             <time>{{ post.date | date_to_string }}</time>
-            <a class="archive_list_article_link" href='{{post.url}}'>{{post.title}}</a>
+            <a class="archive_list_article_link" href='{{ site.url }}{{post.url}}'>{{post.title}}</a>
             <p>{{post.description}}</p>
           </li>
           {% endif %}

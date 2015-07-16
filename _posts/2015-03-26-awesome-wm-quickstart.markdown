@@ -70,7 +70,7 @@ sudo apt-get install lxappearance
 
 Personally I like adwaita dark theme, so I download it and put in /usr/share/themes. And then I choose it from available themes in lxappearance:
 
-![My helpful screenshot]({{ site.url }}/assets/lxappearance.png)
+![My helpful screenshot]({{ site.url }}/images/lxappearance.png)
 
 ### Startup application
 

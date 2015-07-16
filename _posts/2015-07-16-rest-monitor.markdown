@@ -4,7 +4,7 @@ title:  "REST call monitoring extenstion for AppDynamics"
 date:   2015-07-16 16:23:45
 comments: true
 categories:
-description: 
+description: AppDynamics is platform which allows to monitor many aspects of the application - from user interaction to performace of SQL calls to database. It has nice platform for custom extenstions which provides all kind of metrics. Here I'd like to show how to create a custom extension which makes a rest call to some webservice (which provides some interesting metrics about application) and sends them to the AppDynamics controller.
 tags: 
 - appdynamics
 - ruby

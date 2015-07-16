@@ -63,4 +63,4 @@ rm.audit.content-read=Lecture contenu RM
 
 Now let's test it. Create some record and view it. Then open Audit log for this document and you'll see the registered event:
 
-![Screenshot]({{ site.url }}/assets/enableViewAudit.png)
+![Screenshot]({{ site.url }}/images/enableViewAudit.png)

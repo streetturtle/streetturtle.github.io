@@ -1,57 +1,40 @@
-# Harmony Jekyll theme general configurations 
+# Jekyll configuration
 
-# Base URL
- #baseurl: /home
+name: Pavel Makhov
+description: Software Developer
 
-# Site live URL
-# url: http://127.0.0.1:4000
-url: http://pavelmakhov.com
+# Url is currently only used only for the RSS feed in feed.xml
+#url: http://streetturtle.github.io
+url: http://localhost:4000
 
-# Localhost 
-# url: http://127.0.0.1:4000  
+# For a project page here should be a project name. Otherwise (for user's/organizaion's page leave it empty)
+baseurl:
 
-# Harmony theme configuration. Please change accordingly.
-harmony:
-  name: Pavel Makhov
-  # Little description about your site
-  description: Software Developer
-  meta_description: Blog about java, alfresco, linux and other geek''s things.
-  basetheme: theme-base-01 # pre defined thmes are darken, blue-water, redish.
-  author: # Author details
-    email: streetturtle@gmail.com
-    url: http://streetturtle.github.io
+social:
+  github: streetturtle
+  stackoverflow: streetturtle
+  linkedin: streetturtle
+  instagram: streetturtle
+  lastfm: streetturtle
 
-  # Google Analytics key, leave blank to ignore
-  google_analytics_key: UA-57641651-1
-  yandex_metrika_key: 30785898
+# Google Analytics key, leave blank to ignore
+google_analytics_key: UA-57641651-1
+# Yandex metrika (https://metrica.yandex.com/) leave blanc to ignore or put true to use
+yandex_metrika: true
 
-  # Profile links, leave blank to ignore
-  social: 
-    github: streetturtle
-    stackoverflow: streetturtle
-    linkedin: streetturtle
-    instagram: streetturtle
-    lastfm: streetturtle
-  # Toggle disclaimer in footer
-  show_disclaimer: true
 
-# Conversion / Build settings 
-markdown:    kramdown
-highlighter: pygments # this is how you put pygments config in jekyll 2.0 instead of pygments: true
+# Set this to your disqus shortname to enable comments. Note that the 'comments'
+# setting below must also be true. Individual posts can override 'comments' to
+# disable on a post-by-post basis
+disqus: streetturtle
+comments: true
 
-# Permalinks
-permalink:        pretty
+permalink: /:year/:month/:title
+paginate: 3
 
-exclude: 
-  - CNAME
-  - Gemfile
-  - Rakefile
-  - README.md
-  - .gitignore
-  - .sass-cache
-  - Gemfile.lock
+highlighter: pygments
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 
-# Sass conversion configs
-sass:
-    sass_dir: assets/css/_sass
-    style: :compressed
+exclude: ['README.md', 'LICENSE']

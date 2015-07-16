@@ -13,11 +13,11 @@ Just in case I'm running Windows 8.1 on Lenovo m5400 with i5-4200.
 
 Press super and search for "Mouse settings", select _Change mouse settings_
 
-![My helpful screenshot]({{ site.url }}/assets/m5400MouseSettings.png)
+![My helpful screenshot]({{ site.url }}/images/m5400MouseSettings.png)
 
 Then select _Device Settings_, Synaptic TouchPad... device and press _Settings_, you'll see following window:
 
-![My helpful screenshot]({{ site.url }}/assets/m5400MouseSettings-1.png)
+![My helpful screenshot]({{ site.url }}/images/m5400MouseSettings-1.png)
 
 Then I disabled everything except Two-Finger Scrolling option and also changed sensitivity of Palm Check because I think that touchpad wasn't working because it wasn't able to distinguish palm from finger sometimes and was blocking touchpad. 
 

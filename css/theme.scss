@@ -1,0 +1,284 @@
+---
+---
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+body {
+  padding-top: 80px;
+  color: #ddd;
+  background-color: #292929;
+  background-image: url(./pics/triangles.png);
+}
+.copyright {
+  color: #ffffff;
+}
+.footer {
+  text-align: center;
+}
+.footer a {
+  color: #ee4444;
+}
+.sidebar h1 {
+  color: #ddd;
+  font: {
+    size: 1.3em
+  }
+}
+.sidebar li {
+  margin-top: .7em;
+  line-height: 1em;
+}
+//.sidebar a:hover {
+//  color: #3071a9;
+//}
+
+.well {
+  background-color: #444;
+  box-shadow: 0px 0px 0px 0px, 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border: 0px;
+  border-radius: 6px;
+}
+.well.main-page {
+  width: 75%;
+}
+.main-page {
+  width: 75%;
+}
+.well h1 {
+  color: #ddd;
+  font: {
+    size: 1.3em
+  }
+  ;
+}
+.author {
+  color: #ee4444;
+}
+.author a {
+  color: #ee4444;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  max-width:100%;
+  max-height:100%;
+}
+
+//********************************************************
+//                    Code Blocks
+//********************************************************
+.highlight,
+img,
+p > pre,
+p > code,
+p > nobr > code,
+li > code,
+h5 > code,
+.note > code {
+  background-color: #333;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+code {
+  background-color: #333;
+  border-radius: 5px;
+}
+pre {
+    color: #ddd;
+
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding: 1em;
+  @include font-size(12px);
+  line-height: 1.4;
+  word-break: break-all;
+  background-color: #2c2c2c;
+  border: none;
+  border-radius: 5px;
+  overflow-y: auto;
+  box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+p > code {
+  box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+
+//********************************************************
+//                    Links
+//********************************************************
+a {
+  color: #3CA2A2;
+}
+a:hover {
+  color: #3CA2A2;
+  border-bottom: 1px solid transparent;
+}
+
+//********************************************************
+//                    Social Links
+//********************************************************
+ul.social-media {
+  text-align: center;
+  padding: 0 0 10px 0;
+  li {
+    display: inline-block;
+  }
+  li > a {
+    width: 45px;
+    height: 45px;
+    border-radius: 0.25em;
+    @include transition(background-color 0.2s);
+    border-bottom-color: transparent;
+    display: inline-block;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background-repeat: no-repeat;
+    background-position: center center;
+    &:hover {
+//      background-color: #3CA2A2;
+    }
+  }
+  li a.github {
+    background-image: url("./social/githubWh.svg");
+    &:hover {
+      background-image: url("./social/githubGr.svg");
+    }
+  }
+  li a.stackoverflow {
+    background-image: url("./social/stackoverflowWh.svg");
+    &:hover {
+      background-image: url("./social/stackoverflowGr.svg");
+    }
+  }
+  li a.linkedin {
+    background-image: url("./social/linkedinWh.svg");
+    &:hover {
+      background-image: url("./social/linkedinGr.svg");
+    }
+  }
+  li a.instagram {
+    background-image: url("./social/instagramWh.svg");
+    &:hover {
+      background-image: url("./social/instagramGr.svg");
+    }
+  }
+  li a.lastfm {
+    background-image: url("./social/lastfmWh.svg");
+    &:hover {
+      background-image: url("./social/lastfmGr.svg");
+    }
+  }
+}
+
+//********************************************************
+//                    Post
+//********************************************************
+h3.post-title {
+  padding-top: 35px;
+  text-align: left;
+  font-size: 25px;
+}
+div.post-meta {
+  border: 1px solid #666666;
+  border-width: 1px 0;
+  margin: 0 0 20px;
+  ul {
+    display: inline;
+    padding-left: 0px;
+  }
+  ul > li {
+    display: inline;
+    padding: 0 0 5px 20px;
+  }
+  time {
+    display: inline;
+    float: right;
+  }
+}
+
+.post-footer {
+
+  height: 40px;
+  display: table;
+  width: 100%;
+  position: relative;
+  margin-top: 32px;
+  text-align: center;
+}
+//********************************************************
+//                    Header
+//********************************************************
+
+nav a {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  font-size: 18px;
+  font-family: ubuntu;
+}
+nav .navbar-toggle {
+  margin: 13px 15px 13px 0;
+}
+.navbar-brand {
+  font-size: 30px;
+  color: #3CA2A2 !important;
+}
+nav.navbar.shrink {
+  min-height: 25px;
+}
+nav.shrink a {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  font-size: 15px;
+}
+nav.shrink .navbar-brand {
+  font-size: 25px;
+}
+nav.shrink .navbar-toggle {
+  padding: 4px 5px;
+  margin: 8px 15px 8px 0;
+}
+.navbar .navbar-nav {
+  display: inline-block;
+  float: right;
+}
+
+@media (min-width: 1000px) {
+  .twoRow .navbar-collapse {
+    clear: left;
+  }
+  .footer-distributed .footer {
+    text-align: center;
+  }
+  .footer-distributed .footer {
+    float: none;
+    margin: 0 auto 20px;
+  }
+  .footer-distributed .footer {
+    line-height: 1.8;
+  }
+}
+
+//********************************************************
+//                    Footer
+//********************************************************
+.footer-distributed {
+  background-color: #292c2f;
+  font: normal 16px sans-serif;
+  padding: 20px 25px;
+  margin-top: 80px;
+  text-align: center;
+}

@@ -43,6 +43,4 @@ password=somePassword
 
 Now you just need to pass custom VM option parameter when you start alfresco. For instance in Intellij IDEA you can create maven run configuration and specify this parameter there:
 
-![Screenshot]({{ site.url }}/assets/EnvVar.jpg)
-
-
+![Screenshot]({{ site.url }}/images/EnvVar.jpg)

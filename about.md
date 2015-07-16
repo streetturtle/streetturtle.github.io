@@ -1,14 +1,13 @@
 ---
 layout: page
 title: About
-permalink: /about/
 ---
 
 ### ...me
 
 I'm a software developer, was born in Moscow and currenlty I'm living in Geneva, Switzerland.
 
-![My helpful screenshot]({{ site.url }}/assets/ava.jpg)
+![My helpful screenshot]({{ site.url }}/images/ava.jpg)
 
 ### ...this blog
 

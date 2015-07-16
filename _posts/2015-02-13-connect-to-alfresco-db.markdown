@@ -15,7 +15,7 @@ tags:
 You can easily connect to Alfresco database using database IDE, [pgAdmin](http://www.pgadmin.org/) for example. But I prefer to use Intellij's [0xdbe](https://www.jetbrains.com/dbe/).
 All neccessary information you can find in alfresco-global.properties file (host, port, login and password). 
 
-![Screenshot]({{ site.url }}/assets/0xdbeSettings.png)
+![Screenshot]({{ site.url }}/images/0xdbeSettings.png)
 
 ## Connection to PostgreSQL (SSH)
 
@@ -56,6 +56,6 @@ alfresco=> select * from alf_audit_app;
 
 For IDEA it's quite easy to connect to H2 database. Search for `alf-dev.h2` file and just drag-and-drop to database tab:
 
-![Screenshot]({{ site.url }}/assets/alfDbConScrnsht.png)
+![Screenshot]({{ site.url }}/images/alfDbConScrnsht.png)
 
 And you can open the console (Ctrl+Shift+F10 or right click on the database and select Console)
