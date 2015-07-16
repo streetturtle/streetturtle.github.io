@@ -11,7 +11,7 @@ tags:
 
 Here I want to explain how to create a custom site page:
 
-![My helpful screenshot]({{ site.url }}/assets/MyPersLibrary.jpg)
+![My helpful screenshot]({{ site.url }}/images/MyPersLibrary.jpg)
 
 which points to any folder you want inside your repository. It will have kind of the same behaviour as My Files button. For example let's pretend that each user has it's own folder which name matches the username.
 
@@ -47,7 +47,7 @@ Copy this one from `documentlibrary.ftl` as well.
 
 At the end the folder structure should look like this:
 
-![My helpful screenshot]({{ site.url }}/assets/customPage.png)
+![My helpful screenshot]({{ site.url }}/images/customPage.png)
 
 That's it! The page is created, you can view it on [http://localhost:8080/share/page/my-document-library](http://localhost:8080/share/page/my-document-library). 
 
