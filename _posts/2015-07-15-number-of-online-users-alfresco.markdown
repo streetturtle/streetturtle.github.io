@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Get list of currently logged users"
-date:   2015-07-16 20:23:45
+date:   2015-07-15 20:23:45
 comments: true
 categories:
 description: For monitoring of Alfresco we needed to somehow get a number of users currently logged in Alfresco. Here I'm showing how to easily get number of such users as well as list of usernames using simple webscript.
