@@ -4,7 +4,7 @@ title:  "Battery and Sound volume wiget for Awesome WM"
 date:   2015-07-16 16:23:45
 comments: true
 categories:
-description:
+description: Very simple widgets for Awesome - battery widget which shows status of the battery and also includes a popup message when you have less than 15% of power left and a volume widget which shows an icon which represents the sound volume.
 tags: 
 - awesome wm
 - ubuntu
@@ -14,9 +14,13 @@ tags:
 
 Simple and easy-to-install widget for Awesome Window Manager.
 
-Basically this widget consists of an icon which shows the battery status: ![Battery Widget]({{ site.url }}/images/batWid1.png)
+This widget consists of:
 
-And a pop-up window, which shows up when you hover over it: ![Battery Widget]({{ site.url }}/images/batWid2.png)
+ - an icon which shows the battery status: ![Battery Widget]({{ site.url }}/images/batWid1.png)
+ 
+ - a pop-up window, which shows up when you hover over it: ![Battery Widget]({{ site.url }}/images/batWid2.png)
+ 
+ - a pop-up warning message which appears when battery level is less that 15%: ![Battery Widget]({{ site.url }}/images/batWid3.png)
 
 ### Installation
 
