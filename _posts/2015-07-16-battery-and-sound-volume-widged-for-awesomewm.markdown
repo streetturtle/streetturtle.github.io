@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Battery and Sound volume wiget for Awesome WM"
+title:  "Battery and Sound volume widget for Awesome WM"
 date:   2015-07-16 16:23:45
 comments: true
 categories:
@@ -60,5 +60,5 @@ widget:set_image("/home/<username>/.config/awesome/volume-icons/" .. volumeLevel
 
 ~~~~~~~
 require("volume")
-right_layout:add(volumeWidget)
+right_layout:add(volume_widget)
 ~~~~~~~

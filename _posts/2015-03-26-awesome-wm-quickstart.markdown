@@ -34,7 +34,7 @@ cp /etc/xdg/awesome/rc.lua ~/.config/awesome/
 
 From now all changes should be done with rc.lua which is under your home directory.
 
-### Two screens (swam screens)
+### Two screens (swap screens)
 
 By default when I logged in first time using awesome screens were swaped, so left one was on the right and right on the left. If I were using Gnome Shell swap them back would be easier, just using Displays application, but in awesome it should be done manually. To see what screens you have, you need to run `xrandr`. You'll see name of the screen with applied parameters and then available options, such as screen resolutions and FPS. It would be something like this (I replaced some parts with `...`):
 
@@ -109,3 +109,21 @@ and change it to:
 {% highlight bash%}
 wmname LG3D & /opt/sqldeveloper/sqldeveloper.sh
 {% endhighlight bash%}
+
+
+## Shortcuts
+
+Volume control. First you need to find out how increase/decrease volume from shell, depends on your soundcard you can use one of the following:
+
+{% highlight bash %}
+amixer set Master 5%+           # works for desktop
+amixer -D pulse sset Master 5%+ # works for laptop
+{% endhighlight bash %}
+
+And then add following section to the shortcuts:
+
+{% highlight lua %}
+  -- Custom shortkeys
+ awful.key({ modkey,        }, "]", function () awful.util.spawn("amixer -D pulse sset Master 5%+") end),
+ awful.key({ modkey,        }, "[", function () awful.util.spawn("amixer -D pulse sset Master 5%-") end)
+{% endhighlight lua %}
