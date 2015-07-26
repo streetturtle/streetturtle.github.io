@@ -1,10 +1,4 @@
-<!--
-<div class="sidebar well">
-  {{ site.description }}
-</div>
--->
-
-<div class="sidebar well">
+<div class="sidebar ">
   <h1>Recent Posts</h1>
   <ul>
     {% for post in site.posts limit:5 %}
@@ -13,10 +7,11 @@
   </ul>
 </div>
 
-<!--<div class="sidebar well">-->
-<!--
-  {% include links-list.html %}
-  {% include social.html %}
-
+<div class="sidebar">
+  <h1>Tags</h1>
+  <ul>
+    {% for tag in site.tags %}
+      <li><a href="/tag/{{ tag[0] }}">{{ tag[0] }}</a></li>
+    {% endfor %}
+  </ul>
 </div>
--->

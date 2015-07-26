@@ -1,8 +1,7 @@
 ---
-layout: default
+layout: page
 ---
 
-<div class="well main-page">
   {% for post in site.posts limit:10 %}
   <h3 class="post-title">
     <a href="{{site.url}}{{ post.url }}">
@@ -25,12 +24,11 @@ layout: default
     </p>
   </div>
   {% endfor %}
-</div>
-</div>
+<!--</div>-->
+<!--</div>-->
 
-
-<div class="post-footer">
-  <div class="column-full">
-    <h3><a href="{{ '/archive.html' | prepend: site.baseurl | prepend: site.url }}">Blog archive</a></h3>
+  <div class="post-footer">
+    <div class="column-full">
+      <h3><a href="{{ '/archive.html' | prepend: site.baseurl | prepend: site.url }}">Blog archive</a></h3>
+    </div>
   </div>
-</div>

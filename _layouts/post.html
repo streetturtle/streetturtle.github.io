@@ -2,10 +2,8 @@
 
 <div class="container container-center">
   <div class="row">
-    <div class="col-md-3 hidden-xs">
-      {% include sidebar.html %}
-    </div>
-    <div class="col-md-9">
+
+    <div class="col-md-8">
       <div class="article">
         <div class="well">
 
@@ -31,14 +29,11 @@
           {% endif %}
         </div>
       </div>
-<!--
-      <div class="pagination">
-        {% if page.next %}
-        <a class="btn btn-default" href="{{ site.url}}{{ page.next.url }}" class="next">Newer Post</a> {% endif %} {% if page.previous %}
-        <a class="btn btn-default" href="{{ site.url}}{{ page.previous.url }}" class="previous">Older Post</a> {% endif %}
-      </div>
--->
 
+    </div>
+
+    <div class="col-md-4 hidden-xs">
+      {% include sidebar.html %}
     </div>
   </div>
 </div>

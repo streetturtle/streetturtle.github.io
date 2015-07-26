@@ -1,10 +1,8 @@
 ---
-layout: default
+layout: page
 title: Tags 
 
 ---
-
-Bonjour a tous!
 
 <div class="page-content wc-container">
 	<div class="post">
