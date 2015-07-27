@@ -182,6 +182,12 @@ ul.social-media {
       background-image: url("./social/lastfmGr.svg");
     }
   }
+  li a.careers {
+    background-image: url("./social/careers.svg");
+    &:hover {
+      background-image: url("./social/careers.svg");
+    }
+  }
 }
 
 //********************************************************
