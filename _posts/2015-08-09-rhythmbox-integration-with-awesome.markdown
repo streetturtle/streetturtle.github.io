@@ -63,7 +63,7 @@ vicious.register( rhythmboxwidget, vicious.widgets.rhythmbox,
 
 ## Shortcuts
 
-For the shortcuts most useful would be to play next/previous song and play/pause action. I would like to use **Mod4+<(>)** to switch songs and **Mod4+/** to play/pause.
+For the shortcuts most useful would be to play next/previous song and play/pause action. I would like to use **Mod4+,(.)** to switch songs and **Mod4+/** to play/pause.
 
 You can try these commands from terminal to perform those actions:
 
@@ -77,6 +77,6 @@ And in **rc.lua** with keybindings:
 
 {% highlight lua %}
 awful.key({ modkey, }, "/", function () awful.util.spawn("rhythmbox-client --no-start --play-pause", false) end),
-awful.key({ modkey, }, ">", function () awful.util.spawn("rhythmbox-client --no-start --next", false) end),
-awful.key({ modkey, }, "<", function () awful.util.spawn("rhythmbox-client --no-start --previous", false) end)
+awful.key({ modkey, }, ",", function () awful.util.spawn("rhythmbox-client --no-start --next", false) end),
+awful.key({ modkey, }, ".", function () awful.util.spawn("rhythmbox-client --no-start --previous", false) end)
 {% endhighlight lua %} 
