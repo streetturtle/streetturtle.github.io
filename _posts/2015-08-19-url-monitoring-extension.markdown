@@ -4,7 +4,7 @@ title:  "URL monitoring extension for AppDynamics in Ruby"
 date:   2015-08-19 16:23:45
 comments: true
 categories:
-description: Simple extension for AppDynamics' machine agent to monitor URL's written in Ruby. 
+description: Simple extension for AppDynamics' machine agent to monitor URLs written in Ruby. 
 tags: 
 - appdynamics
 ---
