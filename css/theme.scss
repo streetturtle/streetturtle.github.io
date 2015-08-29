@@ -103,7 +103,7 @@ pre {
   margin-top: 0;
   margin-bottom: 1em;
   padding: 1em;
-  @include font-size(12px);
+  @include font-size(14px);
   line-height: 1.4;
   word-break: break-all;
   background-color: #2c2c2c;
@@ -196,7 +196,7 @@ ul.social-media {
 h3.post-title {
   padding-top: 35px;
   text-align: left;
-  font-size: 25px;
+  font-size: 1.6em;
 }
 div.post-meta {
   border: 1px solid #666666;
@@ -243,7 +243,7 @@ nav .navbar-toggle {
   color: #3CA2A2 !important;
 }
 nav.navbar.shrink {
-  min-height: 25px;
+  min-height: 15px;
 }
 nav.shrink a {
   padding-top: 10px !important;
