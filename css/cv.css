@@ -1,0 +1,59 @@
+body {
+	font-family: Garamond, serif;
+	background: none;
+	color: black;
+}
+
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 10mm auto;
+}
+
+.personal-info
+{
+    list-style-type: none;
+}
+
+.positionline {
+  padding: 20 0 30 0;
+}
+.positionline h3 {
+  display: inline;
+  text-align:left;
+  float:left;
+  margin: 0;
+}
+.positionline h4 {
+  display: inline;
+  text-align:right;
+  float:right;
+  margin: 0;
+}
+
+.section {
+  line-height: 0.5;
+  text-align: center;
+}
+.section span {
+  display: inline-block;
+  position: relative;
+}
+.section span:before,
+.section span:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-bottom: 1px solid black;
+/*  border-top: 1px solid black;*/
+  top: 0;
+  width: 200px;
+}
+.section span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+.section span:after {
+  left: 100%;
+  margin-left: 15px;
+}
