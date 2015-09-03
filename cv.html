@@ -3,23 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <title>Pavel Makhov CV</title>
-<!--
   <link href="http://localhost:4000/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="http://localhost:4000/css/cv.css" rel="stylesheet">
--->
+  <link href="http://localhost:4000/css/print.css" rel="stylesheet" media="print">
+  <!--  <link  href="/css/print.css" media="print">-->
+
+  <!--
   <link href="http://streetturtle.github.io/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="http://streetturtle.github.io/css/cv.css" rel="stylesheet">
+-->
 </head>
 
 <body>
   <div class="page">
     <h1 id="pavel-makhov">Pavel Makhov</h1>
+    <div style="width: 100%; overflow: hidden;">
+    <div style="width: 600px; float: left;">
     <ul class="personal-info">
       <li><i class="fa fa-map-marker"></i> Geneva, Switzerland</li>
-      <li><i class="fa fa-envelope-o"></i> makhovpp@gmail.com</li>
-      <li><i class="fa fa-laptop"></i> <a href="http://pavelmakhov.com">http://pavelmakhov.com</a></li>
-      <li><i class="fa fa-github"></i> <a href="http://pavelmakhov.com">http://github/com/streetturtle</a></li>
+      <li><i class="fa fa-flag-o"></i> Russian</li>
     </ul>
+    </div>
+    <div>
+    <ul class="personal-info">
+      <li><i class="fa fa-envelope-o"></i> makhovpp@gmail.com</li>
+      <li><i class="fa fa-laptop"></i> <a href="http://pavelmakhov.com">pavelmakhov.com</a></li>
+      <li><i class="fa fa-phone"></i> +41-78-807-64-11</li>
+
+      <!--
+      <li><i class="fa fa-github"></i> <a href="http://github/com/streetturtle">streetturtle</a></li>
+      <li><i class="fa fa-stack-overflow"></i> <a href="http://stackoverflow.com/users/1252056/streetturtle">streetturtle</a></li>
+      <li><i class="fa fa-linkedin"></i> <a href="https://www.linkedin.com/in/streetturtle">streetturtle</a></li>
+-->
+    </ul>
+    </div>
+    </div>
 
     <p>With almost 4 years of software development experience, I would like to apply for a Fellow position to continue the work at CERN. I was recruited to CERN as PJAS in 2012 to the GS-AIS-EB (Electronic Business) section where I have had the chance to work on a few exciting projects:</p>
     <ul>
@@ -31,8 +49,9 @@
     <p>During my time at CERN I have had the opportunity to work with different teams (HR, CERN Hotel representatives, external consultants) as well as with different people in our section while implementing diverse projects together. Therefore, my focus is not only on my personal technical level improvement, but also on better understanding of business processes and needs of the whole team, and enhancing of communication skills.</p>
     <p>I spend a lot of time on independent study. During the last year, I launched the technical blog of mine, designed several widgets for open-source Linux window manager Awesome, deepened my knowledge of Java, Linux, Ruby, Python</p>
 
+    <!-- ---------- -->
     <!-- Employment -->
-
+    <!-- ---------- -->
     <h2 class="section" id="employment"><span>Employment</span></h2>
 
     <div class="positionline">
@@ -53,7 +72,7 @@
 
     <div class="positionline">
       <h3 id="software-developer-upas-pjas-cern-october-2012-september-2014-">Software Developer (UPAS/PJAS), CERN</h3>
-      <h4>October 2012 – September 2014</h4>
+      <h4><em>October 2012 – September 2014</em></h4>
     </div>
     <p>I worked in GS-AIS-EB (Electronic Business) section for EDH (Electronic Document Handling) system which covers many life aspects at CERN (such as absences, HR&amp;Training, purchasing, logistics and safety). In this role I created EDH documents and improved functionality of existing ones. I worked in a team of 8-10 people, we were using agile software development with Scrum.</p>
     <p><strong>Selected Accomplishments</strong>:</p>
@@ -74,27 +93,67 @@
 
     <div class="positionline">
       <h3 id="software-developer-probusinessbank-bank-october-2011-july-2012-">Software Developer, Probusinessbank bank</h3>
-      <h4>October 2011 – July 2012</h4>
+      <h4><em>October 2011 – July 2012</em></h4>
     </div>
     <p>Development of web-services to communicate with external systems such as credit agencies, payment systems. Extending functionality of Mobile banking system, server-side part. Development of web-applications for internal bank needs. Development of Web-Service in order to generate PDF reports using XSL-FO transformations.</p>
+
+    <!-- ---------------- -->
+    <!-- Technical Skills -->
+    <!-- ---------------- -->
+    <h2 class="section" id="technical-skills"><span>Technical skills</span></h2>
+
+    <div>
+      <div id="container3">
+        <div id="container2">
+          <div id="container1">
+            <div id="col1">
+              <p><strong>Back-End</strong></p>
+              <ul class="skillset">
+                <li>Java Standart/Enterprise Editions</li>
+                <li>Spring, Maven, JUnit, Mockito</li>
+                <li>PL/SQL, Oracle, PostgreSQL, MySQL</li>
+                <li>JSP, SOAP/REST, Servlets</li>
+                <li>Alfresco, CMS, SOLR</li>
+              </ul>
+
+            </div>
+            <div id="col2">
+              <p><strong>Front-End</strong></p>
+              <ul class="skillset">
+                <li>JavaScript, HTML, CSS (SCSS, LESS)</li>
+                <li>Jekyll</li>
+                <li>YUI, DOJO</li>
+                <li>BootStrap</li>
+              </ul>
+            </div>
+            <div id="col3">
+              <p><strong>Others</strong></p>
+              <ul class="skillset">
+                <li>Regular Expressions</li>
+                <li>Linux/Windows</li>
+                <li>Idea/Eclipse/Netbeans</li>
+                <li>Attlassian Tools</li>
+                <li>Ruby, Python, Lua, Erlang</li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ------------- -->
+    <!-- Side Projects -->
+    <!-- ------------- -->
+    <h2 class="section" id="side-projects"><span>Side Projects</span></h2>
+
+    <p><strong>Technical Blog</strong> - <a href="http://pavelmakhov.com">http://pavelmakhov.com</a></p>
+    <p><strong>Awesome WM</strong> (<a href="https://github.com/streetturtle/AwesomeWM">https://github.com/streetturtle/AwesomeWM</a>) - collection of widgets for the Awesome Window Manager for Linux. Written in Lua and Python.</p>
+    <p><strong>AppDynamics Extensions</strong> (<a href="https://github.com/streetturtle/AppDynamics-Extensions">https://github.com/streetturtle/AppDynamics-Extensions</a>) - several extensions for AppDynamics I developed them because out-of-the box extensions are written in Java and it is hard to maintain and customize them.</p>
+    <p><strong>jekyll-clean-dark</strong> (<a href="https://github.com/streetturtle/jekyll-clean-dark">https://github.com/streetturtle/jekyll-clean-dark</a>) - theme for Jekyll - static site generator. I created this theme for myself and then published it as a separate project.</p>
+
 
     <h2 class="section" id="education"><span>Education</span></h2>
 
     <h3 id="master-computer-science-national-research-university-of-electronic-technology-moscow-2007-2012-">Master Computer Science, National Research University of Electronic Technology (Moscow), <em>2007 – 2012</em></h3>
 
-    <h2 class="section" id="side-projects"><span>Side Projects</span></h2>
-
-    <p><strong>Technical Blog</strong> - <a href="http://pavelmakhov.com">http://pavelmakhov.com</a></p>
-    <p><strong>jekyll-clean-dark</strong> (<a href="https://github.com/streetturtle/jekyll-clean-dark">https://github.com/streetturtle/jekyll-clean-dark</a>) - theme for Jekyll - static site generator. I created this theme for myself and then published it as a separate project.</p>
-    <p><strong>Awesome WM</strong> (<a href="https://github.com/streetturtle/AwesomeWM">https://github.com/streetturtle/AwesomeWM</a>) - collection of widgets for the Awesome Window Manager for Linux. Written in Lua and Python.</p>
-
-    <h2 class="section" id="technical-skills"><span>Technical skills</span></h2>
-
-    <p><strong>Back-End</strong>: Java, Spring, Maven, Lua, Ruby, Python</p>
-    <p><strong>Front-End</strong>: HTML, CSS</p>
-    <p><strong>Database</strong>: SQL, PL/SQL, Oracle, MySQL, PostgreSQL, Sybase</p>
-    <p><strong>ECM</strong>: Alfresco, DM and RM concepts</p>
-    <p><strong>OS</strong>: Linux</p>
 
     <h2 class="section" id="personal-attributes"><span>Personal Attributes</span></h2>
 

@@ -1,39 +1,49 @@
 body {
-	font-family: Garamond, serif;
-	background: none;
-	color: black;
+  font-family: Garamond, serif;
+  background: none;
+  color: black;
+  background-color: gray;
 }
-
 .page {
   width: 210mm;
   min-height: 297mm;
   margin: 10mm auto;
+  padding: 20px;
+  background-color: white;
 }
-
-.personal-info
-{
-    list-style-type: none;
+h1 {
+  text-align: center
 }
-
+h1, h2, h3, h4 {
+  font-family: Verdana, serif;
+}
+.personal-info {
+  list-style-type: none;
+  text-align: right;
+}
+.skillset {
+/*  list-style-type: none;*/
+  padding-left: 10px;
+}
 .positionline {
   padding: 20 0 30 0;
 }
 .positionline h3 {
   display: inline;
-  text-align:left;
-  float:left;
+  text-align: left;
+  float: left;
   margin: 0;
 }
 .positionline h4 {
   display: inline;
-  text-align:right;
-  float:right;
+  text-align: right;
+  float: right;
   margin: 0;
 }
-
 .section {
   line-height: 0.5;
   text-align: center;
+  padding-top: 30px;
 }
 .section span {
   display: inline-block;
@@ -45,7 +55,7 @@ body {
   position: absolute;
   height: 5px;
   border-bottom: 1px solid black;
-/*  border-top: 1px solid black;*/
+  /*  border-top: 1px solid black;*/
   top: 0;
   width: 200px;
 }
@@ -56,4 +66,46 @@ body {
 .section span:after {
   left: 100%;
   margin-left: 15px;
+}
+
+/* Technical skills columns*/
+#container3 {
+  clear: left;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+}
+#container2 {
+  clear: left;
+  float: left;
+  width: 100%;
+  position: relative;
+  right: 33.333%;
+}
+#container1 {
+  float: left;
+  width: 100%;
+  position: relative;
+  right: 33.33%;
+}
+#col1 {
+  float: left;
+  width: 29.33%;
+  position: relative;
+  left: 68.67%;
+  overflow: hidden;
+}
+#col2 {
+  float: left;
+  width: 29.33%;
+  position: relative;
+  left: 72.67%;
+  overflow: hidden;
+}
+#col3 {
+  float: left;
+  width: 29.33%;
+  position: relative;
+  left: 76.67%;
+  overflow: hidden;
 }
