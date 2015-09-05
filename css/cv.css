@@ -5,13 +5,15 @@ body {
   background-color: gray;
 }
 .page {
+  font-family: Verdana, serif;
+  font-size: 13px;
   width: 210mm;
   min-height: 297mm;
   margin: 10mm auto;
   padding: 20px;
   background-color: white;
 }
-h1 {
+h1, #software-developer {
   text-align: center
 }
 h1, h2, h3, h4 {
@@ -23,10 +25,14 @@ h1, h2, h3, h4 {
 }
 .skillset {
 /*  list-style-type: none;*/
-  padding-left: 10px;
+  padding-left: 0px;
+}
+
+#col1 p, #col2 p, #col3 p{
+  text-align: center;
 }
 .positionline {
-  padding: 20 0 30 0;
+  padding: 20 30 30 30;
 }
 .positionline h3 {
   display: inline;
