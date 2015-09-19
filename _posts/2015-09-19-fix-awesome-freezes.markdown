@@ -11,7 +11,7 @@ tags:
 
 ## Freeze problem 
 
-Let's say we have a text widget which displays output of some script (get unread emails for instance). And sometimes execution of this script takes some time. Since lua is not multi-threaded you'll have a 'freeze' - you won't be able to interact with Awesome (switch tags, open Awesome menu, etc.).    
+Let's say we have a text widget which displays output of some script (get unread emails for instance). And sometimes execution of this script takes some time. Since lua is not multi-threaded you'll have a 'freeze' - you won't be able to interact with Awesome (switch tags, open Awesome menu, etc.) because Awesome will wait for the response.
 
 I will demonstrate it on a simple example. Let's say I have a python script which sleeps for 5 seondns and then returns some string, sleep.py:
 
@@ -25,7 +25,7 @@ print 'wow'
 
 ## Pread example
 
-Using `awful.util.pread` let's call this script:
+By using `awful.util.pread` Awewsome will just wait untill execution of a script is finished. To check it let's create a text widget in a separate lus file:
 
 {% highlight lua %}
 local wibox = require("wibox")
@@ -102,3 +102,5 @@ dbus.connect_signal("com.console.sleep",
 {% endhighlight lua %}
 
 ## Conclusion
+
+For widgets, wchich uses scripts which could take some time to run, like calling some service use DBus :)
