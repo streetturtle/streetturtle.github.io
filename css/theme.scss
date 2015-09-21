@@ -188,6 +188,12 @@ ul.social-media {
       background-image: url("./social/careers.svg");
     }
   }
+  li a.rss {
+    background-image: url("./social/rss.svg");
+    &:hover {
+      background-image: url("./social/rss.svg");
+    }
+  }
 }
 
 //********************************************************

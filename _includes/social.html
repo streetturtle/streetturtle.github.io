@@ -52,4 +52,12 @@
     </li>
     {% endif %}
 
+    {% if site.social.rss %}
+    <li>
+        <a title="{{ site.social.rss }} RSS"
+            href="{{site.url}}/{{ site.social.rss }}"
+            class="rss wc-img-replace" target="_blank">RSS</a>
+    </li>
+    {% endif %}
+
 </ul>
