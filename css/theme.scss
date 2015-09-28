@@ -294,3 +294,31 @@ nav.shrink .navbar-toggle {
   margin-top: 80px;
   text-align: center;
 }
+
+
+#dnd-input{
+  filter: alpha(opacity=0);      // hides input
+  opacity: 0;                    // hides input
+  padding: 25px 26px 25px 26px;  // 'increases' input area
+  cursor: pointer;               // cusror: pointer :)
+}
+#dnd-container{
+  border: 2px dashed #333;       // border
+  -webkit-border-radius: 10px;   // radius - safari, chrome
+  -moz-border-radius: 10px;      // radius - firefox
+  border-radius: 10px;           // radius
+  text-align: center;            // aligns label
+  font-size: 20px;               // size of a label
+  background-color: #999;     // background color
+  width: 60%;                    // width of a upload area
+  margin: 0 auto;                // centers the upload div
+}
+#dnd-label{
+  position: relative;            // allows moving span
+  top: 25px;                     // moves span
+  display: block;                // allows apply height attr.
+  height: 0;                     // makes span sizeless
+}
+#dnd-form{
+  margin:0;                      // removes margins
+}
