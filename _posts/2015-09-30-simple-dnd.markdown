@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Simple DnD file upload"
-date:   2015-30-19 22:06:45
+date:   2015-09-30 22:06:45
 comments: true
 categories:
 description: Simple implementation of drag-and-drop component based on basic 'input type="file"' tag. 
