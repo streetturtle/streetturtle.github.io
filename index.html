@@ -2,21 +2,23 @@
 layout: page
 ---
 
-  {% for post in site.posts limit:10 %}
-  <h3 class="post-title">
+{% for post in site.posts limit:10 %}
+<h3 class="post-title">
     <a href="{{site.url}}{{ post.url }}">
       {{ post.title }}
     </a>
   </h3>
 
-  <div class="post-meta">
-    <ul>
-      {% for tag in post.tags %}
-      <li><a href="{{site.url}}/tag/{{ tag }}">{{ tag }}</a></li>
-      {% endfor %}
-    </ul>
-    <time>{{ post.date | date_to_string }}</time>
+<div class="post-meta">
+  <div class="post-time">
+    <i class="fa fa-calendar"></i>
+    <time>{{ page.date | date_to_string }}</time>
   </div>
+  <ul>
+    {% for tag in page.tags %}
+    <li><a href="{{ site.url }}/tag/{{ tag }}">{{ tag }}</a></li>
+    {% endfor %}
+  </ul </div>
 
   <div class="post-descr">
     <p>
@@ -24,8 +26,8 @@ layout: page
     </p>
   </div>
   {% endfor %}
-<!--</div>-->
-<!--</div>-->
+  <!--</div>-->
+  <!--</div>-->
 
   <div class="post-footer">
     <div class="column-full">
