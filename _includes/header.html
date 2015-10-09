@@ -21,19 +21,21 @@
   {% include yandex-metrika.html %}
 
   <script type="text/javascript">
-    /* To avoid render blocking css */
-    var cb = function() {
-      var l = document.createElement('link');
-      l.rel = 'stylesheet';
-      l.href = 'http://fonts.googleapis.com/css?family=Ubuntu+Mono&subset=latin';
-      var h = document.getElementsByTagName('head')[0];
-      h.parentNode.insertBefore(l, h);
-    };
-    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-      webkitRequestAnimationFrame || msRequestAnimationFrame;
-    if (raf) raf(cb);
-    else window.addEventListener('load', cb);
-  </script>
+  WebFontConfig = {
+    google: {
+      families: ['Ubuntu::latin']
+    }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
 
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
