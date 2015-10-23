@@ -2,12 +2,11 @@
   <h1>Related By Tags</h1>
   <ul>
     {% assign posts = site.posts | sort: 'title' %}
-    {% for post in posts %}
-      {% assign isAdded = false %}
+    {% for post in posts %} {% assign isAdded = false %}
       {% for tagAll in post.tags %}
         {% for tag in page.tags %}
           {% if tagAll == tag and page.title != post.title and isAdded == false %}
-            <li><a href="{{ post.title | prepend: site.url }}">{{ post.title }}</a></li>
+            <li><a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a></li>
             {% assign isAdded = true %}
           {% endif %}
         {% endfor %}
@@ -19,8 +18,7 @@
 <div class="sidebar">
   <h1>Tags</h1>
   <ul>
-    {% assign tags = (site.tags | sort:0) %}
-    {% for tag in tags %}
+    {% assign tags = (site.tags | sort:0) %} {% for tag in tags %}
       <li><a href="/tag/{{ tag[0] }}">{{ tag[0] }}</a></li>
     {% endfor %}
   </ul>
