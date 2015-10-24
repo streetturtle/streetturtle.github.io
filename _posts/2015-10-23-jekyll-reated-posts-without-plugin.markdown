@@ -45,7 +45,8 @@ And (just in case) here is how to create a sorted list of all used tags:
 {% raw %}
 <h1>Tags</h1>
 <ul>
-  {% assign tags = (site.tags | sort:0) %} {% for tag in tags %}
+  {% assign tags = (site.tags | sort:0) %} 
+  {% for tag in tags %}
     <li><a href="/tag/{{ tag[0] }}">{{ tag[0] }}</a></li>
   {% endfor %}
 </ul>
