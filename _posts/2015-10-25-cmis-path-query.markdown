@@ -22,7 +22,7 @@ where contains('PATH:\"/app:company_home/st:sites/cm:MySite/cm:documentLibrary/c
 
 Or if you have something similar to the following structure:
 
-{% raw %}
+{% highlight bash %}
 MySite
 ├── MyFolder1
 │   ├── Document1.pdf
@@ -35,23 +35,23 @@ MySite
 └── MyFolder3
     ├── Document7.pdf
     └── Document8.pdf
-{% raw %}
+{% endhighlight bash %}
 
 and want to get all documents from those 3 folders, you can easily skip them by replacing their names with `*`:
 
 {% highlight sql %}
 select * 
 from cmis:document 
-where contains('PATH:\"/app:company_home/st:sites/cm:MySite/*/*"')
+where contains('PATH:\"/app:company_home/st:sites/cm:documentLibrary/cm:MySite/*/*"')
 {% endhighlight sql%}
 
 ## How to test
 
 Sometimes it is needed to run/test some query before putting it in code. Alfresco provides very convenient tool for that - Node Browser (in Admin Tools window). But there is limit on how many results it can return. In case your query returns more you can use following GET webscript, changing `maxResults` parameter:
 
-{% highlight %}
+{% highlight bash %}
 https://localhost:8080/share/proxy/alfresco/slingshot/node/search?q=query&lang=cmis-alfresco&store=workspace%3A%2F%2FSpacesStore&maxResults=1000
-{% endhighlight %}
+{% endhighlight bash %}
 
 ## Space and other special character problem
 
@@ -62,7 +62,7 @@ ERROR [solr.core.SolrCore] [http-bio-8080-exec-7] org.apache.solr.common.SolrExc
 Unexpected 'Folder'
 	...
 Caused by: org.apache.solr.search.SyntaxError: org.apache.lucene.queryparser.classic.ParseException: Failed to parse XPath...
-Unexpected 'for_x0020_extraordinary_x0020_service_x0020_PAF'
+Unexpected 'Folder'
 	...
 Caused by: org.apache.lucene.queryparser.classic.ParseException: Failed to parse XPath...
 Unexpected 'Folder'
