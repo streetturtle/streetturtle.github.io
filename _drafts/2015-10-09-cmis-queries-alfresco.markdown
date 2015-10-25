@@ -1,26 +1,59 @@
 ---
 layout: post
-title: "Useful CMIS queries"
-date: 2015-10-09 16:25:06 -0700
+title: "CMIS path query"
+date: 2015-10-25 16:25:06
 comments: true
 tags: 
  - CMIS
  - alfresco
-description: I would like to share some CMIS queries for people (like me) who are not very familiar with CMIS. 
+description: Query for path in CMIS is quite powerful tool to get folders/documents from repository. Here is some useful examples/tricks.   
 comments: true
 ---
 
-## Introduction
-
-Sometimes it is needed to run/test some query before putting it in code. Alfresco provides very convenient tool for that - Node Browser (in Admin Tools window).
-
 ## Search by path
 
-{% highlight sql linenos %}
+Search by path is very convenient, you can return all documents/folders from folder:
+
+{% highlight sql %}
 select * 
-from rma:recordCategory 
-where contains('PATH:\"/app:company_home/st:sites/cm:rm/cm:documentLibrary/cm:HR/cm:MyFolder"')
+from cmis:document 
+where contains('PATH:\"/app:company_home/st:sites/cm:MySite/cm:documentLibrary/cm:MyFolder/*"')
 {% endhighlight sql%}
+
+Or if you have something similar to the following structure:
+
+{% raw %}
+MySite
+├── MyFolder1
+│   ├── Document1.pdf
+│   ├── Document2.pdf
+│   └── Document3.pdf
+├── MyFolder2
+│   ├── Document4.pdf
+│   ├── Document5.pdf
+│   └── Document6.pdf
+└── MyFolder3
+    ├── Document7.pdf
+    └── Document8.pdf
+{% raw %}
+
+and want to get all documents from those 3 folders, you can easily skip them by replacing their names with `*`:
+
+{% highlight sql %}
+select * 
+from cmis:document 
+where contains('PATH:\"/app:company_home/st:sites/cm:MySite/*/*"')
+{% endhighlight sql%}
+
+## How to test
+
+Sometimes it is needed to run/test some query before putting it in code. Alfresco provides very convenient tool for that - Node Browser (in Admin Tools window). But there is limit on how many results it can return. In case your query returns more you can use following GET webscript, changing `maxResults` parameter:
+
+{% highlight %}
+https://localhost:8080/share/proxy/alfresco/slingshot/node/search?q=query&lang=cmis-alfresco&store=workspace%3A%2F%2FSpacesStore&maxResults=1000
+{% endhighlight %}
+
+## Space and other special character problem
 
 The tricky part here is when you have space in your folder name. Running query without escaping it (for example for 'My Folder') will bring following exception:
 
@@ -32,7 +65,7 @@ Caused by: org.apache.solr.search.SyntaxError: org.apache.lucene.queryparser.cla
 Unexpected 'for_x0020_extraordinary_x0020_service_x0020_PAF'
 	...
 Caused by: org.apache.lucene.queryparser.classic.ParseException: Failed to parse XPath...
-Unexpected 'for_x0020_extraordinary_x0020_service_x0020_PAF'
+Unexpected 'Folder'
 	at org.alfresco.solr.query.Solr4QueryParser.getFieldQuery(Solr4QueryParser.java:689)
 	at org.alfresco.solr.query.Solr4QueryParser.getFieldQuery(Solr4QueryParser.java:212)
 	at org.alfresco.solr.query.Lucene4QueryParserAdaptor.getFieldQuery(Lucene4QueryParserAdaptor.java:233)
