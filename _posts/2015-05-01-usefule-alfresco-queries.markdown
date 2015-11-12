@@ -86,12 +86,12 @@ This query returns list of users and number of documents uploaded by them:
 
 {% highlight sql%}
 select audit_creator as uploaded_by, count(*) as doc_uploads
-from alf_node nd, alf_qname qn, alf_namespace ns
-where qn.ns_id = ns.id
-  and nd.type_qname_id = qn.id
-  and ns.uri = 'http://www.alfresco.org/model/content/1.0'
-  and qn.local_name = 'content'
-group by audit_creator;
+  from alf_node nd, alf_qname qn, alf_namespace ns
+ where qn.ns_id = ns.id
+   and nd.type_qname_id = qn.id
+   and ns.uri = 'http://www.alfresco.org/model/content/1.0'
+   and qn.local_name = 'content'
+ group by audit_creator;
 {% endhighlight sql%}
 
 ## Number of users
@@ -100,9 +100,9 @@ Total number of nodes with type `person` which is basically number of users:
 
 {% highlight sql%}
 select count(*)
-from alf_node nd, alf_qname qn
-where nd.type_qname_id = qn.id
-  and qn.local_name = 'person';
+  from alf_node nd, alf_qname qn
+ where nd.type_qname_id = qn.id
+   and qn.local_name = 'person';
 {% endhighlight sql%}
 
 ## List of users
@@ -110,19 +110,17 @@ where nd.type_qname_id = qn.id
 This query returns list of users from the Alfresco database:
 
 {% highlight sql %}
-select 
-  np1.string_value as first_name, 
-  np2.string_value as last_name, 
-  np3.string_value as username
-from 
-  alf_node_properties np1, 
-  alf_node_properties np2, 
-  alf_node_properties np3
-where np1.qname_id in (select id from alf_qname where local_name in ('firstName'))
-  and np2.qname_id in (select id from alf_qname where local_name in ('lastName'))
-  and np3.qname_id in (select id from alf_qname where local_name in ('userName'))
-  and np1.node_id = np2.node_id and np1.node_id = np3.node_id
-order by 1;
+select np1.string_value as first_name, 
+       np2.string_value as last_name, 
+       np3.string_value as username
+  from alf_node_properties np1, 
+       alf_node_properties np2, 
+       alf_node_properties np3
+ where np1.qname_id in (select id from alf_qname where local_name in ('firstName'))
+   and np2.qname_id in (select id from alf_qname where local_name in ('lastName'))
+   and np3.qname_id in (select id from alf_qname where local_name in ('userName'))
+   and np1.node_id = np2.node_id and np1.node_id = np3.node_id
+ order by 1;
 {% endhighlight sql %}
 
 ## Get node's properties
@@ -147,10 +145,10 @@ with tt as (
     where np.qname_id =  qn.id
       and qn.ns_id = ns.id)
 select * from tt
-where qname = 'name'
-  and namespace = 'http://www.alfresco.org/model/content/1.0'
-  and VALUE = 'Document name';
-where node_id = 19304; -- by node id
+ where qname = 'name'
+   and namespace = 'http://www.alfresco.org/model/content/1.0'
+   and VALUE = 'Document name';
+ where node_id = 19304; -- by node id
 {% endhighlight sql %}
 
 More queries are coming! Stay tuned =)
