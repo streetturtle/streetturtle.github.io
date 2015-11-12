@@ -134,59 +134,11 @@ ul.social-media {
   li > a {
     width: 45px;
     height: 45px;
-    border-radius: 0.25em;
-    @include transition(background-color 0.2s);
-    border-bottom-color: transparent;
+    @include transition(color 0.2s);
     display: inline-block;
-    overflow: hidden;
-    text-indent: 100%;
-    white-space: nowrap;
-    background-repeat: no-repeat;
-    background-position: center center;
+    color: white;
     &:hover {
-//      background-color: #3CA2A2;
-    }
-  }
-  li a.github {
-    background-image: url("./social/githubWh.svg");
-    &:hover {
-      background-image: url("./social/githubGr.svg");
-    }
-  }
-  li a.stackoverflow {
-    background-image: url("./social/stackoverflowWh.svg");
-    &:hover {
-      background-image: url("./social/stackoverflowGr.svg");
-    }
-  }
-  li a.linkedin {
-    background-image: url("./social/linkedinWh.svg");
-    &:hover {
-      background-image: url("./social/linkedinGr.svg");
-    }
-  }
-  li a.instagram {
-    background-image: url("./social/instagramWh.svg");
-    &:hover {
-      background-image: url("./social/instagramGr.svg");
-    }
-  }
-  li a.lastfm {
-    background-image: url("./social/lastfmWh.svg");
-    &:hover {
-      background-image: url("./social/lastfmGr.svg");
-    }
-  }
-  li a.careers {
-    background-image: url("./social/careers.svg");
-    &:hover {
-      background-image: url("./social/careers.svg");
-    }
-  }
-  li a.rss {
-    background-image: url("./social/rssWh.svg");
-    &:hover {
-      background-image: url("./social/rssGr.svg");
+      color: #3CA2A2;
     }
   }
 }
