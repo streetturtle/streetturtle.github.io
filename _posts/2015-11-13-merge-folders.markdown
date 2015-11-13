@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Merge folders in Alfresco"
-date: 2015-13-09 19:21:06
+date: 2015-11-13 19:21:06
 comments: true
 tags: 
   - alfresco
