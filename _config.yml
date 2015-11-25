@@ -30,7 +30,7 @@ disqus: streetturtle
 comments: true
 
 permalink: /:year/:month/:title
-#paginate: 3
+paginate: 10
 
 highlighter: pygments
 markdown: redcarpet

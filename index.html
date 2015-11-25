@@ -2,34 +2,50 @@
 layout: page
 ---
 
-{% for post in site.posts limit:10 %}
-<h3 class="post-title">
-  <a href="{{site.url | append: post.url }}">
-    {{ post.title }}
-  </a>
-</h3>
+{% for post in paginator.posts %}
+  <h3 class="post-title">
+    <a href="{{site.url | append: post.url }}">
+      {{ post.title }}
+    </a>
+  </h3>
 
-<div class="post-meta">
-  <div class="post-time">
-    <i class="fa fa-calendar"></i>
-    <time>{{ post.date | date_to_string }}</time>
+  <div class="post-meta">
+    <div class="post-time">
+      <i class="fa fa-calendar"></i>
+      <time>{{ post.date | date_to_string }}</time>
+    </div>
+    <ul>
+      {% for tag in post.tags %}
+      <li><a href="{{ site.url | append: '/tag/' | append:  tag }}">{{ tag }}</a></li>
+      {% endfor %}
+    </ul>
   </div>
-  <ul>
-    {% for tag in post.tags %}
-    <li><a href="{{ site.url | append: '/tag/' | append:  tag }}">{{ tag }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
 
-<div class="post-descr">
-  <p>
-    {{ post.description }}
-  </p>
-</div>
+  <div class="post-descr">
+    <p>
+      {{ post.description }}
+    </p>
+  </div>
 {% endfor %}
 
 <div class="post-footer">
   <div class="column-full">
-    <h3><a href="{{ site.url | append: site.baseurl | append: '/archive.html' }}">Blog archive</a></h3>
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="button"><</a>
+  {% else %}
+    <span class="button"><</span>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="button">></a>
+  {% else %}
+    <span class="button ">></span>
+  {% endif %}
+</div>
+
+
+
+<!--     <h3><a href="{{ site.url | append: site.baseurl | append: '/archive.html' }}">Blog archive</a></h3>-->
   </div>
 </div>

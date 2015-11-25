@@ -173,6 +173,40 @@ div.post-meta {
   }
 }
 
+.button{
+  background-color: #555;
+  border-bottom-color: #666;
+  border-bottom-left-radius: 2px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+  border-left-color: #666;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: #666;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-color: #999;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: inline-block;
+  height: 32px;
+  line-height: 31px;
+  padding-left: 27px;
+  padding-right: 27px;
+  text-decoration: none !important;
+;
+}
+.button a:hover{
+  text-decoration: none !important;
+}
+
 .post-footer {
 
   height: 40px;
