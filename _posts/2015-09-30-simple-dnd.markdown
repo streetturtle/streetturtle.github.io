@@ -14,8 +14,6 @@ tags:
 
 For one of the projects I'm working on I discovered that default html tag for uploading files supports drag-and-drop action. But not in IE. I would like to share how to create simple drag-and-drop without any JS libraries which will have slightly different appearance in all version of IE. So let's start.
 
-## 
-
 Create `<input type="file">` element like this:
 
 {% highlight html %}
@@ -98,7 +96,6 @@ We'll have this element - which supports drag&drop upload as well as uploading b
     padding: 10px 0px 10px 0px;
   }
 </style>
-<![endif]-->
 
 <!-- IE 10, 11 -->
 <style type="text/css">

@@ -7,7 +7,7 @@ title: About
 
 I'm a software developer, was born in Moscow and currenlty I'm living in Geneva, Switzerland.
 
-![My helpful screenshot]({{ site.url }}/images/ava.jpg)
+![My helpful screenshot]({{ site.url }}/images/ava.jpg){:.center-image}
 
 ### ...this blog
 

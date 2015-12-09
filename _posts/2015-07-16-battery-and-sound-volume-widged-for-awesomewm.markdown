@@ -28,20 +28,21 @@ This widget uses the output of acpi tool.
 
 - install `acpi` tool:
 
-~~~~~~~
+{% highlight bash %}
 sudo apt-get install acpi
-~~~~~~~
+{% endhighlight bash %}
 
 - clone/copy battery.lua file and battery-icons folder to your ~/home/username/.config/awesome/ folder;
 
 - include `battery.lua` and add battery widget to your wibox in rc.lua:
 
-~~~~~~~
+{% highlight lua %}
 require("battery")
 right_layout:add(batteryIcon)
-~~~~~~~
+{% endhighlight lua %}
 
 ## Volume widget
+
 Simple and easy-to-install widget for Awesome Window Manager.
 
 This widget represents the sound level: ![Volume Wiget]({{ site.url }}/images/volWid.png)
@@ -52,13 +53,14 @@ This widget represents the sound level: ![Volume Wiget]({{ site.url }}/images/vo
 
 - change path to the icons in `volume.lua`:
 
-~~~~~~~
+{% highlight lua %}
 widget:set_image("/home/<username>/.config/awesome/volume-icons/" .. volumeLevel .. ".png")
-~~~~~~~
+{% endhighlight lua %}
+
 
 - include `volume.lua` and add volume widget to your wibox in rc.lua:
 
-~~~~~~~
+{% highlight lua %}
 require("volume")
 right_layout:add(volume_widget)
-~~~~~~~
+{% endhighlight lua %}

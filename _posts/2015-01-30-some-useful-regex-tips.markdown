@@ -13,7 +13,9 @@ tags:
 
 Usually regular expressions are very long and could be almost unreadable. Even if you wrote it by yourself sometime ago. In such cases comments are very useful. To use it you need to turn on [free-spacing mode](http://www.regular-expressions.info/freespacing.html) by adding `x` modifier to your expression. Comment starts with a hashtag `#`. Let's parse date in this format: YYYY/MM/DD (year should be between 1000 and 2012 and assume all months have 30 days). 
 
-    (1\d{3}|20(0\d|1[0-2]))\/(0[1-9]|1[0-2])\/(0[1-9]|[012]\d|30)
+{% highlight bash %}
+(1\d{3}|20(0\d|1[0-2]))\/(0[1-9]|1[0-2])\/(0[1-9]|[012]\d|30)
+{% endhighlight bash %}
 		
 And the same regex with comments:
 

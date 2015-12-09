@@ -54,7 +54,9 @@ VIRTUAL1 disconnected (normal left inverted right x axis y axis)
 
 From this output we can see that I have two monitors, one is connected using HDMI port and another using VGA. HDMI is at the top left position (1920x1200+**0+0**) and VGA in on top right (1920x1200+***1920+0**). To swap them in my case I need to run:
  
-    xrandr --output VGA1 --left-of HDMI1
+{% highlight bash %}
+xrandr --output VGA1 --left-of HDMI1
+{% endhighlight bash %}
     
 Done!
 

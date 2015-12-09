@@ -190,7 +190,9 @@ a.page.active {
 //   | __ / -_) _` / _` / -_) '_|
 //   |_||_\___\__,_\__,_\___|_|
 //
-
+.navbar{
+  border-top: 3px #3CA2A2 solid;
+}
 nav a {
   padding-top: 20px !important;
   padding-bottom: 20px !important;
@@ -202,7 +204,7 @@ nav .navbar-toggle {
 }
 .navbar-brand {
   font-size: 30px;
-  color: #3CA2A2 !important;
+//  color: #3CA2A2 !important;
 }
 nav.navbar.shrink {
   min-height: 15px;
@@ -260,6 +262,11 @@ nav.shrink .navbar-toggle {
 }
 
 
+.center-image
+{
+  margin: 0 auto;
+  display: block;
+}
 
 
 
