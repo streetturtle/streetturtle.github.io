@@ -3,7 +3,6 @@
 name: Pavel Makhov
 description: Software Developer
 
-# Url is currently only used only for the RSS feed in feed.xml
 url: http://streetturtle.github.io
 #url: http://localhost:4000
 
@@ -33,8 +32,11 @@ permalink: /:year/:month/:title
 paginate: 10
 
 highlighter: pygments
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+#markdown: redcarpet
+#redcarpet:
+#  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+markdown: kramdown
+kramdown:
+  input: GFM # Enable GitHub Flavored Markdown (fenced code blocks)
 
 exclude: ['README.md', 'LICENSE']
