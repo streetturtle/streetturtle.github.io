@@ -1,0 +1,69 @@
+{% if page.share == true %}
+<!-- Social Button HTML -->
+
+<div class="share-bar">
+ Share:
+<!-- Twitter -->
+<a href="https://twitter.com/share?
+    text={{ page.title }}
+    &url={{ page.shorturl }}
+    &via=" class="share-btn twitter">
+  <i class="fa fa-twitter"></i>
+</a>
+
+<!-- Google Plus -->
+<!--the Google+ link url;
+    base = https://plus.google.com/share? -->
+
+<a href="https://plus.google.com/share?
+    url=http://tomhohenstein.com{{ page.url }}
+    &hl=en-US"
+    onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"
+    class="share-btn google-plus">
+  <i class="fa fa-google-plus"></i>
+</a>
+
+<!-- Facebook -->
+<a href="https://www.facebook.com/dialog/share
+    ?app_id=946372735391329&display=popup
+    &href={{ site.url }}{{ page.url }}
+    &redirect_uri={{ site.url }}{{ page.url }}"
+    class="share-btn facebook">
+  <i class="fa fa-facebook"></i>
+</a>
+
+<!-- StumbleUpon (url, title) -->
+<!--
+<a href="http://www.stumbleupon.com/submit?url=<URL>&title=<TITLE>" target="_blank" class="share-btn stumbleupon">
+  <i class="fa fa-stumbleupon"></i>
+</a>
+-->
+
+<!-- Reddit (url, title) -->
+<!--
+<a href="http://reddit.com/submit?url=<URL>&title=<TITLE>" target="_blank" class="share-btn reddit">
+  <i class="fa fa-reddit"></i>
+</a>
+-->
+
+<!-- LinkedIn -->
+<!--the LinkedIn base url
+    http://www.linkedin.com/shareArticle?mini=true -->
+
+<a href="http://www.linkedin.com/shareArticle
+    ?mini=true
+    &url={{ site.url }}{{ page.url }}
+    &title={{ page.title }}
+    &source={{ site.title }}"
+     class="share-btn linkedin">
+  <i class="fa fa-linkedin"></i>
+</a>
+
+<!-- Email -->
+<a href="mailto:?subject=<SUBJECT&body=<BODY>" target="_blank" class="share-btn email">
+  <i class="fa fa-envelope"></i>
+</a>
+</div>
+
+
+{% endif %}
