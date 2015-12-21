@@ -60,9 +60,9 @@ In case you use pagination and have following exception while building your site
 
 Add following line to your **config.xml**:
 
-{% highlight yml %}
+{% highlight bash %}
 gems: [jekyll-paginate]
-{% endhighlight yml %}
+{% endhighlight bash %}
 
 
 
