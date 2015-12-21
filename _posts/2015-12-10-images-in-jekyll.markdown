@@ -22,12 +22,10 @@ Of course you can insert html `img` tag directly in the markdown file. But it's 
 
 Here is the markdown for the images above:
 
-{% highlight bash %}
-{% raw %}
+{% highlight markdown %}
 ![Awesome-screenshot]({{site.url}}/images/awesome_scrnsht.png);
 ![insta-bears]({{site.url}}/images/insta-bears.jpg){:.center-image}
-{% endraw %}
-{% endhighlight bash %}
+{% endhighlight markdown %}
 
 > This approach will work with **kramdown** converter, **redcarpet** does not support this feature.
 {: .note}
