@@ -1,8 +1,11 @@
 <div class="sidebar ">
-  <h1>Related By Tags</h1>
+  {% if page.tags %}
+    <h1>Related By Tags</h1>
+  {% endif %}
   <ul>
     {% assign posts = site.posts | sort: 'title' %}
-    {% for post in posts %} {% assign isAdded = false %}
+    {% for post in posts %}
+      {% assign isAdded = false %}
       {% for tagAll in post.tags %}
         {% for tag in page.tags %}
           {% if tagAll == tag and page.title != post.title and isAdded == false %}
