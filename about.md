@@ -5,7 +5,8 @@ title: About
 
 ### ...me
 
-I'm a software developer, was born in Moscow and currenlty I'm living in Geneva, Switzerland.
+I'm a professional software developer, for the last three years I've been working as a **Full Stack Java Developer** at [CERN](http://home.cern/about) - the largest particle physics laboratory in the world and the birthplace of the World Wide Web :) 
+My scope of interest is Java and Java related technologies, Linux, Alfresco. 
 
 ![My helpful screenshot]({{ site.url }}/images/ava.jpg){:.center-image}
 

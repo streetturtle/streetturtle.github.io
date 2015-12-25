@@ -196,6 +196,7 @@ a.page.active {
 nav a {
   padding-top: 20px !important;
   padding-bottom: 20px !important;
+  @include transition(color 0.31s);
   font-size: 18px;
   font-family: Ubuntu;
 }
