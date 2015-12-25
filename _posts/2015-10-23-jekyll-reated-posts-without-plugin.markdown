@@ -19,7 +19,9 @@ Below you can find how the whole section will look like:
 
 {% highlight html linenos %}
 {% raw %}
-<h1>Related By Tags</h1>
+{% if page.tags %}
+  <h1>Related By Tags</h1>
+{% endif %}
 <ul>
   {% assign posts = site.posts | sort: 'title' %}  <!-- sort all posts --> 
   {% for post in posts %}
