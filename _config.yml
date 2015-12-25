@@ -32,7 +32,7 @@ permalink: /:year/:month/:title
 gems: [jekyll-paginate]
 paginate: 10
 
-highlighter: rouge
+#highlighter: rouge
 #markdown: redcarpet
 #redcarpet:
 #  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
