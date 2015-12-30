@@ -1,18 +1,20 @@
 ---
 layout: post
-title:  "Simple DnD file upload"
+title:  "Simple DnD file upload without js libraries"
 date:   2015-09-30 22:06:45
 comments: true
 categories:
-description: Simple implementation of drag-and-drop component based on basic 'input type="file"' tag. 
+description: Simple implementation of drag-and-drop component based on basic 'input type="file"' HTML tag without any js libraries. 
 tags: 
 - html
 - css
 ---
 
+{% include dndCSS.html %}
+
 ## Introduction
 
-For one of the projects I'm working on I discovered that default html tag for uploading files supports drag-and-drop action. But not in IE. I would like to share how to create simple drag-and-drop without any JS libraries which will have slightly different appearance in all version of IE. So let's start.
+For one of the projects I was working on I needed to have drag-and-drop component, but ideally without using any js libraries. I discovered that default html tag for uploading files (`<input type="file">`) supports drag-and-drop action. So if you drag file and drop it into this element it will be uploaded. Unfortunately this feature doesn't work in Internet Explorer. So idea is to change this component so it would look like dnd component in Chrome and Firefox and look like default component in IE. So let's start.
 
 Create `<input type="file">` element like this:
 
@@ -24,7 +26,7 @@ Create `<input type="file">` element like this:
 </div>
 {% endhighlight html %}
 
-Which will by default looks following way:
+Which will look like following way by default:
 
 <div>
  <form>
@@ -121,9 +123,9 @@ We'll have this element - which supports drag&drop upload as well as uploading b
   </div>
 </div>
 
-## IE
+## Internet Explorer
 
-In IE dnd functionality is not supported by browser, so for ie we can just leave the default element by providing diffenrent css style. To do so there is conditional comments where this can be specified.
+In IE dnd functionality is not supported by browser, so for IE we can just leave the default element by providing diffenrent css style. To do so here is conditional comments where this can be specified:
 
 {% highlight html %}
 <!-- IE 7, 8, 9 -->

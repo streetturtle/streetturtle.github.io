@@ -1,0 +1,55 @@
+<style>
+#dnd-input{
+  filter: alpha(opacity=0);      /*/ hides input*/
+  opacity: 0;                    /*/ hides input*/
+  padding: 25px 26px 25px 26px;  /*/ 'increases' input area*/
+  cursor: pointer;               /*/ cusror: pointer :)*/
+}
+#dnd-container{
+  border: 2px dashed #333;       /* border*/
+  -webkit-border-radius: 10px;   /* radius - safari, chrome*/
+  -moz-border-radius: 10px;      /* radius - firefox*/
+  border-radius: 10px;           /* radius*/
+  text-align: center;            /* aligns label*/
+  font-size: 20px;               /* size of a label*/
+  background-color: #999;        /* background color*/
+  width: 60%;                    /* width of a upload area*/
+  margin: 0 auto;                /* centers the upload div*/
+}
+#dnd-label{
+  position: relative;            /* allows moving span*/
+  top: 25px;                     /* moves span*/
+  display: block;                /* allows apply height attr.*/
+  height: 0;                     /* makes span sizeless*/
+}
+#dnd-form{
+  margin:0;                      /* removes margins*/
+}
+
+#dnd-input-ie{
+  filter: alpha(opacity=1);      /* hides input*/
+  opacity: 1;                    /* hides input*/
+  padding: inherit;              /* 'increases' input area*/
+  cursor: inherit;               /* cusror: pointer :)*/
+}
+#dnd-container-ie{
+  border: none;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  border-radius: inherit;
+  text-align: inherit;
+  font-size: inherit;
+  background-color: inherit;
+  width: inherit;
+  margin: 0 auto;
+}
+#dnd-label-ie
+{
+  display: none
+}
+#file-input-ie{
+  filter: alpha(opacity=100);
+  opacity: 1;
+  padding: 5px 10px 5px 10px;
+}
+</style>

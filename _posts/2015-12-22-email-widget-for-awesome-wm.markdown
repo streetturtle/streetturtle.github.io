@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "E-mail widget for Awesom WM"
+title: "E-mail widget for Awesome WM"
 date: 2015-12-22 12:09:06
 comments: true
 tags: 
@@ -129,4 +129,5 @@ dbus.connect_signal("com.awesome.widget", function (...)
 	end )
 {% endhighlight lua %}
 
-Note that getting number of unread emails could take some time, so instead of `pread` or `spawn_with_shell` functions I use DBus, you can read more about it in [this]({{site.url}}/2015/09/fix-awesome-freezes) post.
+>Note that getting number of unread emails could take some time, so instead of `pread` or `spawn_with_shell` functions I use DBus, you can read more about it in [this]({{site.url}}/2015/09/fix-awesome-freezes) post.
+{: .note}
