@@ -1,6 +1,6 @@
 <div class="sidebar ">
   {% if page.tags %}
-    <h1>Related By Tags</h1>
+    <h2>Related By Tags</h2>
   {% endif %}
   <ul>
     {% assign posts = site.posts | sort: 'title' %}
@@ -19,7 +19,7 @@
 </div>
 
 <div class="sidebar">
-  <h1>Tags</h1>
+  <h2>Tags</h2>
   <ul>
     {% assign tags = (site.tags | sort:0) %} {% for tag in tags %}
       <li><a href="/tag/{{ tag[0] }}">{{ tag[0] }}</a></li>

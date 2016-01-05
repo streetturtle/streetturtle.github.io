@@ -17,6 +17,14 @@ body {
   background-color: #292929;
   background-image: url(./pics/triangles.png);
 }
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.17em; }
+h4 { font-size: 1.12em; }
+h5 { font-size: .83em; }
+h6 { font-size: .75em; }
+
 .copyright {
   color: #ffffff;
 }
@@ -28,9 +36,6 @@ body {
 }
 .sidebar h1 {
   color: #ddd;
-  font: {
-    size: 1.3em
-  }
 }
 .sidebar li {
   margin-top: .7em;
@@ -51,10 +56,6 @@ body {
 }
 .well h1 {
   color: #ddd;
-  font: {
-    size: 1.3em
-  }
-  ;
 }
 .author {
   color: #ee4444;
