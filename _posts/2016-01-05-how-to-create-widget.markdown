@@ -5,7 +5,7 @@ date: 2016-01-05 12:09:06
 comments: true
 tags: 
  - awesome wm
-description: Here is tutorial on how to create simple widget for Awesome WM. As an example we'll create a text widget which will show currency rate. The given approach is very flexible since we will use the output of a script, so depending on your knowledge/experience you can use any language (bash, python, ruby or even groovy or java). Another good thing here is usage of DBus to send data to the widget.
+description: Here is tutorial on how to create simple widget for Awesome WM. As an example we'll create a text widget which will show currency rate. The given approach is very flexible since we will use the output of a script, so depending on your knowledge/experience you can use any language (bash, python, ruby or even groovy or java). Another good thing here is usage of DBus to send messages between scripts and Awesome.
 comments: true
 ---
 
