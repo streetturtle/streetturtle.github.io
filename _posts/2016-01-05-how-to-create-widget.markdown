@@ -107,6 +107,19 @@ require("RatesWidget.rates") -- set the dependency
 right_layout:add(rateWidget) -- add widget 
 {% endhighlight lua %}
 
+# Conclusion
+
+Using this approach you can easily create text widgets which will display any text information - such as information about your system:
+
+{% highlight bash %}
+~ df -h /dev/sda2 | grep -P '\d\d%' -o # percentage of available place on sda2 partition
+29%
+{% endhighlight bash %}
+or output of a script, as it was shown in this example. 
+I use the same approach in [email widget]({{site.url}}/2015/12/email-widget-for-awesome-wm/): python script gets number of unread emails in my mailbox.
+You can set the timer to update widget's value as frequently as you want (for the sake of tutorial in rates widget the timeout is set to half an hour, but actually API is updated every day).
+Another good point here is using DBus to prevent Awesome from freezing, so Awesome doesn't wait for script or command to finish execution, result is sent to DBus and then it is taken from it when requested.
+
 The code could be found in the [gihub repo](https://github.com/streetturtle/AwesomeWM/tree/master/RatesWidget).
 
 If something is unclear or if there is any questions please let me know in the comments below, I will be happy to answer :)
