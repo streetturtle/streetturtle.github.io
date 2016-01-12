@@ -10,9 +10,9 @@ tags:
 - ubuntu
 ---
 
-Google keep is very useful in taking quick notes. Resently I've found out how to use is as a stand alone app in Awesome!
+Google keep is very useful in taking quick notes. Recently I've found out how to use is as a standalone app in Awesome!
 
-First step is quite easy: install Google Keep extension in Chrome, then go to apps, right click on it and press create shortcuts, in next window choose Desktop.
+First step is quite easy: install Google Keep extension in Chrome, then go to apps, right click on it and choose create shortcuts option, in next window choose Desktop.
 
 Done! But run apps using desktop entry from Awesome is not geeky at all :)
 
@@ -32,10 +32,10 @@ sudo touch keep
 sudo chmod +x keep
 {% endhighlight bash %}
 
-And insert in that file Exec part of desktop entry you've copied followed by ampersand &:
+And insert in that file Exec part of desktop entry you've copied followed by ampersand `&`:
 
 {% highlight bash %}
 /opt/google/chrome/google-chrome --profile-directory=Default --app-id=hmjkmjkepdijhoojdojkdfohbdgmmhki &
 {% endhighlight bash %}
 
-Now to rub keep you can use Mod4+r using keep command.
+Now to run keep you can use Mod4+r using `keep` command.
