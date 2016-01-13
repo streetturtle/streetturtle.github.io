@@ -5,7 +5,7 @@ date: 2016-01-12 12:09:06
 comments: true
 tags: 
  - awesome wm
-description: It's a second part ot tutorial about creating simple widgets for Awesome WM. 
+description: It's a second part of tutorial about creating simple widgets for Awesome WM. In this part we'll add a notification popup which will appear when mouse enters the widget area and will show rates for several other currencies.
 comments: true
 ---
 
