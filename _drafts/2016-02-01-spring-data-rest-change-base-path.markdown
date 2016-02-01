@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Spring Data Rest - change base path not working"
+title: "Spring Data Rest - change of base path not working"
 date: 2016-02-01 12:09:06
 comments: true
 tags: 
