@@ -6,8 +6,8 @@ comments: true
 categories:
 description:  
 tags: 
-- spring
-- angular
+- spring data rest
+- angular js
 ---
 
 Using Spring Data REST with Angular's $resource object is very useful and convenient, but I've faced a problem with CRUD update. 

@@ -9,7 +9,7 @@ description: I tried to change base path of Spring Data Rest in application.prop
 comments: true
 ---
 
-To change the base path in Spring Data Rest is relatively easy, you just add `spring.data.rest.baseUri=api` or `spring.data.rest.basePath=/api` if you have Spring Boot 1.2.3+ in **application.properties** and the your base 
+To change the base path in Spring Data Rest is relatively easy, you just add `spring.data.rest.baseUri=api` or `spring.data.rest.basePath=/api` if you have Spring Boot 1.2.3+ in **application.properties** and then your base 
 path to Spring Data Rest would be at [localhost:8080/api](localhost:8080/api).
 But unfortunately for me it didn't work. Thanks to [raised issue](https://github.com/spring-projects/spring-boot/issues/2392) on github I found out that the problem was in my custom config which I used to expose ids of the entities:
 

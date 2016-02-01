@@ -4,7 +4,7 @@ title: "Solving Angualr JS CORS issue"
 date: 2016-02-01 12:09:06
 comments: true
 tags: 
- - angularjs
+ - angular js
 description: Making HTTP requests from Angular was painful for me at the beginning. Due to CORS issue I wasn't able to make calls to external services. Trying different solutions I came up with one which I think quite easy to implement.
 comments: true
 ---
@@ -29,26 +29,26 @@ I haven't tried first solution. Second worked quite good but unfortunately we us
 # The solution
 
 Since it's possible to call only the server which served the application I decided to create a proxy controller which basically redirects all the requests to the proper service, and then simply returns the response back.
-So intead of calling `someservice.com/getUsers` I call local controller at `localhost:8080/proxy/someservice/getUsers` which then calls `someservice.com/getUsers` and simply returns the response. Here is simple implementation:
+So intead of calling `someservice.com/getUsers` I call local controller at `localhost:8080/proxy/someservice/getUsers` which then calls `someservice.com/getUsers` and simply returns the response. Here is simple implementation of proxy controller for two POST methods:
 
 {% highlight java %}
 @RestController
 public class ProxyController{
   @RequestMapping(value = "/proxy/dar/person/acl", method = RequestMethod.POST)
   public String getAce(RequestEntity<String> requestEntity) throws URISyntaxException {
-    return getResponseBody(serviceUrl + "/access-rights/person/acl", requestEntity, HttpMethod.POST);
+    return getResponseBody("http://external-service.com" + "/access-rights/person/acl", requestEntity, HttpMethod.POST);
   }
 
   @RequestMapping(value = "/proxy/dar/read/acl/document/all", method = RequestMethod.POST)
   public String getAcl(RequestEntity<String> requestEntity) throws URISyntaxException {
-    return getResponseBody(serviceUrl + "/access-rights/document/acl/all", requestEntity, HttpMethod.POST);
+    return getResponseBody("http://external-service.com" + "/access-rights/document/acl/all", requestEntity, HttpMethod.POST);
   }
 }
 {% endhighlight java %}
 
 In case of calling many services all urls could be put in a map and then it would be just one method:
 
-{% highlight java %}
+{% highlight java linenos %}
 HashMap<String, String> redirects = new HashMap<String, String>(){
   {
     put("person/acl", "/access-rights/person/acl");
@@ -65,6 +65,14 @@ public String genericProxyPost(RequestEntity<String> requestEntity, HttpServletR
   String pattern = (String) request.getAttribute(HandlerMapping.BEST_MATCHING_PATTERN_ATTRIBUTE);
   String path = new AntPathMatcher().extractPathWithinPattern(pattern, request.getServletPath());
 
-  return getResponseBody(serviceUrl + redirects.get(path), requestEntity, HttpMethod.POST);
+  return getResponseBody("http://external-service.com" + redirects.get(path), requestEntity, HttpMethod.POST);
 }
 {% endhighlight java %}
+
+For the code above all requests which starts with `/proxy/dar/` will endup in this method (line **10**).
+The key in the map is local path, the value is path of the external service. 
+Then in `path` variable would be written the remaing part of the URL, which is key in the map (line **15**). 
+By this key we take the part of URL from the map of external service and redirect HTTP call there (line **17**).
+
+
+Basically the code above tells redirect calls from `http://localhost:8080/proxy/dar/person/acl` to `http://external-service.com/access-rights/person/acl` and so on according to the map. 
