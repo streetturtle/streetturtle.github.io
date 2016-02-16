@@ -17,6 +17,15 @@ social:
   lastfm: streetturtle
   rss: feed.xml
 
+share:
+  facebook: true
+  twitter: true
+  gplus: true
+  linkedin: true
+  pinterest:
+  email: true
+
+
 # Google Analytics key, leave blank to ignore
 google_analytics_key: UA-57641651-1
 # Yandex metrika (https://metrica.yandex.com/) leave blanc to ignore or put true to use

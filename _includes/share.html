@@ -1,69 +1,74 @@
 {% if page.share == true %}
-<!-- Social Button HTML -->
 
 <div class="share-bar">
- Share:
-<!-- Twitter -->
-<a href="https://twitter.com/share?
-    text={{ page.title }}
-    &url={{ page.shorturl }}
-    &via=" class="share-btn twitter">
-  <i class="fa fa-twitter"></i>
-</a>
+  <ul class="share-buttons">
+    {% if site.share.facebook %}
+    <li class="share-facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?u={ site.url | append: page.url | url_param_escape }" target="_blank" title="Share on Facebook">
 
-<!-- Google Plus -->
-<!--the Google+ link url;
-    base = https://plus.google.com/share? -->
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-square-o fa-stack-2x"></i>
+          <i class="fa fa-facebook fa-stack-1x"></i>
+        </span>
+      </a>
+    </li>
+    {% endif %} {% if site.share.twitter %}
+    <li class="share-twitter">
+      <a href="https://twitter.com/intent/tweet?url={ site.url | append: page.url | url_param_escape}&text={page.title}" target="_blank" title="Tweet">
+        <span class="fa-stack fa-lg">
+  <i class="fa fa-square-o fa-stack-2x"></i>
+  <i class="fa fa-twitter fa-stack-1x"></i>
+</span>
+      </a>
+    </li>
+    {% endif %} {% if site.share.gplus %}
+    <li class="share-google-plus">
+      <a href="https://plus.google.com/share?url={ site.url | append: page.url | url_param_escape }" target="_blank" title="Share on Google Plus">
+        <span class="fa-stack fa-lg">
+  <i class="fa fa-square-o fa-stack-2x"></i>
+  <i class="fa fa-google-plus fa-stack-1x"></i>
+</span>
+      </a>
+    </li>
+    {% endif %} {% if site.share.linkedin %}
 
-<a href="https://plus.google.com/share?
-    url=http://tomhohenstein.com{{ page.url }}
-    &hl=en-US"
-    onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"
-    class="share-btn google-plus">
-  <i class="fa fa-google-plus"></i>
-</a>
+    <li class="share-linkedin">
+      <a href="http://www.linkedin.com/shareArticle?mini=true&url={ site.url | append: page.url | url_param_escape }&title={page.title}&summary={page.description}&source=" target="_blank" title="Share on LinkedIn">
+        <span class="fa-stack fa-lg">
+  <i class="fa fa-square-o fa-stack-2x"></i>
+  <i class="fa fa-linkedin fa-stack-1x"></i>
+</span>
+      </a>
+    </li>
+    {% endif %}
+    {% if site.share.pinterest %}
 
-<!-- Facebook -->
-<a href="https://www.facebook.com/dialog/share
-    ?app_id=946372735391329&display=popup
-    &href={{ site.url }}{{ page.url }}
-    &redirect_uri={{ site.url }}{{ page.url }}"
-    class="share-btn facebook">
-  <i class="fa fa-facebook"></i>
-</a>
+    <li class="share-pinterest">
+      <a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fpavelmakhov.com&description=" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;">
+        <span class="fa-stack fa-lg">
+  <i class="fa fa-square-o fa-stack-2x"></i>
+  <i class="fa fa-pinterest fa-stack-1x"></i>
+</span>
+      </a>
+    </li>
+    {% endif %}
 
-<!-- StumbleUpon (url, title) -->
-<!--
-<a href="http://www.stumbleupon.com/submit?url=<URL>&title=<TITLE>" target="_blank" class="share-btn stumbleupon">
-  <i class="fa fa-stumbleupon"></i>
-</a>
--->
+    {% if site.share.email %}
 
-<!-- Reddit (url, title) -->
-<!--
-<a href="http://reddit.com/submit?url=<URL>&title=<TITLE>" target="_blank" class="share-btn reddit">
-  <i class="fa fa-reddit"></i>
-</a>
--->
+    <li class="share-envelope">
+      <a href="mailto:?subject=&body=:%20http%3A%2F%2Fpavelmakhov.com" target="_blank" title="Email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;">
 
-<!-- LinkedIn -->
-<!--the LinkedIn base url
-    http://www.linkedin.com/shareArticle?mini=true -->
+        <a href="mailto:?&subject={page.title | url_param_escape}&body={page.description | append: ' ' | append: site.url | append: page.url | url_param_escape }" target="_blank" title="Email">
+          <span class="fa-stack fa-lg">
+  <i class="fa fa-square-o fa-stack-2x"></i>
+  <i class="fa fa-envelope-o fa-stack-1x"></i>
+</span>
+        </a>
+    </li>
+    {% endif %}
 
-<a href="http://www.linkedin.com/shareArticle
-    ?mini=true
-    &url={{ site.url }}{{ page.url }}
-    &title={{ page.title }}
-    &source={{ site.title }}"
-     class="share-btn linkedin">
-  <i class="fa fa-linkedin"></i>
-</a>
 
-<!-- Email -->
-<a href="mailto:?subject=<SUBJECT&body=<BODY>" target="_blank" class="share-btn email">
-  <i class="fa fa-envelope"></i>
-</a>
+
+  </ul>
 </div>
-
-
 {% endif %}
