@@ -73,6 +73,17 @@ And register webscript in `your-app-contect.xml`:
         parent="webscript"/>
 {% endhighlight xml %}
 
+At the end after calling webscript's URL: [/alfresco/s/mycomp/api/getStatistics](/alfresco/s/mycomp/api/getStatistics) you'll get this output:
+
+{% highlight json %}
+{
+  "users": {
+    "online": 4
+  },
+  "usernames": "[\"dduck\",\"mmouse\",\"pluto\",\"System\"]"
+}
+{% endhighlight json %}
+
 And in this post: [REST call monitoring extenstion for AppDynamics]({{ site.url }}/2015/07/rest-monitor/) you will now how to use this webscrip as a metric provider for AppDynamics.
 
 Cheers!
