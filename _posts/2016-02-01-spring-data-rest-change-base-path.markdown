@@ -7,7 +7,6 @@ tags:
  - spring data rest
 description: I tried to change base path of Spring Data Rest in application.properties file, but for some reason it didn't work. The problem was in custom config...
 comments: true
-share: true
 ---
 
 To change the base path in Spring Data Rest is relatively easy, you just add `spring.data.rest.baseUri=api` or `spring.data.rest.basePath=/api` if you have Spring Boot 1.2.3+ in **application.properties** and then your base 
