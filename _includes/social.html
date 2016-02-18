@@ -18,11 +18,19 @@
     </li>
     {% endif %}
 
-    {% if site..social.linkedin %}
+    {% if site.social.linkedin %}
     <li>
-        <a title="{{ site.social.github }} on LinkedIn"
+        <a title="{{ site.social.linkedin }} on LinkedIn"
             href="https://www.linkedin.com/in/{{ site.social.linkedin }}"
             target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
+    </li>
+    {% endif %}
+
+    {% if site.social.codepen %}
+    <li>
+        <a title="{{ site.social.codepen }} on CodePen"
+            href="http://codepen.io/{{ site.social.codepen }}"
+            target="_blank"><i class="fa fa-codepen fa-2x"></i></a>
     </li>
     {% endif %}
 
