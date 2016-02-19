@@ -106,6 +106,15 @@ ul.social-media {
       color: #3CA2A2;
     }
   }
+  .fa-linkedin:hover{
+    -webkit-animation: linkedin 1s ease forwards;
+    animation: linkedin 1s ease forwards;
+  }
+  @-webkit-keyframes linkedin {
+    0%   {color: white;}
+    50% {color: #4875B4;}
+    100% {color: #3CA2A2;}
+  }
 }
 
 //    ___        _
