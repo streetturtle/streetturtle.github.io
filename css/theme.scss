@@ -99,7 +99,6 @@ ul.social-media {
   li > a {
     margin-left: 0.8em;
     margin-right: 0.8em;
-    @include transition(color 0.3s);
     display: inline-block;
     color: white;
     &:hover {
