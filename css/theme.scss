@@ -15,7 +15,8 @@ body {
   padding-top: 80px;
   color: #ddd;
   background-color: #292929;
-  background-image: url(./pics/triangles.png);
+//  background-image: url(./pics/triangles.png);
+  background-image: url(./pics/random-grey-variations.png);
 }
 
 h1 { font-size: 2em; }
@@ -101,9 +102,6 @@ ul.social-media {
     margin-right: 0.8em;
     display: inline-block;
     color: white;
-    &:hover {
-      color: #3CA2A2;
-    }
   }
 
   .fa-github:hover {
