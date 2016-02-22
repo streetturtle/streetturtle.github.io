@@ -11,7 +11,7 @@ comments: true
 
 # Introduction
 
-As an example let's create a simple widget which displays a currency rate between swiss franc (CHF) and euro (EUR). This widget will be updated every hour and will consist of just a number. And the end it will look like this: ![ratesWidget]({{site.url}}/images/ratesWidget.png)
+As an example let's create a simple widget which displays a currency rate between swiss franc (CHF) and euro (EUR). This widget will be updated every hour and will consist of just a number. At the end it will look like this: ![ratesWidget]({{site.url}}/images/ratesWidget.png)
 
 # Get the currency rate
 

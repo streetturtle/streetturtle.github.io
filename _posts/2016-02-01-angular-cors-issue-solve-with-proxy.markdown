@@ -29,7 +29,7 @@ I haven't tried first solution. Second worked quite good but unfortunately we us
 # The solution
 
 Since it's possible to call only the server which served the application I decided to create a proxy controller which basically redirects all the requests to the proper service, and then simply returns the response back.
-So intead of calling `someservice.com/getUsers` I call local controller at `localhost:8080/proxy/someservice/getUsers` which then calls `someservice.com/getUsers` and simply returns the response. Here is simple implementation of proxy controller for two POST methods:
+So instead of calling `someservice.com/getUsers` I call local controller at `localhost:8080/proxy/someservice/getUsers` which then calls `someservice.com/getUsers` and simply returns the response. Here is simple implementation of proxy controller for two POST methods:
 
 {% highlight java %}
 @RestController

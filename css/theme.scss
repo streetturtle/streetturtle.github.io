@@ -15,7 +15,8 @@ body {
   padding-top: 80px;
   color: #ddd;
   background-color: #292929;
-  background-image: url(./pics/triangles.png);
+//  background-image: url(./pics/triangles.png);
+  background-image: url(./pics/random-grey-variations.png);
 }
 
 h1 { font-size: 2em; }
@@ -92,29 +93,53 @@ a:hover {
 
 ul.social-media {
   text-align: center;
-  padding: 0 0 10px 0;
+  padding: 0;
   li {
     display: inline-block;
   }
   li > a {
-    width: 45px;
-    height: 45px;
-    @include transition(color 0.2s);
+    margin-left: 0.8em;
+    margin-right: 0.8em;
     display: inline-block;
     color: white;
-    &:hover {
-      color: #3CA2A2;
-    }
   }
-  .fa-linkedin:hover{
-    -webkit-animation: linkedin 1s ease forwards;
-    animation: linkedin 1s ease forwards;
+
+  .fa-github:hover {
+    -webkit-animation: github 1s ease-in-out forwards;
+    animation: github 1s ease-in-out forwards;
   }
-  @-webkit-keyframes linkedin {
-    0%   {color: white;}
-    50% {color: #4875B4;}
-    100% {color: #3CA2A2;}
+  .fa-stack-overflow:hover {
+    -webkit-animation: stack-overflow 1s ease-in-out forwards;
+    animation: stack-overflow 1s ease-in-out forwards;
   }
+  .fa-linkedin:hover {
+    -webkit-animation: linkedin 1s ease-in-out forwards;
+    animation: linkedin 1s ease-in-out forwards;
+  }
+  .fa-codepen:hover {
+    -webkit-animation: codepen 1s ease-in-out forwards;
+    animation: codepen 1s ease-in-out forwards;
+  }
+  .fa-instagram:hover {
+    -webkit-animation: instagram 1s ease-in-out forwards;
+    animation: instagram 1s ease-in-out forwards;
+  }
+  .fa-lastfm:hover {
+    -webkit-animation: lastfm 1s ease-in-out forwards;
+    animation: lastfm 1s ease-in-out forwards;
+  }
+  .fa-rss:hover {
+    -webkit-animation: rss 1s ease-in-out forwards;
+    animation: rss 1s ease-in-out forwards;
+  }
+
+  @-webkit-keyframes github         {0% {color: white;} 50% {color: #333333;} 100% {color: #3CA2A2;}}
+  @-webkit-keyframes stack-overflow {0% {color: white;} 50% {color: #fe7a15;} 100% {color: #3CA2A2;}}
+  @-webkit-keyframes linkedin       {0% {color: white;} 50% {color: #4875B4;} 100% {color: #3CA2A2;}}
+  @-webkit-keyframes codepen        {0% {color: white;} 50% {color: #000000;} 100% {color: #3CA2A2;}}
+  @-webkit-keyframes instagram      {0% {color: white;} 50% {color: #517fa4;} 100% {color: #3CA2A2;}}
+  @-webkit-keyframes lastfm         {0% {color: white;} 50% {color: #c3000d;} 100% {color: #3CA2A2;}}
+  @-webkit-keyframes rss            {0% {color: white;} 50% {color: #FF6600;} 100% {color: #3CA2A2;}}
 }
 
 //    ___        _
@@ -261,7 +286,8 @@ nav.shrink .navbar-toggle {
 }
 
 .footer-distributed {
-  background-color: #292c2f;
+  // background-color: #292c2f;
+  background-color: #222;
   font: normal 16px sans-serif;
   padding: 20px 25px;
   margin-top: 80px;
