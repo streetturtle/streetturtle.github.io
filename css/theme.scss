@@ -388,3 +388,13 @@ ul.share-buttons {
 .content{
   padding-bottom: 250px;
 }
+
+.key {
+  font-size: 1.0em;
+  box-shadow: 1px 0 1px 0 #555, 0 1px 0 2px #888, 0 2px 0 2px #777;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin: 2px 3px;
+  padding: 0px 5px;
+}
