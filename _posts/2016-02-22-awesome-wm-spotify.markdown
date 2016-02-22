@@ -1,11 +1,12 @@
 ---
 layout: post
 title: "Spotify integration with Awesome WM"
-date: 2016-02-22 22:09:06
-comments: true
+date: 2016-02-22 12:09:06
 tags: 
  - awesome wm
 description: After moving to Spotify I was feeling myself helpless without possiblity to pause/play tracks with keyboard shortcut as I did it with Rhythmbox. And also could be cool to display current track in the wibox. Here is what I came up with.
+comments: true
+share: true
 ---
 
 # Control Spotify from shell
