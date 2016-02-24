@@ -1,0 +1,177 @@
+---
+---
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]>
+<html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.data.cv.person.name }}'s CV</title>
+  <meta name="author" content="{{ site.data.cv.name }}" />
+  <meta name="description" content="{{ site.data.cv.name }}'s CV" />
+  <link rel="shortcut icon" href="/favicon.png">
+  <link href="{{site.url}}/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="{{site.url}}/css/cv1.css" rel="stylesheet">
+
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet" media="all" />
+  <link href='http://fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'>
+<!--
+  <style>
+    h1 {
+      font-family: 'Lusitana', serif;
+      font-size: 5em;
+    }
+
+    .skills {
+      margin-right: 1em;
+    }
+
+    @media print {
+      /* In case you don't want the boxes on your printout... */
+      /*.label {*/
+      /*border: none;*/
+      /*}*/
+      /* Avoid printing hrefs when this class is applied */
+      .nohref a[href]:after {
+        content: "";
+      }
+    }
+
+  </style>
+-->
+  <script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Passion+One:400,700:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
+</head>
+
+<body>
+  <div class="container">
+      <div class="row section">
+        <div class="col-md-7">
+          <h1>{{ site.data.cv.person.name }}</h1>
+        <h2>{{ site.data.cv.person.proffesion }}</h2>
+        </div>
+        <div class="col-md-2">
+          <ul class="list-unstyled">
+            <li><i class="fa fa-map-marker"></i> Geneva, Switzerland</li>
+            <li><i class="fa fa-flag-o"></i> Russian</li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <ul class="list-unstyled">
+            <li><i class="fa fa-envelope-o"></i> <a href="mailto: {{ site.data.cv.person.email }}">{{ site.data.cv.person.email }}</a></li>
+            <li><i class="fa fa-laptop"></i> <a href="http://pavelmakhov.com">pavelmakhov.com</a></li>
+            <li><i class="fa fa-phone"></i> +41-78-807-64-11</li>
+            </ull>
+        </div>
+      </div>
+<hr/>
+
+    {% for item in site.data.cv.career %}
+    <div class="row  section-mid">
+      <div class="col-md-3">
+        {% if forloop.first == true %}
+        <h3>Career</h3> {% endif %}
+      </div>
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col-md-8">
+            <h3>{{ item.position }}</h3>
+          </div>
+          <div class="col-md-4">
+            <h5 class="pull-right">{{ item.dates }}</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p>{{ item.summary }}</p>
+          </div>
+        </div>
+        {% for itemm in item.accomplishments %}
+        <div class="row">
+          <ul>
+            <li>{{itemm.accomplishment}}
+            </li>
+          </ul>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+
+    <div class="row section-mid">
+      <div class="col-md-3">
+        <h3>Technical skills</h3>
+      </div>
+      <div class="col-md-9">
+        <p>Other keywords: {{site.data.cv.technicalSkills.keywords}}</p>
+
+        <div class="col-md-4">
+          <h4>Backend</h4> {% for item in site.data.cv.technicalSkills.backend %} {{item.name}}
+          <div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{item.level}}%"></div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="col-md-4">
+          <h4>Frontend</h4> {% for item in site.data.cv.technicalSkills.frontend %} {{item.name}}
+          <div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{item.level}}%"></div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="col-md-4">
+          <h4>Other</h4> {% for item in site.data.cv.technicalSkills.other %} {{item.name}}
+          <div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{item.level}}%"></div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="row  section-mid">
+      <div class="col-md-3"><h3>Side Projects</h3></div>
+      <div class="col-md-9">
+        {% for item in site.data.cv.sideProjects %}
+        <div class="row">
+          <div class="col-md-5">{{item.name}} {{item.link}}</div>
+          <div class="col-md-7">{{item.description}}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="row section-mid">
+      <div class="col-md-3"><h3>Education</h3></div>
+      <div class="col-md-9">
+
+        {% for item in site.data.cv.education %}
+        <div class="row">
+          <div class="col-md-5">{{item.name}} {{item.link}}</div>
+          <div class="col-md-7">{{item.description}}</div>
+        </div>
+        {% endfor %}
+        </div>
+    </div>
+</body>
+
+</html>
