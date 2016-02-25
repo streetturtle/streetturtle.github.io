@@ -231,16 +231,14 @@ nav a {
   @include transition(color 0.31s);
   font-size: 18px;
   font-family: Ubuntu;
-   -webkit-transition: all 0.7s ease;
-   transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
 }
-
-nav.navbar{
-   border-top: 3px #3CA2A2 solid;
-   -webkit-transition: all 0.7s ease;
-   transition: all 0.7s ease;
-  }
-
+nav.navbar {
+  border-top: 3px #3CA2A2 solid;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
 nav.navbar.shrink {
   min-height: 15px;
 }
@@ -259,6 +257,13 @@ nav.shrink .navbar-brand {
 .navbar .navbar-nav {
   display: inline-block;
   float: right;
+}
+nav .navbar-toggle {
+  margin: 13px 15px 13px 0;
+}
+nav.shrink .navbar-toggle {
+  padding: 4px 5px;
+  margin: 8px 15px 8px 0;
 }
 
 //    ___         _
