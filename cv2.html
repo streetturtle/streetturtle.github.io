@@ -24,30 +24,9 @@
 
   <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet" media="all" />
   <link href='http://fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'>
-<!--
-  <style>
-    h1 {
-      font-family: 'Lusitana', serif;
-      font-size: 5em;
-    }
 
-    .skills {
-      margin-right: 1em;
-    }
-
-    @media print {
-      /* In case you don't want the boxes on your printout... */
-      /*.label {*/
-      /*border: none;*/
-      /*}*/
-      /* Avoid printing hrefs when this class is applied */
-      .nohref a[href]:after {
-        content: "";
-      }
-    }
-
-  </style>
--->
+  <link href='https://fonts.googleapis.com/css?family=Archivo+Black' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300' rel='stylesheet' type='text/css'>
   <script type="text/javascript">
   WebFontConfig = {
     google: { families: [ 'Passion+One:400,700:latin' ] }
@@ -65,18 +44,22 @@
 <body>
   <div class="container">
       <div class="row section">
-        <div class="col-md-7">
-          <h1>{{ site.data.cv.person.name }}</h1>
-        <h2>{{ site.data.cv.person.proffesion }}</h2>
+        <div class="col-md-9">
+          <h1 class="name">{{ site.data.cv.person.name }}</h1>
+          <span class="profesion">{{ site.data.cv.person.profesion }}</span>
         </div>
+<!--
         <div class="col-md-2">
           <ul class="list-unstyled">
             <li><i class="fa fa-map-marker"></i> Geneva, Switzerland</li>
             <li><i class="fa fa-flag-o"></i> Russian</li>
           </ul>
         </div>
+-->
         <div class="col-md-3">
           <ul class="list-unstyled">
+            <li><i class="fa fa-map-marker"></i> Geneva, Switzerland</li>
+            <li><i class="fa fa-flag-o"></i> Russian</li>
             <li><i class="fa fa-envelope-o"></i> <a href="mailto: {{ site.data.cv.person.email }}">{{ site.data.cv.person.email }}</a></li>
             <li><i class="fa fa-laptop"></i> <a href="http://pavelmakhov.com">pavelmakhov.com</a></li>
             <li><i class="fa fa-phone"></i> +41-78-807-64-11</li>
@@ -87,14 +70,15 @@
 
     {% for item in site.data.cv.career %}
     <div class="row  section-mid">
-      <div class="col-md-3">
+      <div class="col-md-4">
         {% if forloop.first == true %}
-        <h3>Career</h3> {% endif %}
+        <h2>Career</h2> {% endif %}
       </div>
-      <div class="col-md-9">
+      <div class="col-md-8 {% if forloop.last != true %}jd{%endif%}">
         <div class="row">
           <div class="col-md-8">
-            <h3>{{ item.position }}</h3>
+            <h4><b>{{ item.position }}</b></h4>
+            <h5>{{item.company}}</h5>
           </div>
           <div class="col-md-4">
             <h5 class="pull-right">{{ item.dates }}</h5>
@@ -117,11 +101,12 @@
     </div>
     {% endfor %}
 
+    
     <div class="row section-mid">
-      <div class="col-md-3">
-        <h3>Technical skills</h3>
+      <div class="col-md-4">
+        <h2>Technical skills</h2>
       </div>
-      <div class="col-md-9">
+      <div class="col-md-8">
         <p>Other keywords: {{site.data.cv.technicalSkills.keywords}}</p>
 
         <div class="col-md-4">
@@ -148,9 +133,11 @@
       </div>
     </div>
 
+    <hr/>
+
     <div class="row  section-mid">
-      <div class="col-md-3"><h3>Side Projects</h3></div>
-      <div class="col-md-9">
+      <div class="col-md-4"><h2>Side Projects</h2></div>
+      <div class="col-md-8">
         {% for item in site.data.cv.sideProjects %}
         <div class="row">
           <div class="col-md-5">{{item.name}} {{item.link}}</div>
@@ -160,9 +147,11 @@
       </div>
     </div>
 
+    <hr/>
+
     <div class="row section-mid">
-      <div class="col-md-3"><h3>Education</h3></div>
-      <div class="col-md-9">
+      <div class="col-md-4"><h2>Education</h2></div>
+      <div class="col-md-8">
 
         {% for item in site.data.cv.education %}
         <div class="row">

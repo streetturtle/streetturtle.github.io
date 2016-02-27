@@ -1,0 +1,40 @@
+---
+---
+body{
+  background-color: #333 !important;
+  background-image: url(./pics/random-grey-variations.png);
+}
+
+.container{
+  background-color: #FFFFFF;
+  margin-top: 50px;
+}
+
+.section{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+}
+.section-mid{
+  padding: 20px 50px;
+  .jd{
+    border-bottom: 1px solid #ddd; 
+  }
+}
+
+.progress{
+  height: 8px !important;
+}
+
+.name{
+  font-size: 40px;
+  margin-bottom: 0px;
+}
+.profesion{
+  font-family: 'Roboto Slab';
+  font-weight: 300;
+  font-size: 20px;
+}
+h1, h2{
+  font-family: 'Archivo Black' !important;
+}
