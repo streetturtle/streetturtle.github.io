@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Customize alfresco footer"
+title:  "Customize alfresco footer (Surf)"
 date:   2016-02-25 20:23:45
 comments: true
 description: Alfresco footer appears on every page of application and actually there is not much interesting there - logo, copyright and some links. Let's replace it with your application specific footer!
