@@ -14,22 +14,22 @@ career:
    company: CERN
    location: Geneva, Switzerland
    dates: September 2014 - current
-   summary: I take part in the development of business critical eFiles document management system based on open source solution - Alfresco – the market leader in records management. One of my projects is e-Personnel – CMS system. I work in a small team of three; development is performed using agile software development with Scrum. As an Alfresco developer I work on extending and customizing Alfresco, which is needed since out of the box solutions of Alfresco do not provide enough functionality for CERN needs. Through this project, I have learned business processes of other teams, as we constantly work with CERN HR team, developing the way to link their needs with technical abilities of Alfresco software.
+   summary: I take part in the development of business critical eFiles document management system based on open source solution - Alfresco – the market leader in records management. One of my projects is eFiles – CMS system. I work in a small team of three; development is performed using agile software development with Scrum. As an Alfresco developer I work on extending and customizing Alfresco, which is needed since out of the box solutions of Alfresco do not provide enough functionality for CERN needs. Through this project, I have learned business processes of other teams, as we constantly work with CERN HR team, developing the way to link their needs with technical abilities of Alfresco software.
    accomplishments:
     - accomplishment: Customization of server-side and client-side parts of Alfresco in correspondence to the organisation's internal processes and requirements.
     - accomplishment: Integrating Alfresco with AppDynamics - application performance management system. This project consisted of setting up the AppDynamics and development of the monitoring extensions in order to provide metrics.
+    - accomplishment: Development of the web application for 2nd/3rd support of eFiles. Technology stack is Spring Boot, AngularJS, Spring Data Rest.
  - position: Software Developer
    company: CERN
    location: Geneva, Switzerland
    dates: October 2012 – September 2014
    summary: I worked in GS-AIS-EB (Electronic Business) section for EDH (Electronic Document Handling) system, which covers many life aspects at CERN (such as absences, HR & Training, purchasing, logistics and safety). In this role, I was developing EDH documents and improving functionality of existing ones. I worked in a team of 8-10 people; agile software development with Scrum was used for a development performance. One of the biggest and the most interesting project during this period was the development of CERN Hotel booking application. This activity included the work with Micros/Oracle consultant and Hotel’s representatives.
    accomplishments:
-    - accomplishment: Migrating existing business processes from BPEL to BPMN.
-    - accomplishment: Modification of the Phone Request document in order to get the possibility to choose LYNC phone.
     - accomplishment: Extending functionality of CERN Hotel web booking application (hostel.cern.ch). Main feature developed is the possibility to create a Waiting-List reservations in cases when no rooms were available for the given period, which was not supported by Fidelio. I was working closely with customers from Hotel as well as consultant from Micros/Oracle.
+    - accomplishment: Migrating existing business processes from BPEL to BPMN.
     - accomplishment: 3rd Line support
  - position: Software Developer
-   company: Probusinessbank bank
+   company: Probusinessbank
    location: Moscow, Russia
    dates: October 2011 – July 2012
    summary: While finishing the study at University I got a job at Probusinessbank in Moscow, one of TOP-50 banks in Russia. During my time there, I was responsible for several activities.
@@ -40,13 +40,19 @@ career:
     - accomplishment: Development of Web-Service in order to generate PDF reports using XSL-FO transformations.
 
 technicalSkills:
-  keywords: JSP, SOAP/REST, Alfresco, CMS, SOLR, Jekyll, YUI, BootStrap, Idea/Eclipse/Netbeans, Atlassian Tools, Ruby, Python, Lua, Erlang
+  list:
+    - tr: "Database: Oracle, Postgre, MySQL"
+    - tr: "Knowledge of JDBC/ORM tools"
+    - tr: "Web application servers: Tomcat, Weblogic"
+    - tr: "More than 1 year of Alfresco development experience"
+    - tr: "Scripting languages: Python/Ruby"
+    - tr: "Experience with REST/SOAP web-services"
+    - tr: "IDE: IDEA/Eclipse/NetBeans, PLSQL/SQL Developer"
+    - tr: "Atlassian Tools: JIRA, Stash, Bamboo, Confluenece"
   backend:
    - name: Java SE/EE
      level: 90
    - name: PL/SQL
-     level: 80
-   - name: Maven/Spring/JUnit
      level: 80
   frontend:
    - name: AngularJS/JS
@@ -61,25 +67,25 @@ technicalSkills:
 
 sideProjects:
   - name: Technical blog
-    description: My technical blog
+    description: My technical blog to share some thoughts/problems-solutions/tutorials on different topics, such as Java, Web development, Linux, Awesome WM.
     link: http://pavelmakhov.com
     type: site
     langs: HTML/CSS/Bootstrap
 
   - name: jekyll-clean-dark
-    description: Theme for Jekyll - static site generator. I created this theme for myself and then published it (http://drjekyllthemes.github.io/, http://jekyllthemes.org/themes/jekyll-clean-dark/)as a separate project.
+    description: Theme for Jekyll - static site generator. After creating theme for my blog I shared it on github.
     link: https://github.com/streetturtle/jekyll-clean-dark
     type: github
     langs: HTML/CSS/Bootstrap
 
   - name: number-writing-trainer
-    description: It is small app which helps with learning how to wite foreign numbers. It's written in AngularJS, just to practice a bit language and syntax
+    description: Application which helps with learning foreign numerals. Was created to help with learning how to write french numbers as wel as to practive AngularJS.
     link: http://pavelmakhov.com/number-writing-trainer/#/
     type: site
     langs: AngularJS/HTML/CSS/Bootstrap
 
   - name: Awesome WM widgets
-    description: Collection of widgets for the Awesome Window Manager for Linux. Written in Lua and Python.
+    description: Collection of widgets for the Awesome Window Manager for Linux. Contains Battery, Volume, Spotify, Email and Rates widgets.
     link: https://github.com/streetturtle/AwesomeWM
     type: github
     langs: Lua/Python
@@ -93,6 +99,6 @@ sideProjects:
 education:
   - name: National Research University of Electronic Technology
     degree: Master of Computer Science
-    city: Moscow
+    location: Moscow, Russia
     dates: 2007 – 2012
-    link: miet.ru
+    link: https://eng.miet.ru/
