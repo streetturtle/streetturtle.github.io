@@ -10,16 +10,23 @@ body{
   margin-top: 50px;
 }
 
-.section{
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 50px;
+.header{
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  background-color: #ddd;
 }
-.section-mid{
+.section{
   padding: 20px 50px;
+  border-top: 1px solid lightblue;
   .jd{
-    border-bottom: 1px solid #ddd; 
+    border-bottom: 1px solid lightblue;
+    padding: 20px 0px;
   }
+  .jd:last-child{
+      border-bottom: none;
+    }
 }
 
 .progress{
@@ -34,6 +41,13 @@ body{
   font-family: 'Roboto Slab';
   font-weight: 300;
   font-size: 20px;
+}
+
+.side-project{
+  padding-bottom: 20px;
+  :last-child{
+    padding-bottom: 0px
+  }
 }
 h1, h2{
   font-family: 'Archivo Black' !important;

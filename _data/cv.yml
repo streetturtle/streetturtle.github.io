@@ -5,11 +5,14 @@ person:
   citizenship: Russia
   email: makhovpp@gmail.com
   site: http://pavelmakhov.com
-  phone: +41-78-807064-11
+  phone: +41-78-807-64-11
+  github: /streetturtle
+  stackoverflow: /streetturtle
 
 career:
- - position: Alfresco Developer
+ - position: Java/Alfresco Developer
    company: CERN
+   location: Geneva, Switzerland
    dates: September 2014 - current
    summary: I take part in the development of business critical eFiles document management system based on open source solution - Alfresco – the market leader in records management. One of my projects is e-Personnel – CMS system. I work in a small team of three; development is performed using agile software development with Scrum. As an Alfresco developer I work on extending and customizing Alfresco, which is needed since out of the box solutions of Alfresco do not provide enough functionality for CERN needs. Through this project, I have learned business processes of other teams, as we constantly work with CERN HR team, developing the way to link their needs with technical abilities of Alfresco software.
    accomplishments:
@@ -17,6 +20,7 @@ career:
     - accomplishment: Integrating Alfresco with AppDynamics - application performance management system. This project consisted of setting up the AppDynamics and development of the monitoring extensions in order to provide metrics.
  - position: Software Developer
    company: CERN
+   location: Geneva, Switzerland
    dates: October 2012 – September 2014
    summary: I worked in GS-AIS-EB (Electronic Business) section for EDH (Electronic Document Handling) system, which covers many life aspects at CERN (such as absences, HR & Training, purchasing, logistics and safety). In this role, I was developing EDH documents and improving functionality of existing ones. I worked in a team of 8-10 people; agile software development with Scrum was used for a development performance. One of the biggest and the most interesting project during this period was the development of CERN Hotel booking application. This activity included the work with Micros/Oracle consultant and Hotel’s representatives.
    accomplishments:
@@ -26,6 +30,7 @@ career:
     - accomplishment: 3rd Line support
  - position: Software Developer
    company: Probusinessbank bank
+   location: Moscow, Russia
    dates: October 2011 – July 2012
    summary: While finishing the study at University I got a job at Probusinessbank in Moscow, one of TOP-50 banks in Russia. During my time there, I was responsible for several activities.
    accomplishments:
@@ -41,12 +46,12 @@ technicalSkills:
      level: 90
    - name: PL/SQL
      level: 80
-   - name: Maven/Spring/Junit
+   - name: Maven/Spring/JUnit
      level: 80
   frontend:
    - name: AngularJS/JS
      level: 80
-   - name: HTML/CSS
+   - name: HTML/CSS/Bootstrap
      level: 90
   other:
    - name: Linux
@@ -55,21 +60,35 @@ technicalSkills:
      level: 100
 
 sideProjects:
-  - name: Blog
-    desription: My technical blog
-    link: pavelmakhov.com
-  - name: Awesome WM widget
-    description: Collection of widgets for the Awesome Window Manager for Linux. Written in Lua and Python.
-    link: https://github.com/streetturtle/AwesomeWM
-  - name: AppDynamics Extensions
-    description: Several extensions for AppDynamics. They were developed because out-of-the-box extensions are written in Java and it was hard to maintain and customize them.
-    link: https://github.com/streetturtle/AppDynamics-Extensions
+  - name: Technical blog
+    description: My technical blog
+    link: http://pavelmakhov.com
+    type: site
+    langs: HTML/CSS/Bootstrap
+
   - name: jekyll-clean-dark
     description: Theme for Jekyll - static site generator. I created this theme for myself and then published it (http://drjekyllthemes.github.io/, http://jekyllthemes.org/themes/jekyll-clean-dark/)as a separate project.
     link: https://github.com/streetturtle/jekyll-clean-dark
+    type: github
+    langs: HTML/CSS/Bootstrap
+
   - name: number-writing-trainer
     description: It is small app which helps with learning how to wite foreign numbers. It's written in AngularJS, just to practice a bit language and syntax
     link: http://pavelmakhov.com/number-writing-trainer/#/
+    type: site
+    langs: AngularJS/HTML/CSS/Bootstrap
+
+  - name: Awesome WM widgets
+    description: Collection of widgets for the Awesome Window Manager for Linux. Written in Lua and Python.
+    link: https://github.com/streetturtle/AwesomeWM
+    type: github
+    langs: Lua/Python
+
+  - name: AppDynamics Extensions
+    description: Several extensions for AppDynamics. They were developed because out-of-the-box extensions are written in Java and it was hard to maintain and customize them.
+    link: https://github.com/streetturtle/AppDynamics-Extensions
+    type: github
+    langs: Ruby/Bash
 
 education:
   - name: National Research University of Electronic Technology
