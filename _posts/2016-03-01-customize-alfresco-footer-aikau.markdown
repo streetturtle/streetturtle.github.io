@@ -11,7 +11,7 @@ tags:
 # Introduction
 
 In my previous post I've shown how to change footer for pages made without Aikau, but since I am using Alfresco 5.0.c, footer haven't changed on search result page.
-Let's change it! The idea is to make it as it is in my previous post (3 columns: copyright, application version and link to the ticket system):
+Let's change it! The idea is to make it as it is in my previous [post]({{site.url}}/2016/02/customize-alfresco-footer/) (3 columns: copyright, application version and link to the ticket system):
 
 ![Custom Alfresco footer]({{site.url}}/images/alfCustomFooter.png)
 
@@ -44,11 +44,11 @@ First of all let's register extension module which will add new packages:
 
 # Footer
 
-The idea of the customization is similar to the one in this article: [Aikau Mini Examples – Data List (part 1)](https://www.alfresco.com/blogs/developer/2014/09/30/aikau-mini-examples-data-list-part-1/). We will take Alfresco footer and override some fields. Before I would suggest to spend few minutes to check which methods and fields **AlfShareFooter.js** has. Actually it seems quite easy, we need to change footer template, css, add i18n files and add some custom variables, like already existing `copyrightLabel` or `licenseLabel`.
+The idea of the customization is similar to the one in this article: [Aikau Mini Examples – Data List (part 1)](https://www.alfresco.com/blogs/developer/2014/09/30/aikau-mini-examples-data-list-part-1/). We will take Alfresco footer and override some fields. Before doing it I would suggest to spend few minutes and check **AlfShareFooter.js**. Actually it seems quite easy, we need to change footer template, css, add i18n files and add some custom variables, like already existing `copyrightLabel` or `licenseLabel`.
 
 ## Template
 
-Template looks similar to the one for surf, except some ftl features. Current year (`currentYear`) and ticket message (`snowLabel`) will be added by js component later and application version (`version`) will work the same way. Also we need to add [attach point](https://dojotoolkit.org/documentation/tutorials/1.6/templated/) - `footerParentNode` to the wrapper div:
+Template looks similar to the one for surf, except some ftl features. Current year (`currentYear`) and ticket message (`snowLabel`) will be added by js component later and application version (`version`) will work without any changes needed. Also we need to add [attach point](https://dojotoolkit.org/documentation/tutorials/1.6/templated/) - `footerParentNode` to the wrapper div:
 
 {% highlight html %}
 <div class="alfresco-footer-AlfShareFooter" data-dojo-attach-point="footerParentNode">
@@ -69,19 +69,19 @@ Template looks similar to the one for surf, except some ftl features. Current ye
 </div>
 {% endhighlight html %}
 
-Put this in **/resources/META-INF/js/mycmpny/footer/templates/my-footer.html**
+Put this snippet in **/resources/META-INF/js/mycmpny/footer/templates/my-footer.html**
 
 ## CSS
 
-CSS style is almost the same as for the old footer except `.sticky-wraper` should be renamed to `.wrapper`. Copy file from previous post and put it in **/footer/css/my-footer.css**
+CSS style is almost the same as for the old footer except `.sticky-wraper` class should be renamed to `.wrapper`. Copy file from previous post and put it in **/footer/css/my-footer.css**
 
 ## i18n
 
-File is the same as for surf footer, should be in **/footer/i18n/myFooter.properties**. To add french language for example, add **myFooter_fr.properties** in the same folder.
+Files are the same as for surf footer, should be in **/footer/i18n/myFooter.properties**. To add french language for example, add **myFooter_fr.properties** in the same folder.
 
 ## Widget
 
-Finally widget, create **/footer/MyFooter.js** with following content, I think it's quite easy to understand what's happening here:
+Finally widget, create **/footer/MyFooter.js** with following content, I think it's quite easy to understand what's happening here - we take existing widget `AlfShareFooter`, add css and i18n and in `postMixInProperties` override `templateString` and add some custom variables which are used in the template:
 
 {% highlight javascript linenos %}
 define(["dojo/_base/declare",
@@ -133,4 +133,4 @@ footer.config.widgetsForFooter = [{
 }];
 {% endhighlight javascript %}
 
-And after restart it should work! 
+And after restart it should work! In case of any question don't hesitate to left a comment ;)
