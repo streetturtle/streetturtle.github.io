@@ -20,7 +20,7 @@
 
 <div class="sidebar">
   <h2>Tags</h2>
-  <ul>
+  <ul class="sideBarTags">
     {% assign tags = (site.tags | sort:0) %} {% for tag in tags %}
       <li><a href="/tag/{{ tag[0] }}">{{ tag[0] }}</a></li>
     {% endfor %}
