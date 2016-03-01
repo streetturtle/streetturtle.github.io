@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Customize alfresco footer (Aikau)"
-date:   2016-03-01 20:23:45
+date:   2016-03-01 10:23:45
 comments: true
 description: Here I'm showing how to change footer for pages created with Aikau framework, like Search result page.
 tags: 
