@@ -72,7 +72,13 @@ Ftl (maybe Spring, not sure) provides access to the maven version of the applica
 
 ## link to ticket system
 
-Nothing special here, just a link.
+It would be just a link with text, but let's add multilanguage support. Add file **/web-extension/site-webscripts/mycmpny/efiles/footer/footer.get_en.properties** with `label.snow=Support is <a href="http://mySupportlink.com"> here`. To get the proper message ftl has `msg()` function which is used like this:
+
+{% highlight html %}
+<span class="snow">
+  <span>${msg("label.snow")}</span>
+</span>
+{% endhighlight html %}
 
 Put everything together in **/web-extension/site-webscripts/mycmpny/efiles/footer/footer.get.html.ftl**:
 
