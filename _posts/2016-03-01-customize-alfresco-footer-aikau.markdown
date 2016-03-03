@@ -19,6 +19,8 @@ Let's change it! The idea is to make it as it is in my previous [post]({{site.ur
 
 First of all let's register extension module which will add new packages:
 
+>widget-extension.xml
+{:.filename}
 {% highlight xml %}
 <extension>
   <modules>
