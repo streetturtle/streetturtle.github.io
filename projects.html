@@ -1,0 +1,28 @@
+---
+layout: projects
+---
+
+{% for project in site.data.projects.projects %}
+  <div class="row">
+    <div class="col-md-4">
+      <h2>
+        {% if project.links.site %}
+          <i class="fa fa-globe"></i> <a href="{{ project.links.site }}">{{project.name}}</a>
+        {% else %}
+          {{project.name}}
+        {% endif %}
+      </h2>
+      {{project.technologies}}
+    </div>
+
+    <div class="col-md-8" style="margin-top:2em; margin-bottom:1em">
+      <div>{{project.description}}</div>
+      {% if project.links.github %}
+        <div><i class="fa fa-github"></i> <a href="{{ project.links.github }}">{{project.name}}</a></div>
+      {% endif %}
+    </div>
+  </div>
+  {% if forloop.last == false %}
+    <hr/>
+  {% endif %}
+{% endfor %}

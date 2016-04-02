@@ -1,0 +1,41 @@
+projects:
+
+  - name: PDF-element
+    description: Web component built with Polymer which allows to view PDF files.
+    technologies: Polymer/JS
+    links:
+      github: https://github.com/streetturtle/pdf-element
+      site: http://pavelmakhov.com/pdf-element/
+
+  - name: Number-writing-trainer
+    description: Application which helps with learning foreign numerals. Was created to help with learning how to write french numbers as wel as to practice a bit AngularJS.
+    technologies: AngularJS/HTML/CSS/Bootstrap
+    links:
+      github: https://github.com/streetturtle/number-writing-trainer
+      site: http://pavelmakhov.com/number-writing-trainer/#/
+
+  - name: Awesome WM widgets
+    description: Collection of widgets for the Awesome Window Manager for Linux. Contains Battery, Volume, Spotify, Email and Rates widgets.
+    technologies: Lua/Python
+    links:
+      github: https://github.com/streetturtle/AwesomeWM
+
+  - name: AppDynamics Extensions
+    description: Several extensions for AppDynamics. They were developed because out-of-the-box extensions are written in Java and it was hard to maintain and customize them.
+    technologies: Ruby/Bash
+    links:
+      github: https://github.com/streetturtle/AppDynamics-Extensions
+
+  - name: Jekyll Clean Dark
+    description: Theme for Jekyll - static site generator. After creating theme for my blog I shared it on github.
+    technologies: HTML/CSS/Bootstrap
+    links:
+      github: https://github.com/streetturtle/jekyll-clean-dark
+      site: http://pavelmakhov.com/jekyll-clean-dark/
+
+  - name: Jekyll CV Crafter
+    description: To be able to easy update/view/print my CV I created jekyll powered CV generator.
+    technologies: HTML/CSS/Bootstrap
+    links:
+      github: https://github.com/streetturtle/jekyll-cv-crafter
+      site: http://pavelmakhov.com/jekyll-cv-crafter/
