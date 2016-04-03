@@ -19,7 +19,7 @@ body {
   background-image: url(./pics/random-grey-variations.png);
 }
 
-h1 { font-size: 2em; }
+h1 { font-size: 2em; font-weight: bold;}
 h2 { font-size: 1.5em; }
 h3 { font-size: 1.17em; }
 h4 { font-size: 1.12em; }
@@ -239,9 +239,9 @@ a.page.active {
 nav a {
   padding-top: 20px !important;
   padding-bottom: 20px !important;
-  @include transition(color 0.31s);
   font-size: 18px;
   font-family: Ubuntu;
+  @include transition(color 0.4s);
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }

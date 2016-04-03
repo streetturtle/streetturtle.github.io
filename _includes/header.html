@@ -14,7 +14,6 @@
   <link href="{{site.url}}/css/syntax.css" rel="stylesheet">
   <link href="{{site.url}}/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu+Mono&subset=latin">
-
 </head>
 
 <body>
@@ -23,21 +22,21 @@
   {% include yandex-metrika.html %}
 
   <script type="text/javascript">
-  WebFontConfig = {
-    google: {
-      families: ['Ubuntu::latin']
-    }
-  };
-  (function() {
-    var wf = document.createElement('script');
-    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-    wf.type = 'text/javascript';
-    wf.async = 'true';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(wf, s);
-  })();
-</script>
+    WebFontConfig = {
+      google: {
+        families: ['Ubuntu::latin']
+      }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+  </script>
 
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -53,6 +52,7 @@
         <ul class="nav navbar-nav">
           <li><a href="{{ site.url }}/">/home</a></li>
           <li><a href="{{ site.url }}/archive.html">/archive</a></li>
+          <li><a href="{{ site.url }}/projects">/projects</a></li>
           <li><a href="{{ site.url }}/tags.html">/tags</a></li>
           <li><a href="{{ site.url }}/about.html">/about</a></li>
         </ul>
