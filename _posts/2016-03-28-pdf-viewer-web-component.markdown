@@ -4,7 +4,7 @@ title:  "Polymer based PDF viewer component"
 date:   2016-03-28 10:23:45
 comments: true
 share: true
-description: Here I'm showing how to change footer for pages created with Aikau framework, like Search result page.
+description: 
 tags: 
 - polymer
 ---
