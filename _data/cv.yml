@@ -1,9 +1,10 @@
 person:
   name: Pavel Makhov
-  profesion: Software Developer
+  profession: Software Developer
   location: Geneva, Switzerland
   citizenship: Russia
-  email: makhovpp@gmail.com
+  birthday: 12.04.1990
+  email: pavel.makhov@outlook.com
   site: http://pavelmakhov.com
   phone: +41-78-807-64-11
   github: /streetturtle
@@ -19,6 +20,7 @@ career:
     - accomplishment: Customization of server-side and client-side parts of Alfresco in correspondence to the organisation's internal processes and requirements.
     - accomplishment: Integrating Alfresco with AppDynamics - application performance management system. This project consisted of setting up the AppDynamics and development of the monitoring extensions in order to provide metrics.
     - accomplishment: Development of the web application for 2nd/3rd support of eFiles. Technology stack is Spring Boot, AngularJS, Spring Data Rest.
+    - accomplishment: Development of the custom user interface of Alfresco document library page based on Polymer.
  - position: Software Developer
    company: CERN
    location: Geneva, Switzerland
@@ -49,13 +51,14 @@ technicalSkills:
     - tr: "Experience with REST/SOAP web-services"
     - tr: "IDE: IDEA/Eclipse/NetBeans, PLSQL/SQL Developer"
     - tr: "Atlassian Tools: JIRA, Stash, Bamboo, Confluenece"
+    - tr: "Git/SVN"
   backend:
    - name: Java SE/EE
      level: 90
    - name: PL/SQL
      level: 80
   frontend:
-   - name: AngularJS/JS
+   - name: AngularJS/Polymer/JS
      level: 80
    - name: HTML/CSS/Bootstrap
      level: 90
@@ -72,17 +75,17 @@ sideProjects:
     type: site
     langs: HTML/CSS/Bootstrap
 
-  - name: jekyll-clean-dark
-    description: Theme for Jekyll - static site generator. After creating theme for my blog I shared it on github.
-    link: https://github.com/streetturtle/jekyll-clean-dark
-    type: github
-    langs: HTML/CSS/Bootstrap
-
   - name: number-writing-trainer
     description: Application which helps with learning foreign numerals. Was created to help with learning how to write french numbers as wel as to practive AngularJS.
     link: http://pavelmakhov.com/number-writing-trainer/#/
     type: site
     langs: AngularJS/HTML/CSS/Bootstrap
+
+  - name: PDF-element
+    description: Web component built with Polymer which allows to view PDF files.
+    link: http://pavelmakhov.com/pdf-element/
+    type: site
+    langs: Polymer/JavaScript
 
   - name: Awesome WM widgets
     description: Collection of widgets for the Awesome Window Manager for Linux. Contains Battery, Volume, Spotify, Email and Rates widgets.
@@ -95,6 +98,12 @@ sideProjects:
     link: https://github.com/streetturtle/AppDynamics-Extensions
     type: github
     langs: Ruby/Bash
+
+  - name: jekyll-clean-dark
+    description: Theme for Jekyll - static site generator. After creating theme for my blog I shared it on github.
+    link: https://github.com/streetturtle/jekyll-clean-dark
+    type: github
+    langs: HTML/CSS/Bootstrap
 
   - name: Jekyll CV Crafter
     description: To be able to easy update/view/print my CV I created jekyll powered CV generator.

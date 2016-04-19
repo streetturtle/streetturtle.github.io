@@ -21,8 +21,6 @@
   <link rel="shortcut icon" href="/favicon.png">
   <link href="{{site.url}}/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="{{site.url}}/css/cv1.css" rel="stylesheet">
-<!--  <link href="{{site.url}}/css/printCV.css" rel="stylesheet" type="text/css" media="print">-->
-
 
   <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet" media="all" />
   <link href='http://fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'>
@@ -48,13 +46,14 @@
       <div class="row header">
         <div class="col-xs-9">
           <h1 class="name">{{ site.data.cv.person.name }}</h1>
-          <span class="profesion">{{ site.data.cv.person.profesion }}</span>
+          <span class="profession">{{ site.data.cv.person.profession }}</span>
         </div>
 
         <div class="col-xs-3">
           <ul class="list-unstyled">
             <li><i class="fa fa-map-marker"></i> {{site.data.cv.person.location}}</li>
             <li><i class="fa fa-flag-o"></i> {{site.data.cv.person.citizenship}}</li>
+            <li><i class="fa fa-birthday-cake"></i> {{site.data.cv.person.birthday}}</li>
             <li><i class="fa fa-envelope-o"></i> <a href="mailto: {{ site.data.cv.person.email }}">{{ site.data.cv.person.email }}</a></li>
             <li><i class="fa fa-laptop"></i> <a href="http://pavelmakhov.com">pavelmakhov.com</a></li>
             <li><i class="fa fa-phone"></i> {{site.data.cv.person.phone}}</li>
