@@ -4,6 +4,7 @@ title: "Native user automation tool for Awesome WM"
 date: "2016-05-22 21:11:47 +0200"
 description: When I was using Windows I really liked the AutoHotKey tool. After moving to Linux and Awesome WM I missed some of the features of AHK, but finally I found time to investigate the alternatives and came up with native solution for Awesome WM, which I'd like to share.
 comments: true
+share: true
 tags: 
  - awesome wm
 ---
