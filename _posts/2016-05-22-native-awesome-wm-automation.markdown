@@ -77,4 +77,19 @@ end)
 
 ## Clipboard
 
-Here the idea is to map .sh script to a hotkey and inside script get current text in clipboard and apply the same rules as above.
+Here the idea is the same. But text is taken from clipboard. Awesome provides handy function - [selection()](https://awesomewm.org/doc/api/modules/selection.html) which gets the content of the clipboard. The function stays almost the same:
+
+{% highlight lua %}
+awful.key({ modkey }, "z", function()
+  text = selection()
+  if string.find(text, 'cal') then 
+    awful.util.spawn_with_shell('zenity --calendar')
+  elseif string.find(text, "^so%s") then
+    awful.util.spawn_with_shell("google-chrome 'http://stackoverflow.com/questions/tagged/" .. string.gsub(text, 'so%s', '') .. "'")
+  elseif string.find(text, "^wi%s") then
+    awful.util.spawn_with_shell("google-chrome 'https://en.wikipedia.org/wiki/Special:Search?search=" .. string.gsub(string.gsub(text, 'wi%s', ''), ' ', '+') .. "'")
+  else
+    awful.util.spawn_with_shell("google-chrome 'https://google.com/search?query=" .. text .. "'")
+  end
+end),
+{% endhighlight lua %}
