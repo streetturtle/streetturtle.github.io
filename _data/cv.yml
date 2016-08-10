@@ -1,7 +1,7 @@
 person:
   name: Pavel Makhov
   profession: Software Developer
-  location: Geneva, Switzerland
+  location: Montréal, Canada
   citizenship: Russia
   birthday: 12.04.1990
   email: pavel.makhov@outlook.com
@@ -14,7 +14,7 @@ career:
  - position: Java/Alfresco Developer
    company: CERN
    location: Geneva, Switzerland
-   dates: September 2014 - current
+   dates: September 2014 - May 2016
    summary: I take part in the development of business critical eFiles document management system based on open source solution - Alfresco – the market leader in records management. One of my projects is eFiles – CMS system. I work in a small team of three; development is performed using agile software development with Scrum. As an Alfresco developer I work on extending and customizing Alfresco, which is needed since out of the box solutions of Alfresco do not provide enough functionality for CERN needs. Through this project, I have learned business processes of other teams, as we constantly work with CERN HR team, developing the way to link their needs with technical abilities of Alfresco software.
    accomplishments:
     - accomplishment: Customization of server-side and client-side parts of Alfresco in correspondence to the organisation's internal processes and requirements.
