@@ -14,9 +14,8 @@
 body {
   padding-top: 80px;
   color: #ddd;
-  background-color: #292929;
-//  background-image: url(./pics/triangles.png);
-  background-image: url(./pics/random-grey-variations.png);
+  //  background-image: url(./pics/triangles.png);
+  background: #292929 url(./pics/random-grey-variations.png);
 }
 
 h1 { font-size: 2em; font-weight: bold;}

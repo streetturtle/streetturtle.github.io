@@ -20,7 +20,7 @@ $tag: #f1c829;
 $attributes: #9876AA;
 $comments: #75715e;
 $linenos: #A9B7C6;
-.highlight {
+.highlight, .highlighter-rouge {
   margin-bottom: 1.5em;
   color: $foreground;
   background-color: $background;
@@ -53,12 +53,12 @@ $linenos: #A9B7C6;
     color: $selectionForeground;
   }
 }
-.highlight > pre {
+.highlight > pre, .highlighter-rouge > pre {
   -webkit-box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.5);
   -moz-box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.5);
   box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.5);
 }
-.highlight,
+.highlight, .highlighter-rouge
 img,
 p > nobr > code,
 li > code,
