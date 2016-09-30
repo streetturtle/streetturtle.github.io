@@ -3,14 +3,15 @@ layout: post
 title:  "MySQL fulltext search with JPA"
 date:   2016-09-27 22:47:45
 comments: true
-description:
+description: Example on how to write JPQL or Criteria API queries for DB functions with 'unusual' signatures, like MySQL's FTS function - match against.
 tags: 
 - jpa
+- database
 ---
 
 # Problem Description
 
-In JPQL you can easily call user-defined functions just by providing its' name and parameters, the same way it would be done in SQL: `... and someFunc(user.age, :someParam)`. Regarding the Criteria API it becomes a little bit trickier, but still possible. You need to use following construction:
+In JPQL you can easily call user-defined functions just by providing its' name and parameters, the same way it would be done in plain SQL: `... and someFunc(user.age, :someParam)`. Regarding the Criteria API it becomes a little bit trickier, but still possible. You need to use following construction:
 
 ```java
 // create it
@@ -21,24 +22,21 @@ Expression<Double> function = criteriaBuilder.function("calculateAge", Double.cl
 // use it
 criteriaQuery.where(criteriaBuilder.greaterThan(function, 0.));
 ...
-// set param
+// set parameter
 entityManager.createQuery(criteriaQuery).setParameter("someParam", "someValue");
 ```
 
-Since any user-defined function has the same signature it's easy to create it in JPQL or by using Criteria API. But
-there are some functions which have different signature, like MySQL's Full Text Search, which is `match(column_name)
-against (param)`.
+Since any user-defined function has the same signature - `funcName(params...)` it's easy to create it in JPQL or by using Criteria API. But there are some functions which have different signature, like MySQL's Full Text Search, which is `match(column_name) against (param)`.
 
 >**So the problem is how to call such functions using JPQL or Criteria API**
 {:.note}
 
 # Solution
 
-The idea here is to register custom function, to do so you need to create custom dialect. I would recommend first to
-[check](http://stackoverflow.com/questions/27181397/how-to-get-hibernate-dialect-during-runtime) which dialect is used and then extend it. I didn't manage to find the proper return type. `Boolean` and `TrueFalse` types didn't work. With `Double` type it seems to work ok, but you would need to compare the result with 0 after.
+The idea here is to register a custom function, to do so you need to create custom dialect. I would recommend first to [check](http://stackoverflow.com/questions/27181397/how-to-get-hibernate-dialect-during-runtime) which dialect is used by default and then extend it. 
 
 ```java
-public class MySQLDialect extends MySQL5Dialect {
+public class MySQLDialectCustom extends MySQL5Dialect {
 
   public MySQLDialect() {
     super();
@@ -47,12 +45,15 @@ public class MySQLDialect extends MySQL5Dialect {
   }
 }
 ```
+>I didn't manage to find the proper return type. `Boolean` and `TrueFalse` types didn't work. With `Double` type it seems to work ok, but you will need to make sure that result is positive.
+{:.note .warning}
 
 And then set it by setting `hibernate.dialect` property.
 
 Now you can easily use it:
 
-**JPQL**:
+>JPQL example
+{:.filename}
 
 ```java
 Query query = entityManager
@@ -65,7 +66,8 @@ List<Animal> result = query.getResultList();
 return result;
 ```
 
-**Criteria API**:
+>Criteria API example
+{:.filename}
 
 ```java
 CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
