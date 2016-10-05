@@ -58,6 +58,10 @@ h1, h2{
   text-align: center;
 }
 
+.flag{
+  vertical-align: middle;
+}
+
 @media print {
   .section {
     page-break-inside: avoid;

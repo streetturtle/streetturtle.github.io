@@ -11,10 +11,16 @@ person:
   stackoverflow: /streetturtle
 
 career:
+ - position: Java Developer / Consultant
+   company: Savoir-Faire Linux
+   location: Montreal, Canada
+   country: ca
+   dates: 08.2016 - current
  - position: Java/Alfresco Developer
    company: CERN
    location: Geneva, Switzerland
-   dates: September 2014 - May 2016
+   country: ch
+   dates: 09.2014 - 05.2016
    summary: I take part in the development of business critical eFiles document management system based on open source solution - Alfresco – the market leader in records management. One of my projects is eFiles – CMS system. I work in a small team of three; development is performed using agile software development with Scrum. As an Alfresco developer I work on extending and customizing Alfresco, which is needed since out of the box solutions of Alfresco do not provide enough functionality for CERN needs. Through this project, I have learned business processes of other teams, as we constantly work with CERN HR team, developing the way to link their needs with technical abilities of Alfresco software.
    accomplishments:
     - accomplishment: Customization of server-side and client-side parts of Alfresco in correspondence to the organisation's internal processes and requirements.
@@ -24,7 +30,8 @@ career:
  - position: Software Developer
    company: CERN
    location: Geneva, Switzerland
-   dates: October 2012 – September 2014
+   country: ch
+   dates: 10.2012 – 09.2014
    summary: I worked in GS-AIS-EB (Electronic Business) section for EDH (Electronic Document Handling) system, which covers many life aspects at CERN (such as absences, HR & Training, purchasing, logistics and safety). In this role, I was developing EDH documents and improving functionality of existing ones. I worked in a team of 8-10 people; agile software development with Scrum was used for a development performance. One of the biggest and the most interesting project during this period was the development of CERN Hotel booking application. This activity included the work with Micros/Oracle consultant and Hotel’s representatives.
    accomplishments:
     - accomplishment: Extending functionality of CERN Hotel web booking application (hostel.cern.ch). Main feature developed is the possibility to create a Waiting-List reservations in cases when no rooms were available for the given period, which was not supported by Fidelio. I was working closely with customers from Hotel as well as consultant from Micros/Oracle.
@@ -33,7 +40,8 @@ career:
  - position: Software Developer
    company: Probusinessbank
    location: Moscow, Russia
-   dates: October 2011 – July 2012
+   country: ru
+   dates: 10.2011 – 07.2012
    summary: While finishing the study at University I got a job at Probusinessbank in Moscow, one of TOP-50 banks in Russia. During my time there, I was responsible for several activities.
    accomplishments:
     - accomplishment: Development of web-services communicating with external systems such as credit agencies, payment systems.

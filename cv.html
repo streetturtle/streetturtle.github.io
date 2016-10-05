@@ -21,6 +21,7 @@
   <link rel="shortcut icon" href="/favicon.png">
   <link href="{{site.url}}/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="{{site.url}}/css/cv1.css" rel="stylesheet">
+  <link href="{{site.url}}/css/flags/flags.css" rel="stylesheet">
 
   <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet" media="all" />
   <link href='http://fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'>
@@ -63,22 +64,23 @@
         </div>
       </div>
 
-
     <div class="row  section">
       <div class="col-xs-3">
         <h2>Career</h2>
-              </div>
+      </div>
 
       <div class="col-xs-9">
         {% for item in site.data.cv.career %}
          <div class="jd">
           <div class="row">
             <div class="col-xs-6">
-              <h4><b>{{ item.position }}</b></h4>
+              <span><b>{{ item.position }}</b> <i>at</i> {{ item.company}}</span>
             </div>
-            <div class="col-xs-6 pull-right">
-              <h5 class="pull-right">{{ item.dates }}<br/>
-              {{item.company}} <i>({{item.location}})</i></h5>
+            <div class="row">
+              <div class="pull-right">
+                <div><i class="flag flag-{{item.country}}" alt="Czech Republic"></i> {{item.location}}</div>
+                <div class="pull-right">{{ item.dates }}</div>
+              </div>
             </div>
           </div>
           <div class="row">
@@ -89,9 +91,9 @@
           <div class="row">
             <div class="col-xs-12">
 
-                      {% if item.accomplishments.size > 0 %}
-            <b>Selected accomplishments:</b>
-           {% endif %}
+            {% if item.accomplishments.size > 0 %}
+              <b>Selected accomplishments:</b>
+            {% endif %}
             <ul>
             {% for itemm in item.accomplishments %}
               <li>{{itemm.accomplishment}}</li>
