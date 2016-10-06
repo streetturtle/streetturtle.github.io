@@ -88,7 +88,7 @@ sideProjects:
     langs: HTML/CSS/Bootstrap
 
   - name: number-writing-trainer
-    description: Application which helps with learning foreign numerals. Was created to help with learning how to write french numbers as wel as to practive AngularJS.
+    description: Application which helps with learning foreign numerals. Was created to help with learning how to write french numbers as well as to practice AngularJS.
     link: http://pavelmakhov.com/number-writing-trainer/#/
     type: site
     langs: AngularJS/HTML/CSS/Bootstrap
