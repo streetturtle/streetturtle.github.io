@@ -72,13 +72,19 @@
       <div class="col-xs-9">
         {% for item in site.data.cv.career %}
          <div class="jd">
-          <div class="row">
+          <div class="row" style="padding-bottom:20px">
             <div class="col-xs-6">
-              <span><b>{{ item.position }}</b> <i>at</i> {{ item.company}}</span>
+              <div>
+                <img style="height: 30px;display: inline-block;vertical-align: middle;" src="{{ site.url }}/images/cv/{{ item.logo }}">
+                <div style="display: inline-block; vertical-align: middle;">
+                  <div><b>{{ item.position }}</b></div>
+                  <div>{{ item.company }}</div>
+                </div>
+              </div>
             </div>
-            <div class="row">
+            <div class="col-xs-6">
               <div class="pull-right">
-                <div><i class="flag flag-{{item.country}}" alt="Czech Republic"></i> {{item.location}}</div>
+                <div><i class="flag flag-{{item.country}}"></i> {{item.location}}</div>
                 <div class="pull-right">{{ item.dates }}</div>
               </div>
             </div>
