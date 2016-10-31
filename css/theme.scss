@@ -42,9 +42,9 @@ h6 { font-size: .75em; }
   line-height: 1em;
 }
 
-.sideBarTags{
-    list-style: none;
-  :before {
+ul.sideBarTags {
+  list-style: none;
+  li:before {
     content: '\f02b';
     font-family: 'FontAwesome';
     float: left;
