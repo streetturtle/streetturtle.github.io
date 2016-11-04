@@ -7,7 +7,7 @@ categories:
 description: After several days of using my Lenovo m5400 I faced serious problem with built-in touchpad. Sometimes it didn't work at all, sometimes every touch I made was understood as scrolling, sometimes it was stuck for several seconds and started to work again. Here is solution to this problem!   
 tags: 
 ---
-After several days of using my Lenovo m5400 I've faced serious problem with built-in touchpad. Sometimes it didn't work at all, sometimes every touch I made was understood as scrolling, sometimes it was stuck for several seconds and started to work again. It seems that problem somewhere in driver, I tried to reinstall/update it, but it didn't help. Since I was usinig my laptop only at home I decided to buy an external mouse and don't use  touchpad at all. But recently I tried again to solve this issue. After some time clicking around it turned out that it's quite easy to make it work. 
+After several days of using my Lenovo m5400 I've faced serious problem with built-in touchpad. Sometimes it didn't work at all, sometimes every touch I made was understood as scrolling, sometimes it was stuck for several seconds and started to work again. It seems that problem somewhere in driver, I tried to reinstall/update it, but it didn't help. Since I was using my laptop only at home I decided to buy an external mouse and don't use  touchpad at all. But recently I tried again to solve this issue. After some time clicking around it turned out that it's quite easy to make it work.
 
 Just in case I'm running Windows 8.1 on Lenovo m5400 with i5-4200.
 

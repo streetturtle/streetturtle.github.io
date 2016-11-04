@@ -3,12 +3,13 @@ layout: post
 title:  "Juniper  VPN on Ubuntu 16.04 64-bit"
 date:   2016-09-17 22:47:45
 comments: true
-description: I faced an issue running Juniper on Ubuntu 16.04. Some of the solutions I found wasn’t working (like install 32-bit openjdk and firefox), others took to much time to set up and were quite fragile (like setup VM with 32-bit Debian, run Juniper applet on it and use this VM as proxy). So here is my solution which I already succesfully tried on 3 laptops with 64-bit Ubuntu 16.04.
+description: I faced an issue running Juniper on Ubuntu 16.04. Some of the solutions I found wasn't working (like install 32-bit openjdk and firefox), others took to much time to set up and were quite fragile (like setup VM with 32-bit Debian, run Juniper applet on it and use this VM as proxy). So here is my solution which I already successfully tried on 3 laptops with 64-bit Ubuntu 16.04.
 tags: 
 - ubuntu
 ---
 
-I faced an issue running Juniper on Ubuntu 16.04. Some of the solutions I found wasn't working (like install 32-bit openjdk and firefox), others took to much time to set up and were quite fragile (like setup VM with 32-bit Debian, run Juniper applet on it and use this VM as proxy). So here is my solution which I already succesfully tried on 3 laptops with 64-bit Ubuntu 16.04.
+I faced an issue running Juniper on Ubuntu 16.04. Some of the solutions I found wasn't working (like install 32-bit openjdk and firefox), others took to much time to set up and were quite fragile (like setup VM with 32-bit Debian, run Juniper applet on it and use this VM as proxy). So here is my solution which I already successfully tried on 3 laptops with 64-bit Ubuntu
+ 16.04.
 
 ## Install Firefox
 Most likely it's already installed - normal one, 64-bit

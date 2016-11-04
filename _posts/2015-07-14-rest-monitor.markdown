@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "REST call monitoring extenstion for AppDynamics"
+title:  "REST call monitoring extension for AppDynamics"
 date:   2015-07-14 16:23:45
 comments: true
 categories:
-description: AppDynamics is platform which allows to monitor many aspects of the application - from user interaction to performace of SQL calls to database. It has nice platform for custom extenstions which provides all kind of metrics. Here I'd like to show how to create a custom extension which makes a rest call to some webservice (which provides some interesting metrics about application) and sends them to the AppDynamics controller.
+description: AppDynamics is platform which allows to monitor many aspects of the application - from user interaction to performance of SQL calls to database. It has nice platform for custom extensions which provides all kind of metrics. Here I'd like to show how to create a custom extension which makes a rest call to some webservice (which provides some interesting metrics about application) and sends them to the AppDynamics controller.
 tags: 
 - appdynamics
 - ruby
@@ -22,7 +22,7 @@ Let's say I have a web application and I want to know how many users are online.
 }
 {% endhighlight json %}
 
-## Type of extenstion
+## Type of extension
 
 AppDynamics supports three types of extensions:
 
@@ -69,7 +69,7 @@ res = http.request(request)
 {% endhighlight ruby %}
 
 
-`res.body` will containt json response, but first we need to parse it, get value by key and print it:
+`res.body` will contain json response, but first we need to parse it, get value by key and print it:
 
 {% highlight ruby %}
 resJson = JSON.parse(res.body)

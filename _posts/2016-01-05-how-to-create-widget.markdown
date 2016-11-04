@@ -89,11 +89,11 @@ Let's have a look at some important lines:
 
 Line **4**: creation of text widget.
 Line **7**: creation of a timer which will fire every hour.
-Line **8**: second parameter, an anonymus function, will be called when timer will have a timeout signal. 
+Line **8**: second parameter, an anonymous function, will be called when timer will have a timeout signal.
 Line **9**: function which sends the execution result of a script (line **14**) to DBus.
 Line **16**: timer starts.
-Line **18**: very important part, without emiting the signal explicitly it will be fired only after one hour and widget will be empty, so we fire the signal manualy.
-Lines **20**-**27**: requesting the script ouput from DBus.
+Line **18**: very important part, without emitting the signal explicitly it will be fired only after one hour and widget will be empty, so we fire the signal manually.
+Lines **20**-**27**: requesting the script output from DBus.
 Line **26**: setting the widget text.
 
 >You can read more about sending messages to DBus in this post [Use DBus instead of pread/popen/spawn_in_shell]({{site.url}}/2015/09/fix-awesome-freezes/)
@@ -120,6 +120,6 @@ I use the same approach in [email widget]({{site.url}}/2015/12/email-widget-for-
 You can set the timer to update widget's value as frequently as you want (for the sake of tutorial in rates widget the timeout is set to half an hour, but actually API is updated every day).
 Another good point here is using DBus to prevent Awesome from freezing, so Awesome doesn't wait for script or command to finish execution, result is sent to DBus and then it is taken from it when requested.
 
-The code could be found in the [gihub repo](https://github.com/streetturtle/AwesomeWM/tree/master/RatesWidget).
+The code could be found in the [girhub repo](https://github.com/streetturtle/AwesomeWM/tree/master/RatesWidget).
 
 If something is unclear or if there is any questions please let me know in the comments below, I will be happy to answer :)

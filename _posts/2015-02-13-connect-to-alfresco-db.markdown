@@ -13,7 +13,7 @@ tags:
 ## Connection to PostgreSQL (IDE)
 
 You can easily connect to Alfresco database using database IDE, [pgAdmin](http://www.pgadmin.org/) for example. But I prefer to use Intellij's [0xdbe](https://www.jetbrains.com/dbe/).
-All neccessary information you can find in alfresco-global.properties file (host, port, login and password). 
+All necessary information you can find in alfresco-global.properties file (host, port, login and password).
 
 ![Screenshot]({{ site.url }}/images/0xdbeSettings.png){:.center-image}
 

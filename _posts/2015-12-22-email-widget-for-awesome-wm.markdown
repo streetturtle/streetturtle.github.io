@@ -116,7 +116,7 @@ emailWidget_counter = wibox.widget.textbox()
 emailWidget_times = timer ({timeout = 5})
 emailWidget_times:connect_signal ("timeout", 
 	function ()
-		awful.util.spawn_with_shell("dbus-send --session --dest=org.naquadah.awesome.awful /com/awesome/wodget com.awesome.widget.unreadEmails string:$(python ~/.config/awesome/email/getUnreadEmailsNum.py)" )
+		awful.util.spawn_with_shell("dbus-send --session --dest=org.naquadah.awesome.awful /com/awesome/widget com.awesome.widget.unreadEmails string:$(python ~/.config/awesome/email/getUnreadEmailsNum.py)" )
 		end)
 emailWidget_times:start()
 

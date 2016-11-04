@@ -13,7 +13,7 @@ comments: true
 
 Alfresco provides very good and rich Java API to maintain NodeRefs, there are `nodeService` and `fileFolderService` with many convenient methods, but applicable to the problem below I couldn't find relevant one.
 
-Let's pretend that we have a folder with a typo in the name (*HR ofice*). When it was discovered instead of renaming it user just created another folder with a proper name (*HR office*). So it would be something like this:
+Let's pretend that we have a folder with a typo in the name (*HR office*). When it was discovered instead of renaming it user just created another folder with a proper name (*HR office*). So it would be something like this:
 
 {% highlight bash %}
 Recruitment
@@ -36,7 +36,7 @@ First thing which comes up is to use some of the services, but since inner folde
  - `fileFolderService#move(moveFrom)` will throw `FileExistsException`
  - `nodeService#moveNode` will throw `DuplicateChildNodeNameException`
  
-The proper way to merge them is to recurseviely check if child nodes of target folder has nodes with the same name as child nodes of source folder. If not then just move child node from source to target, otherwise do the same check with child nodes. Here is the method:
+The proper way to merge them is to recursively check if child nodes of target folder has nodes with the same name as child nodes of source folder. If not then just move child node from source to target, otherwise do the same check with child nodes. Here is the method:
 
 
 {% highlight java %}
@@ -79,7 +79,7 @@ public void mergeFolders(NodeRef source, NodeRef target)
 
 If you want to use it please be very careful - source and target folders should be identical (name, aspects, type, inner folder structure) like in the example above. Otherwise you can lose some important information about the source folder. I guess this is why Alfresco doesn't have such method. Also note that source folder is not deleted, it has to be deleted explicitly. 
 
-After runnig this method for folders from the example above the structure will be following:
+After running this method for folders from the example above the structure will be following:
 
 {% highlight bash %}
 Recruitment

@@ -4,7 +4,7 @@ title:  "Enable document view event for RM audit"
 date:   2015-02-19 16:23:45
 comments: true
 categories:
-description: I was quite surised when discovered that out-the-box alfresco RM doesn't audit document view action. After suffering for a while I've finally managed to turn it on!
+description: I was quite surprised when discovered that out-the-box alfresco RM doesn't audit document view action. After suffering for a while I've finally managed to turn it on!
 tags: 
 - alfresco
 - alfresco RM
@@ -15,7 +15,7 @@ Records Management has a really useful feature which is audit. Out of the box it
 
 ##Behaviour
 
-In alfresco actions are audited by behaviour. To a have a closer look on it you can clone Records Managment project from RM [git repository](https://github.com/Alfresco/records-management.git) and then have a look on some default events. They are located in `org.alfresco.module.org_alfresco_module_rm.audit.event` package. [Here](http://ecmarchitect.com/alfresco-developer-series-tutorials/behaviors/tutorial/tutorial.html) you can find very good tutorial about Alfresco becaviour from Jeff Potts.
+In alfresco actions are audited by behaviour. To a have a closer look on it you can clone Records Management project from RM [git repository](https://github.com/Alfresco/records-management.git) and then have a look on some default events. They are located in `org.alfresco.module.org_alfresco_module_rm.audit.event` package. [Here](http://ecmarchitect.com/alfresco-developer-series-tutorials/behaviors/tutorial/tutorial.html) you can find very good tutorial about Alfresco behaviour from Jeff Potts.
 
 In few words behaviour should implement some policy which is in our case would be `ContentServicePolicies.OnContentReadPolicy` and also extend `Audit event`. The behaviour itself would register read event of noderef and pass it to RM audit service. Here is the implementation of this behaviour:
 

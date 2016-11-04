@@ -12,7 +12,8 @@ tags:
 
 ### Installation and Configuration files
 
-First of all you need to install it, note that in default repositries only version 3.4 available, but the latest one is 3.5.6:
+First of all you need to install it, note that in default repositories only version 3.4 available, but the latest one
+ is 3.5.6:
 
 {% highlight bash %}
 sudo add-apt-repository ppa:klaus-vormweg/awesome
@@ -36,7 +37,7 @@ From now all changes should be done with rc.lua which is under your home directo
 
 ### Two screens (swap screens)
 
-By default when I logged in first time using awesome screens were swaped, so left one was on the right and right on the left. If I were using Gnome Shell swap them back would be easier, just using Displays application, but in awesome it should be done manually. To see what screens you have, you need to run `xrandr`. You'll see name of the screen with applied parameters and then available options, such as screen resolutions and FPS. It would be something like this (I replaced some parts with `...`):
+By default when I logged in first time using awesome screens were swapped, so left one was on the right and right on the left. If I were using Gnome Shell swap them back would be easier, just using Displays application, but in awesome it should be done manually. To see what screens you have, you need to run `xrandr`. You'll see name of the screen with applied parameters and then available options, such as screen resolutions and FPS. It would be something like this (I replaced some parts with `...`):
 
 {% highlight bash %}
 Screen 0: minimum 8 x 8, current 3840 x 1200, maximum 32767 x 32767
@@ -64,7 +65,8 @@ Done!
 
 There are two types of themes: for awesome: which basically applies to top panel, widgets and for applications: GTK themes.
 
-Regarding GTK themes to check available ones you need to install `lxappearace` application which allows you to change theme:
+Regarding GTK themes to check available ones you need to install `lxappearance` application which allows you to
+change theme:
 
 {% highlight bash %}
 sudo apt-get install lxappearance
@@ -76,7 +78,7 @@ Personally I like adwaita dark theme, so I download it and put in /usr/share/the
 
 ### Startup application
 
-One of the simpliest way is to add following section to your _rc.lua_:
+One of the simplest way is to add following section to your _rc.lua_:
 
 {% highlight lua %}
 function run_once(cmd)
@@ -100,7 +102,7 @@ I am using SQL Developer to work with databases. I was unable to run it after in
 sudo apt-get install suckless-tools
 {% endhighlight bash %}
 
-And then add magic spell before runnig sqldeveloper.sh:
+And then add magic spell before running sqldeveloper.sh:
 
 {% highlight bash%}
 vim `which 'sqldeveloper'`

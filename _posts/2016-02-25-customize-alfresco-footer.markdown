@@ -11,12 +11,12 @@ tags:
 # Introduction
 
 Actually Alfresco documentation already has quite good [article](http://docs.alfresco.com/5.0/tasks/dev-extensions-share-tutorials-fm-temp-customize.html) on how to customize footer. But it took me some time to understand it and implement my version of footer, because I am not very familiar with Surf.
-What I want to achive is to remove Alfresco logo because it takes to much space, decrease footer size and add some useful information to it - like version of the deployed application, link to ticket system, version of Alfresco.
+What I want to achieve is to remove Alfresco logo because it takes to much space, decrease footer size and add some useful information to it - like version of the deployed application, link to ticket system, version of Alfresco.
 
-Let's see how to achive following result:
+Let's see how to achieve following result:
 ![Custom Alfresco footer]({{site.url}}/images/alfCustomFooter.png)
 
-> Unfortunately this approach doesn't work for pages which are built using Aikau (like Search resluts page)
+> Unfortunately this approach doesn't work for pages which are built using Aikau (like Search results page)
 {:.note}
 
 # Extension

@@ -65,7 +65,7 @@ public class GetStatistics extends AbstractWebScript
 }
 {% endhighlight java %}
 
-And register webscript in `your-app-contect.xml`:
+And register webscript in `your-app-context.xml`:
 
 {% highlight xml %}
 <bean id="webscript.com.mycomp.myapp.getStatistics.get"
@@ -84,6 +84,6 @@ At the end after calling webscript's URL: [/alfresco/s/mycomp/api/getStatistics]
 }
 {% endhighlight json %}
 
-And in this post: [REST call monitoring extenstion for AppDynamics]({{ site.url }}/2015/07/rest-monitor/) you will now how to use this webscrip as a metric provider for AppDynamics.
+And in this post: [REST call monitoring extension for AppDynamics]({{ site.url }}/2015/07/rest-monitor/) you will now how to use this webscript as a metric provider for AppDynamics.
 
 Cheers!

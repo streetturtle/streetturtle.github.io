@@ -61,7 +61,7 @@ and css:
   filter: alpha(opacity=0);      /* hides input */
   opacity: 0;                    /* hides input */
   padding: 25px 26px 25px 26px;  /* 'increases' input area */
-  cursor: pointer;               /* cusror: pointer :) */
+  cursor: pointer;               /* cursor: pointer :) */
 }
 #dnd-container{  
   border: 2px dashed #333;       /* border */
@@ -125,7 +125,7 @@ We'll have this element - which supports drag&drop upload as well as uploading b
 
 ## Internet Explorer
 
-In IE dnd functionality is not supported by browser, so for IE we can just leave the default element by providing diffenrent css style. To do so here is conditional comments where this can be specified:
+In IE dnd functionality is not supported by browser, so for IE we can just leave the default element by providing different css style. To do so here is conditional comments where this can be specified:
 
 {% highlight html %}
 <!-- IE 7, 8, 9 -->

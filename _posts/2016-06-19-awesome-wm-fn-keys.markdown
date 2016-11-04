@@ -2,7 +2,7 @@
 layout: post
 title: "Making fn-keys work in Awesome WM"
 date: "2016-06-19 11:11:47 +0200"
-description: After switching to Awesome from Unity I didn't use fn-keys at all - I simply remaped their functionality to different shortcuts with mod4 key. But after sometime of using Awesome in a dual-boot system alongside with Windows made me crazy each time remembering which shortcut to use to change volume, or brightness. Here I want to show how to make some of fn-keys work in Awesome.  
+description: After switching to Awesome from Unity I didn't use fn-keys at all - I simply remapped their functionality to different shortcuts with mod4 key. But after sometime of using Awesome in a dual-boot system alongside with Windows made me crazy each time remembering which shortcut to use to change volume, or brightness. Here I want to show how to make some of fn-keys work in Awesome.
 comments: true
 share: true
 tags: 
@@ -10,7 +10,7 @@ tags:
 ---
 
 Basically there is nothing super hard in it. The only discovery for me was that the `fn`{:.key} does not throw any signal to X by itself. It works only in combination with some other key. To test that you can run `xev` (listens events from keyboard/mouse and prints them) in your terminal and press `fn`{:.key} several times.
-Now let's try combination - `fn`{:.key}+`F2`{:.key} for instance - voulme down for my DELL laptop. You'd see something like this in terminal:
+Now let's try combination - `fn`{:.key}+`F2`{:.key} for instance - volume down for my DELL laptop. You'd see something like this in terminal:
 
 {% highlight bash %}
 KeyPress event, serial 33, synthetic NO, window 0x800001,

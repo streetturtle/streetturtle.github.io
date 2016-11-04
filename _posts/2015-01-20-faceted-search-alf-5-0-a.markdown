@@ -10,7 +10,7 @@ tags:
 - faceted-search
 ---
 
-In the project I'm working on I had a task to add custom facets to the search. Since version 5.0.a is the first one which supports faceted search the support for custom facets wasn't there, at least I couldn't find it. It seems that in further version of alfresco it is in place, but in the project I'm working on we had a strict requirement to use 5.0.a version. The solution I discovered is a bit "dirty" because instead of overriding the facet cofiguraion component using aikau framework I just overwritten it. Another negative point is that it prbably won't work with further Alfresco versions, so you'll need to update the code. But hopefully adding new facets would be easier in latest versions so this change won't be to big.
+In the project I'm working on I had a task to add custom facets to the search. Since version 5.0.a is the first one which supports faceted search the support for custom facets wasn't there, at least I couldn't find it. It seems that in further version of alfresco it is in place, but in the project I'm working on we had a strict requirement to use 5.0.a version. The solution I discovered is a bit "dirty" because instead of overriding the facet configuration component using aikau framework I just overwritten it. Another negative point is that it probably won't work with further Alfresco versions, so you'll need to update the code. But hopefully adding new facets would be easier in latest versions so this change won't be to big.
 Let's start!
 All the changes are done in share project.
 
@@ -62,7 +62,7 @@ id: "FCTSRCH_FACET_DOCUMENT_TYPE",
 ...
 {% endhighlight javascript %}
 
-To check the config parameters refer to the documentation: [FacetFilfters config parameters].
+To check the config parameters refer to the documentation: [FacetFilters config parameters].
 
 In my case the document type name is several words split by space. To make solr search for the whole phrase and create whole prhase facet you need to add this part `.__.u` to the facet Qname. And also make sure that tokenised in the content model is set to `false` or `both`, so that the string is not tokenised before being indexed:
 
@@ -78,4 +78,4 @@ In my case the document type name is several words split by space. To make solr 
 </property>
 {% endhighlight xml %}
 
-[FacetFilfters config parameters]: http://dev.alfresco.com/resource/docs/jsdoc-haiku/FacetFilters.html
+[FacetFilters config parameters]: http://dev.alfresco.com/resource/docs/jsdoc-haiku/FacetFilters.html

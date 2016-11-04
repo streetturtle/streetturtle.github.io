@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Solving Angualr JS CORS issue"
+title: "Solving Angular JS CORS issue"
 date: 2016-02-01 12:09:06
 comments: true
 tags: 
@@ -11,7 +11,7 @@ comments: true
 
 # The problem
 
-Every time I call some services which are on different machine from one which served the application using `$http` or `$resource` services I endup with following error: 
+Every time I call some services which are on different machine from one which served the application using `$http` or `$resource` services I end up with following error:
 
 {% highlight bash %}
 No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://something:1234' is therefore not allowed access.
@@ -71,7 +71,7 @@ public String genericProxyPost(RequestEntity<String> requestEntity, HttpServletR
 
 For the code above all requests which starts with `/proxy/dar/` will endup in this method (line **10**).
 The key in the map is local path, the value is path of the external service. 
-Then in `path` variable would be written the remaing part of the URL, which is key in the map (line **15**). 
+Then in `path` variable would be written the remaining part of the URL, which is key in the map (line **15**).
 By this key we take the part of URL from the map of external service and redirect HTTP call there (line **17**).
 
 

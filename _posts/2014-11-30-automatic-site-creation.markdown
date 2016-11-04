@@ -75,7 +75,7 @@ Done! So now you'll just need to run the webscript by going to [http://localhost
 
 ## Some problems
 
-For the moment there is one problem with this method which I still cannot resolve. For some reason the first post reqest of site creation is ignored. So in my example only one site will be created.
+For the moment there is one problem with this method which I still cannot resolve. For some reason the first post request of site creation is ignored. So in my example only one site will be created.
 
 Working project you can find on my [github].
 

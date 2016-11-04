@@ -35,11 +35,11 @@ And on iPad mini:
 Optionally you can use:
 
  - [Disqus](http://disqus.com) as a comments system;
- - [Google Analyticse](http://www.google.com/analytics/);
+ - [Google Analytics](http://www.google.com/analytics/);
  - [Yandex Metrika](http://metrica.yandex.com);
  - Blog tags.
 
-Also you can have social icons which could lead to your social acounts. 
+Also you can have social icons which could lead to your social accounts.
 Out-of-the box it has: 
 
 <ul class="social-media">
@@ -86,7 +86,7 @@ All these features could be set up in `_config.yml`.
 
 ## Installation
 
-If you dont't have your own blog you can clone this repository and put your articles in a `_posts` folder.
+If you don't have your own blog you can clone this repository and put your articles in a `_posts` folder.
 If you already have your own blog then I think you can clone this repository and copy-paste content keeping your `_posts` folder.
 
 After you will have to set up your `_config.yml`

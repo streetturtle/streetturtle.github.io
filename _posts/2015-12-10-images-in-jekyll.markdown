@@ -48,4 +48,4 @@ And the output html would be:
 
 With this approach you can use as many image styles as you want just by defining css class and providing it after the image. You can read more about this kramdown feature in [quick reference](http://kramdown.gettalong.org/quickref.html#block-attributes). 
 
-By the way those bears are from [Madrid Zoo](http://zoomadrid.com/en), I really recomment to visit them :)
+By the way those bears are from [Madrid Zoo](http://zoomadrid.com/en), I really recommend to visit them :)

@@ -4,7 +4,7 @@ title:  "Rhythmbox integration with Awesome WM"
 date:   2015-08-09 16:23:45
 comments: true
 categories:
-description: Rhythmbox provides tool to control running instance from terminal, which is very good feature. With it's help it is very easy to create a widget which diplays currently playing song. Also here I'm showing how to add some shortcuts to control music.
+description: Rhythmbox provides tool to control running instance from terminal, which is very good feature. With it's help it is very easy to create a widget which displays currently playing song. Also here I'm showing how to add some shortcuts to control music.
 tags: 
 - awesome wm
 - ubuntu
@@ -14,7 +14,7 @@ To work with rhythmbox from terminal there is really nice tool called **rhythmbo
 
 ## Widget
 
-Widget shows name and artist of currently playing song. Basically it runs theis command: `rhythmbox-client --no-start --print-playing`. Looks like this: ![Rhythmbox Wiget]({{ site.url }}/images/rhythmbox.png).
+Widget shows name and artist of currently playing song. Basically it runs theis command: `rhythmbox-client --no-start --print-playing`. Looks like this: ![Rhythmbox Widget]({{ site.url }}/images/rhythmbox.png).
 To create such widget create file **rhythmbox.lua** with following content:
 
 {% highlight lua %}

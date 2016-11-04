@@ -27,7 +27,7 @@ Below you can find how the whole section will look like:
   {% for post in posts %}
     {% assign isAdded = false %}       <!-- used to prevent duplicates -->  
     {% for tagAll in post.tags %}      <!-- all posts's tags -->
-      {% for tag in page.tags %}       <!-- curent post's tags -->
+      {% for tag in page.tags %}       <!-- current post's tags -->
         {% if tagAll == tag and page.title != post.title and isAdded == false %}
           <li><a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a></li>
           {% assign isAdded = true %} 

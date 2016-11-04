@@ -11,7 +11,7 @@ tags:
 ---
 
 Using Spring Data REST with Angular's $resource object is very useful and convenient, but I've faced a problem with CRUD update. 
-First you need to create such method while creating $resouce object:
+First you need to create such method while creating $resource object:
 
 {% highlight javascript %}
 angular.module('myApp.services',[]).factory('Something',function($resource){
@@ -23,7 +23,7 @@ angular.module('myApp.services',[]).factory('Something',function($resource){
 });
 {% endhighlight javascript %}
 
-But when this method was called I got `405 Method Not Allowed` error. The problem is Spring expects to have an id in the URL. To add it modify creation of a $resouce object:
+But when this method was called I got `405 Method Not Allowed` error. The problem is Spring expects to have an id in the URL. To add it modify creation of a $resource object:
 
 {% highlight javascript %}
 angular.module('myApp.services',[]).factory('Something',function($resource){

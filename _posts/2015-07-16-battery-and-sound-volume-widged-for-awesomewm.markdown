@@ -45,7 +45,7 @@ right_layout:add(batteryIcon)
 
 Simple and easy-to-install widget for Awesome Window Manager.
 
-This widget represents the sound level: ![Volume Wiget]({{ site.url }}/images/volWid.png)
+This widget represents the sound level: ![Volume Widget]({{ site.url }}/images/volWid.png)
 
 ### Installation
 

@@ -69,7 +69,7 @@ But this page is not linked to your site yet. To link it add this part to `share
 </config>
 {% endhighlight xml%}
 
-And then on site-customization page just drag and drop created page from Availabe Site Pages to Current Site Pages.
+And then on site-customization page just drag and drop created page from Available Site Pages to Current Site Pages.
 
 First step is done!
 
