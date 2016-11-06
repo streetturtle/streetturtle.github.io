@@ -56,6 +56,3 @@ And (just in case) here is how to create a sorted list of all used tags:
 {% endhighlight html %}
 
 Cheers!
-
-
-
