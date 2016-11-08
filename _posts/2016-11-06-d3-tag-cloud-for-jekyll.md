@@ -5,8 +5,7 @@ date:   2016-11-06 22:47:45
 comments: true
 description: Generate a tag cloud for a Jekyll blog with d3.js
 tags: 
-- jpa
-- database
+- jekyll
 share: true
 ---
 
