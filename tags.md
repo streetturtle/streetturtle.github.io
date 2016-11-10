@@ -13,6 +13,5 @@ title: Tags
   ]
 {% endcapture %}
 
-{{site_tags}}
 {% include tag-cloud.html %}
 </div>
