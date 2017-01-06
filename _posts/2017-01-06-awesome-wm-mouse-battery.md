@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Mouse Battery status widget for Awesome wm"
-date:   2016-11-06 10:47:45
+date:   2017-01-06 10:47:45
 comments: true
 description: Quick tutorial on how to create widget which displays battery status of a wireless mouse
 tags: 
