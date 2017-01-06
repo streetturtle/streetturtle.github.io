@@ -29,7 +29,7 @@ share:
 
 # Google Analytics key, leave blank to ignore
 google_analytics_key: UA-57641651-1
-# Yandex metrika (https://metrica.yandex.com/) leave blanc to ignore or put true to use
+# Yandex metrika (https://metrica.yandex.com/) leave blank to ignore or put true to use
 yandex_metrika: true
 
 # Set this to your disqus shortname to enable comments. Note that the 'comments'
