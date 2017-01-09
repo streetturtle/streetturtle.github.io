@@ -6,7 +6,7 @@ person:
   birthday: 12.04.1990
   email: pavel.makhov@outlook.com
   site: http://pavelmakhov.com
-  phone: +41-78-807-64-11
+  phone:
   github: /streetturtle
   stackoverflow: /streetturtle
 
@@ -62,7 +62,6 @@ technicalSkills:
     - tr: "Scripting languages: Python/Ruby"
     - tr: "Experience with REST/SOAP web-services"
     - tr: "IDE: IDEA/Eclipse/NetBeans, PLSQL/SQL Developer"
-    - tr: "Atlassian Tools: JIRA, Stash, Bamboo, Confluenece"
     - tr: "Git/SVN"
   backend:
    - name: Java SE/EE
