@@ -14,7 +14,7 @@ tags:
 
 The proper way to get information about your repo would be to create a Java or javascript webscript. To get info about documents you'll need to use [CMIS](http://docs.alfresco.com/4.2/concepts/intrans-metadata-query.html) query language in it. But sometimes more convenient way is to use SQL. For example in the project I'm working on we use [AppDynamics](https://www.appdynamics.com/) for monitoring. For one of the dashboards we would like to have a document counter and for AppDynamics it's more convenient to get a result from database rather than response from an Alfresco webscript. So here we go!
 
-First we need to connect to Alfresco database. You can refer to this post to do it: [Connect to alfresco database]({{ site.url }}/2015/02/connect-to-alfresco-db/).
+First we need to connect to Alfresco database. You can refer to this post to do it: [Connect to alfresco database]({{ site.url }}/2015/02/connect-to-alfresco-db).
 
 ## Total number of documents in repository
 
