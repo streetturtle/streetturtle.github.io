@@ -3,7 +3,7 @@ layout: post
 title:  "LTTng live streaming example"
 date:   2017-01-18 22:47:45
 comments: true
-description: 
+description: LTTng has quite good documentation, but sometimes it’s not very clear, especially without deep knowledge of this tool. It took me almost a day to setup live streaming of the traces. 
 tags: 
 - lttng
 ---
@@ -61,7 +61,7 @@ Tracing started for session my-session
 
 Remote means that traces are sent from one machine to another. For test purpose I created a headless Ubuntu Server VM which will "generate" traces, let's name it **guest-machine**.  
 
-**1**. Target (guest-machine):
+**1**. Target (guest-machine) - if `--set-url` parameter is passed the relay daemon won't start:
 
 ```bash
 $ sudo lttng create my-session --live --set-url=net://host-machine-ip
@@ -71,13 +71,13 @@ Traces will be written in net://host-machine-ip
 Live timer set to 1000000 usec
 ```
 
-**2**. Remote (host-machine):
+**2**. Remote (host-machine) - start the daemon:
 
 ```bash
 $ lttng-relayd
 ```
 
-**3**. Target:
+**3**. Target - enable kernel events, note that relay daemon should be started already on remote:
 
 ```bash
 $ sudo lttng enable-event --kernel --all
@@ -86,7 +86,7 @@ $ sudo lttng start
 Tracing started for session my-session
 ```
 
-**4**. Remote:
+**4**. Remote - view traces:
 
 ```bash
 $ babeltrace --input-format=lttng-live net://localhost

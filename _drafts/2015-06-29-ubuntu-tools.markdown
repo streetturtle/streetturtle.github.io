@@ -1,5 +1,4 @@
 ---
----
 layout: post
 title:  "Developer's/geek's tools for ubuntu"
 date:   2015-06-18 22:47:45
