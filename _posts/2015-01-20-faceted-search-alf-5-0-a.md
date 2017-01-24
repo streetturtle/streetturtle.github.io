@@ -7,7 +7,6 @@ description: Alfresco 5.0.a is the first version with faceted search support. By
 categories: 
 tags: 
 - alfresco
-- faceted-search
 ---
 
 In the project I'm working on I had a task to add custom facets to the search. Since version 5.0.a is the first one which supports faceted search the support for custom facets wasn't there, at least I couldn't find it. It seems that in further version of alfresco it is in place, but in the project I'm working on we had a strict requirement to use 5.0.a version. The solution I discovered is a bit "dirty" because instead of overriding the facet configuration component using aikau framework I just overwritten it. Another negative point is that it probably won't work with further Alfresco versions, so you'll need to update the code. But hopefully adding new facets would be easier in latest versions so this change won't be to big.

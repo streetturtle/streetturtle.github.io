@@ -7,8 +7,6 @@ categories:
 description: I was quite surprised when discovered that out-the-box alfresco RM doesn't audit document view action. After suffering for a while I've finally managed to turn it on!
 tags: 
 - alfresco
-- alfresco RM
-- audit
 ---
 
 Records Management has a really useful feature which is audit. Out of the box it supports many actions and also provides very good ui to view the audit. But the most interesting action - read content is not supported. So let's turn it on.
