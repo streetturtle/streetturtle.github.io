@@ -29,13 +29,13 @@ Local means that traces are streamed to the same machine.
 **1**. Target terminal session - create live session which triggers creation of relay daemon and enable kernel's events:
 
 ```bash
-$ sudo lttng create my-session --live
+$ lttng create my-session --live
 Spawning a session daemon
 Spawning a relayd daemon
 Session my-session created.
 Traces will be written in net://127.0.0.1
 Live timer set to 1000000 usec
-$ sudo lttng enable-event --kernel --all
+$ lttng enable-event --kernel --all
 All Kernel events are enabled in channel channel0
 ```
 
@@ -53,7 +53,7 @@ $ babeltrace --input-format=lttng-live net://localhost/host/laptop-name/my-sessi
 **3**. Target terminal session - start trace session:
 
 ```bash
-$ sudo lttng start
+$ lttng start
 Tracing started for session my-session
 ```
 
@@ -61,10 +61,13 @@ Tracing started for session my-session
 
 Remote means that traces are sent from one machine to another. For test purpose I created a headless Ubuntu Server VM which will "generate" traces, let's name it **guest-machine**.  
 
+> Note that on remote (receiver) machine ports 5342 and 5343 should be opened.
+{:.note}
+
 **1**. Target (guest-machine) - if `--set-url` parameter is passed the relay daemon won't start:
 
 ```bash
-$ sudo lttng create my-session --live --set-url=net://host-machine-ip
+$ lttng create my-session --live --set-url=net://host-machine-ip
 Spawning a session daemon
 Session my-session created.
 Traces will be written in net://host-machine-ip
@@ -80,9 +83,9 @@ $ lttng-relayd
 **3**. Target - enable kernel events, note that relay daemon should be started already on remote:
 
 ```bash
-$ sudo lttng enable-event --kernel --all
+$ lttng enable-event --kernel --all
 All Kernel events are enabled in channel channel0
-$ sudo lttng start
+$ lttng start
 Tracing started for session my-session
 ```
 
