@@ -32,7 +32,10 @@ So from now you are able to control Spotify from command line! Try it:  `sp help
 
 # Widget, Awesome widget
 
-Create **spotify.lua** with following content under **/home/.config/awesome** or clone it from this [repo](https://github.com/streetturtle/AwesomeWM/tree/master/Spotify).  
+> This widget is not compatible with v4.0 of Awesome WM. For v4.0 use [this](https://github.com/streetturtle/AwesomeWM/tree/master/spotify-widget) one
+{:.note}
+
+Create **spotify.lua** with following content under **/home/.config/awesome** or clone it from this [repo](https://github.com/streetturtle/AwesomeWM3/tree/master/Spotify).  
 
 {% highlight lua %}
 local wibox = require("wibox")
