@@ -3,7 +3,7 @@ layout: post
 title:  "Upgrading to Awesome WM 4"
 date:   2017-01-06 10:47:45
 comments: true
-description: Several thing I did after upgrading to Awesome WM 4.0
+description: Several things I did after upgrading to Awesome WM 4.0
 tags: 
 - awesome wm
 share: true
