@@ -54,16 +54,10 @@ ul.sideBarTags {
 }
 
 .well {
-  background-color: #444;
-  box-shadow: 0px 0px 0px 0px, 0px 8px 16px rgba(0, 0, 0, 0.2);
-  border: 0px;
+  background-color: #39393a;
+  box-shadow: 0 0 0 0, 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border: 0;
   border-radius: 6px;
-}
-.well > main-page {
-  width: 75%;
-}
-.main-page {
-  width: 75%;
 }
 .well h1 {
   color: #ddd;
@@ -161,11 +155,10 @@ h3.post-title {
 }
 div.post-meta {
   border: 1px solid #666666;
-  border-width: 1px 0;
   margin: 0 0 20px;
   ul {
     display: inline;
-    padding-left: 0px;
+    padding-left: 0;
     float: right;
   }
   ul > li {
@@ -199,9 +192,9 @@ a.page {
   font-weight: bold;
   border: solid 1px #32373b;
   background: #3e4347;
-  box-shadow: inset 0px 1px 1px rgba(255,255,255, .1), 0px 1px 3px rgba(0,0,0, .1);
+  box-shadow: inset 0 1px 1px rgba(255,255,255, .1), 0 1px 3px rgba(0,0,0, .1);
   color: #feffff;
-  text-shadow: 0px 1px 0px rgba(0,0,0, .5);
+  text-shadow: 0 1px 0 rgba(0,0,0, .5);
   text-decoration: none;
 }
 a.page:hover, a.page.gradient:hover {
@@ -329,7 +322,7 @@ nav.shrink .navbar-toggle {
   content: "\f06a";
   font-size: 2em;
   font-family: FontAwesome;
-  left: 0px;
+  left: 0;
   position:absolute;
   top: 0;
   color: #87CEFA;
@@ -409,19 +402,16 @@ ul.share-buttons {
 }
 
 .filename{
-  padding: 0px;
-  margin: 0px;
   background-color: #292929;
   color: lightgrey;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  margin-bottom: 0px;
-  padding-left: 1em;
+  margin: 0;
   font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
-  border-left: 0px;
+  border-left: 0;
   bottom: -2px;
   position: relative;
-  padding-bottom: 2px;
+  padding: 0 0 2px 1em;
 }
 
 hr{
