@@ -154,7 +154,8 @@ h3.post-title {
   font-size: 1.6em;
 }
 div.post-meta {
-  border: 1px solid #666666;
+  border-top: 1px solid #666666;
+  border-bottom: 1px solid #666666;
   margin: 0 0 20px;
   ul {
     display: inline;
