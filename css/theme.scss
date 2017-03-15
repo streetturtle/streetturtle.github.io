@@ -367,12 +367,12 @@ ul.share-buttons {
     transition: transform .7s;
   }
 
-  li.share-facebook .fa-square-o { color: #3B5998;}
-  li.share-twitter .fa-square-o { color: #55acee;}
-  li.share-google-plus .fa-square-o { color: #dd4b39;}
-  li.share-linkedin .fa-square-o { color: #4875B4;}
-  li.share-pinterest .fa-square-o { color: #BD081C;}
-  li.share-envelope .fa-square-o { color: #3B5998;}
+  li.share-facebook .fa-circle-thin { color: #3B5998;}
+  li.share-twitter .fa-circle-thin { color: #55acee;}
+  li.share-google-plus .fa-circle-thin { color: #dd4b39;}
+  li.share-linkedin .fa-circle-thin { color: #4875B4;}
+  li.share-pinterest .fa-circle-thin { color: #BD081C;}
+  li.share-envelope .fa-circle-thin { color: #3B5998;}
 
   li:hover {
     -webkit-transform: scale(1.3,1.3);
