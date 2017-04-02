@@ -45,7 +45,7 @@ Su Mo Tu We Th Fr Sa
 After I played a bit with `cal` I came up with following command:
 
 {% highlight sh %}
-$ ncal -3MC | sed 's/_.\([0-9]\)/+\1-/g'
+$ ncal -3MC | sed 's/_.\(.\)/+\1-/g'
    February 2017           March 2017            April 2017       
 Mo Tu We Th Fr Sa Su  Mo Tu We Th Fr Sa Su  Mo Tu We Th Fr Sa Su  
        1  2  3  4  5         1  2  3  4  5                  1  2  
@@ -73,7 +73,7 @@ local cal_notification
 mytextclock:connect_signal("button::release",
     function()
         if cal_notification == nil then
-            awful.spawn.easy_async([[bash -c "ncal -3MC | sed 's/_.\([0-9]\)/+\1-/g'"]],
+            awful.spawn.easy_async([[bash -c "ncal -3MC | sed 's/_.\(.\)/+\1-/g'"]],
                 function(stdout, stderr, reason, exit_code)
                     cal_notification = naughty.notify{
                         text = string.gsub(string.gsub(stdout, 
