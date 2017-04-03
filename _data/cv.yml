@@ -3,13 +3,12 @@ person:
   profession: Software Developer
   location: Montréal, Canada
   citizenship: Russia
-  birthday: 12.04.1990
+#  birthday: 12.04.1990
   email: pavel.makhov@outlook.com
   site: http://pavelmakhov.com
-  phone:
   github: /streetturtle
   stackoverflow: /streetturtle
-
+  spokenLanguages: English/French/Russian
 career:
  - position: Java Developer / Consultant
    company: Savoir-Faire Linux
@@ -17,16 +16,19 @@ career:
    location: Montreal, Canada
    country: ca
    dates: 08.2016 - current
+   accomplishments:
+    - accomplishment: Development of high performant highly available REST API which supports many various parameters and provides information from MySQL DB.
+    - accomplishment: Development of the real-time data processing application based on Apache Kafka as a message system.
  - position: Java/Alfresco Developer
    company: CERN
    logo: cern.jpg
    location: Geneva, Switzerland
    country: ch
    dates: 09.2014 - 05.2016
-   summary: I take part in the development of business critical eFiles document management system based on open source solution - Alfresco – the market leader in records management. One of my projects is eFiles – CMS system. I work in a small team of three; development is performed using agile software development with Scrum. As an Alfresco developer I work on extending and customizing Alfresco, which is needed since out of the box solutions of Alfresco do not provide enough functionality for CERN needs. Through this project, I have learned business processes of other teams, as we constantly work with CERN HR team, developing the way to link their needs with technical abilities of Alfresco software.
+   summary: I took part in the development of business critical eFiles document management system based on open source solution - Alfresco – the market leader in records management. As an Alfresco developer I worked on extending and customizing Alfresco. Through this project, I have learned business processes of other teams, as we constantly work with CERN HR team, developing the way to link their needs with technical abilities of the software.
    accomplishments:
     - accomplishment: Customization of server-side and client-side parts of Alfresco in correspondence to the organisation's internal processes and requirements.
-    - accomplishment: Integrating Alfresco with AppDynamics - application performance management system. This project consisted of setting up the AppDynamics and development of the monitoring extensions in order to provide metrics.
+    - accomplishment: Integrating Alfresco with AppDynamics - application performance management system.
     - accomplishment: Development of the web application for 2nd/3rd support of eFiles. Technology stack is Spring Boot, AngularJS, Spring Data Rest.
     - accomplishment: Development of the custom user interface of Alfresco document library page based on Polymer.
  - position: Software Developer
@@ -35,9 +37,9 @@ career:
    location: Geneva, Switzerland
    country: ch
    dates: 10.2012 – 09.2014
-   summary: I worked in GS-AIS-EB (Electronic Business) section for EDH (Electronic Document Handling) system, which covers many life aspects at CERN (such as absences, HR & Training, purchasing, logistics and safety). In this role, I was developing EDH documents and improving functionality of existing ones. I worked in a team of 8-10 people; agile software development with Scrum was used for a development performance. One of the biggest and the most interesting project during this period was the development of CERN Hotel booking application. This activity included the work with Micros/Oracle consultant and Hotel’s representatives.
+   summary: I worked in GS-AIS-EB (Electronic Business) section for EDH (Electronic Document Handling) system, which covers many life aspects at CERN (such as absences, HR & Training, purchasing, logistics and safety). In this role I was developing EDH documents and improving functionality of existing ones. One of the biggest and the most interesting project during this period was the development of CERN Hotel booking application.
    accomplishments:
-    - accomplishment: Extending functionality of CERN Hotel web booking application (hostel.cern.ch). Main feature developed is the possibility to create a Waiting-List reservations in cases when no rooms were available for the given period, which was not supported by Fidelio. I was working closely with customers from Hotel as well as consultant from Micros/Oracle.
+    - accomplishment: Extending functionality of CERN Hotel web booking application (hostel.cern.ch). Main feature developed is the possibility to create a Waiting-List reservations.
     - accomplishment: Migrating existing business processes from BPEL to BPMN.
     - accomplishment: 3rd Line support
  - position: Software Developer
@@ -55,18 +57,20 @@ career:
 
 technicalSkills:
   list:
-    - tr: "Database: Oracle, Postgre, MySQL"
-    - tr: "Knowledge of JDBC/ORM tools"
+    - tr: "Spring/Maven/JUnit/Mockito"
+    - tr: "Database: Oracle, MySQL, Postgre"
+    - tr: "Experience with JDBC/ORM, Hibernate, Criteria API"
     - tr: "Web application servers: Tomcat, Weblogic"
-    - tr: "More than 1 year of Alfresco development experience"
-    - tr: "Scripting languages: Python/Ruby"
+    - tr: "Alfresco development experience"
+    - tr: "Scripting languages: Python/Bash"
     - tr: "Experience with REST/SOAP web-services"
-    - tr: "IDE: IDEA/Eclipse/NetBeans, PLSQL/SQL Developer"
     - tr: "Git/SVN"
+    - tr: "100% Ubuntu/Debian user"
+    - tr: "Scrum/Agile/pair programming experience"
   backend:
    - name: Java SE/EE
      level: 90
-   - name: PL/SQL
+   - name: DBs
      level: 80
   frontend:
    - name: AngularJS/Polymer/JS
@@ -76,8 +80,8 @@ technicalSkills:
   other:
    - name: Linux
      level: 90
-   - name: Regex
-     level: 100
+#   - name: Regex
+#     level: 100
 
 sideProjects:
   - name: Technical blog
@@ -86,20 +90,20 @@ sideProjects:
     type: site
     langs: HTML/CSS/Bootstrap
 
-  - name: number-writing-trainer
-    description: Application which helps with learning foreign numerals. Was created to help with learning how to write french numbers as well as to practice AngularJS.
+  - name: Learn Foreign Numbers
+    description: Progressive Web App based on Google's <a href="https://www.polymer-project.org/">Polymer Project</a>. The aim of this app is to train how to write foreign numbers Currently supported languages are French, Spanish, Portuguese, Italian and Vietnamese.
     link: http://pavelmakhov.com/number-writing-trainer/#/
     type: site
-    langs: AngularJS/HTML/CSS/Bootstrap
+    langs: Polymer/HTML/CSS
 
   - name: PDF-element
     description: Web component built with Polymer which allows to view PDF files.
-    link: http://pavelmakhov.com/pdf-element/
-    type: site
+    link: http://github.com/streetturtle/pdf-element/
+    type: github
     langs: Polymer/JavaScript
 
   - name: Awesome WM widgets
-    description: Collection of widgets for the Awesome Window Manager for Linux. Contains Battery, Volume, Spotify, Email and Rates widgets.
+    description: Collection of widgets for the Awesome Window Manager for Linux.
     link: https://github.com/streetturtle/AwesomeWM
     type: github
     langs: Lua/Python
@@ -110,7 +114,7 @@ sideProjects:
     type: github
     langs: Ruby/Bash
 
-  - name: jekyll-clean-dark
+  - name: Jekyll Clean Dark
     description: Theme for Jekyll - static site generator. After creating theme for my blog I shared it on github.
     link: https://github.com/streetturtle/jekyll-clean-dark
     type: github
