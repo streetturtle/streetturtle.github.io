@@ -92,7 +92,7 @@ sideProjects:
 
   - name: Learn Foreign Numbers
     description: Progressive Web App based on Google's <a href="https://www.polymer-project.org/">Polymer Project</a>. The aim of this app is to train how to write foreign numbers. Currently supported languages are French, Spanish, Portuguese, Italian and Vietnamese.
-    link: http://pavelmakhov.com/number-writing-trainer/#/
+    link: https://learn-foreign-numbers.firebaseapp.com/
     type: site
     langs: Polymer/HTML/CSS
 
