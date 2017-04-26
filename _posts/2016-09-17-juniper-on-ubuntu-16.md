@@ -11,7 +11,7 @@ tags:
 I faced an issue running Juniper on Ubuntu 16.04. Some of the solutions I found wasn't working (like install 32-bit openjdk and firefox), others took to much time to set up and were quite fragile (like setup VM with 32-bit Debian, run Juniper applet on it and use this VM as proxy). So here is my solution which I already successfully tried on 3 laptops with 64-bit Ubuntu
  16.04.
 
-## Install Firefoxr
+## Install Firefox
 Most likely it's already installed - normal one, 64-bit
 
 > Note that due to firefox update versions 52+ don't support NPAPI, if it's your case you need to install ESR version of Firefox: [2017-04-14-juniper-on-ubuntu-16-2]({% post_url 2017-04-14-juniper-on-ubuntu-16-2%})
@@ -20,6 +20,8 @@ Most likely it's already installed - normal one, 64-bit
 ```bash
 sudo apt-get install firefox
 ```
+
+> Also make sure that you have xterm installed (normally you should have it, but some distibutions doesn't, like Elementary OS). Juniper runs some command there, and if it's not installed VPN connection will fail.
 
 ## Install icedtea-plugin
  
