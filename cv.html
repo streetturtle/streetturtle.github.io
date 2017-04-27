@@ -54,18 +54,28 @@
           <ul class="list-unstyled">
             <li><i class="fa fa-map-marker"></i> {{site.data.cv.person.location}}</li>
             <li><i class="fa fa-flag-o"></i> {{site.data.cv.person.citizenship}}</li>
-              <li><i class="fa fa-comments-o"></i> {{site.data.cv.person.spokenLanguages}}</li>
+            <li><i class="fa fa-comments-o"></i> {{site.data.cv.person.spokenLanguages}}</li>
 
-              <!--             <li><i class="fa fa-birthday-cake"></i> {{site.data.cv.person.birthday}}</li> -->
             <li><i class="fa fa-envelope-o"></i> <a href="mailto: {{ site.data.cv.person.email }}">{{ site.data.cv.person.email }}</a></li>
+
             {% if site.data.cv.person.site %}
               <li><i class="fa fa-laptop"></i> <a href="{{site.data.cv.person.site}}">pavelmakhov.com</a></li>
             {% endif %}
+
             {% if site.data.cv.person.phone %}
               <li><i class="fa fa-phone"></i> {{site.data.cv.person.phone}}</li>
             {% endif %}
-            <li><i class="fa fa-github"></i> <a href="https://github.com{{site.data.cv.person.github}}">{{site.data.cv.person.github}}</a></li>
-            <li><i class="fa fa-stack-overflow"></i> <a href="http://stackoverflow.com/users/1252056{{site.data.cv.person.stackoverflow}}">{{site.data.cv.person.stackoverflow}}</a></li>
+
+            {% if site.data.cv.person.linkedin %}
+              <li><i class="fa fa-linkedin"></i>
+                  <a href="https://www.linkedin.com/in{{site.data.cv.person.linkedin}}">linkedin.com/in/streetturtle</a></li>
+            {% endif %}
+
+            <li><i class="fa fa-github"></i>
+                <a href="https://github.com{{site.data.cv.person.github}}">{{site.data.cv.person.github}}</a></li>
+            <li><i class="fa fa-stack-overflow"></i>
+                <a href="http://stackoverflow.com/users/1252056{{site.data.cv.person.stackoverflow}}">
+                    {{site.data.cv.person.stackoverflow}}</a></li>
             </ul>
         </div>
       </div>

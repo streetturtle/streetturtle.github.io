@@ -1,11 +1,12 @@
 person:
   name: Pavel Makhov
-  profession: Software Developer
+  profession: Java Developer
   location: Montréal, Canada
   citizenship: Russia
 #  birthday: 12.04.1990
   email: pavel.makhov@outlook.com
   site: http://pavelmakhov.com
+  linkedin: /streetturtle
   github: /streetturtle
   stackoverflow: /streetturtle
   spokenLanguages: English/French/Russian
