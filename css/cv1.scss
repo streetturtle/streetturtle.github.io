@@ -62,6 +62,20 @@ h1, h2{
   vertical-align: middle;
 }
 
+#pdf-button {
+  position: absolute; top: 40px; border: 0; right: 40px;
+  color: #000000;
+  border-radius: 50%;
+
+  width: 2em;
+  height: 2em;
+  padding: 8px;
+
+  background: #fff;
+  text-align: center;
+  font-size: 2em;
+}
+
 @media print {
   .section {
     page-break-inside: avoid;

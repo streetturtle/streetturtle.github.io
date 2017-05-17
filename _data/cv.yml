@@ -2,14 +2,14 @@ person:
   name: Pavel Makhov
   profession: Java Developer
   location: Montréal, Canada
-  citizenship: Russia
+#  citizenship: Russia
 #  birthday: 12.04.1990
   email: pavel.makhov@outlook.com
   site: http://pavelmakhov.com
   linkedin: /streetturtle
   github: /streetturtle
   stackoverflow: /streetturtle
-  spokenLanguages: English/French/Russian
+  spokenLanguages: English / French / Russian
 career:
  - position: Java Developer / Consultant
    company: Savoir-Faire Linux
@@ -86,11 +86,11 @@ technicalSkills:
 #     level: 100
 
 sideProjects:
-  - name: Technical blog
-    description: My technical blog to share some thoughts/problems-solutions/tutorials on different topics, such as Java, Web development, Linux, Awesome WM.
-    link: http://pavelmakhov.com
-    type: site
-    langs: HTML/CSS/Bootstrap
+#  - name: Technical blog
+#    description: My technical blog to share some thoughts/problems-solutions/tutorials on different topics, such as Java, Web development, Linux, Awesome WM.
+#    link: http://pavelmakhov.com
+#    type: site
+#    langs: HTML/CSS/Bootstrap
 
   - name: Learn Foreign Numbers
     description: Progressive Web App based on Google's <a href="https://www.polymer-project.org/">Polymer Project</a>. The aim of this app is to train how to write foreign numbers. Currently supported languages are French, Spanish, Portuguese, Italian and Vietnamese.
@@ -110,12 +110,6 @@ sideProjects:
     type: github
     langs: Lua/Python
 
-  - name: AppDynamics Extensions
-    description: Several extensions for AppDynamics. They were developed because out-of-the-box extensions are written in Java and it was hard to maintain and customize them.
-    link: https://github.com/streetturtle/AppDynamics-Extensions
-    type: github
-    langs: Ruby/Bash
-
   - name: Jekyll Clean Dark
     description: Theme for Jekyll - static site generator. After creating theme for my blog I shared it on github.
     link: https://github.com/streetturtle/jekyll-clean-dark
@@ -127,6 +121,33 @@ sideProjects:
     link: https://github.com/streetturtle/jekyll-cv-crafter
     type: github
     langs: HTML/CSS/Bootstrap
+
+certifications:
+  - name: FP Principles in Scala
+    issuer: Coursera
+    date: July 2016
+    link: https://www.coursera.org/account/accomplishments/verify/ZBYZ6J458R9Z
+    badge: coursera_cert.png
+  - name: Data Science Foundations
+    issuer: IBM (Big Data University)
+    date: December 2016
+    link: https://www.youracclaim.com/badges/d591811c-74fc-414f-a360-d24838c257dd
+    badge: data_sci_found_cert.png
+  - name: Hadoop Programming
+    issuer: IBM (Big Data University)
+    date: December 2016
+    link: https://www.youracclaim.com/badges/d6b2f959-1029-4e89-88f0-117c0c130fc4
+    badge: hadoop_cert.png
+  - name: Scala Programming for Data Science
+    issuer: IBM (Big Data University)
+    date: December 2016
+    link: https://www.youracclaim.com/badges/c8a35db4-61ab-4365-ad57-bcf973696bc6
+    badge: scala_cert.png
+  - name: Spark
+    issuer: IBM (Big Data University)
+    date: January 2017
+    link: https://www.youracclaim.com/badges/c2b8ce85-70ec-446d-8b59-702459cb1849
+    badge: spark-cert.png
 
 education:
   - name: National Research University of Electronic Technology
