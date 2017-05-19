@@ -79,7 +79,7 @@ h1, h2{
 @media print {
   .section {
     page-break-inside: avoid;
-    padding: 0px 30px;
+    padding: 10px 20px;
   }
   a[href]:after {
     content: none !important;
