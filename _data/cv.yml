@@ -18,7 +18,7 @@ career:
    country: ca
    dates: 08.2016 - current
    accomplishments:
-    - accomplishment: Development of high performant highly available REST API which supports many various parameters and provides information from MySQL DB.
+    - accomplishment: Development of high performance highly available REST API which supports many various parameters and provides information from MySQL DB.
     - accomplishment: Development of the real-time data processing application based on Apache Kafka as a message system.
  - position: Java/Alfresco Developer
    company: CERN
@@ -99,7 +99,7 @@ sideProjects:
     langs: Polymer/HTML/CSS
 
   - name: PDF-element
-    description: Web component built with Polymer which allows to view PDF files.
+    description: Web component built with Polymer which allows to render PDF files.
     link: http://github.com/streetturtle/pdf-element/
     type: github
     langs: Polymer/JavaScript
