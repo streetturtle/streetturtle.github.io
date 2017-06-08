@@ -13,7 +13,7 @@ comments: true
 
 Alfresco provides very good and rich Java API to maintain NodeRefs, there are `nodeService` and `fileFolderService` with many convenient methods, but applicable to the problem below I couldn't find relevant one.
 
-Let's pretend that we have a folder with a typo in the name (*HR office*). When it was discovered instead of renaming it user just created another folder with a proper name (*HR office*). So it would be something like this:
+Let's pretend that we have a folder with a typo in the name (*HR ofice*). When it was discovered instead of renaming it user just created another folder with a proper name (*HR office*). So it would be something like this:
 
 {% highlight bash %}
 Recruitment
