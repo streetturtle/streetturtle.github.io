@@ -157,16 +157,7 @@
           {% endfor %}
         </div>
         <div class="col-xs-4">
-          <h4 class="techSkillHeader"><i class="fa fa-code"></i> Frontend</h4> {% for item in
-          site.data.cv.technicalSkills.frontend %} {{item.name}}
-          <div class="progress">
-            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0"
-                 aria-valuemax="100" style="width: {{item.level}}%"></div>
-          </div>
-          {% endfor %}
-        </div>
-        <div class="col-xs-4">
-          <h4 class="techSkillHeader"><i class="fa fa-cogs"></i> Other</h4> {% for item in
+          <h4 class="techSkillHeader"><i class="fa fa-database"></i> Big Data</h4> {% for item in
           site.data.cv.technicalSkills.other %} {{item.name}}
           <div class="progress">
             <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0"
@@ -174,6 +165,16 @@
           </div>
           {% endfor %}
         </div>
+          <div class="col-xs-4">
+              <h4 class="techSkillHeader"><i class="fa fa-code"></i> Frontend</h4> {% for item in
+              site.data.cv.technicalSkills.frontend %} {{item.name}}
+              <div class="progress">
+                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0"
+                       aria-valuemax="100" style="width: {{item.level}}%"></div>
+              </div>
+              {% endfor %}
+          </div>
+
       </div>
       <div>
         <h4><i class="fa fa-male"></i> Key competencies:</h4>
@@ -202,8 +203,12 @@
             {% endif %}
             <a href="{{item.link}}">{{item.name}}</a>
           </h4>
-
-          <h5>{{item.langs}}</h5>
+          <div class="row">
+              <div class="col-xs-2">{{item.langs}}</div>
+              {% if item.stars %}
+              <div class="col-xs-6"><i class="fa fa-star-o" aria-hidden="true"></i> {{item.stars}}</div>
+              {% endif%}
+          </div>
         </div>
         <div class="col-xs-7">{{item.description}}</div>
       </div>

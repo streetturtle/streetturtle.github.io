@@ -19,7 +19,8 @@ career:
    dates: 08.2016 - current
    accomplishments:
     - accomplishment: Development of high performance highly available REST API which supports many various parameters and provides information from MySQL DB.
-    - accomplishment: Development of the real-time data processing application based on Apache Kafka as a message system.
+    - accomplishment: Development of the real-time data processing application based on Apache Mahout and Apache Kafka.
+    - accomplishment: Development of Proof of Concept WebRTC Liferay portlet.
  - position: Java/Alfresco Developer
    company: CERN
    logo: cern.jpg
@@ -41,7 +42,7 @@ career:
    summary: I worked in GS-AIS-EB (Electronic Business) section for EDH (Electronic Document Handling) system, which covers many life aspects at CERN (such as absences, HR & Training, purchasing, logistics and safety). In this role I was developing EDH documents and improving functionality of existing ones. One of the biggest and the most interesting project during this period was the development of CERN Hotel booking application.
    accomplishments:
     - accomplishment: Extending functionality of CERN Hotel web booking application (hostel.cern.ch). Main feature developed is the possibility to create a Waiting-List reservations.
-    - accomplishment: Migrating existing business processes from BPEL to BPMN.
+    - accomplishment: Migrating existing business processes from BPEL to BPMN (Activiti).
     - accomplishment: 3rd Line support
  - position: Software Developer
    company: Probusinessbank
@@ -59,16 +60,15 @@ career:
 technicalSkills:
   list:
     - tr: "Spring/Maven/JUnit/Mockito"
-    - tr: "Database: Oracle, MySQL, Postgre"
+    - tr: "Database: Oracle, MySQL, PostgreSQL"
     - tr: "Experience with JDBC/ORM, Hibernate, Criteria API"
     - tr: "Web application servers: Tomcat, Weblogic"
     - tr: "Alfresco development experience"
-    - tr: "Scripting languages: Python/Bash"
-    - tr: "Experience with REST/SOAP web-services"
-    - tr: "Apache Kafka"
-    - tr: "Git/SVN"
+    - tr: "Scripting languages: Python / Bash"
+    - tr: "Experience with REST / SOAP web-services"
+    - tr: "Git / SVN"
     - tr: "100% Ubuntu/Debian user"
-    - tr: "Scrum/Agile/pair programming experience"
+    - tr: "Scrum / Agile / pair programming experience"
   backend:
    - name: Java SE/EE
      level: 90
@@ -80,10 +80,10 @@ technicalSkills:
    - name: HTML/CSS/Bootstrap
      level: 90
   other:
-   - name: Linux
+   - name: Apache Kafka
      level: 90
-#   - name: Regex
-#     level: 100
+   - name: Hadoop
+     level: 60
 
 sideProjects:
 #  - name: Technical blog
@@ -92,35 +92,40 @@ sideProjects:
 #    type: site
 #    langs: HTML/CSS/Bootstrap
 
-  - name: Learn Foreign Numbers
-    description: Progressive Web App based on Google's <a href="https://www.polymer-project.org/">Polymer Project</a>. The aim of this app is to train how to write foreign numbers. Currently supported languages are French, Spanish, Portuguese, Italian and Vietnamese.
-    link: https://learn-foreign-numbers.firebaseapp.com/
-    type: site
-    langs: Polymer/HTML/CSS
+  - name: Awesome WM widgets
+    description: Collection of widgets for the Awesome Window Manager for Linux.
+    link: https://github.com/streetturtle/AwesomeWM
+    type: github
+    langs: Lua
+    stars: 58
 
   - name: PDF-element
     description: Web component built with Polymer which allows to render PDF files.
     link: http://github.com/streetturtle/pdf-element/
     type: github
-    langs: Polymer/JavaScript
-
-  - name: Awesome WM widgets
-    description: Collection of widgets for the Awesome Window Manager for Linux.
-    link: https://github.com/streetturtle/AwesomeWM
-    type: github
-    langs: Lua/Python
+    langs: Polymer
+    stars: 21
 
   - name: Jekyll Clean Dark
     description: Theme for Jekyll - static site generator. After creating theme for my blog I shared it on github.
     link: https://github.com/streetturtle/jekyll-clean-dark
     type: github
-    langs: HTML/CSS/Bootstrap
+    langs: Jekyll
+    stars: 70
 
   - name: Jekyll CV Crafter
     description: To be able to easy update/view/print my CV I created jekyll powered CV generator.
     link: https://github.com/streetturtle/jekyll-cv-crafter
     type: github
-    langs: HTML/CSS/Bootstrap
+    langs: Jekyll
+    stars: 36
+
+  - name: Learn Foreign Numbers
+    description: Progressive Web App based on Google's <a href="https://www.polymer-project.org/">Polymer Project</a>. The aim of this app is to train how to write foreign numbers. Currently supported languages are French, Spanish, Portuguese, Italian and Vietnamese.
+    link: https://learn-foreign-numbers.firebaseapp.com/
+    type: site
+    langs: Polymer
+
 
 certifications:
   - name: FP Principles in Scala
