@@ -421,3 +421,8 @@ ul.share-buttons {
 hr{
   border-color: #666;
 }
+
+@font-face {
+  font-family:"AwesomeFont";
+  src: url('{{site.url}}/css/awesomewmfont.ttf')
+}

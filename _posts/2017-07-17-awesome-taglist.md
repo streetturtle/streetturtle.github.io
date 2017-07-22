@@ -15,10 +15,10 @@ Here is pretty nice-looking and super easy way to customize taglist! The idea is
 To customize the taglist the same way you need to install font which I generated using [icomoon.io](https://icomoon.io/) service from the svg images of letters from the logo. You can get it from my [github]({{site.url}}/css/awesomewmfont.ttf). 
 And then simply name your tags using this font:
 
-<style>
+<style type="text/css">
 @font-face {
-    font-family:"AwesomeFont";
-    src: url({{site.url}}/css/awesomewmfont.ttf)
+    font-family: "AwesomeFont";
+    src: url({{site.url}}/css/awesomewmfont.ttf) format("truetype");
 }
 </style>
 
@@ -32,7 +32,7 @@ awful.tag({ "", "", "", "", "", "", "", "", ""},
 ...
 {% endhighlight %}
 
-At the beginning I tried to use svg images directly in the tags, but had too many problems trying to align them properly and get rid of the gap between tags. And for the text names this is done by default.  
+At the beginning I tried to use svg images directly in the tags, but had too many problems trying to align them properly and getting rid of the gap between tags. And for the text names this is done by default.  
 Another good thing about using font instead of images is that it's really easy to theme using Beautiful theme library whereas for images you'd need to create several images with the same color (for focus, urgent, etc.). For example in my current configuration I use following colors:
 
 >theme.lua
