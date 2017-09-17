@@ -26,6 +26,9 @@ share:
   pinterest:
   email: true
 
+collections:
+  notes:
+    output: true
 
 # Google Analytics key, leave blank to ignore
 google_analytics_key: UA-57641651-1
