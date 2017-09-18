@@ -23,7 +23,7 @@ Now run configure script with option which tells where to install it (to avoid p
 {% highlight bash %}
 ./configure -prefix=$Home/env
 make
-makeinstall
+makeinstall # or sudo make install for v.2.4.2
 {% endhighlight bash %}
 
 Almost done, the only thing left is to add `/bin` folder to the PATH. Do it in .profile or in .bash_profile or some other startup script:
