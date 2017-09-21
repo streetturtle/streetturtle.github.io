@@ -27,7 +27,7 @@ share:
   email: true
 
 collections:
-  notes:
+  quicknotes:
     output: true
 
 # Google Analytics key, leave blank to ignore
@@ -53,4 +53,4 @@ markdown: kramdown
 kramdown:
   input: GFM # Enable GitHub Flavored Markdown (fenced code blocks)
 
-exclude: ['README.md', 'LICENSE']
+exclude: ['README.md', 'LICENSE', vendor]

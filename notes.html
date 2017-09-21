@@ -1,0 +1,20 @@
+---
+layout: page
+title: Notes
+---
+<div class="page-content wc-container">
+    <div class="post">
+        <h1>Notes</h1>
+        <ul>
+            {% for note in site.quicknotes %}
+            <li>
+                <div class="post-time">
+                    <i class="fa fa-calendar"></i>
+                    <time>{{ note.date | date: "%d-%m-%Y" }}</time>
+                    <a href="{{ note.url | prepend: site.url }}">{{ note.title }}</a>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

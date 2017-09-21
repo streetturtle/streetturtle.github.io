@@ -3,11 +3,13 @@ layout: post
 title:  "Record GIF in Ubuntu"
 date:   2017-07-20 10:47:45
 comments: true
+tags:
+ - notes
 ---
 
 Super fast and simple tool to record GIFs in Ubuntu. Below is an example command which created following GIF:
 
-![gif](../images/notes/out.gif)
+![gif](../images/notes/out.gif){:.center-image}
 
 {% highlight bash %}
 $ sudo apt-get install byzanz

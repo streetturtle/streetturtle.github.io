@@ -62,6 +62,9 @@ ul.sideBarTags {
 .well h1 {
   color: #ddd;
 }
+.well h1:first-child, h3:first-child{
+  margin-top: 5px;
+}
 .author {
   color: #ee4444;
 }

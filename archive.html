@@ -11,9 +11,10 @@ title: Blog archive
         {% unless forloop.first %}</ul>{% endunless %}
         <h1>{{ currentyear }}</h1>
         <ul class="posts">
-        {% capture year %}{{currentyear}}{% endcapture %} 
+        {% capture year %}{{currentyear}}{% endcapture %}
       {% endif %}
       <li><a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a></li>
     {% endfor %}
+    <ul>
   </div>
 </div>
