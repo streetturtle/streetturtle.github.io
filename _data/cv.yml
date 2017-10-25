@@ -59,7 +59,7 @@ career:
 
 technicalSkills:
   list:
-    - tr: "Spring / Maven / JUnit / Mockito"
+    - tr: "Spring / Maven / JUnit / Mockito / Camel / Hazelcast"
     - tr: "Oracle, MySQL, PostgreSQL"
     - tr: "Experience with JDBC/ORM, Hibernate, Criteria API"
     - tr: "Web application servers: Tomcat, Weblogic"
