@@ -59,19 +59,19 @@ career:
 
 technicalSkills:
   list:
-    - tr: "Spring/Maven/JUnit/Mockito"
-    - tr: "Database: Oracle, MySQL, PostgreSQL"
+    - tr: "Spring / Maven / JUnit / Mockito"
+    - tr: "Oracle, MySQL, PostgreSQL"
     - tr: "Experience with JDBC/ORM, Hibernate, Criteria API"
     - tr: "Web application servers: Tomcat, Weblogic"
-    - tr: "Alfresco development experience"
     - tr: "Scripting languages: Python / Bash"
     - tr: "Experience with REST / SOAP web-services"
     - tr: "Git / SVN"
     - tr: "100% Ubuntu/Debian user"
     - tr: "Scrum / Agile / pair programming experience"
+    - tr: "Alfresco development experience"
   backend:
    - name: Java SE/EE
-     level: 90
+     level: 100
    - name: DBs
      level: 80
   frontend:
@@ -82,7 +82,7 @@ technicalSkills:
   other:
    - name: Apache Kafka
      level: 90
-   - name: Hadoop
+   - name: Hadoop, Apache Spark
      level: 60
 
 sideProjects:
