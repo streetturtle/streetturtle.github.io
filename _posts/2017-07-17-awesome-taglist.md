@@ -8,6 +8,9 @@ tags:
 - awesome wm
 ---
 
+> Check the updated article in one of the Awesome WM [recipe](https://awesomewm.org/recipes/awesome-taglist/)
+{:.note}
+
 Here is pretty nice-looking and super easy way to customize taglist! The idea is simple - literally write 'awesomewm' in the taglist using letters from the awesomewm logo:
 
 ![awesome-taglist]({{site.url}}/images/awesome-taglist.png){:.center-image}
