@@ -39,7 +39,7 @@ The specific key size 4096 is not supported
   at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
   at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
   at java.lang.Thread.run(Unknown Source)
-[                      Thread-3] Utilinux           INFO  Application has been stopped
+[                      Thread-3] Application           INFO  Application has been stopped
 {% endhighlight %}
 
 After some investigation and googling I found out that bouncyCastle jar is signed and cannot be put inside the fat jar.
@@ -99,7 +99,7 @@ Below is an example of the plugin section of the **pom.xml**:
             <transformer
                     implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                 <manifestEntries>
-                    <Main-Class>ca.gc.rddc.linux.utilinux.Utilinux</Main-Class>
+                    <Main-Class>com.application.Application</Main-Class>
                     <Class-Path>. ./jce-jars/bcprov-jdk15on-1.58.jar</Class-Path>
                 </manifestEntries>
             </transformer>

@@ -1,0 +1,186 @@
+---
+---
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]>
+<html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.data.cv.person.name }}'s CV</title>
+    <meta name="author" content="{{ site.data.cv.name }}" />
+    <meta name="description" content="{{ site.data.cv.name }}'s CV" />
+    <link rel="shortcut icon" href="/favicon.png">
+    <link href="{{site.url}}/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{site.url}}/css/cv1.css" rel="stylesheet">
+    <link href="{{site.url}}/css/flags/flags.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="all" />
+
+    <link href='https://fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Archivo+Black' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript">
+        WebFontConfig = {
+            google: {
+                families: ['Passion+One:400,700:latin']
+            }
+        };
+        (function() {
+            var wf = document.createElement('script');
+            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+    </script>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-3 bg-gray">
+            <div class="row">
+                <div class="section text-center">
+                    <img src="{{site.url}}/images/{{ site.data.cv.person.depiction }}" class="img-responsive img-circle" alt="{{ site.data.cv.person.name }}'s Photo">
+                </div>
+
+                <div class="section">
+                    <ul class="list-unstyled">
+                        {% if site.data.cv.person.location %}
+                        <li><i class="fa fa-map-marker"></i> {{site.data.cv.person.location}}</li>
+                        {% endif%}
+                        {% if site.data.cv.person.citizenship %}
+                        <li><i class="fa fa-flag-o"></i> {{site.data.cv.person.citizenship}}</li>
+                        {% endif%}
+                        {% if site.data.cv.person.email %}
+                        <li><i class="fa fa-envelope-o"></i>
+                            <a href="mailto: {{ site.data.cv.person.email }}">{{site.data.cv.person.email }}</a></li>
+                        {% endif%}
+                        {% if site.data.cv.person.site %}
+                        <li><i class="fa fa-laptop"></i>
+                            <a href="http://{{ site.data.cv.person.site }}">{{ site.data.cv.person.site }}</a></li>
+                        {% endif%}
+                        {% if site.data.cv.person.phone %}
+                        <li><i class="fa fa-phone"></i> {{site.data.cv.person.phone}}</li>
+                        {% endif%}
+                        {% if site.data.cv.person.github %}
+                        <li><i class="fa fa-github"></i>
+                            <a href="https://github.com{{site.data.cv.person.github}}">{{site.data.cv.person.github}}</a>
+                        </li>
+                        {% endif%}
+                        {% if site.data.cv.person.stackoverflow %}
+                        <li><i class="fa fa-stack-overflow"></i> <a href="http://stackoverflow.com/users/1252056{{site.data.cv.person.stackoverflow}}">{{site.data.cv.person.stackoverflow}}</a>
+                        </li>
+                        {% endif%}
+                    </ul>
+                </div>
+
+                <!-- TECHNICALS SKILLS -->
+                <div class="section">
+                    <h4><i class="fa fa-cogs" aria-hidden="true"></i> Technicals skillls</h4>
+                    {% for item in site.data.cv.technicalSkills.backend %} {{item.name}}
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{item.level}}%"></div>
+                    </div>
+                    {% endfor %}
+
+                    <!--            <h4 class="techSkillHeader"><i class="fa fa-code"></i> Frontend</h4> -->
+                    {% for item in site.data.cv.technicalSkills.frontend %} {{item.name}}
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{item.level}}%"></div>
+                    </div>
+                    {% endfor %}
+
+                    <!--            <h4 class="techSkillHeader"><i class="fa fa-cogs"></i> Other</h4> -->
+                    {% for item in site.data.cv.technicalSkills.other %} {{item.name}}
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{item.level}}%"></div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <div class="section">
+                    <h4><i class="fa fa-male"></i> Key competencies:</h4>
+                    <ul class="list-unstyled">
+                        {% for item in site.data.cv.technicalSkills.list %}
+                        <li>{{item.tr}}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-xs-9">
+            <div class="row">
+
+                <div class="section text-center">
+                    <h1 class="name">{{ site.data.cv.person.name }}</h1>
+                    <span class="profession">{{ site.data.cv.person.profession }}</span>
+                </div>
+
+                <!-- CAREER -->
+                <div class="section">
+                    <h2>Career</h2>
+                    {% for item in site.data.cv.career %}
+                    <div class="jd">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <h4><b>{{ item.position }}</b></h4>
+                            </div>
+                            <div class="col-xs-6 pull-right">
+                                <h5 class="pull-right">{{ item.dates }}<br/> {{item.company}} <i>({{item.location}})</i></h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <p>{{ item.summary }}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+
+                                {% if item.accomplishments.size > 0 %}
+                                <b>Selected accomplishments:</b> {% endif %}
+                                <ul>
+                                    {% for itemm in item.accomplishments %}
+                                    <li>{{itemm.accomplishment}}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- EDUCATION -->
+                <div class="section">
+                    <h2>Education</h2>
+                    {% for item in site.data.cv.education %}
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h4><b>{{item.name}}</b></h4>
+                        </div>
+                        <div class="col-xs-12"><i class="fa fa-graduation-cap"></i> {{item.degree}} ({{item.dates}})</div>
+                        <div class="col-xs-12"><a href="{{item.link}}">{{item.link}}</a>, {{item.location}}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
