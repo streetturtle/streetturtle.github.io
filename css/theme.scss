@@ -396,13 +396,13 @@ ul.share-buttons {
 }
 
 .key {
-  font-size: 1.0em;
+  font-size: 0.9em;
   box-shadow: 1px 0 1px 0 #555, 0 1px 0 2px #888, 0 2px 0 2px #777;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
   margin: 2px 3px;
-  padding: 0px 5px;
+  padding: 1px 5px;
 }
 
 .filename{
@@ -423,6 +423,10 @@ ul.share-buttons {
 
 hr{
   border-color: #666;
+}
+
+figure.in-list {
+  margin-left: 30px;
 }
 
 @font-face {
