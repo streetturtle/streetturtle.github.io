@@ -9,7 +9,7 @@ description: Email widget for Awesome WM
 comments: true
 ---
 
-> This post is a bit outdated, checkout the repo: [github.com/streetturtle/awesome-wm-widgets](https://github.com/streetturtle/awesome-wm-widgets/){:.warning}
+> This post is a bit outdated, checkout the repo: [github.com/streetturtle/awesome-wm-widgets](https://github.com/streetturtle/awesome-wm-widgets/) for more info{:.warning}
 
 This widget consists of an icon with counter which shows number of unread emails: ![email icon]({{site.url}}/images/emailWidgetScrnsht.png)
 and a popup message which appears when mouse hovers over an icon: ![email popup]({{site.url}}/images/emailWidgetScrnsht2.png)
