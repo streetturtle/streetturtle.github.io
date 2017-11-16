@@ -9,12 +9,15 @@ description: Email widget for Awesome WM
 comments: true
 ---
 
+> This post is a bit outdated, checkout the repo: [github.com/streetturtle/awesome-wm-widgets](https://github.com/streetturtle/awesome-wm-widgets/)
+{:.warning}
+
 This widget consists of an icon with counter which shows number of unread emails: ![email icon]({{site.url}}/images/emailWidgetScrnsht.png)
 and a popup message which appears when mouse hovers over an icon: ![email popup]({{site.url}}/images/emailWidgetScrnsht2.png)
 
 ## Installation
 
-To install it either clone [EmailWidget](https://github.com/streetturtle/AwesomeWM/tree/master/EmailWidget) project under `~/.config/awesome/` or download a .zip archive and unzip it there.
+To install it either clone [EmailWidget](https://github.com/streetturtle/awesome-wm-widgets/tree/master/email-widget) project under `~/.config/awesome/` or download a .zip archive and unzip it there.
 
 After provide your credentials in python scripts so that they could connect to server and add following lines in your **rc.lua** file:
 
