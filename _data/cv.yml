@@ -11,18 +11,29 @@ person:
   stackoverflow: /streetturtle
   spokenLanguages: English / French / Russian
 career:
+ - position: Software Developer
+   company: Intelerad
+   company-site: https://www.intelerad.com/
+   logo: intelerad.png
+   location: Montreal, Canada
+   country: ca
+   dates: 01.2018 - current
+
  - position: Java Developer / Consultant
    company: Savoir-Faire Linux
+   company-site: https://savoirfairelinux.com
    logo: sflx.png
    location: Montreal, Canada
    country: ca
-   dates: 08.2016 - current
+   dates: 08.2016 - 12.2017
    accomplishments:
     - accomplishment: Development of high performance highly available REST API which supports many various parameters and provides information from MySQL DB.
     - accomplishment: Development of the real-time data processing application based on Apache Mahout and Apache Kafka.
     - accomplishment: Development of Proof of Concept WebRTC Liferay portlet.
+
  - position: Java/Alfresco Developer
    company: CERN
+   company-site: https://home.cern/
    logo: cern.jpg
    location: Geneva, Switzerland
    country: ch
@@ -33,8 +44,10 @@ career:
     - accomplishment: Integrating Alfresco with AppDynamics - application performance management system.
     - accomplishment: Development of the web application for 2nd/3rd support of eFiles. Technology stack is Spring Boot, AngularJS, Spring Data Rest.
     - accomplishment: Development of the custom user interface of Alfresco document library page based on Polymer.
+
  - position: Software Developer
    company: CERN
+   company-site: https://home.cern/
    logo: cern.jpg
    location: Geneva, Switzerland
    country: ch
@@ -44,6 +57,7 @@ career:
     - accomplishment: Extending functionality of CERN Hotel web booking application (hostel.cern.ch). Main feature developed is the possibility to create a Waiting-List reservations.
     - accomplishment: Migrating existing business processes from BPEL to BPMN (Activiti).
     - accomplishment: 3rd Line support
+
  - position: Software Developer
    company: Probusinessbank
    logo: life.jpg

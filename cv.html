@@ -105,7 +105,13 @@
                    src="{{ site.url }}/images/cv/{{ item.logo }}">
               <div style="display: inline-block; vertical-align: middle;">
                 <div><b>{{ item.position }}</b></div>
-                <div>{{ item.company }}</div>
+                  <div>
+                      {% if item.company-site %}
+                        <a href="{{item.company-site}}">{{ item.company }}</a>
+                      {% else %}
+                        {{item.company}}
+                      {% endif %}
+                  </div>
               </div>
             </div>
           </div>
