@@ -1,4 +1,4 @@
 ---
 layout: tag_index
-tag: i3
+tag: i3wm
 ---
