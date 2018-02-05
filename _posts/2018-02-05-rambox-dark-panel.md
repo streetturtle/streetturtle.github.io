@@ -23,5 +23,6 @@ document.querySelectorAll('.x-tab').forEach(function(el){el.style.backgroundColo
 
 First line sets the color of the bar and second of the tabs. Result will look following way:
 
-![{{site.url}}/images/2018/rambox-dark-panel.png]{:.center-image}
+![rambox dark panel]({{ "/images/2018/rambox-dark-panel.png" | relative_url }}){:.center-image}
+
 
