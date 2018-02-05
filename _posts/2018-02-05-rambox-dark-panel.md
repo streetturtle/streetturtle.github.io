@@ -14,11 +14,8 @@ Basically you need to open the Developer Tools window of Rambox (not the Service
 
 
 ```js
-
 document.querySelector('.x-tab-bar').style.backgroundColor='#20272D';
-
 document.querySelectorAll('.x-tab').forEach(function(el){el.style.backgroundColor='#444';});
-
 ```
 
 First line sets the color of the bar and second of the tabs. Result will look following way:
