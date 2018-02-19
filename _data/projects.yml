@@ -18,7 +18,7 @@ projects:
     description: Collection of widgets for the Awesome Window Manager for Linux. Contains Battery, Volume, Spotify, Email and Rates widgets.
     technologies: Lua/Python
     links:
-      github: https://github.com/streetturtle/AwesomeWM
+      github: https://github.com/streetturtle/awesome-wm-widgets
       site: http://pavelmakhov.com/AwesomeWM/
 
   - name: AppDynamics Extensions
