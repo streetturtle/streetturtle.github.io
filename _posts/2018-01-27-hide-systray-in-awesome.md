@@ -12,7 +12,7 @@ Here is a trick to toggle system tray visibility in Awesome using keyboard short
 
  - I didn't manage to make it transparent which is quite important since I am using transparent tasklist and widgets. I tried `wibox.widget.systray.opacity` property which doesn't work as well as setting an alpha channel for `beautiful.bg_systray`.
 
- - Colors of the apps is very different from theme colors which makes systray look flashy and disturbing:
+ - Colors of the apps are very different from theme colors which makes systray look flashy and disturbing:
 
 ![systray screenshot]({{ "/images/2018/systray.png" | relative_url }})
 
