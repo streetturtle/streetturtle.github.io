@@ -78,9 +78,9 @@ technicalSkills:
     - tr: "Experience with JDBC/ORM, Hibernate, Criteria API"
     - tr: "Web application servers: Tomcat, Weblogic"
     - tr: "Scripting languages: Python / Bash"
+    - tr: "Jenkins / Bamboo / GitLab CI"
     - tr: "Experience with REST / SOAP web-services"
-    - tr: "Git / SVN"
-    - tr: "100% Ubuntu/Debian user"
+    - tr: "Git / SVN / Mercurial"
     - tr: "Scrum / Agile / pair programming experience"
     - tr: "Alfresco development experience"
   backend:
@@ -89,7 +89,7 @@ technicalSkills:
    - name: Python
      level: 70
   frontend:
-   - name: AngularJS/Polymer/JS
+   - name: AngularJS/Polymer/JS/Dart
      level: 80
    - name: HTML/CSS/Bootstrap
      level: 90
