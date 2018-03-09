@@ -2,8 +2,6 @@ person:
   name: Pavel Makhov
   profession: Java Developer
   location: Montréal, Canada
-#  citizenship: Russia
-#  birthday: 12.04.1990
   email: pavel.makhov@outlook.com
   site: http://pavelmakhov.com
   linkedin: /streetturtle
@@ -18,6 +16,7 @@ career:
    location: Montreal, Canada
    country: ca
    dates: 01.2018 - current
+   summary: Development of the PACS - Picture Archiving and Communication System.
 
  - position: Java Developer / Consultant
    company: Savoir-Faire Linux
@@ -27,9 +26,10 @@ career:
    country: ca
    dates: 08.2016 - 12.2017
    accomplishments:
-    - accomplishment: Development of high performance highly available REST API which supports many various parameters and provides information from MySQL DB.
+    - accomplishment: Development of high performance highly available Music REST API.
     - accomplishment: Development of the real-time data processing application based on Apache Mahout and Apache Kafka.
     - accomplishment: Development of Proof of Concept WebRTC Liferay portlet.
+    - accomplishment: Took part in building data pipeline for a ML project.
 
  - position: Java/Alfresco Developer
    company: CERN
@@ -86,8 +86,8 @@ technicalSkills:
   backend:
    - name: Java SE/EE
      level: 100
-   - name: DBs
-     level: 80
+   - name: Python
+     level: 70
   frontend:
    - name: AngularJS/Polymer/JS
      level: 80
