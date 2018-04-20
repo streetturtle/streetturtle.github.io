@@ -12,4 +12,73 @@ css
     `-- fa-solid-900.woff
 ```
 
-Including css as CssResource will include only the CSS, but it you have a look at the bottom of it you'll notice `@font-face` section which refers to font file by relative path. So we will need to serve font files and make them be accessible.
+Including css as CssResource will include only the CSS, but if you have a look at the bottom of it you'll notice `@font-face` section which refers to font file by relative path. So we will need to serve font files and make them be accessible.
+
+First let's serve the css and fonts, create a ClientBundle with follwing content:
+
+```java
+public interface FontAwesomeBundle extends ClientBundle{
+    FontAwesomeBundle INSTANCE =  GWT.create( FontAwesomeBundle.class );
+
+    @Source("css/fontawesome/fontawesome-all.min.css")
+    @CssResource.NotStrict
+    CssResource fontAwesome();
+
+    @DataResource.DoNotEmbed
+    @DataResource.MimeType("application/font-woff")
+    @Source("css/fontawesome/webfonts/fa-brands-400.woff")
+    DataResource faBrands400woff();
+
+    @DataResource.DoNotEmbed
+    @DataResource.MimeType("application/font-woff")
+    @Source("css/fontawesome/webfonts/fa-regular-400.woff")
+    DataResource faRegular400woff();
+
+    @DataResource.DoNotEmbed
+    @DataResource.MimeType("application/font-woff")
+    @Source("css/fontawesome/webfonts/fa-solid-900.woff")
+    DataResource faSolid900woff();
+}
+```
+Then inject css in your app by calling:
+
+```java
+FontAwesomeBundle.INSTANCE.fontAwesome().ensureInjected();
+```
+
+After above operations content of font-awesome will be injected in the head element of dom. But css still has relative paths to font files. But they should be different, now path to the font will look like this: http://localhost/gwt/myapp/65A71CB6AC75767538DD48A2FE8BD898.cache.woff. So to change it in font awesome css replace all @font-faces by following in case of using only woff fonts:
+
+```css
+@url faBrands400woffUrl faBrands400woff;
+@font-face {
+    font-family: 'Font Awesome 5 Brands';
+    font-style: normal;
+    font-weight: normal;
+    src: faBrands400woffUrl format("woff"); }
+
+.fab {
+    font-family: 'Font Awesome 5 Brands'; }
+
+@url faRegular400woffUrl faRegular400woff;
+@font-face {
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 400;
+    src: faRegular400woffUrl format("woff"); }
+
+.far {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 400; }
+
+@url faSolid900woffUrl faSolid900woff;
+@font-face {
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+    src: faSolid900woffUrl format("woff"); }
+
+.fa,
+.fas {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900; }
+```
