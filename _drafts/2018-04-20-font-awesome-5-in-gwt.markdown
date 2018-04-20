@@ -82,3 +82,6 @@ After above operations content of font-awesome will be injected in the head elem
     font-family: 'Font Awesome 5 Free';
     font-weight: 900; }
 ```
+
+`@url faBrands400woffUrl faBrands400woff;` construction defines constant `faBrands400woffUrl` which will be replaced by `faBrands400woff,getUrl()`.
+
