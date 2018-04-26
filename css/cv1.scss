@@ -58,6 +58,13 @@ h1, h2{
   text-align: center;
 }
 
+.competencies{
+  ul {
+    columns: 2;
+    column-gap: 40px
+  }
+}
+
 .flag{
   vertical-align: middle;
 }
@@ -78,8 +85,16 @@ h1, h2{
 
 @media print {
   .section {
-    page-break-inside: avoid;
+    //page-break-inside: avoid;
     padding: 10px 20px;
+  }
+
+  .flag{
+    display: block;
+  }
+  .jd{
+    page-break-inside: avoid;
+    padding-top: 80px;
   }
   a[href]:after {
     content: none !important;

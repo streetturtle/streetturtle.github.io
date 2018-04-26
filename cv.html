@@ -90,7 +90,7 @@
     </div>
   </div>
 
-  <div class="row  section">
+  <div class="row section">
     <div class="col-xs-2">
       <h2>Career</h2>
     </div>
@@ -101,8 +101,10 @@
         <div class="row" style="padding-bottom:20px">
           <div class="col-xs-6">
             <div>
-              <img style="height: 30px;display: inline-block;vertical-align: middle;"
-                   src="{{ site.url }}/images/cv/{{ item.logo }}">
+                <a href="{{item.company-site}}" style="text-decoration: none !important">
+                    <img style="height: 40px;display: inline-block;vertical-align: middle;"
+                         src="{{ site.url }}/images/cv/{{ item.logo }}">
+                </a>
               <div style="display: inline-block; vertical-align: middle;">
                 <div><b>{{ item.position }}</b></div>
                   <div>
@@ -146,7 +148,7 @@
   </div>
 
 
-  <div class="row section pagebreakishere">
+  <div class="row section">
     <div class="col-xs-3">
       <h2>Technical skills</h2>
     </div>
@@ -182,7 +184,7 @@
           </div>
 
       </div>
-      <div>
+      <div class="competencies">
         <h4><i class="fa fa-male"></i> Key competencies:</h4>
         <ul>
           {% for item in site.data.cv.technicalSkills.list %}
@@ -200,7 +202,7 @@
     <div class="col-xs-9">
       {% for item in site.data.cv.sideProjects %}
       <div class="row side-project">
-        <div class="col-xs-5">
+        <div class="col-xs-4">
           <h4>
             {% if item.type == 'github' %}
             <i class="fa fa-github"></i>
@@ -210,13 +212,13 @@
             <a href="{{item.link}}">{{item.name}}</a>
           </h4>
           <div class="row">
-              <div class="col-xs-2">{{item.langs}}</div>
+              <div class="col-xs-3">{{item.langs}}</div>
               {% if item.stars %}
               <div class="col-xs-6"><i class="fa fa-star-o" aria-hidden="true"></i> {{item.stars}}</div>
               {% endif%}
           </div>
         </div>
-        <div class="col-xs-7">{{item.description}}</div>
+        <div class="col-xs-8">{{item.description}}</div>
       </div>
       {% endfor %}
     </div>
