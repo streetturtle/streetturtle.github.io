@@ -2,7 +2,6 @@
 layout: post
 title: Add locally installed libs to Python SDK in IDEA
 date:   2018-04-15 14:25
-description: Description
 comments: true
 tags:
 - idea
