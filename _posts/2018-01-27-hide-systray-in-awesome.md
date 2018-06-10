@@ -16,7 +16,7 @@ Here is a trick to toggle system tray visibility in Awesome using keyboard short
 
 ![systray screenshot]({{ "/images/2018/systray.png" | relative_url }})
 
-On the other hand not showing it at all will make interaction with some apps pretty difficult. So having a keyboard shortcut which toggles its visibility sounds like a good solution for above mentioned problems.
+On the other hand not showing it at all will make interaction with some apps pretty difficult. So having a keyboard shortcut which toggles its visibility sounds like a good solution for the problems mentioned above.
 
 To do it create a systray widget inside `awful.screen.connect_for_each_screen` function:
 
