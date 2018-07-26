@@ -1,7 +1,16 @@
+---
+layout: post
+title: FontAwesome 5 in GWT
+date:   2018-04-20 14:25
+comments: true
+description: In GWT it's easy to include CSS resource, but since FontAwesome is not only CSS - it's also font files (woff, eot, etc.) it took me some time to do it.
+tags:
+- GWT
+---
 
-In GWT it's easy to include CSS resource, but since FontAwesome is not only CSS - it's also font files (woff, eot, etc.) it took me some time to do it. 
+In GWT it's easy to include CSS resource, but since FontAwesome is not only CSS - it's also font files (woff, eot, etc.) it took me some time to do it.
 
-In my case I used only WOFF font, since it's mostly supported by browsers, but using the below way you can do the same for all other types. First download Font Awesome and put following files in your project:
+In my case I used only WOFF font, since it's supported by most of the browsers, but using the below way you can do the same for all other types. First download Font Awesome and put following files in your project:
 
 ```
 css
@@ -12,9 +21,9 @@ css
     `-- fa-solid-900.woff
 ```
 
-Including css as CssResource will include only the CSS, but if you have a look at the bottom of it you'll notice `@font-face` section which refers to font file by relative path. So we will need to serve font files and make them be accessible.
+Including CSS as `CssResource` will include only the CSS file, but if you have a look at the bottom of it you'll notice `@font-face` section which refers to font file by relative path. So we will need to serve font files and make them be accessible.
 
-First let's serve the css and fonts, create a ClientBundle with follwing content:
+First let's serve the CSS and fonts, create a `ClientBundle` with follwing content:
 
 ```java
 public interface FontAwesomeBundle extends ClientBundle{
@@ -40,13 +49,14 @@ public interface FontAwesomeBundle extends ClientBundle{
     DataResource faSolid900woff();
 }
 ```
-Then inject css in your app by calling:
+
+Then inject CSS in your app by calling:
 
 ```java
 FontAwesomeBundle.INSTANCE.fontAwesome().ensureInjected();
 ```
 
-After above operations content of font-awesome will be injected in the head element of dom. But css still has relative paths to font files. But they should be different, now path to the font will look like this: http://localhost/gwt/myapp/65A71CB6AC75767538DD48A2FE8BD898.cache.woff. So to change it in font awesome css replace all @font-faces by following in case of using only woff fonts:
+After above operations content of font-awesome will be injected in the head element of the DOM. But CSS file still has relative paths to the font files, e.g. **http://localhost/gwt/myapp/65A71CB6AC75767538DD48A2FE8BD898.cache.woff**. To change it in font awesome CSS replace all `@font-faces` by following:
 
 ```css
 @url faBrands400woffUrl faBrands400woff;
@@ -83,5 +93,5 @@ After above operations content of font-awesome will be injected in the head elem
     font-weight: 900; }
 ```
 
-`@url faBrands400woffUrl faBrands400woff;` construction defines constant `faBrands400woffUrl` which will be replaced by `faBrands400woff,getUrl()`.
+`@url faBrands400woffUrl faBrands400woff;` construction defines constant `faBrands400woffUrl` which will be replaced by `faBrands400woff.getUrl()`.
 
