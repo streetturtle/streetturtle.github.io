@@ -1,0 +1,91 @@
+---
+layout: page
+---
+
+
+<div id="total_words">Total words: </div>
+<div>Total posts: {{ site.posts.size }}</div>
+
+<canvas id="myChart" width="400" height="300"></canvas>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+<script>
+    var ctx = document.getElementById("myChart").getContext('2d');
+
+    var rawData = [
+        {% for post in site.posts %}
+        {
+            "date" : "{{post.date}}",
+            "value": 1
+        },
+        {% endfor %}
+    ];
+
+    var groupedByMonth = _.groupBy(rawData, function(item) {
+        return item.date.substring(0,7);
+    });
+
+    var data = [];
+
+    for (var key in groupedByMonth) {
+        if (groupedByMonth.hasOwnProperty(key)) {
+            data.push({"t" : key, "y" : groupedByMonth[key].length});
+        }
+    }
+    data = data.reverse();
+
+    var labels = [];
+
+    var start = data[0];
+    var end = data[data.length-1];
+
+    var sy = parseInt(start.t.substr(0, 4));
+    var ey = parseInt(end.t.substr(0, 4));
+    var sm = parseInt(start.t.substr(5,7));
+    var em = parseInt(end.t.substr(5,7));
+
+    console.log(sy);
+    console.log(ey);
+    console.log(sm);
+    console.log(em);
+
+    // for(var y = sy; y <= ey; y++)
+    //     for(var m = 1; m <=12; m++)
+    //         if (m < 10 )
+    //             labels.push(y + '-0' + m);
+    //         else
+    //             labels.push(y + '-' + m);
+
+
+    for (var key in groupedByMonth) {
+        if (groupedByMonth.hasOwnProperty(key)) {
+            // console.log(key + ": " + groupedByMonth[key].length);
+            labels.push(key);
+        }
+    }
+    labels.reverse();
+
+    var myLineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Demo',
+                data: data,
+            borderColor: 'rgb(60, 162, 162, 1)',
+            borderWidth: 2
+            }],
+        }
+
+    });
+</script>
+<script>
+    var total_words = [
+        {% for post in site.posts %}
+    {{ post.content | number_of_words }},
+    {% endfor %}
+    ]
+    var total_words = total_words.reduce((a, b) => a + b, 0);
+    document.getElementById('total_words').innerText += ' ' + total_words;
+</script>
