@@ -120,28 +120,28 @@ sideProjects:
     link: https://github.com/streetturtle/AwesomeWM
     type: github
     langs: Lua
-    stars: 148
+    stars: 186
 
   - name: PDF-element
     description: Web component built with Polymer which allows to render PDF files.
     link: http://github.com/streetturtle/pdf-element/
     type: github
     langs: Polymer
-    stars: 26
+    stars: 27
 
   - name: Jekyll Clean Dark
     description: Theme for Jekyll - static site generator. After creating theme for my blog I shared it on github.
     link: https://github.com/streetturtle/jekyll-clean-dark
     type: github
     langs: Jekyll
-    stars: 105
+    stars: 112
 
   - name: Jekyll CV Crafter
     description: To be able to easy update/view/print my CV I created jekyll powered CV generator.
     link: https://github.com/streetturtle/jekyll-cv-crafter
     type: github
     langs: Jekyll
-    stars: 57
+    stars: 61
 
   - name: Learn Foreign Numbers
     description: Progressive Web App based on Google's <a href="https://www.polymer-project.org/">Polymer Project</a>. The aim of this app is to learn how to write numbers in foreign language. Currently supported languages are French, Spanish, Portuguese, Italian and Vietnamese.
