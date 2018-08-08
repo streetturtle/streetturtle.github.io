@@ -9,13 +9,22 @@ person:
   stackoverflow: /streetturtle
   spokenLanguages: English / French / Russian
 career:
+ - position: Backend Developer
+   company: TouchTunes
+   company-site: http://www.touchtunes.com/
+   logo: touchtunes.png
+   location: Montreal, Canada
+   country: ca
+   dates: 05.2018 - current
+   summary: Java Development.
+
  - position: Software Developer
    company: Intelerad
    company-site: https://www.intelerad.com/
    logo: intelerad.png
    location: Montreal, Canada
    country: ca
-   dates: 01.2018 - current
+   dates: 01.2018 - 05.2018
    summary: Development of the PACS - Picture Archiving and Communication System.
 
  - position: Java Developer / Consultant
