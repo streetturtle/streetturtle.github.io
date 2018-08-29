@@ -8,7 +8,6 @@ layout: page
 <canvas id="myChart" width="400" height="300"></canvas>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
 
 <script>
     var rawData = [
@@ -48,7 +47,7 @@ layout: page
     }, {});
 
     var myLineChart = new Chart(ctx, {
-        type: 'line',
+        type: 'bar',
         data: {
             labels: Object.keys(counts),
             datasets: [{
