@@ -10,5 +10,11 @@ tags:
 This one-liner lists top 10 most used commands based on your history file:
 
 ```bash
-history | sed 's/^\s*[[:digit:]]\+\*\?\s*//g' | sort | uniq -c | sed 's/^\s*//g' | sort  -k1 -n -r | head 
+history \
+| sed 's/^\s*[[:digit:]]\+\*\?\s*//g' \
+| sort \
+| uniq -c \
+| sed 's/^\s*//g' \
+| sort  -k1 -n -r \
+| head
 ```
