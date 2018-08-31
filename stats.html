@@ -37,7 +37,7 @@ layout: page
     }
 
     var ctx = document.getElementById("myChart").getContext('2d');
-    var ctx = document.getElementById("myChart1").getContext('2d');
+    var ctx1 = document.getElementById("myChart1").getContext('2d');
 
 
     var res = data.concat(rawData)
@@ -81,7 +81,7 @@ layout: page
         }
     });
     
-    var myLineChart_for_numwords = new Chart(ctx, {
+    var myLineChart_for_numwords = new Chart(ctx1, {
         type: 'bar',
         data: {
             labels: Object.keys(counts_for_numwords),
