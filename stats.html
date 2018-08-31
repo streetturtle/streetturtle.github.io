@@ -7,6 +7,7 @@ layout: page
 <div id="words_per_post">Average words per posts:</div>
 
 <canvas id="myChart" width="400" height="300"></canvas>
+<canvas id="myChart1" width="400" height="300"></canvas>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 
@@ -15,7 +16,8 @@ layout: page
         {% for post in site.posts %}
             {
                 "t":"{{post.date | date: '%Y-%-m'}}",
-                "x":1
+                "x":1,
+                "y":{{ post.content | number_of_words }}
             },
         {% endfor %}
     ];
@@ -30,11 +32,13 @@ layout: page
     for (var i = parseInt(sy); i <= parseInt(yy); i++) {
         for (var j = parseInt(sm); j < 13; j++) {
             console.log('' + i + "-" + j);
-            data.push({"t": '' + i + "-" + j, "x": 0});
+            data.push({"t": '' + i + "-" + j, "x": 0, "y": 0});
         }
     }
 
     var ctx = document.getElementById("myChart").getContext('2d');
+    var ctx = document.getElementById("myChart1").getContext('2d');
+
 
     var res = data.concat(rawData)
 
@@ -47,6 +51,15 @@ layout: page
         return p;
     }, {});
 
+    var counts_for_numwords = res.reduce((p, c) => {
+        var name = c.t;
+        if (!p.hasOwnProperty(name)) {
+            p[name] = 0;
+        }
+        p[name] = p[name] + c.y;
+        return p;
+    }, {});
+    
     var myLineChart = new Chart(ctx, {
         type: 'bar',
         data: {
@@ -67,6 +80,28 @@ layout: page
             }
         }
     });
+    
+    var myLineChart_for_numwords = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: Object.keys(counts_for_numwords),
+            datasets: [{
+                label: 'Number of words',
+                data: Object.values(counts_for_numwords),
+                borderColor: 'rgb(60, 162, 162, 1)',
+                borderWidth: 1
+            }],
+        },
+        options: {
+            scales: {
+                xAxes: [{
+                    categoryPercentage: 1.0,
+                    barPercentage: 1.0
+                }]
+            }
+        }
+    });
+    
 </script>
 <script>
 var total_words = [
