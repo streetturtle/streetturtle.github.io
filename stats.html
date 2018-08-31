@@ -3,7 +3,8 @@ layout: page
 ---
 
 <div id="total_words">Total words:</div>
-<div>Total posts: {{ site.posts.size }}</div>
+<div id="total_posts">Total posts:</div>
+<div id="words_per_post">Average words per posts:</div>
 
 <canvas id="myChart" width="400" height="300"></canvas>
 
@@ -74,5 +75,9 @@ var total_words = [
 {% endfor %}
 ]
 var total_words = total_words.reduce((a, b) => a + b, 0);
-document.getElementById('total_words').innerText += ' ' + total_words;
+    var total_posts = {{ site.posts.size }};
+    
+    document.getElementById('total_words').innerText += ' ' + total_words;
+    document.getElementById('total_posts').innerText += ' ' + total_posts;
+    document.getElementById('words_per_post').innerText += ' ' + total_words / total_posts;
 </script>
