@@ -386,6 +386,28 @@ ul.share-buttons {
   }
 }
 
+
+// scrollbar
+/* width */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #343434;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #171717;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #202020;
+}
+
 .wrapper{
   min-height: 100%;
   position: relative;
