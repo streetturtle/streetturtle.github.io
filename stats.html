@@ -1,18 +1,29 @@
 ---
 layout: page
 ---
-
-<div id="total_words">Total words:</div>
-<div id="total_posts">Total posts:</div>
-<div id="words_per_post">Average words per posts:</div>
-
-<canvas id="myChart" width="400" height="300"></canvas>
-<canvas id="myChart1" width="400" height="300"></canvas>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.2/randomColor.min.js"></script>
+
+<h1>Blog statistics</h1>
+
+<div id="total-posts">Total number of posts:</div>
+<div id="total-words">Total number of words:</div>
+<div id="words-per-post">Number of words per post:</div>
+
+<h1>Number of posts per month</h1>
+<canvas id="postsPerMonth" width="400" height="300"></canvas>
+
+<h1>Number of words per month</h1>
+<canvas id="wordsPerMonth" width="400" height="300"></canvas>
+
+<h1>Tags distribution</h1>
+<canvas id="tagsDistr" width="400" height="300"></canvas>
 
 <script>
-    var rawData = [
+
+    var accentColor = "#3CA2A2";
+
+    var datePostsWords = [
         {% for post in site.posts %}
             {
                 "t":"{{post.date | date: '%Y-%-m'}}",
@@ -23,26 +34,18 @@ layout: page
     ];
 
     var sy = "{{ site.posts.last.date | date: '%Y'}}",
-        yy = "{{ site.posts.first.date | date: '%Y'}}",
-        sm = "1",
-        em = "{{ site.posts.first.date | date: '%-m'}}";
+        ey = "{{ site.posts.first.date | date: '%Y'}}";
 
-    var data = [];
-
-    for (var i = parseInt(sy); i <= parseInt(yy); i++) {
-        for (var j = parseInt(sm); j < 13; j++) {
-            console.log('' + i + "-" + j);
-            data.push({"t": '' + i + "-" + j, "x": 0, "y": 0});
+    var datePostsWordsZeros = [];
+    for (var i = parseInt(sy); i <= parseInt(ey); i++) {
+        for (var j = 1; j < 13; j++) {
+            datePostsWordsZeros.push({"t": '' + i + "-" + j, "x": 0, "y": 0});
         }
     }
 
-    var ctx = document.getElementById("myChart").getContext('2d');
-    var ctx1 = document.getElementById("myChart1").getContext('2d');
+    var datePostsWords = datePostsWordsZeros.concat(datePostsWords);
 
-
-    var res = data.concat(rawData)
-
-    var counts = res.reduce((p, c) => {
+    var postsPerMonth = datePostsWords.reduce((p, c) => {
         var name = c.t;
         if (!p.hasOwnProperty(name)) {
             p[name] = 0;
@@ -51,7 +54,7 @@ layout: page
         return p;
     }, {});
 
-    var counts_for_numwords = res.reduce((p, c) => {
+    var wordsPerMonth = datePostsWords.reduce((p, c) => {
         var name = c.t;
         if (!p.hasOwnProperty(name)) {
             p[name] = 0;
@@ -59,15 +62,17 @@ layout: page
         p[name] = p[name] + c.y;
         return p;
     }, {});
-    
-    var myLineChart = new Chart(ctx, {
+
+
+    var postsPerMonthCtx = document.getElementById("postsPerMonth").getContext('2d');
+    var postsPerMonthChart = new Chart(postsPerMonthCtx, {
         type: 'bar',
         data: {
-            labels: Object.keys(counts),
+            labels: Object.keys(postsPerMonth),
             datasets: [{
                 label: 'Post(s)',
-                data: Object.values(counts),
-                borderColor: 'rgb(60, 162, 162, 1)',
+                data: Object.values(postsPerMonth),
+                backgroundColor: accentColor,
                 borderWidth: 1
             }],
         },
@@ -80,15 +85,16 @@ layout: page
             }
         }
     });
-    
-    var myLineChart_for_numwords = new Chart(ctx1, {
+
+    var wordsPerMonthCtx = document.getElementById("wordsPerMonth").getContext('2d');
+    var wordsPerMonthChart = new Chart(wordsPerMonthCtx, {
         type: 'bar',
         data: {
-            labels: Object.keys(counts_for_numwords),
+            labels: Object.keys(wordsPerMonth),
             datasets: [{
                 label: 'Number of words',
-                data: Object.values(counts_for_numwords),
-                borderColor: 'rgb(60, 162, 162, 1)',
+                data: Object.values(wordsPerMonth),
+                backgroundColor: accentColor,
                 borderWidth: 1
             }],
         },
@@ -101,18 +107,63 @@ layout: page
             }
         }
     });
-    
+
+    {% capture tags %}
+        {% for tag in site.tags %}
+            {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}/
+        {% endfor %}
+    {% endcapture %}
+    {% assign sortedtags = tags | split:'/' | sort %}
+
+    var pieLabels = [
+        {% for tag in sortedtags reversed %}
+            {% assign tagitems = tag | split: '#' %}
+            {% for tag in tags %} "{{ tagitems[1] }}", {% endfor %}
+        {% endfor %}
+    ];
+
+    var pieData = [
+        {% for tag in sortedtags reversed %}
+            {% assign tagitems = tag | split: '#' %}
+            {% for tag in tags %} {{ tagitems[2]}}, {% endfor %}
+        {% endfor %}
+    ];
+
+    var tagsDistrCtx = document.getElementById("tagsDistr").getContext('2d');
+    var tagsDistrChart = new Chart(tagsDistrCtx,{
+        type: 'pie',
+        data: {
+            labels: pieLabels,
+            datasets: [{
+                label: "tag",
+                data: pieData,
+                borderColor: "#aaa",
+                backgroundColor: randomColor({
+                    count: pieData.length,
+                    hue: accentColor,
+                    luminosity: 'dark',
+                })
+            }],
+        },
+    });
 </script>
+
 <script>
-var total_words = [
-{% for post in site.posts %}
-{{ post.content | number_of_words }},
-{% endfor %}
-]
-var total_words = total_words.reduce((a, b) => a + b, 0);
-    var total_posts = {{ site.posts.size }};
-    
-    document.getElementById('total_words').innerText += ' ' + total_words;
-    document.getElementById('total_posts').innerText += ' ' + total_posts;
-    document.getElementById('words_per_post').innerText += ' ' + total_words / total_posts;
+    var totalWords = [
+        {% for post in site.posts %}
+            {{ post.content | number_of_words }},
+        {% endfor %}
+    ].reduce((a, b) => a + b, 0);
+    var totalPosts = {{ site.posts.size }};
+
+    function concatBoldTextToELement(id, text) {
+        var abvgd = document.createElement('b');
+        abvgd.innerText = ' ' + text;
+        document.getElementById(id).appendChild(abvgd);
+    }
+
+    concatBoldTextToELement('total-words', totalWords);
+    concatBoldTextToELement('total-posts', totalPosts);
+    concatBoldTextToELement('words-per-post', totalWords / totalPosts);
+
 </script>
