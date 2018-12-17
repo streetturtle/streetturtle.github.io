@@ -41,7 +41,7 @@ yandex_metrika: true
 disqus: streetturtle
 comments: true
 
-permalink: /:year/:month/:title
+permalink: /:year/:month/:title/
 gems: [jekyll-paginate]
 paginate: 10
 
