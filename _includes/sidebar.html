@@ -1,4 +1,5 @@
 <div class="sidebar ">
+
   {% if page.tags.size == 1 %}
     <h2>Related By Tag</h2>
   {% elsif page.tags.size > 1 %}
@@ -31,4 +32,20 @@
           <span>{{tag[0] }}</span></a></li>
     {% endfor %}
   </ul>
+</div>
+
+<div class="sidebar">
+  <h2>Be my colleague at
+    <a href="http://www.touchtunes.com/"><img style="width:150px" src="{{site.url}}/images/tt-logo-white.png"></a></h2>
+
+  <div class="row">
+  {% for job in site.data.job_postings %}
+    <div class="col-xs-12"  style="padding-top:10px">
+      <a href="{{job.link}}">{{ job.title }}</a>
+    </div>
+    <div class="col-xs-12">{{ job.tech }}</div>
+    <div class="col-xs-12"><i class="fa fa-map-marker"></i> {{job.place}}</div>
+  {% endfor %}
+  </div>
+
 </div>
