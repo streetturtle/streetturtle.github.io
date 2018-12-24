@@ -5,7 +5,6 @@ date: 2015-12-10 11:09:06
 comments: true
 tags: 
   - jekyll
-  - markdown
 description: Using markdown for writing posts is very convenient and easy, but since markdown converts to html there is not much ways to customize styles of some elements in result html, like styles of an image. Here I'll show how it could be solved.
 comments: true
 ---

@@ -7,7 +7,6 @@ categories:
 description: For better understanding of Alfresco sometimes it's needed to see Alfresco tables. Here I'm showing how to connect to Alfresco Postgre database on a server and to h2 database during development.
 tags: 
 - alfresco
-- database
 ---
 
 ## Connection to PostgreSQL (IDE)

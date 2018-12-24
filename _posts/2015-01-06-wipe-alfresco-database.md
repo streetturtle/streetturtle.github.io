@@ -7,7 +7,6 @@ categories:
 description: Here I'm showing how to wipe alfresco database.
 tags: 
 - alfresco
-- database
 ---
 Sometimes for some unknown reason alfresco crashes after I upload some documents. To be able to work with alfresco again each time this happens I need to reinstall alfresco which takes quite a long time. But basically what I want to do is to wipe alfresco database. To do it I've created a following script:
 

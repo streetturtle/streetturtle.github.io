@@ -7,7 +7,6 @@ categories:
 description: I would like to share some of SQL queries for Alfresco database which could be useful.
 tags: 
 - alfresco
-- database
 ---
 
 ## Why you may use SQL queries

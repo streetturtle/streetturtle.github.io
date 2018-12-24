@@ -6,7 +6,6 @@ comments: true
 description: Here I have a simple example showing how to implement MySQL's order by field in Criteria API for MySQL DBMS.
 tags: 
 - jpa
-- database
 ---
 
 JPA is pretty awesome when you work with DB, but it has several downsides. One of them is missing support for some DB specific functions/features (which could be very useful if you plan to change your DBMS one day). About one of them I wrote in my previous post: [MySQL fulltext search with JPA](http://localhost:4000/2016/09/jpa-custom-function). Another problem I've faced recently is ordering by given list of ids which looks like follows in plain SQL:

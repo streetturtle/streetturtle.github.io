@@ -27,9 +27,11 @@
   <ul class="sideBarTags">
     {% assign tags = (site.tags | sort:0) %}
     {% for tag in tags %}
+    {% if tag[1].size > 1 %}
       <li>
         <a href="/tag/{{ tag[0] }}" data-toggle="tooltip" data-placement="right" title="{{ tag[1].size }}">
           <span>{{tag[0] }}</span></a></li>
+    {% endif %}
     {% endfor %}
   </ul>
 </div>

@@ -5,7 +5,7 @@ date:   2018-04-20 14:25
 comments: true
 description: In GWT it's easy to include CSS resource, but since FontAwesome is not only CSS - it's also font files (woff, eot, etc.) it took me some time to do it.
 tags:
-- GWT
+- gwt
 ---
 
 In GWT it's easy to include CSS resource, but since FontAwesome is not only CSS - it's also font files (woff, eot, etc.) it took me some time to do it.

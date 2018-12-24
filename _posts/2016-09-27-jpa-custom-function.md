@@ -6,7 +6,6 @@ comments: true
 description: Example on how to write JPQL or Criteria API queries for DB functions with 'unusual' signatures, like MySQL's FTS function - match against.
 tags: 
 - jpa
-- database
 ---
 
 # Problem Description

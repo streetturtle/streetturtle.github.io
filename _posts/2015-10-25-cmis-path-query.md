@@ -4,7 +4,6 @@ title: "CMIS path query"
 date: 2015-10-25 16:25:06
 comments: true
 tags: 
- - CMIS
  - alfresco
 description: Query for path in CMIS is quite powerful tool to get folders/documents from repository. Here is some useful examples/tricks.   
 comments: true
