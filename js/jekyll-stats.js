@@ -36,6 +36,8 @@ var postsPerMonth = datePostsWords.reduce((p, c) => {
 }, {});
 
 var postsPerYear = datePostsWords.reduce((p, c) => {
+    if (c.year === undefined)
+        return p;
     var name = c.year;
     if (!p.hasOwnProperty(name)) {
         p[name] = 0;
