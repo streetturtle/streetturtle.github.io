@@ -16,7 +16,7 @@ career:
    location: Montreal, Canada
    country: ca
    dates: 05.2018 - current
-   summary: Working as a Java Backend Developer for the largest in-venue interactive music and entertainment platform, featured in over 75,000 bars and restaurants across North America and Europe.
+   summary: Working as a Java Backend Developer in the Production team for the largest in-venue interactive music and entertainment platform, featured in over 75,000 bars and restaurants across North America and Europe. Working with a microservice architecture, with Spring Boot-based services deployed to AWS in Docker containers, managed by Mesos/Marathon.
 
  - position: Software Developer
    company: Intelerad
@@ -87,11 +87,11 @@ technicalSkills:
     - tr: "Experience with JDBC/ORM, Hibernate, Criteria API"
     - tr: "Web application servers: Tomcat, Weblogic"
     - tr: "Scripting languages: Python / Bash"
-    - tr: "Jenkins / Bamboo / GitLab CI"
-    - tr: "Experience with REST / SOAP web-services"
-    - tr: "Git / Mercurial / SVN"
+    - tr: "Kafka / RabbitMQ"
+    - tr: "Jenkins / Bamboo"
+    - tr: "REST / SOAP web-services"
+    - tr: "Git / Mercurial / Gerrit"
     - tr: "Scrum / Agile / pair programming experience"
-    - tr: "Alfresco development experience"
   backend:
    - name: Java SE/EE
      level: 100
@@ -120,34 +120,34 @@ sideProjects:
     link: https://github.com/streetturtle/AwesomeWM
     type: github
     langs: Lua
-    stars: 186
+    stars: 242
 
   - name: PDF-element
     description: Web component built with Polymer which allows to render PDF files.
     link: http://github.com/streetturtle/pdf-element/
     type: github
     langs: Polymer
-    stars: 27
+    stars: 28
 
   - name: Jekyll Clean Dark
     description: Theme for Jekyll - static site generator. After creating theme for my blog I shared it on github.
     link: https://github.com/streetturtle/jekyll-clean-dark
     type: github
     langs: Jekyll
-    stars: 112
+    stars: 131
 
   - name: Jekyll CV Crafter
     description: To be able to easy update/view/print my CV I created jekyll powered CV generator.
     link: https://github.com/streetturtle/jekyll-cv-crafter
     type: github
     langs: Jekyll
-    stars: 61
+    stars: 72
 
   - name: Learn Foreign Numbers
-    description: Progressive Web App based on Google's <a href="https://www.polymer-project.org/">Polymer Project</a>. The aim of this app is to learn how to write numbers in foreign language. Currently supported languages are French, Spanish, Portuguese, Italian and Vietnamese.
-    link: https://learn-foreign-numbers.firebaseapp.com/
+    description: Progressive Web App based on Google's <a href="https://www.polymer-project.org/">Polymer Project</a>. The aim of this app is to learn how to write numbers in foreign language.
+    link: https://pavelmakhov.com/lfn/#
     type: site
-    langs: Polymer
+    langs: VanillaJS
 
 
 certifications:
