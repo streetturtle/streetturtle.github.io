@@ -1,15 +1,6 @@
-- title: Software Architect
-  link: https://www.thegravityapp.com/shared/job?u=1538747201&id=8a78879e64eec1460164f22121c90c9e&clientId=8a7882674ed84215014ee1240ec103cb&v=9&token=eyJ0eXBlIjoiZW1haWwiLCJ1aWQiOjE3MjQ2LCJwcm92aWRlciI6ImJvdW5jZSJ9.YdITLAq7kkg9ckNCTp6z-TA9WmE
-  place: Redmond, WA
-
 - title: Tech Lead
   link: https://www.thegravityapp.com/shared/job?u=1545087850&id=8a78839f67ab0f710167ad3635921fe2&clientId=8a7882674ed84215014ee1240ec103cb&v=9&token=eyJ0eXBlIjoiZW1haWwiLCJ1aWQiOjE3MjQ2LCJwcm92aWRlciI6ImJvdW5jZSJ9.0AsXkglRyo_vcQ9Ggoj04Cs-jJ8
   tech: API / Microservices
-  place: Montreal, Canada
-
-- title: DevOps Specialist
-  link: https://www.thegravityapp.com/shared/job?u=1545181768&id=8a7885a8670aebd70167553b647a2436&clientId=8a7882674ed84215014ee1240ec103cb&v=9&token=eyJ0eXBlIjoiZW1haWwiLCJ1aWQiOjE3MjQ2LCJwcm92aWRlciI6ImJvdW5jZSJ9.LyVikjjtg_IL361hq1WCmTKzN5s
-  tech: Docker / AWS / Mesos
   place: Montreal, Canada
 
 - title: Software Developer
@@ -25,4 +16,9 @@
 - title: QA Automation Specialist
   link: https://www.thegravityapp.com/shared/job?u=1543413340&id=8a7887a9670aebb3016751eab9e50838&clientId=8a7882674ed84215014ee1240ec103cb&v=9&token=eyJ0eXBlIjoiZW1haWwiLCJ1aWQiOjE3MjQ2LCJwcm92aWRlciI6ImJvdW5jZSJ9.QTz2XCRGOMQQa23ZUC79pOOh8bA
   tech: Selenium / Robot
+  place: Montreal, Canada
+
+- title: Full Stack Developer
+  link: https://www.thegravityapp.com/shared/job?u=1548352411&id=8a7883a8687e104601688033b51d1665&clientId=8a7882674ed84215014ee1240ec103cb&v=9&token=eyJ0eXBlIjoiZW1haWwiLCJ1aWQiOjE3MjQ2LCJwcm92aWRlciI6ImJvdW5jZSJ9.D9rvwVKwJVPxkSMFxRKev0Tjrp4
+  tech: React / NodeJS / Angular
   place: Montreal, Canada
