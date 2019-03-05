@@ -143,13 +143,6 @@ sideProjects:
     langs: Jekyll
     stars: 72
 
-  - name: Learn Foreign Numbers
-    description: Progressive Web App based on Google's <a href="https://www.polymer-project.org/">Polymer Project</a>. The aim of this app is to learn how to write numbers in foreign language.
-    link: https://pavelmakhov.com/lfn/#
-    type: site
-    langs: VanillaJS
-
-
 certifications:
   - name: FP Principles in Scala
     issuer: Coursera
