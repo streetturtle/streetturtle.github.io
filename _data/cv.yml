@@ -16,16 +16,16 @@ career:
    location: Montreal, Canada
    country: ca
    dates: 05.2018 - current
-   summary: Working as a Java Backend Developer in the Production team for the largest in-venue interactive music and entertainment platform, featured in over 75,000 bars and restaurants across North America and Europe. Working with a microservice architecture, with Spring Boot-based services deployed to AWS in Docker containers, managed by Mesos/Marathon.
+   summary: Working as a Java Backend Developer in the Production team for the largest in-venue interactive music and entertainment platform, featured in over 75,000 bars and restaurants across North America and Europe. Working in a microservice architecture, with Spring Boot-based services deployed to AWS in Docker containers, managed by Mesos/Marathon.
 
- - position: Software Developer
+ - position: Full Stack Java Developer
    company: Intelerad
    company-site: https://www.intelerad.com/
    logo: intelerad.png
    location: Montreal, Canada
    country: ca
    dates: 01.2018 - 05.2018
-   summary: Development of the PACS - Picture Archiving and Communication System.
+   summary: 'Development of the PACS - Picture Archiving and Communication System. My primary focus was on Tech Portal - a customization tool that allows technologists to create multiple worklists based on different criteria, including exam status, date range, modality, organizations, locations and rooms. Tech stack: GWT, CSS / SCSS, AngularJS.'
 
  - position: Java Developer / Consultant
    company: Savoir-Faire Linux
@@ -83,26 +83,26 @@ career:
 technicalSkills:
   list:
     - tr: "Spring / Maven / JUnit / Mockito / Camel / Hazelcast"
-    - tr: "Oracle, MySQL, PostgreSQL"
+    - tr: "Oracle, MySQL / Mongo, Redis, Couchbase"
     - tr: "Experience with JDBC/ORM, Hibernate, Criteria API"
     - tr: "Web application servers: Tomcat, Weblogic"
     - tr: "Scripting languages: Python / Bash"
     - tr: "Kafka / RabbitMQ"
-    - tr: "Jenkins / Bamboo"
+    - tr: "Bower / Grunt / NPM "
     - tr: "REST / SOAP web-services"
     - tr: "Git / Mercurial / Gerrit"
     - tr: "Scrum / Agile / pair programming experience"
-  backend:
-   - name: Java SE/EE
-     level: 100
-   - name: Python
-     level: 70
-  frontend:
+  left:
+    - name: Java
+      level: 100
+    - name: Python
+      level: 70
+  center:
    - name: AngularJS/Polymer/JS/Dart
      level: 80
-   - name: HTML/CSS/Bootstrap
+   - name: HTML / CSS/SCSS / Bootstrap
      level: 90
-  other:
+  right:
    - name: Apache Kafka
      level: 90
    - name: Hadoop, Apache Spark
@@ -120,28 +120,28 @@ sideProjects:
     link: https://github.com/streetturtle/AwesomeWM
     type: github
     langs: Lua
-    stars: 242
+    stars: 302
 
   - name: PDF-element
-    description: Web component built with Polymer which allows to render PDF files.
+    description: Web component built with Polymer which allows rendering PDF files.
     link: http://github.com/streetturtle/pdf-element/
     type: github
     langs: Polymer
-    stars: 28
+    stars: 29
 
   - name: Jekyll Clean Dark
     description: Theme for Jekyll - static site generator. After creating theme for my blog I shared it on github.
     link: https://github.com/streetturtle/jekyll-clean-dark
     type: github
     langs: Jekyll
-    stars: 131
+    stars: 143
 
   - name: Jekyll CV Crafter
     description: To be able to easy update/view/print my CV I created jekyll powered CV generator.
     link: https://github.com/streetturtle/jekyll-cv-crafter
     type: github
     langs: Jekyll
-    stars: 72
+    stars: 76
 
 certifications:
   - name: FP Principles in Scala
