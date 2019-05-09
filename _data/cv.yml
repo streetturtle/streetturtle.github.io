@@ -82,13 +82,14 @@ career:
 
 technicalSkills:
   list:
-    - tr: "Spring / Maven / JUnit / Mockito / Camel / Hazelcast"
+    - tr: "Spring / Maven / JUnit / Mockito / Camel"
     - tr: "Oracle, MySQL / Mongo, Redis, Couchbase"
     - tr: "Experience with JDBC/ORM, Hibernate, Criteria API"
-    - tr: "TDD / BDD (Cucmber)"
+    - tr: "AWS / Dynatrace / Sumologic"
+    - tr: "TDD / BDD (Cucumber)"
     - tr: "Scripting languages: Python / Bash"
     - tr: "Kafka / RabbitMQ"
-    - tr: "Bower / Grunt / NPM "
+    - tr: "Bower / Grunt / NPM"
     - tr: "REST / SOAP web-services"
     - tr: "Git / Mercurial / Gerrit"
     - tr: "Scrum / Agile / pair programming experience"
