@@ -85,7 +85,7 @@ technicalSkills:
     - tr: "Spring / Maven / JUnit / Mockito / Camel / Hazelcast"
     - tr: "Oracle, MySQL / Mongo, Redis, Couchbase"
     - tr: "Experience with JDBC/ORM, Hibernate, Criteria API"
-    - tr: "Web application servers: Tomcat, Weblogic"
+    - tr: "TDD / BDD (Cucmber)"
     - tr: "Scripting languages: Python / Bash"
     - tr: "Kafka / RabbitMQ"
     - tr: "Bower / Grunt / NPM "
