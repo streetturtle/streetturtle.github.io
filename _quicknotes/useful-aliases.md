@@ -9,4 +9,4 @@ tags:
 
 {% highlight bash %}
 alias cdt='cd $(mktemp -d)'
-{% endhightlight %}
+{% endhighlight %}
