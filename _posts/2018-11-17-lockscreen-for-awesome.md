@@ -3,7 +3,7 @@ layout: post
 title: Lockscreen for AwesomeWM
 date: 2018-11-17 14:25
 comments: true
-description: Finally there is a super easy way to use Juniper VPN on Ubuntu (and probably on other distributives as well).
+description: A few-liner lock screen for Awesome WM using i3lock.
 tags:
 - awesome wm
 ---
