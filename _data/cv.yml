@@ -18,7 +18,7 @@ career:
    dates: 05.2018 - current
    summary: Working as a Java Backend Developer in the Production team for the largest in-venue interactive music and entertainment platform, featured in over 75,000 bars and restaurants across North America and Europe. Working in a microservice architecture, with Spring Boot-based services deployed to AWS in Docker containers, managed by Mesos/Marathon.
    accomplishments:
-    - accomplishment: development of the Access Control System - inspired by ABAC (attribute-based access control). Microservice responsble for grangin access to all king of resources.
+    - accomplishment: development of the Access Control System - JSON-based system responsible for granting access to a various resources, inspired by ABAC (attribute-based access control).
     - accomplishment: various improvements to the payments system.
 
  - position: Full Stack Java Developer
