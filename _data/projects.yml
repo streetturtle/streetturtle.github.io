@@ -12,20 +12,20 @@ projects:
     technologies: Polymer/HTML/CSS
     links:
       github: https://github.com/streetturtle/learn-foreign-numbers
-      site: https://learn-foreign-numbers.firebaseapp.com/
+      site: http://foreign-numbers.coach/
 
   - name: Awesome WM widgets
     description: Collection of widgets for the Awesome Window Manager for Linux. Contains Battery, Volume, Spotify, Email and Rates widgets.
     technologies: Lua/Python
     links:
       github: https://github.com/streetturtle/awesome-wm-widgets
-      site: http://pavelmakhov.com/AwesomeWM/
+      site: http://pavelmakhov.com/awesome-wm-widgets/#tabMain
 
-  - name: AppDynamics Extensions
-    description: Several extensions for AppDynamics. They were developed because out-of-the-box extensions are written in Java and it was hard to maintain and customize them.
-    technologies: Ruby/Bash
-    links:
-      github: https://github.com/streetturtle/AppDynamics-Extensions
+#  - name: AppDynamics Extensions
+#    description: Several extensions for AppDynamics. They were developed because out-of-the-box extensions are written in Java and it was hard to maintain and customize them.
+#    technologies: Ruby/Bash
+#    links:
+#      github: https://github.com/streetturtle/AppDynamics-Extensions
 
   - name: Jekyll Clean Dark
     description: Theme for Jekyll - static site generator. After creating theme for my blog I shared it on github.
