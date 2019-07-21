@@ -121,24 +121,24 @@ sideProjects:
 
   - name: Awesome WM widgets
     description: Collection of widgets for the Awesome Window Manager for Linux.
-    link: https://github.com/streetturtle/AwesomeWM
+    link: https://github.com/streetturtle/awesome-wm-widgets
     type: github
     langs: Lua
-    stars: 302
+    stars: 335
 
   - name: PDF-element
     description: Web component built with Polymer which allows rendering PDF files.
     link: http://github.com/streetturtle/pdf-element/
     type: github
     langs: Polymer
-    stars: 29
+    stars: 30
 
   - name: Jekyll Clean Dark
     description: Theme for Jekyll - static site generator. After creating theme for my blog I shared it on github.
     link: https://github.com/streetturtle/jekyll-clean-dark
     type: github
     langs: Jekyll
-    stars: 143
+    stars: 156
 
   - name: Jekyll CV Crafter
     description: To be able to easy update/view/print my CV I created jekyll powered CV generator.
