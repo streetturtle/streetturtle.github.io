@@ -85,7 +85,7 @@ career:
 
 technicalSkills:
   list:
-    - tr: "Spring / Maven / JUnit / Mockito / Camel"
+    - tr: "Spring / Reactor / Maven / JUnit / Mockito"
     - tr: "Oracle, MySQL / Mongo, Redis, Couchbase"
     - tr: "Experience with JDBC/ORM, Hibernate, Criteria API"
     - tr: "AWS / Dynatrace / Sumologic"
