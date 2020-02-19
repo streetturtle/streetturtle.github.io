@@ -9,13 +9,21 @@ person:
   stackoverflow: /streetturtle
   spokenLanguages: English / French / Russian
 career:
+ - position: Java Developer
+   company: Behavox
+   company-site: http://www.behavox.com/
+   logo: behavox.png
+   location: Montreal, Canada
+   country: ca
+   dates: 01.2020 - current
+
  - position: Backend Developer
-   company: TouchTunes
+   company: OctaveGroup / TouchTunes
    company-site: http://www.touchtunes.com/
    logo: touchtunes.png
    location: Montreal, Canada
    country: ca
-   dates: 05.2018 - current
+   dates: 06.2018 - 12.2019
    summary: Working as a Java Backend Developer in the Production team for the largest in-venue interactive music and entertainment platform, featured in over 75,000 bars and restaurants across North America and Europe. Working in a microservice architecture, with Spring Boot-based services deployed to AWS in Docker containers, managed by Mesos/Marathon.
    accomplishments:
     - accomplishment: development of the Access Control System - JSON-based system responsible for granting access to a various resources, inspired by ABAC (attribute-based access control).
