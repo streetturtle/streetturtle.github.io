@@ -84,6 +84,10 @@ h1, h2{
 }
 
 @media print {
+  .header {
+    padding-top: 0;
+  };
+  
   .section {
     //page-break-inside: avoid;
     padding: 10px 20px;
