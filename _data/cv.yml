@@ -24,8 +24,9 @@ career:
    location: Montreal, Canada
    country: ca
    dates: 06.2018 - 12.2019
-   summary: Working as a Java Backend Developer in the Production team for the largest in-venue interactive music and entertainment platform, featured in over 75,000 bars and restaurants across North America and Europe. Working in a microservice architecture, with Spring Boot-based services deployed to AWS in Docker containers, managed by Mesos/Marathon.
+   summary: 'Working as a Java Backend Developer in the Production team for the largest in-venue interactive music and entertainment platform, featured in over 75,000 bars and restaurants across North America and Europe. Working in a microservice architecture, with Spring Boot-based services deployed to AWS in Docker containers, managed by Mesos/Marathon. Technology stack: Java 11, Spring Boot, Reactor, Cucumber, MongoDB' 
    accomplishments:
+    - accomplishment: took part in implementation of Apple Music For Business
     - accomplishment: development of the Access Control System - JSON-based system responsible for granting access to a various resources, inspired by ABAC (attribute-based access control).
     - accomplishment: various improvements to the payments system.
 
