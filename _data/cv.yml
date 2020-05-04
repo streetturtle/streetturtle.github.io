@@ -16,6 +16,7 @@ career:
    location: Montreal, Canada
    country: ca
    dates: 01.2020 - current
+   summary: Building data-heavy applications with Java, HBase, MySQL.
 
  - position: Backend Developer
    company: OctaveGroup / TouchTunes
@@ -26,7 +27,7 @@ career:
    dates: 06.2018 - 12.2019
    summary: 'Working as a Java Backend Developer in the Production team for the largest in-venue interactive music and entertainment platform, featured in over 75,000 bars and restaurants across North America and Europe. Working in a microservice architecture, with Spring Boot-based services deployed to AWS in Docker containers, managed by Mesos/Marathon. Technology stack: Java 11, Spring Boot, Reactor, Cucumber, MongoDB' 
    accomplishments:
-    - accomplishment: took part in implementation of Apple Music For Business
+    - accomplishment: backend implementation of <a href="https://www.applemusicforbusiness.apple/">Apple Music For Business</a>.
     - accomplishment: development of the Access Control System - JSON-based system responsible for granting access to a various resources, inspired by ABAC (attribute-based access control).
     - accomplishment: various improvements to the payments system.
 
@@ -129,7 +130,7 @@ sideProjects:
 #    langs: HTML/CSS/Bootstrap
 
   - name: Awesome WM widgets
-    description: Collection of widgets for the Awesome Window Manager for Linux.
+    description: Collection of widgets for the tiling window manager for Linux called Awesome.
     link: https://github.com/streetturtle/awesome-wm-widgets
     type: github
     langs: Lua
@@ -143,7 +144,7 @@ sideProjects:
     stars: 30
 
   - name: Jekyll Clean Dark
-    description: Theme for Jekyll - static site generator. After creating theme for my blog I shared it on github.
+    description: Theme for Jekyll - static site generator used by GitHub for GitHub pages by default .
     link: https://github.com/streetturtle/jekyll-clean-dark
     type: github
     langs: Jekyll
