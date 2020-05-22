@@ -154,3 +154,11 @@ p > code,
   -ms-user-select: none;
   user-select: none;
 }
+
+.nv {
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
