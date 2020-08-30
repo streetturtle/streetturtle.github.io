@@ -18,6 +18,7 @@ All those actions could be automated in a following script (or a three-liner com
 
 ```bash
 #!/bin/bash
+
 # Open a new meeting
 xdg-open https://meet.google.com/new
 # Wait till it creates a new 'room'
@@ -28,15 +29,15 @@ xwininfo -tree -root | grep -oE 'https://[^ ]+' | xclip -selection clipboard
 
 To make it work, you need to have `xclip` installed, to be able to write to the clipboard, and a browser extension, which adds the url to the window title.  
 
-For Google Chrome I use this one: [URL in title](https://chrome.google.com/webstore/detail/url-in-title/ignpacbgnbnkaiooknalneoeladjnfgb), which should be setup first:
+For Google Chrome I use this one: [URL in title](https://chrome.google.com/webstore/detail/url-in-title/ignpacbgnbnkaiooknalneoeladjnfgb), which should be setup first:  
 In Extension's Options set following:
- - Tab title format: {title} - {protocol}://{hostname}{port}/{path}
+ - Tab title format: `{title} - {protocol}://{hostname}{port}/{path}`
  - Page URL filtering: Whitelist
- - URL filters: ^https://meet\.google\.com/
+ - URL filters: `^https://meet\.google\.com/`
 
 And for Firefox this one: [Add URL to Window Title](https://addons.mozilla.org/en-US/firefox/addon/add-url-to-window-title/)
 
-Then install the script to some folder, `opt` for example (you can get it from [gist](https://gist.github.com/streetturtle/82f2cd547e627f76e09f640701369545)), make it executable, and add a link to the `/usr/local/bin` to be able to call it from everywhere:
+Then install the script to some folder, `opt` for example (you can get the latest version from [gist](https://gist.github.com/streetturtle/82f2cd547e627f76e09f640701369545)), make it executable, and add a link to the `/usr/local/bin` to be able to call it from everywhere:
 
 ```bash
 $ git clone https://gist.github.com/82f2cd547e627f76e09f640701369545.git
