@@ -209,12 +209,12 @@
             {% elsif item.type == 'site' %}
             <i class="fa fa-globe"></i>
             {% endif %}
-            <a href="{{item.link}}">{{item.name}}</a>
+            <a href="http://github.com/{{item.link}}">{{item.name}}</a>
           </h4>
           <div class="row">
               <div class="col-xs-3">{{item.langs}}</div>
               {% if item.stars %}
-              <div class="col-xs-6"><i class="fa fa-star-o" aria-hidden="true"></i> {{item.stars}}</div>
+              <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/{{item.link}}?style=flat-square">
               {% endif%}
           </div>
         </div>
