@@ -137,7 +137,7 @@ sideProjects:
 
   - name: PDF-element
     description: Web component built with Polymer which allows rendering PDF files.
-    link: streetturtle/pdf-element/
+    link: streetturtle/pdf-element
     type: github
     langs: Polymer
 
