@@ -131,31 +131,27 @@ sideProjects:
 
   - name: Awesome WM widgets
     description: Collection of widgets for the tiling window manager for Linux called Awesome.
-    link: https://github.com/streetturtle/awesome-wm-widgets
+    link: streetturtle/awesome-wm-widgets
     type: github
     langs: Lua
-    stars: 335
 
   - name: PDF-element
     description: Web component built with Polymer which allows rendering PDF files.
-    link: http://github.com/streetturtle/pdf-element/
+    link: streetturtle/pdf-element/
     type: github
     langs: Polymer
-    stars: 30
 
   - name: Jekyll Clean Dark
     description: Theme for Jekyll - static site generator used by GitHub for GitHub pages by default .
-    link: https://github.com/streetturtle/jekyll-clean-dark
+    link: streetturtle/jekyll-clean-dark
     type: github
     langs: Jekyll
-    stars: 156
 
   - name: Jekyll CV Crafter
     description: To be able to easy update/view/print my CV I created jekyll powered CV generator.
-    link: https://github.com/streetturtle/jekyll-cv-crafter
+    link: streetturtle/jekyll-cv-crafter
     type: github
     langs: Jekyll
-    stars: 76
 
 certifications:
   - name: FP Principles in Scala
