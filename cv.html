@@ -40,6 +40,28 @@
       var s = document.getElementsByTagName('script')[0];
       s.parentNode.insertBefore(wf, s);
     })(); </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+
+    $(window).on('load', function() {
+      $('[data-github]').each(function () {
+      var _this = this;
+      var repo = $(_this).data('github')
+
+      fetch('https://api.github.com/repos/' + repo).then(function (response) {
+        return response.json();
+      }).then(function (response) {
+        $(_this).find('[data-forks]').text(response.forks);
+        $(_this).find('[data-stars]').text(response.stargazers_count);
+      });
+    });
+    // code here
+    });
+
+</script>
+
 </head>
 
 <body>
@@ -201,23 +223,30 @@
     <div class="col-xs-3"><h2>Side Projects</h2></div>
     <div class="col-xs-9">
       {% for item in site.data.cv.sideProjects %}
-      <div class="row side-project">
-        <div class="col-xs-4">
-          <h4>
-            {% if item.type == 'github' %}
-            <i class="fa fa-github"></i>
-            {% elsif item.type == 'site' %}
-            <i class="fa fa-globe"></i>
-            {% endif %}
-            <a href="http://github.com/{{item.link}}">{{item.name}}</a>
-          </h4>
-          <div class="row">
-              <div class="col-xs-3">{{item.langs}}</div>
-              <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/{{item.link}}?logo=github&style=flat-square">
-          </div>
+          <div class="github-cards col-xs-6">
+          <a href="https://github.com/{{item.link}}" class="github-card" data-github="{{item.link}}">
+            <h3>{{item.name}}</h3>
+            <p>{{item.description}}</p>
+            <span class="github-card__meta">
+              <span class="github-card__language-icon" style="color: #{{item.color}};">●</span> {{item.langs}}
+            </span>
+            <span class="github-card__meta">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <span data-stars>
+                <i class="fa fa-spinner" aria-hidden="true"></i>
+              </span>
+            </span>
+            <span class="github-card__meta">
+              <i class="fa fa-code-fork" aria-hidden="true"></i>
+              <span data-forks>
+                <i class="fa fa-spinner" aria-hidden="true"></i>
+              </span>
+            </span>
+          </a>
+
         </div>
-        <div class="col-xs-8">{{item.description}}</div>
-      </div>
+        <!-- </div> -->
+      <!-- </div> -->
       {% endfor %}
     </div>
   </div>
