@@ -15,7 +15,8 @@ career:
    logo: behavox.jpg
    location: Montreal, Canada
    country: ca
-   dates: 01.2020 - current
+   dates: 01.2020 - 01.2021
+   duration: 1y
    summary: Building data-heavy applications with Java, HBase, MySQL.
 
  - position: Backend Developer
@@ -25,6 +26,7 @@ career:
    location: Montreal, Canada
    country: ca
    dates: 06.2018 - 12.2019
+   duration: 1y 6m
    summary: 'Working as a Java Backend Developer in the Product team for the largest in-venue interactive music and entertainment platform, featured in over 75,000 bars and restaurants across North America and Europe. Working in a microservice architecture, with Spring Boot-based services deployed to AWS in Docker containers, managed by Mesos/Marathon. Technology stack: Java 11, Spring Boot, Reactor, Cucumber, MongoDB' 
    accomplishments:
     - accomplishment: backend implementation of the <a href="https://www.applemusicforbusiness.apple/">Apple Music For Business</a>.
@@ -38,6 +40,7 @@ career:
    location: Montreal, Canada
    country: ca
    dates: 01.2018 - 05.2018
+   duration: 5m
    summary: 'Development of the PACS - Picture Archiving and Communication System. My primary focus was on Tech Portal - a customization tool that allows technologists to create multiple worklists based on different criteria, including exam status, date range, modality, organizations, locations and rooms. Tech stack: GWT, CSS / SCSS, AngularJS.'
 
  - position: Java Developer / Consultant
@@ -47,6 +50,7 @@ career:
    location: Montreal, Canada
    country: ca
    dates: 08.2016 - 12.2017
+   duration: 1y 5m
    accomplishments:
     - accomplishment: Took part in development of high performance highly available Music REST API.
     - accomplishment: Development of the real-time data processing application based on Apache Mahout and Apache Kafka.
@@ -59,26 +63,16 @@ career:
    logo: cern.jpg
    location: Geneva, Switzerland
    country: ch
-   dates: 09.2014 - 05.2016
-   summary: I took part in the development of business critical eFiles document management system based on open source solution - Alfresco – the market leader in records management. As an Alfresco developer I worked on extending and customizing Alfresco. Through this project, I have learned business processes of other teams, as we constantly work with CERN HR team, developing the way to link their needs with technical abilities of the software.
+   dates: 10.2012 - 05.2016
+   duration: 3y 9m
+   summary: I took part in the development of business critical eFiles document management system based on open source solution - Alfresco – the market leader in records management. As an Alfresco developer I worked on extending and customizing Alfresco. I also worked on EDH (Electronic Document Handling) system with complex workflows, covering most business aspects at CERN. In this role I was developing EDH documents and improving functionality of existing ones.
    accomplishments:
-    - accomplishment: Customization of server-side and client-side parts of Alfresco in correspondence to the organisation's internal processes and requirements.
     - accomplishment: Integrating Alfresco with AppDynamics - application performance management system.
     - accomplishment: Development of the web application for 2nd/3rd support of eFiles. Technology stack is Spring Boot, AngularJS, Spring Data Rest.
     - accomplishment: Development of the custom user interface of Alfresco document library page based on Polymer.
-
- - position: Software Developer
-   company: CERN
-   company-site: https://home.cern/
-   logo: cern.jpg
-   location: Geneva, Switzerland
-   country: ch
-   dates: 10.2012 – 09.2014
-   summary: I worked in GS-AIS-EB (Electronic Business) section for EDH (Electronic Document Handling) system, which covers many life aspects at CERN (such as absences, HR & Training, purchasing, logistics and safety). In this role I was developing EDH documents and improving functionality of existing ones. One of the biggest and the most interesting project during this period was the development of CERN Hotel booking application.
-   accomplishments:
     - accomplishment: Extending functionality of CERN Hotel web booking application (hostel.cern.ch). Main feature developed is the possibility to create a Waiting-List reservations.
     - accomplishment: Migrating existing business processes from BPEL to BPMN (Activiti).
-    - accomplishment: 3rd Line support
+    - accomplishment: Production / 3rd level support
 
  - position: Software Developer
    company: Probusinessbank
@@ -86,6 +80,7 @@ career:
    location: Moscow, Russia
    country: ru
    dates: 10.2011 – 07.2012
+   duration: 10m
    summary: While finishing the study at University I got a job at Probusinessbank in Moscow, one of TOP-50 banks in Russia. During my time there, I was responsible for several activities.
    accomplishments:
     - accomplishment: Development of web-services communicating with external systems such as credit agencies, payment systems.

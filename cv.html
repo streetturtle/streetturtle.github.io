@@ -140,9 +140,9 @@
             </div>
           </div>
           <div class="col-xs-6">
-            <div class="pull-right">
+            <div class="pull-right" style="text-align: right;">
               <div><i class="flag flag-{{item.country}}"></i> {{item.location}}</div>
-              <div class="pull-right">{{ item.dates }}</div>
+              <div class="pull-right">{{ item.dates }} / {{ item.duration }}</div>
             </div>
           </div>
         </div>
@@ -175,37 +175,6 @@
       <h2>Technical skills</h2>
     </div>
     <div class="col-xs-9">
-      <div class="row">
-        <div class="col-xs-4">
-
-          <h4 class="techSkillHeader"><i class="fa fa-terminal"></i> Backend</h4>
-          {% for item in site.data.cv.technicalSkills.left %} {{item.name}}
-          <div class="progress">
-            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0"
-                 aria-valuemax="100" style="width: {{item.level}}%"></div>
-          </div>
-          {% endfor %}
-        </div>
-        <div class="col-xs-4">
-          <h4 class="techSkillHeader"><i class="fa fa-code"></i> Frontend</h4> {% for item in
-          site.data.cv.technicalSkills.center %} {{item.name}}
-          <div class="progress">
-            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0"
-                 aria-valuemax="100" style="width: {{item.level}}%"></div>
-          </div>
-          {% endfor %}
-        </div>
-          <div class="col-xs-4">
-              <h4 class="techSkillHeader"><i class="fa fa-database"></i> Big Data</h4> {% for item in
-              site.data.cv.technicalSkills.right %} {{item.name}}
-              <div class="progress">
-                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0"
-                       aria-valuemax="100" style="width: {{item.level}}%"></div>
-              </div>
-              {% endfor %}
-          </div>
-
-      </div>
       <div class="competencies">
         <h4><i class="fa fa-male"></i> Key competencies:</h4>
         <ul>
