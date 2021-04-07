@@ -9,6 +9,15 @@ person:
   stackoverflow: /streetturtle
   spokenLanguages: English / French / Russian
 career:
+
+ - position: Senior Software Developer
+   company: Solution Media 360
+   company-site: https://360.agency/en/compagnies/sm360-ca360/
+   logo: sm-log.png
+   location: Montreal, Canada
+   country: ca
+   dates: 01.2021 - current
+
  - position: Java Developer
    company: Behavox
    company-site: http://www.behavox.com/
