@@ -26,7 +26,7 @@ career:
    country: ca
    dates: 01.2020 - 01.2021
    duration: 1y
-   summary: Building data-heavy applications with Java, HBase, MySQL.
+   summary: I was working in a product team of Compliance Management Software Solutions. Building data-heavy applications using Java, Kotlin, HBase, MySQL.
 
  - position: Backend Developer
    company: OctaveGroup / TouchTunes
@@ -40,7 +40,7 @@ career:
    accomplishments:
     - accomplishment: backend implementation of the <a href="https://www.applemusicforbusiness.apple/">Apple Music For Business</a>.
     - accomplishment: development of the Access Control System - a set of microservices implementing ABAC authorization model.
-    - accomplishment: development of various payment integrations with Worldpay/Vantiv, PayPal, Apple/Google Pay.
+    - accomplishment: development of various payment integrations with Worldpay/Vantiv, PayPal, Apple Pay, Google Pay.
 
  - position: Full Stack Java Developer
    company: Intelerad
@@ -83,29 +83,28 @@ career:
     - accomplishment: Migrating existing business processes from BPEL to BPMN (Activiti).
     - accomplishment: Production / 3rd level support
 
- - position: Software Developer
-   company: Probusinessbank
-   logo: life.jpg
-   location: Moscow, Russia
-   country: ru
-   dates: 10.2011 – 07.2012
-   duration: 10m
-   summary: While finishing the study at University I got a job at Probusinessbank in Moscow, one of TOP-50 banks in Russia. During my time there, I was responsible for several activities.
-   accomplishments:
-    - accomplishment: Development of web-services communicating with external systems such as credit agencies, payment systems.
-    - accomplishment: Extending of the functionality of Mobile banking system, server-side part, which was the theme for my diploma project.
-    - accomplishment: Development of Web-Service in order to generate PDF reports using XSL-FO transformations.
+ #- position: Software Developer
+ #  company: Probusinessbank
+ #  logo: life.jpg
+ #  location: Moscow, Russia
+#   country: ru
+#   dates: 10.2011 – 07.2012
+#   duration: 10m
+#   summary: While finishing the study at University I got a job at Probusinessbank in Moscow, one of TOP-50 banks in Russia. During my time there, I was responsible for several activities.
+#   accomplishments:
+#    - accomplishment: Development of web-services communicating with external systems such as credit agencies, payment systems.
+#    - accomplishment: Extending of the functionality of Mobile banking system, server-side part, which was the theme for my diploma project.
+#    - accomplishment: Development of Web-Service in order to generate PDF reports using XSL-FO transformations.
 
 technicalSkills:
   list:
-    - tr: "Spring / Reactor / Maven / JUnit / Mockito"
+    - tr: "Java / Kotlin / Lua / Python"
+    - tr: "Spring / Reactor / Hibernate / JUnit / Mockito"
     - tr: "Oracle, MySQL / Mongo, Redis, Couchbase"
-    - tr: "Experience with JDBC/ORM, Hibernate, Criteria API"
-    - tr: "AWS / Dynatrace / Sumologic"
+    - tr: "Datadog / Dynatrace / Sumologic"
     - tr: "TDD / BDD (Cucumber)"
-    - tr: "Scripting languages: Python / Bash"
     - tr: "Kafka / RabbitMQ"
-    - tr: "Bower / Grunt / NPM"
+    - tr: "Maven / Bower / Grunt / NPM"
     - tr: "REST / SOAP web-services"
     - tr: "Git / Mercurial / Gerrit"
     - tr: "Scrum / Agile / pair programming experience"
