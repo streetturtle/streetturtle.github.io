@@ -28,6 +28,8 @@ career:
    dates: 01.2020 - 01.2021
    duration: 1y
    summary: I was working in a product team of Compliance Management Software Solutions. Building data-heavy applications using Java, Kotlin, HBase, MySQL.
+   accomplishments:
+    - accomplishment: extracting services from a monolithic application.
 
  - position: Backend Developer
    company: OctaveGroup / TouchTunes
