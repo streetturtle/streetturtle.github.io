@@ -19,7 +19,7 @@ career:
    dates: 08.2021 - current
    summary: Working in a small distributed agile team on a Lightspeed Hospitality flagship product. 
    accomplishments:
-    - accomplishment: breaking a monotlithic application into springboot-based microservices
+    - accomplishment: breaking a monolithic application into springboot-based microservices
     
  - position: Senior Software Developer
    company: Solution Media 360
@@ -31,8 +31,8 @@ career:
    duration: 7m
    summary: Develop and design backend java/kotlin-based services for automotive industry - a leader in innovative technological solutions for the car dealership market.
    accomplishments:
-    - accomplishment: implemetation of edge-level authorization mechanism for a set of microservices
-    - accomplishment: level 3 support of application  
+    - accomplishment: implementation of edge-level authorization mechanism for a set of microservices
+    - accomplishment: tier 3 application support  
 
  - position: Java Developer
    company: Behavox
