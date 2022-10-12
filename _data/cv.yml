@@ -154,8 +154,8 @@ sideProjects:
     langs: Lua
     color: 000080
 
-  - name: PDF-element
-    description: Web component built with Polymer which allows rendering PDF files.
+  - name: pullBar
+    description: MacOS menubar application to show GitHub Pull Requests in the menu bar.
     link: menubar-apps/PullBar
     type: github
     langs: Swift
