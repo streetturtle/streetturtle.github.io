@@ -18,11 +18,12 @@ career:
    location: Montreal, Canada
    country: ca
    dates: 08.2021 - current
-   summary: Working in a small distributed squad on a Lightspeed Hospitality flagship product. 
+   summary: Working in a small distributed squad on a Lightspeed Hospitality flagship product - <a href="https://www.lightspeedhq.com/pos/restaurant/">Lightspeed Restaurant</a>.
    accomplishments:
     - accomplishment: breaking down a monolithic application into springboot-based domain microservices
-    - accomplishment: 
-    - accomplishment: developed a macOS menubar application which acts as a front end of an internal tool for creating reproducible development evnvironments.
+    - accomplishment: technical design, implementation and delivery of an authorization mechanism for microservice-based application based on Attribute-Based Access Control paradigm
+    - accomplishment: developed a macOS menubar application which acts as a front end of an internal tool for creating reproducible development evnvironments
+    - accomplishment: 3rd level support
     - accomplishment: onboarding new team members
     
  - position: Senior Software Developer
