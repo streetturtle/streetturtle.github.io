@@ -8,6 +8,7 @@ person:
   github: /streetturtle
   stackoverflow: /streetturtle
   spokenLanguages: English / French / Russian
+
 career:
 
  - position: Senior Software Developer
@@ -17,9 +18,10 @@ career:
    location: Montreal, Canada
    country: ca
    dates: 08.2021 - current
-   summary: Working in a small distributed agile team on a Lightspeed Hospitality flagship product. 
+   summary: Working in a small distributed squad on a Lightspeed Hospitality flagship product. 
    accomplishments:
     - accomplishment: breaking a monolithic application into springboot-based microservices
+    - accomplishment: 
     
  - position: Senior Software Developer
    company: Solution Media 360
@@ -29,10 +31,11 @@ career:
    country: ca
    dates: 01.2021 - 08.2021
    duration: 7m
-   summary: Develop and design backend java/kotlin-based services for automotive industry - a leader in innovative technological solutions for the car dealership market.
+   summary: Develop and design kotlin-based backend services for automotive industry - a Canadian leader in innovative technological solutions for the car dealership market.
    accomplishments:
     - accomplishment: implementation of edge-level authorization mechanism for a set of microservices
-    - accomplishment: tier 3 application support  
+    - accomplishment: level 3 application support
+    - accomplishment: onboarding and mentorship of new team members
 
  - position: Java Developer
    company: Behavox
@@ -153,10 +156,10 @@ sideProjects:
 
   - name: PDF-element
     description: Web component built with Polymer which allows rendering PDF files.
-    link: streetturtle/pdf-element
+    link: menubar-apps/PullBar
     type: github
-    langs: JavaScript
-    color: f1e05a
+    langs: Swift
+    color: F05138
 
   - name: Jekyll Clean Dark
     description: Theme for Jekyll - static site generator used by GitHub for GitHub pages by default.
