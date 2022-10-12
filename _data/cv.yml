@@ -20,8 +20,10 @@ career:
    dates: 08.2021 - current
    summary: Working in a small distributed squad on a Lightspeed Hospitality flagship product. 
    accomplishments:
-    - accomplishment: breaking a monolithic application into springboot-based microservices
+    - accomplishment: breaking down a monolithic application into springboot-based domain microservices
     - accomplishment: 
+    - accomplishment: developed a macOS menubar application which acts as a front end of an internal tool for creating reproducible development evnvironments.
+    - accomplishment: onboarding new team members
     
  - position: Senior Software Developer
    company: Solution Media 360
@@ -31,7 +33,7 @@ career:
    country: ca
    dates: 01.2021 - 08.2021
    duration: 7m
-   summary: Develop and design kotlin-based backend services for automotive industry - a Canadian leader in innovative technological solutions for the car dealership market.
+   summary: Designed and developed kotlin-based backend services for automotive industry - a Canadian leader in innovative technological solutions for the car dealership market.
    accomplishments:
     - accomplishment: implementation of edge-level authorization mechanism for a set of microservices
     - accomplishment: level 3 application support
@@ -47,10 +49,10 @@ career:
    duration: 1y
    summary: I was working in a product team of Compliance Management Software Solutions. Building data-heavy applications using Java, Kotlin, HBase, MySQL.
    accomplishments:
-    - accomplishment: extracting services from a monolithic application.
+    - accomplishment: technical design, implementation and delivery of complex data intensive applications
 
  - position: Backend Developer
-   company: OctaveGroup / TouchTunes
+   company: TouchTunes / OctaveGroup
    company-site: http://www.touchtunes.com/
    logo: touchtunes.png
    location: Montreal, Canada
@@ -119,11 +121,11 @@ career:
 
 technicalSkills:
   list:
-    - tr: "Java / Kotlin / Lua / Python / Swift"
+    - tr: "Java / Kotlin / Python / Lua / Swift"
     - tr: "Spring / Reactor / Hibernate / JUnit / Mockito / Spock"
     - tr: "Oracle, MySQL / Mongo, Redis, Couchbase"
     - tr: "Datadog / Dynatrace / Sumologic"
-    - tr: "TDD / BDD (Cucumber)"
+    - tr: "TDD / BDD (Cucumber, Spock)"
     - tr: "Kafka / RabbitMQ"
     - tr: "Maven / Bower / Grunt / NPM"
     - tr: "REST / SOAP web-services"
