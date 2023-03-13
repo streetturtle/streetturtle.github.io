@@ -127,10 +127,10 @@ technicalSkills:
     - tr: "Oracle, MySQL / Mongo, Redis, Couchbase"
     - tr: "Datadog / Dynatrace / Sumologic"
     - tr: "TDD / BDD (Cucumber, Spock)"
-    - tr: "Kafka / RabbitMQ"
+    - tr: "Kubernetes / Docker"
     - tr: "Maven / Bower / Grunt / NPM"
     - tr: "REST / SOAP web-services"
-    - tr: "Git / Mercurial / Gerrit"
+    - tr: "Kafka / RabbitMQ"
     - tr: "Scrum / Agile / pair programming experience"
   left:
     - name: Java
