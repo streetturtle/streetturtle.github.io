@@ -177,12 +177,28 @@
     <div class="col-xs-9">
       <div class="competencies">
         <h4><i class="fa fa-male"></i> Key competencies:</h4>
-        <ul>
-          {% for item in site.data.cv.technicalSkills.list %}
-          <li>{{item.tr}}</li>
-          {% endfor %}
-        </ul>
-
+          <div class="col-xs-6">
+            <ul>
+              <li>site.data.cv.technicalSkills[0]tr</li>
+              <li>site.data.cv.technicalSkills[1]tr</li>
+              <li>site.data.cv.technicalSkills[2]tr</li>
+              <li>site.data.cv.technicalSkills[3]tr</li>
+              <!-- {% for item in site.data.cv.technicalSkills.list %}
+              <li>{{item.tr}}</li>
+              {% endfor %} -->
+            </ul>
+        </div>
+          <div class="col-xs-6">
+            <ul>
+              <li>site.data.cv.technicalSkills[4]tr</li>
+              <li>site.data.cv.technicalSkills[5]tr</li>
+              <li>site.data.cv.technicalSkills[6]tr</li>
+              <!-- <li>site.data.cv.technicalSkills[7]tr</li> -->
+              <!-- {% for item in site.data.cv.technicalSkills.list %}
+              <li>{{item.tr}}</li>
+              {% endfor %} -->
+            </ul>
+        </div>
       </div>
     </div>
   </div>

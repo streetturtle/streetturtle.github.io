@@ -130,7 +130,6 @@ technicalSkills:
     - tr: "Datadog / Dynatrace / Sumologic"
     - tr: "TDD / BDD (Cucumber, Spock)"
     - tr: "Kubernetes / Docker"
-    - tr: "Maven / Bower / Grunt / NPM"
     - tr: "REST / SOAP web-services"
     - tr: "Kafka / RabbitMQ"
     - tr: "Scrum / Agile / pair programming experience"
@@ -174,7 +173,7 @@ sideProjects:
     color: e44b23
 
   - name: Jekyll CV Crafter
-    description: To be able to easy update/view/print my CV I created jekyll powered CV generator.
+    description: Jekyll powered CV generator.
     link: streetturtle/jekyll-cv-crafter
     type: github
     langs: HTML
