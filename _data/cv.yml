@@ -152,21 +152,21 @@ technicalSkills:
 sideProjects:
 
   - name: Awesome WM widgets
-    description: Collection of widgets for the tiling window manager for Linux called Awesome.
+    description: Collection of widgets for Awesome WM.
     link: streetturtle/awesome-wm-widgets
     type: github
     langs: Lua
     color: 000080
 
   - name: pullBar
-    description: MacOS menubar application to show GitHub Pull Requests in the menu bar.
+    description: MacOS application to show GitHub PRs.
     link: menubar-apps/PullBar
     type: github
     langs: Swift
     color: F05138
 
   - name: Jekyll Clean Dark
-    description: Theme for Jekyll - static site generator used by GitHub for GitHub pages by default.
+    description: Theme for Jekyll.
     link: streetturtle/jekyll-clean-dark
     type: github
     langs: HTML

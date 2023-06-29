@@ -58,13 +58,6 @@ h1, h2{
   text-align: center;
 }
 
-.competencies{
-  ul {
-    columns: 2;
-    column-gap: 40px
-  }
-}
-
 .flag{
   vertical-align: middle;
 }
@@ -86,11 +79,12 @@ h1, h2{
 @media print {
   .header {
     padding-top: 0;
+    padding-bottom: 0;
   };
   
   .section {
     //page-break-inside: avoid;
-    padding: 10px 20px;
+    padding: 0px 20px;
   }
 
   .flag{
