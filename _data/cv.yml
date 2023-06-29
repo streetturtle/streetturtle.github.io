@@ -18,13 +18,14 @@ career:
    location: Montreal, Canada
    country: ca
    dates: 08.2021 - current
-   summary: Working in a small distributed squad on a Lightspeed Hospitality flagship product - <a href="https://www.lightspeedhq.com/pos/restaurant/">Lightspeed Restaurant</a>.
+   summary: Working in a distributed squad on a Lightspeed Hospitality flagship product - <a href="https://www.lightspeedhq.com/pos/restaurant/">Lightspeed Restaurant</a>.
    accomplishments:
-    - accomplishment: breaking down a monolithic application into springboot-based domain microservices
-    - accomplishment: technical design, implementation and delivery of an authorization mechanism for microservice-based application based on Attribute-Based Access Control paradigm
-    - accomplishment: developed a macOS menubar application which acts as a front end of an internal tool for creating reproducible development evnvironments
-    - accomplishment: 3rd level support
-    - accomplishment: onboarding new team members
+
+     - accomplishment: Successfully decomposed a monolithic application into domain microservices using the Spring Boot framework.
+     - accomplishment: Led the technical design, implementation, and delivery of an advanced authorization mechanism based on the Attribute-Based Access Control paradigm for the microservice-based application.
+     - accomplishment: Developed a user-friendly macOS menubar application, serving as a frontend for the tool for creating reproducible development environments.
+     - accomplishment: Provided expert-level support as a 3rd level support engineer, ensuring efficient issue resolution and customer satisfaction.
+     - accomplishment: Facilitated the seamless onboarding of new team members, ensuring a smooth transition and accelerated productivity.
     
  - position: Senior Software Developer
    company: Solution Media 360
@@ -34,7 +35,7 @@ career:
    country: ca
    dates: 01.2021 - 08.2021
    duration: 7m
-   summary: Designed and developed kotlin-based backend services for automotive industry - a Canadian leader in innovative technological solutions for the car dealership market.
+   summary: Designed and developed Kotlin-based backend services for a prominent Canadian leader in innovative technological solutions for the car dealership market. Collaborated closely with cross-functional teams to deliver robust and scalable solutions tailored to the automotive industry.
    accomplishments:
     - accomplishment: implementation of edge-level authorization mechanism for a set of microservices
     - accomplishment: level 3 application support
@@ -84,10 +85,11 @@ career:
    country: ca
    dates: 08.2016 - 12.2017
    duration: 1y 5m
+   summary: 'Successfully completed multiple projects as a consultant, collaborating with diverse clients to deliver high-quality solutions. Provided expertise in Java development, contributing to various aspects of project lifecycles.'
    accomplishments:
-    - accomplishment: Took part in development of high performance highly available Music REST API.
-    - accomplishment: Development of the real-time data processing application based on Apache Mahout and Apache Kafka.
-    - accomplishment: Development of Proof of Concept WebRTC Liferay portlet, Content Classifier portlet (based on <a href="https://deeplearning4j.org/">DL4J</a> library).
+    - accomplishment: Developed a high performant highly available Music REST API.
+    - accomplishment: Developed a real-time data processing application based on Apache Mahout and Apache Kafka.
+    - accomplishment: Developed a WebRTC Liferay portlet and Content Classifier portlet (based on <a href="https://deeplearning4j.org/">DL4J</a> library).
     - accomplishment: Took part in building data pipeline for a ML project.
 
  - position: Java/Alfresco Developer
@@ -102,10 +104,10 @@ career:
    accomplishments:
     - accomplishment: Integrating Alfresco with AppDynamics - application performance management system.
     - accomplishment: Development of the web application for 2nd/3rd support of eFiles. Technology stack is Spring Boot, AngularJS, Spring Data Rest.
-    - accomplishment: Development of the custom user interface of Alfresco document library page based on Polymer.
-    - accomplishment: Extending functionality of CERN Hotel web booking application (hostel.cern.ch). Main feature developed is the possibility to create a Waiting-List reservations.
-    - accomplishment: Migrating existing business processes from BPEL to BPMN (Activiti).
-    - accomplishment: Production / 3rd level support
+    # - accomplishment: Development of the custom user interface of Alfresco document library page based on Polymer.
+    # - accomplishment: Extending functionality of CERN Hotel web booking application (hostel.cern.ch). Main feature developed is the possibility to create a Waiting-List reservations.
+    # - accomplishment: Migrating existing business processes from BPEL to BPMN (Activiti).
+    # - accomplishment: Production / 3rd level support
 
  #- position: Software Developer
  #  company: Probusinessbank
