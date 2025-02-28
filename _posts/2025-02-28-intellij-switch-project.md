@@ -27,4 +27,4 @@ Press your shortcut key combination to open the Switcher window, displaying rece
 ![create-screenshot]({{site.url}}/images/2025/ide-screenshot-1.png)
 
 
-This ways you can switch between opened projects, as well as open closed ones!
+This way you can switch between opened projects, as well as closed ones!
