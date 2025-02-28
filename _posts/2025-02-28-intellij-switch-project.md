@@ -13,19 +13,18 @@ I often juggle multiple projects, and constantly opening and closing them can be
 
 ## Setting Up the Shortcut
 
- 1. Open your JetBrains IDE and go to File > Settings (or Preferences on macOS).
+ 1. Open your JetBrains IDE and go to Settings (<kbd>⌘</kbd>+<kbd>,</kbd>).
  1. Navigate to Keymap.
  1. Search for "Manage Project".
  1. Add a desired shortcut, I'm using <kbd>cmd</kbd>+<kbd>shift</kbd>+<kbd>M</kbd>
 
-![create-screenshot]({{site.url}}/images/2025/ide-screenshot-1.png)
-
+![create-screenshot]({{site.url}}/images/2025/ide-screenshot-2.png)
 
 ## Using the Shortcut
 
-Press your shortcut key combination to open the Switcher window, displaying recent projects
+Press your shortcut key combination to open the Switcher window, displaying recent projects:
 
-![create-screenshot]({{site.url}}/images/2025/ide-screenshot-2.png)
+![create-screenshot]({{site.url}}/images/2025/ide-screenshot-1.png)
 
 
-This ways you can switch between opened projects, as well as open closed projects!
+This ways you can switch between opened projects, as well as open closed ones!
