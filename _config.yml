@@ -31,7 +31,7 @@ collections:
     output: true
 
 # Google Analytics key, leave blank to ignore
-google_analytics_key: UA-57641651-1
+google_analytics_key: G-22DVWFTTE5
 # Yandex metrika (https://metrica.yandex.com/) leave blank to ignore or put true to use
 yandex_metrika: true
 
