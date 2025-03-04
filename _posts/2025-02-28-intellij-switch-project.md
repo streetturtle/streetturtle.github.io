@@ -7,8 +7,6 @@ tags:
  - intellij idea
 ---
 
-# Quickly Switch Between Projects in JetBrains IDEs
-
 I often juggle multiple projects, and constantly opening and closing them can be a hassle. JetBrains IDEs offer a shortcut to quickly switch between projects, saving you time and effort, but unfortunately it's not enabled by default.
 
 ## Setting Up the Shortcut
