@@ -1,0 +1,198 @@
+person:
+  name: Pavel Makhov
+  profession: Staff Software Developer // Java, Kotlin
+  location: Montréal, Canada
+  email: pavel.makhov@outlook.com
+  site: http://pavelmakhov.com
+  linkedin: /streetturtle
+  github: /streetturtle
+  stackoverflow: /streetturtle
+  spokenLanguages: English / French / Russian
+
+career:
+
+ - position: Staff Software Developer
+   company: Lightspeed Commerce
+   company-site: https://www.lightspeedhq.com/
+   logo: lightspeed-logo.png
+   location: Montreal, Canada
+   country: ca
+   dates: 08.2021 - current
+   summary: Working in a distributed squad on a Lightspeed Hospitality flagship product - <a href="https://www.lightspeedhq.com/pos/restaurant/">Lightspeed Restaurant</a>. Building scalable backend services in Java/Spring Boot. Currently leading development of Generative AI product features, integrating LLM capabilities into production systems.
+   accomplishments:
+
+     - accomplishment: Designed and built an Attribute-Based Access Control authorization system in Java/Spring Boot as part of migrating from monolith to microservices. It is currently sustaining 2,000 RPS with p95 latency of 6ms, ensuring reliability and security across a fleet of microservices.
+     - accomplishment: Built event-driven framework for creating AI agents using Java, Spring AI, Kubernetes, Kafka and DynamoDB, using Azure AI and Vertex AI APIs, optimizing for high-availability, with comprehensive testing and monitoring.
+     - accomplishment: Developed custom observability framework based on DataDog to monitor cost, performance, and model quality across AI features.
+     - accomplishment: Created an internal macOS tool for managing Kubernetes clusters, tightly integrated with CI/CD pipelines, GitHub PRs, and Jira; now adopted across the engineering organization to streamline developer workflows and improve productivity.
+     - accomplishment: Collaborated closely with Product and Design teams to define roadmap and deliver innovative AI-powered features from concept to production.
+     - accomplishment: Provided technical leadership through code reviews, architectural discussions, and mentorship, onboarding new developers and elevating code quality and engineering practices across the team and the whole organization.
+    
+ - position: Senior Software Developer
+   company: Solution Media 360
+   company-site: https://360.agency/en/compagnies/sm360-ca360/
+   logo: sm-logo.png
+   location: Montreal, Canada
+   country: ca
+   dates: 01.2021 - 08.2021
+   duration: 7m
+   summary: Designed and developed Kotlin-based backend services for a prominent Canadian leader in innovative technological solutions for the car dealership market. Collaborated closely with cross-functional teams to deliver robust and scalable solutions tailored to the automotive industry.
+   accomplishments:
+    - accomplishment: Implemented edge-level authorization mechanism for a microservices architecture, ensuring secure API access control.
+    - accomplishment: Provided level 3 application support, troubleshooting production issues and ensuring system reliability.
+    - accomplishment: Mentored and onboarded new team members, accelerating their productivity and integration into the team.
+
+ - position: Java Developer
+   company: Behavox
+   company-site: http://www.behavox.com/
+   logo: behavox.jpg
+   location: Montreal, Canada
+   country: ca
+   dates: 01.2020 - 01.2021
+   duration: 1y
+   summary: I was working in a product team of Compliance Management Software Solutions. Building data-heavy applications using Java, Kotlin, HBase, MySQL.
+   accomplishments:
+    - accomplishment: Designed and delivered complex data-intensive applications using Java, Kotlin, HBase, and MySQL for compliance management solutions.
+    - accomplishment: Built scalable backend services to process and analyze large volumes of data for regulatory compliance.
+
+ - position: Backend Developer
+   company: TouchTunes / OctaveGroup
+   company-site: http://www.touchtunes.com/
+   logo: touchtunes.png
+   location: Montreal, Canada
+   country: ca
+   dates: 06.2018 - 12.2019
+   duration: 1y 6m
+   summary: 'Working as a Java Backend Developer in the Product team for the largest in-venue interactive music and entertainment platform, featured in over 75,000 bars and restaurants across North America and Europe. Working in a microservice architecture, with Spring Boot-based services deployed to AWS in Docker containers, managed by Mesos/Marathon. Technology stack: Java 11, Spring Boot, Reactor, Cucumber, MongoDB' 
+   accomplishments:
+    - accomplishment: Designed and implemented backend services for <a href="https://www.applemusicforbusiness.apple/">Apple Music For Business</a>, integrating with Apple's music platform APIs.
+    - accomplishment: Built an Access Control System using microservices architecture with ABAC (Attribute-Based Access Control) authorization model.
+    - accomplishment: Developed payment integrations with multiple providers including Worldpay/Vantiv, PayPal, Apple Pay, and Google Pay, ensuring secure transaction processing.
+
+ - position: Full Stack Java Developer
+   company: Intelerad
+   company-site: https://www.intelerad.com/
+   logo: intelerad.png
+   location: Montreal, Canada
+   country: ca
+   dates: 01.2018 - 05.2018
+   duration: 5m
+   summary: 'Development of the PACS - Picture Archiving and Communication System. My primary focus was on Tech Portal - a customization tool that allows technologists to create multiple worklists based on different criteria, including exam status, date range, modality, organizations, locations and rooms. Tech stack: GWT, CSS / SCSS, AngularJS.'
+
+ - position: Java Developer / Consultant
+   company: Savoir-Faire Linux
+   company-site: https://savoirfairelinux.com
+   logo: sflx.png
+   location: Montreal, Canada
+   country: ca
+   dates: 08.2016 - 12.2017
+   duration: 1y 5m
+   summary: 'Successfully completed multiple projects as a consultant, collaborating with diverse clients to deliver high-quality solutions. Provided expertise in Java development, contributing to various aspects of project lifecycles.'
+   accomplishments:
+    - accomplishment: Designed and built a high-performance, highly available Music REST API serving thousands of concurrent users.
+    - accomplishment: Developed a real-time data processing application using Apache Mahout and Apache Kafka for streaming analytics.
+    - accomplishment: Built a WebRTC Liferay portlet and Content Classifier portlet using deep learning (DL4J library) for intelligent content categorization.
+    - accomplishment: Contributed to building data pipelines for machine learning projects, enabling automated model training and deployment.
+
+ - position: Java/Alfresco Developer
+   company: CERN
+   company-site: https://home.cern/
+   logo: cern.jpg
+   location: Geneva, Switzerland
+   country: ch
+   dates: 10.2012 - 05.2016
+   duration: 3y 9m
+   summary: I took part in the development of business critical eFiles document management system based on open source solution - Alfresco – the market leader in records management. As an Alfresco developer I worked on extending and customizing Alfresco. I also worked on EDH (Electronic Document Handling) system with complex workflows, covering most business aspects at CERN. In this role I was developing EDH documents and improving functionality of existing ones.
+   accomplishments:
+    - accomplishment: Integrated Alfresco document management system.
+    - accomplishment: Developed a web application for 2nd/3rd level support of eFiles using Spring Boot, AngularJS, and Spring Data Rest, improving support efficiency and response times.
+
+technicalSkills:
+  list:
+    - tr: "Java / Kotlin / Swift / Python"
+    - tr: "Spring / Reactor / Hibernate / JUnit / Mockito"
+    - tr: "Oracle, MySQL / Dynamo DB, Mongo, Redis"
+    - tr: "OpenAI / Azure AI / Vertex AI"
+    - tr: "TDD / BDD (Cucumber, Spock)"
+    - tr: "Kubernetes / Docker"
+    - tr: "REST / SOAP web-services"
+    - tr: "Kafka / RabbitMQ"
+  left:
+    - name: Java
+      level: 100
+    - name: Python
+      level: 70
+  center:
+   - name: AngularJS/Polymer/JS/Dart
+     level: 80
+   - name: HTML / CSS/SCSS / Bootstrap
+     level: 90
+  right:
+   - name: Apache Kafka
+     level: 90
+   - name: Hadoop, Apache Spark
+     level: 60
+
+sideProjects:
+
+  - name: Awesome WM widgets
+    description: Collection of widgets for Awesome WM.
+    link: streetturtle/awesome-wm-widgets
+    type: github
+    langs: Lua
+    color: 000080
+
+  - name: pullBar
+    description: MacOS application to show GitHub PRs.
+    link: menubar-apps/PullBar
+    type: github
+    langs: Swift
+    color: F05138
+
+  - name: Jekyll Clean Dark
+    description: Theme for Jekyll.
+    link: streetturtle/jekyll-clean-dark
+    type: github
+    langs: HTML
+    color: e44b23
+
+  - name: Jekyll CV Crafter
+    description: Jekyll powered CV generator.
+    link: streetturtle/jekyll-cv-crafter
+    type: github
+    langs: HTML
+    color: e44b23
+
+certifications:
+  - name: FP Principles in Scala
+    issuer: Coursera
+    date: July 2016
+    link: https://www.coursera.org/account/accomplishments/verify/ZBYZ6J458R9Z
+    badge: coursera_cert.png
+  - name: Data Science Foundations
+    issuer: IBM (Big Data University)
+    date: December 2016
+    link: https://www.youracclaim.com/badges/d591811c-74fc-414f-a360-d24838c257dd
+    badge: data_sci_found_cert.png
+  - name: Hadoop Programming
+    issuer: IBM (Big Data University)
+    date: December 2016
+    link: https://www.youracclaim.com/badges/d6b2f959-1029-4e89-88f0-117c0c130fc4
+    badge: hadoop_cert.png
+  - name: Scala Programming for Data Science
+    issuer: IBM (Big Data University)
+    date: December 2016
+    link: https://www.youracclaim.com/badges/c8a35db4-61ab-4365-ad57-bcf973696bc6
+    badge: scala_cert.png
+  - name: Spark
+    issuer: IBM (Big Data University)
+    date: January 2017
+    link: https://www.youracclaim.com/badges/c2b8ce85-70ec-446d-8b59-702459cb1849
+    badge: spark-cert.png
+
+education:
+  - name: National Research University of Electronic Technology
+    degree: Master of Computer Science
+    location: Moscow, Russia
+    dates: 2007 – 2012
+    link: https://eng.miet.ru/
