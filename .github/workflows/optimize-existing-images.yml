@@ -1,0 +1,93 @@
+name: Optimize All Existing Images (One-Time)
+
+on:
+  workflow_dispatch: # Manual trigger only
+
+jobs:
+  optimize-all:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Install ImageMagick
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+      
+      - name: Optimize all images
+        run: |
+          echo "🖼️ Optimizing all existing images..."
+          
+          TOTAL_SAVED=0
+          COUNT=0
+          
+          # Find all images
+          find images/ -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) | while read file; do
+            echo "Processing: $file"
+            
+            # Get original size
+            ORIGINAL_SIZE=$(stat -c%s "$file")
+            
+            # Skip if already small (< 500KB)
+            if [ $ORIGINAL_SIZE -lt 512000 ]; then
+              echo "  ✓ Already optimized ($(($ORIGINAL_SIZE / 1024))KB)"
+              continue
+            fi
+            
+            # Determine max dimensions based on path
+            if [[ $file == *"header"* ]] || [[ $file == *"hero"* ]]; then
+              MAX_WIDTH=1200
+              QUALITY=85
+            else
+              MAX_WIDTH=800
+              QUALITY=80
+            fi
+            
+            # Create temp file
+            TEMP_FILE="${file}.tmp"
+            
+            # Optimize with ImageMagick
+            convert "$file" \
+              -resize "${MAX_WIDTH}x${MAX_WIDTH}>" \
+              -quality $QUALITY \
+              -strip \
+              "$TEMP_FILE"
+            
+            # Get new size
+            NEW_SIZE=$(stat -c%s "$TEMP_FILE")
+            
+            # Only replace if smaller
+            if [ $NEW_SIZE -lt $ORIGINAL_SIZE ]; then
+              mv "$TEMP_FILE" "$file"
+              SAVED=$((($ORIGINAL_SIZE - $NEW_SIZE) / 1024))
+              echo "  ✓ Optimized: $(($ORIGINAL_SIZE / 1024))KB → $(($NEW_SIZE / 1024))KB (saved ${SAVED}KB)"
+              TOTAL_SAVED=$(($TOTAL_SAVED + $SAVED))
+              COUNT=$(($COUNT + 1))
+            else
+              rm "$TEMP_FILE"
+              echo "  ℹ️ No optimization needed"
+            fi
+          done
+          
+          echo "TOTAL_SAVED=$TOTAL_SAVED" >> $GITHUB_ENV
+          echo "COUNT=$COUNT" >> $GITHUB_ENV
+      
+      - name: Commit optimized images
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add images/
+          git commit -m "🖼️ Optimize all existing images (saved ${TOTAL_SAVED}KB across $COUNT images)" || echo "No changes to commit"
+          git push
+      
+      - name: Summary
+        run: |
+          echo "### 🖼️ Bulk Image Optimization Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Optimized **$COUNT** images" >> $GITHUB_STEP_SUMMARY
+          echo "💾 Total space saved: **${TOTAL_SAVED}KB** (~$(($TOTAL_SAVED / 1024))MB)" >> $GITHUB_STEP_SUMMARY

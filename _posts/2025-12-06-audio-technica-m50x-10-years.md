@@ -3,6 +3,7 @@ layout: post
 title:  "10 Years with Audio Technica m50x: Problems Faced & Non-Standard Solutions Found"
 date:   2025-12-06 13:50:00
 comments: false
+gallery: true
 categories:
 description: After 10+ years of daily use with my Audio Technica m50x headphones, I've encountered and solved every common problem. Here's my complete guide to keeping these legendary headphones running for a decade.
 tags: 

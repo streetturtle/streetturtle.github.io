@@ -1,0 +1,112 @@
+name: Optimize Images
+
+on:
+  push:
+    paths:
+      - 'images/**/*.jpg'
+      - 'images/**/*.jpeg'
+      - 'images/**/*.png'
+      - 'images/**/*.JPG'
+      - 'images/**/*.JPEG'
+      - 'images/**/*.PNG'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install image optimization tools
+        run: |
+          npm install -g @squoosh/cli
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+      
+      - name: Optimize images
+        id: optimize
+        run: |
+          echo "🖼️ Optimizing images..."
+          
+          # Create a flag to track if any images were optimized
+          OPTIMIZED=false
+          
+          # Find all images added/modified in the last commit
+          for file in $(git diff --name-only --diff-filter=AM HEAD~1 HEAD | grep -E '\.(jpg|jpeg|png|JPG|JPEG|PNG)$'); do
+            if [ -f "$file" ]; then
+              echo "Processing: $file"
+              
+              # Get original size
+              ORIGINAL_SIZE=$(stat -f%z "$file" 2>/dev/null || stat -c%s "$file")
+              
+              # Skip if already optimized (< 500KB)
+              if [ $ORIGINAL_SIZE -lt 512000 ]; then
+                echo "  ✓ Already optimized ($(($ORIGINAL_SIZE / 1024))KB)"
+                continue
+              fi
+              
+              # Determine max dimensions based on path
+              if [[ $file == *"header"* ]] || [[ $file == *"hero"* ]]; then
+                MAX_WIDTH=1200
+                QUALITY=85
+              else
+                MAX_WIDTH=800
+                QUALITY=80
+              fi
+              
+              # Create temp file
+              TEMP_FILE="${file}.tmp"
+              
+              # Optimize with ImageMagick
+              convert "$file" \
+                -resize "${MAX_WIDTH}x${MAX_WIDTH}>" \
+                -quality $QUALITY \
+                -strip \
+                "$TEMP_FILE"
+              
+              # Get new size
+              NEW_SIZE=$(stat -f%z "$TEMP_FILE" 2>/dev/null || stat -c%s "$TEMP_FILE")
+              
+              # Only replace if smaller
+              if [ $NEW_SIZE -lt $ORIGINAL_SIZE ]; then
+                mv "$TEMP_FILE" "$file"
+                SAVED=$((($ORIGINAL_SIZE - $NEW_SIZE) / 1024))
+                echo "  ✓ Optimized: $(($ORIGINAL_SIZE / 1024))KB → $(($NEW_SIZE / 1024))KB (saved ${SAVED}KB)"
+                OPTIMIZED=true
+              else
+                rm "$TEMP_FILE"
+                echo "  ℹ️ No optimization needed"
+              fi
+            fi
+          done
+          
+          echo "optimized=$OPTIMIZED" >> $GITHUB_OUTPUT
+      
+      - name: Commit optimized images
+        if: steps.optimize.outputs.optimized == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add images/
+          git commit -m "🖼️ Optimize images [skip ci]" || echo "No changes to commit"
+          git push
+      
+      - name: Summary
+        run: |
+          echo "### 🖼️ Image Optimization Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.optimize.outputs.optimized }}" == "true" ]; then
+            echo "✅ Images were optimized and committed" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "ℹ️ No images needed optimization" >> $GITHUB_STEP_SUMMARY
+          fi
