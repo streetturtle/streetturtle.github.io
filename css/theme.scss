@@ -13,17 +13,17 @@
 }
 body {
   padding-top: 80px;
-  color: #ddd;
+  color: #c4c4c4;
   //  background-image: url(./pics/triangles.png);
   background: #292929 url(./pics/random-grey-variations.png);
 }
 
-h1 { font-size: 2em; font-weight: bold;}
-h2 { font-size: 1.5em; }
-h3 { font-size: 1.17em; }
-h4 { font-size: 1.12em; }
-h5 { font-size: .83em; }
-h6 { font-size: .75em; }
+h1 { font-size: 2em; font-weight: bold; color: #eee; }
+h2 { font-size: 1.5em; color: #eee; }
+h3 { font-size: 1.17em; color: #eee; }
+h4 { font-size: 1.12em; color: #eee; }
+h5 { font-size: .83em; color: #eee; }
+h6 { font-size: .75em; color: #eee; }
 
 .copyright {
   color: #ffffff;
@@ -50,6 +50,29 @@ ul.sideBarTags {
     float: left;
     margin-left: -1.5em;
     color: #ddd;
+  }
+}
+
+.toc-sidebar {
+  .toc {
+    list-style: none;
+    padding-left: 0;
+  }
+  .toc-item {
+    margin-top: 0.4em;
+    line-height: 1.2em;
+  }
+  .toc-item-h3 {
+    margin-left: 1em;
+    font-size: 0.95em;
+  }
+  .toc a {
+    color: #c4c4c4;
+    text-decoration: none;
+  }
+  .toc a:hover {
+    color: #eee;
+    text-decoration: underline;
   }
 }
 
@@ -84,8 +107,15 @@ blockquote {
   font-size: 1em;
 }
 
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+  scroll-margin-top: 90px;
+}
+
 a {
   color: #3CA2A2;
+  text-decoration: none;
 }
 
 //    ___          _      _   _ _      _

@@ -36,6 +36,13 @@
   </ul>
 </div>
 
+{% if page.toc %}
+<div class="sidebar toc-sidebar" id="js-toc-sidebar">
+  <h2>Table of Contents</h2>
+  <ul class="toc" id="js-toc"></ul>
+</div>
+{% endif %}
+
 <!-- <div class="sidebar">
   <h2>Be my colleague at
     <a href="http://www.touchtunes.com/"><img style="width:150px" src="{{site.url}}/images/tt-logo-white.png"></a></h2>

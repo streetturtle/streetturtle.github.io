@@ -10,6 +10,7 @@ tags:
 - audio
 - hardware
 - diy
+toc: true
 ---
 
 [![Audio-Technica m50x]({{ site.url }}/images/2025/m50x-header.jpg){:.center-image}]({{ site.url }}/images/2025/m50x-header.jpg)
