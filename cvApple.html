@@ -188,6 +188,40 @@
 
     <script>
 
+    function formatDurationFromStart(startDateToken) {
+      if (!startDateToken) {
+        return '';
+      }
+
+      var parts = startDateToken.split('.');
+      if (parts.length !== 2) {
+        return '';
+      }
+
+      var startMonth = parseInt(parts[0], 10) - 1;
+      var startYear = parseInt(parts[1], 10);
+      if (isNaN(startMonth) || isNaN(startYear) || startMonth < 0 || startMonth > 11) {
+        return '';
+      }
+
+      var now = new Date();
+      var totalMonths = (now.getFullYear() - startYear) * 12 + (now.getMonth() - startMonth);
+      if (totalMonths < 0) {
+        return '';
+      }
+
+      var years = Math.floor(totalMonths / 12);
+      var months = totalMonths % 12;
+
+      if (years > 0 && months > 0) {
+        return years + 'y ' + months + 'm';
+      }
+      if (years > 0) {
+        return years + 'y';
+      }
+      return months + 'm';
+    }
+
     $(window).on('load', function() {
       $('[data-github]').each(function () {
       var _this = this;
@@ -200,7 +234,14 @@
         $(_this).find('[data-stars]').text(response.stargazers_count);
       });
     });
-    // code here
+
+    $('.js-current-duration').each(function () {
+      var startDate = $(this).data('start');
+      var dynamicDuration = formatDurationFromStart(startDate);
+      if (dynamicDuration) {
+        $(this).text(dynamicDuration);
+      }
+    });
     });
 
 </script>
@@ -291,7 +332,14 @@
                 {% if item.country == 'ru' %}<span class="flag-emoji">🇷🇺</span>{% endif %}
                 {{item.location}}
               </div>
-              <div class="pull-right">{{ item.dates }} / {{ item.duration }}</div>
+              <div class="pull-right">
+                {{ item.dates }}
+                {% if item.duration %}
+                / {{ item.duration }}
+                {% elsif item.dates contains 'current' %}
+                / <span class="js-current-duration" data-start="{{ item.dates | split: ' - ' | first }}"></span>
+                {% endif %}
+              </div>
             </div>
           </div>
         </div>
@@ -437,7 +485,6 @@
     </div>
   </div>
   {% endcomment %}
-  </div>
 
   <div class="row section">
     <div class="col-xs-3"><h2>Education</h2></div>
@@ -452,6 +499,8 @@
       {% endfor %}
     </div>
   </div>
+
+</div>
 
 </body>
 
