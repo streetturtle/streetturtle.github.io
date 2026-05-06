@@ -25,7 +25,7 @@ career:
       - accomplishment: Led the technical design and delivery of a platform-wide authorization system based on the Attribute-Based Access Control (ABAC) model.
       - accomplishment: Heavily involved in the architecture and design of new APIs and surrounding tooling, advocating design-first API development and continuously applying modern backend best practices.
       - accomplishment: Passionate about developer tools; built a native macOS menubar application to help engineers manage internal Kubernetes clusters and reproducible development environments, and created multiple OpenCode plugins and internal tools to automate repetitive tasks and improve developer experience.
-      - accomplishment: Provided expert-level 3rd line support, resolving high-impact issues and helping teams recover quickly.
+      - accomplishment: Provided expert-level 3rd line support and actively participated in incident on-call rotations, postmortems, and end-to-end resolution of high-impact production issues.
       - accomplishment: Onboarded and mentored new engineers, accelerating ramp-up and increasing team effectiveness.
     
  - position: Senior Software Developer
