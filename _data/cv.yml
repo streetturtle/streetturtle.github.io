@@ -17,16 +17,16 @@ career:
    logo: lightspeed-logo.png
    location: Montreal, Canada
    country: ca
-   dates: 08.2021
+   dates: 08.2021 - current
    summary: As part of the Agent Squad, I am helping architect and build an agentic AI framework that accelerates and simplifies delivery of high-impact generative features across product teams.
    accomplishments:
 
-      - accomplishment: Drove the decomposition of a monolithic application into domain-aligned Spring Boot microservices to improve scalability and team autonomy.
-      - accomplishment: Led the technical design and delivery of a platform-wide authorization system based on the Attribute-Based Access Control (ABAC) model.
-      - accomplishment: Heavily involved in the architecture and design of new APIs and surrounding tooling, advocating design-first API development and continuously applying modern backend best practices.
-      - accomplishment: Passionate about developer tools; built a native macOS menubar application to help engineers manage internal Kubernetes clusters and reproducible development environments, and created multiple OpenCode plugins and internal tools to automate repetitive tasks and improve developer experience.
-      - accomplishment: Provided expert-level 3rd line support and actively participated in incident on-call rotations, postmortems, and end-to-end resolution of high-impact production issues.
-      - accomplishment: Onboarded and mentored new engineers, accelerating ramp-up and increasing team effectiveness.
+     - accomplishment: Drove the decomposition of a monolithic application into domain-aligned Spring Boot microservices to improve scalability and team autonomy.
+     - accomplishment: Led the technical design and delivery of a platform-wide authorization system based on the Attribute-Based Access Control (ABAC) model.
+     - accomplishment: Heavily involved in the architecture and design of new APIs and surrounding tooling, advocating design-first API development and continuously applying modern backend best practices.
+     - accomplishment: Passionate about developer tools; built a native macOS menubar application to help engineers manage internal Kubernetes clusters and reproducible development environments, and created multiple OpenCode plugins and internal tools to automate repetitive tasks and improve developer experience.
+     - accomplishment: Provided expert-level 3rd line support and actively participated in incident on-call rotations, postmortems, and end-to-end resolution of high-impact production issues.
+     - accomplishment: Onboarded and mentored new engineers, accelerating ramp-up and increasing team effectiveness.
     
  - position: Senior Software Developer
    company: Solution Media 360
@@ -36,11 +36,11 @@ career:
    country: ca
    dates: 01.2021 - 08.2021
    duration: 7m
-   summary: Designed and developed Kotlin-based backend services for a prominent Canadian leader in innovative technological solutions for the car dealership market. Collaborated closely with cross-functional teams to deliver robust and scalable solutions tailored to the automotive industry.
+   summary: Designed and developed Kotlin-based backend services for a leading Canadian provider of innovative technology solutions for the automotive dealership market. Collaborated closely with cross-functional teams to deliver robust and scalable solutions.
    accomplishments:
-    - accomplishment: implementation of edge-level authorization mechanism for a set of microservices
-    - accomplishment: level 3 application support
-    - accomplishment: onboarding and mentorship of new team members
+     - accomplishment: Implemented an edge-level authorization mechanism for a set of microservices.
+     - accomplishment: Provided level 3 application support.
+     - accomplishment: Onboarded and mentored new team members.
 
  - position: Java Developer
    company: Behavox
@@ -50,9 +50,9 @@ career:
    country: ca
    dates: 01.2020 - 01.2021
    duration: 1y
-   summary: I was working in a product team of Compliance Management Software Solutions. Building data-heavy applications using Java, Kotlin, HBase, MySQL.
+   summary: Worked in a product team building compliance management software solutions, developing data-intensive applications using Java, Kotlin, HBase, and MySQL.
    accomplishments:
-    - accomplishment: technical design, implementation and delivery of complex data intensive applications
+     - accomplishment: Led technical design, implementation, and delivery of complex data-intensive applications.
 
  - position: Backend Developer
    company: TouchTunes / OctaveGroup
@@ -62,11 +62,11 @@ career:
    country: ca
    dates: 06.2018 - 12.2019
    duration: 1y 6m
-   summary: 'Working as a Java Backend Developer in the Product team for the largest in-venue interactive music and entertainment platform, featured in over 75,000 bars and restaurants across North America and Europe. Working in a microservice architecture, with Spring Boot-based services deployed to AWS in Docker containers, managed by Mesos/Marathon. Technology stack: Java 11, Spring Boot, Reactor, Cucumber, MongoDB' 
+   summary: 'Worked as a Java Backend Developer in the product team for the largest in-venue interactive music and entertainment platform, deployed in over 75,000 bars and restaurants across North America and Europe. Built services in a microservice architecture, with Spring Boot-based applications deployed to AWS in Docker containers managed by Mesos/Marathon. Technology stack: Java 11, Spring Boot, Reactor, Cucumber, MongoDB.'
    accomplishments:
-    - accomplishment: backend implementation of the <a href="https://www.applemusicforbusiness.apple/">Apple Music For Business</a>.
-    - accomplishment: development of the Access Control System - a set of microservices implementing ABAC authorization model.
-    - accomplishment: development of various payment integrations with Worldpay/Vantiv, PayPal, Apple Pay, Google Pay.
+     - accomplishment: Implemented backend integration for <a href="https://www.applemusicforbusiness.apple/">Apple Music For Business</a>.
+     - accomplishment: Developed the Access Control System, a set of microservices implementing the ABAC authorization model.
+     - accomplishment: Developed multiple payment integrations with Worldpay/Vantiv, PayPal, Apple Pay, and Google Pay.
 
  - position: Full Stack Java Developer
    company: Intelerad
@@ -76,7 +76,7 @@ career:
    country: ca
    dates: 01.2018 - 05.2018
    duration: 5m
-   summary: 'Development of the PACS - Picture Archiving and Communication System. My primary focus was on Tech Portal - a customization tool that allows technologists to create multiple worklists based on different criteria, including exam status, date range, modality, organizations, locations and rooms. Tech stack: GWT, CSS / SCSS, AngularJS.'
+   summary: 'Contributed to development of PACS (Picture Archiving and Communication System). My primary focus was Tech Portal, a customization tool that allows technologists to create multiple worklists based on criteria such as exam status, date range, modality, organizations, locations, and rooms. Tech stack: GWT, CSS/SCSS, AngularJS.'
 
  - position: Java Developer / Consultant
    company: Savoir-Faire Linux
@@ -86,12 +86,12 @@ career:
    country: ca
    dates: 08.2016 - 12.2017
    duration: 1y 5m
-   summary: 'Successfully completed multiple projects as a consultant, collaborating with diverse clients to deliver high-quality solutions. Provided expertise in Java development, contributing to various aspects of project lifecycles.'
+   summary: 'Successfully delivered multiple consulting projects, collaborating with diverse clients to build high-quality solutions. Provided Java expertise across different stages of project lifecycles.'
    accomplishments:
-    - accomplishment: Developed a high performant highly available Music REST API.
-    - accomplishment: Developed a real-time data processing application based on Apache Mahout and Apache Kafka.
-    - accomplishment: Developed a WebRTC Liferay portlet and Content Classifier portlet (based on <a href="https://deeplearning4j.org/">DL4J</a> library).
-    - accomplishment: Took part in building data pipeline for a ML project.
+     - accomplishment: Developed a high-performance, highly available Music REST API.
+     - accomplishment: Developed a real-time data processing application based on Apache Mahout and Apache Kafka.
+     - accomplishment: Developed a WebRTC Liferay portlet and Content Classifier portlet (based on <a href="https://deeplearning4j.org/">DL4J</a> library).
+     - accomplishment: Contributed to building a data pipeline for an ML project.
 
  - position: Java Developer
    company: CERN
@@ -101,10 +101,10 @@ career:
    country: ch
    dates: 10.2012 - 05.2016
    duration: 3y 9m
-   summary: I took part in the development of business critical eFiles document management system based on open source solution - Alfresco – the market leader in records management. As an Alfresco developer I worked on extending and customizing Alfresco. I also worked on EDH (Electronic Document Handling) system with complex workflows, covering most business aspects at CERN. In this role I was developing EDH documents and improving functionality of existing ones.
+   summary: Contributed to development of the business-critical eFiles document management system based on Alfresco, an open-source market leader in records management. As an Alfresco developer, I extended and customized the platform and also worked on EDH (Electronic Document Handling), a system with complex workflows covering key business processes at CERN. In this role, I developed EDH documents and improved existing functionality.
    accomplishments:
-    - accomplishment: Integrating Alfresco with AppDynamics - application performance management system.
-    - accomplishment: Development of the web application for 2nd/3rd support of eFiles. Technology stack is Spring Boot, AngularJS, Spring Data Rest.
+     - accomplishment: Integrated Alfresco with AppDynamics, an application performance management system.
+     - accomplishment: Developed a web application for 2nd/3rd-line support of eFiles. Technology stack included Spring Boot, AngularJS, and Spring Data REST.
     # - accomplishment: Development of the custom user interface of Alfresco document library page based on Polymer.
     # - accomplishment: Extending functionality of CERN Hotel web booking application (hostel.cern.ch). Main feature developed is the possibility to create a Waiting-List reservations.
     # - accomplishment: Migrating existing business processes from BPEL to BPMN (Activiti).
@@ -131,9 +131,9 @@ technicalSkills:
     - tr: "Datadog / Dynatrace / Sumologic"
     - tr: "TDD / BDD (Cucumber, Spock)"
     - tr: "Kubernetes / Docker"
-    - tr: "REST / SOAP web-services"
+    - tr: "REST / SOAP web services"
     - tr: "Kafka / RabbitMQ"
-    - tr: "Scrum / Agile / pair programming experience"
+    - tr: "Scrum / Agile / Pair programming experience"
   left:
     - name: Java
       level: 100
@@ -170,7 +170,7 @@ sideProjects:
     color: 000080
 
   - name: pullBar
-    description: MacOS application to show GitHub PRs.
+    description: macOS application to show GitHub PRs.
     link: menubar-apps/PullBar
     type: github
     langs: Swift
@@ -184,7 +184,7 @@ sideProjects:
     color: e44b23
 
   - name: Jekyll CV Crafter
-    description: Jekyll powered CV generator.
+    description: Jekyll-powered CV generator.
     link: streetturtle/jekyll-cv-crafter
     type: github
     langs: HTML
