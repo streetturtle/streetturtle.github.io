@@ -207,14 +207,21 @@
   <div class="row section">
     <div class="col-xs-3"><h2>Talks</h2></div>
     <div class="col-xs-9">
+      {% for item in site.data.cv.talks %}
+      <h4><b>{{ item.title }}</b></h4>
       <ul>
-        {% for item in site.data.cv.talks %}
+        {% for place in item.places %}
         <li>
-          <b>{{ item.title }}</b> - {{ item.event }}
-          {% if item.link %}(<a href="{{ item.link }}">link</a>){% endif %}
+          {% if place.link %}
+          <a href="{{ place.link }}">{{ place.name }}</a>
+          {% else %}
+          {{ place.name }}
+          {% endif %}
+          {% if place.year %} ({{ place.year }}){% endif %}
         </li>
         {% endfor %}
       </ul>
+      {% endfor %}
     </div>
   </div>
 

@@ -153,11 +153,12 @@ technicalSkills:
 talks:
 
   - title: "API Development: Shifting from Code-First to Design-First"
-    event: ConFoo Conference
-
-  - title: "API Development: Shifting from Code-First to Design-First"
-    event: Montreal JUG
-    link: https://www.linkedin.com/posts/montreal-jug_shifting-from-code-first-to-design-first-activity-7419836298108055555-PZI7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAvnRIYBhDgGm5C9aIIf05X1h5uik9c8fmw
+    places:
+      - name: ConFoo Conference
+        year: 2026
+        link: https://confoo.ca/en/2026/session/api-development-shifting-from-code-first-to-design-first
+      - name: Montreal JUG
+        link: https://www.linkedin.com/posts/montreal-jug_shifting-from-code-first-to-design-first-activity-7419836298108055555-PZI7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAvnRIYBhDgGm5C9aIIf05X1h5uik9c8fmw
 
 sideProjects:
 
