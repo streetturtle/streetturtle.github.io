@@ -18,14 +18,15 @@ career:
    location: Montreal, Canada
    country: ca
    dates: 08.2021 - current
-   summary: Working in a distributed squad on a Lightspeed Hospitality flagship product - <a href="https://www.lightspeedhq.com/pos/restaurant/">Lightspeed Restaurant</a>.
+   summary: As part of the Agent Squad, I am helping architect and build an agentic AI framework that accelerates and simplifies delivery of high-impact generative features across product teams.
    accomplishments:
 
-     - accomplishment: Successfully decomposed a monolithic application into domain microservices using the Spring Boot framework.
-     - accomplishment: Led the technical design, implementation, and delivery of an advanced authorization mechanism based on the Attribute-Based Access Control paradigm for the microservice-based application.
-     - accomplishment: Developed a user-friendly macOS menubar application, serving as a frontend for the tool for creating reproducible development environments.
-     - accomplishment: Provided expert-level support as a 3rd level support engineer, ensuring efficient issue resolution and customer satisfaction.
-     - accomplishment: Facilitated the seamless onboarding of new team members, ensuring a smooth transition and accelerated productivity.
+     - accomplishment: Drove the decomposition of a monolithic application into domain-aligned Spring Boot microservices to improve scalability and team autonomy.
+      - accomplishment: Led the technical design and delivery of a platform-wide authorization system based on the Attribute-Based Access Control (ABAC) model.
+      - accomplishment: Heavily involved in the architecture and design of new APIs and surrounding tooling, advocating design-first API development and continuously applying modern backend best practices.
+      - accomplishment: Passionate about developer tools; built a native macOS menubar application to help engineers manage internal Kubernetes clusters and reproducible development environments, and created multiple OpenCode plugins and internal tools to automate repetitive tasks and improve developer experience.
+     - accomplishment: Provided expert-level 3rd line support, resolving high-impact issues and helping teams recover quickly.
+     - accomplishment: Onboarded and mentored new engineers, accelerating ramp-up and increasing team effectiveness.
     
  - position: Senior Software Developer
    company: Solution Media 360
