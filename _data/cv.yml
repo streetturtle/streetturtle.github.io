@@ -21,12 +21,12 @@ career:
    summary: As part of the Agent Squad, I am helping architect and build an agentic AI framework that accelerates and simplifies delivery of high-impact generative features across product teams.
    accomplishments:
 
-     - accomplishment: Drove the decomposition of a monolithic application into domain-aligned Spring Boot microservices to improve scalability and team autonomy.
+      - accomplishment: Drove the decomposition of a monolithic application into domain-aligned Spring Boot microservices to improve scalability and team autonomy.
       - accomplishment: Led the technical design and delivery of a platform-wide authorization system based on the Attribute-Based Access Control (ABAC) model.
       - accomplishment: Heavily involved in the architecture and design of new APIs and surrounding tooling, advocating design-first API development and continuously applying modern backend best practices.
       - accomplishment: Passionate about developer tools; built a native macOS menubar application to help engineers manage internal Kubernetes clusters and reproducible development environments, and created multiple OpenCode plugins and internal tools to automate repetitive tasks and improve developer experience.
-     - accomplishment: Provided expert-level 3rd line support, resolving high-impact issues and helping teams recover quickly.
-     - accomplishment: Onboarded and mentored new engineers, accelerating ramp-up and increasing team effectiveness.
+      - accomplishment: Provided expert-level 3rd line support, resolving high-impact issues and helping teams recover quickly.
+      - accomplishment: Onboarded and mentored new engineers, accelerating ramp-up and increasing team effectiveness.
     
  - position: Senior Software Developer
    company: Solution Media 360
@@ -149,6 +149,15 @@ technicalSkills:
      level: 90
    - name: Hadoop, Apache Spark
      level: 60
+
+talks:
+
+  - title: "API Development: Shifting from Code-First to Design-First"
+    event: ConFoo Conference
+
+  - title: "API Development: Shifting from Code-First to Design-First"
+    event: Montreal JUG
+    link: https://www.linkedin.com/posts/montreal-jug_shifting-from-code-first-to-design-first-activity-7419836298108055555-PZI7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAvnRIYBhDgGm5C9aIIf05X1h5uik9c8fmw
 
 sideProjects:
 

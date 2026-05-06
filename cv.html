@@ -204,6 +204,21 @@
   </div>
 
 
+  <div class="row section">
+    <div class="col-xs-3"><h2>Talks</h2></div>
+    <div class="col-xs-9">
+      <ul>
+        {% for item in site.data.cv.talks %}
+        <li>
+          <b>{{ item.title }}</b> - {{ item.event }}
+          {% if item.link %}(<a href="{{ item.link }}">link</a>){% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+
   <div class="row  section">
     <div class="col-xs-3"><h2>Open Source Projects</h2></div>
     <div class="col-xs-9">
