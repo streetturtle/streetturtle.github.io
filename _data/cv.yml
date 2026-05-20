@@ -1,6 +1,6 @@
 person:
   name: Pavel Makhov
-  profession: Staff Software Developer // Java, Kotlin
+  profession: Staff Software Developer // GenAI Platform, Java, Python
   location: Montréal, Canada
   email: pavel.makhov@outlook.com
   site: http://pavelmakhov.com
@@ -18,15 +18,17 @@ career:
    location: Montreal, Canada
    country: ca
    dates: 08.2021 - current
-   summary: As part of the Agent Squad, I am helping architect and build an agentic AI framework that accelerates and simplifies delivery of high-impact generative features across product teams.
+   summary: As part of the Agent Squad, I architect and build an agentic AI platform that helps teams deliver production-grade generative features from design and implementation to rollout and operations.
    accomplishments:
 
      - accomplishment: Drove the decomposition of a monolithic application into domain-aligned Spring Boot microservices to improve scalability and team autonomy.
      - accomplishment: Led the technical design and delivery of a platform-wide authorization system based on the Attribute-Based Access Control (ABAC) model.
      - accomplishment: Heavily involved in the architecture and design of new APIs and surrounding tooling, advocating design-first API development and continuously applying modern backend best practices.
+     - accomplishment: Built an event-driven framework for AI agents using Java, Spring AI, Kafka, Kubernetes, and DynamoDB, integrating Azure AI and Vertex AI APIs for production workflows.
      - accomplishment: Passionate about developer tools; built a native macOS menubar application to help engineers manage internal Kubernetes clusters and reproducible development environments, and created multiple OpenCode plugins and internal tools to automate repetitive tasks and improve developer experience.
-     - accomplishment: Provided expert-level 3rd line support and actively participated in incident on-call rotations, postmortems, and end-to-end resolution of high-impact production issues.
-     - accomplishment: Onboarded and mentored new engineers, accelerating ramp-up and increasing team effectiveness.
+     - accomplishment: Developed a Datadog-based observability framework for LLM features to track latency, cost-per-request, and model-quality signals, enabling faster debugging and safer rollouts.
+     - accomplishment: Provided expert-level 3rd line support and actively participated in incident on-call rotations, postmortems, and end-to-end resolution of high-impact production issues, including post-incident improvements.
+     - accomplishment: Partnered with product and engineering stakeholders in discovery and design sessions to define AI feature requirements, delivery plans, and integration constraints.
     
  - position: Senior Software Developer
    company: Solution Media 360
@@ -127,13 +129,13 @@ technicalSkills:
   list:
     - tr: "Java / Kotlin / Python / Lua / Swift"
     - tr: "Spring / Reactor / Hibernate / JUnit / Mockito / Spock"
-    - tr: "Oracle, MySQL / Mongo, Redis, Couchbase"
+    - tr: "Oracle, MySQL / Mongo, Redis, DynamoDB, Couchbase"
     - tr: "Datadog / Dynatrace / Sumologic"
     - tr: "TDD / BDD (Cucumber, Spock)"
-    - tr: "Kubernetes / Docker"
-    - tr: "REST / SOAP web services"
-    - tr: "Kafka / RabbitMQ"
-    - tr: "Scrum / Agile / Pair programming experience"
+    - tr: "Google Cloud (Vertex AI) / Azure AI / Kubernetes / Docker"
+    - tr: "REST / Design-first APIs / SDK integrations"
+    - tr: "Kafka / RabbitMQ / Event-driven architectures"
+    - tr: "Scrum / Agile / Discovery workshops / Pair programming"
   left:
     - name: Java
       level: 100
