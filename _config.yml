@@ -53,4 +53,4 @@ markdown: kramdown
 kramdown:
   input: GFM # Enable GitHub Flavored Markdown (fenced code blocks)
 
-exclude: ['README.md', 'LICENSE', vendor]
+exclude: ['README.md', 'LICENSE', vendor, cv]

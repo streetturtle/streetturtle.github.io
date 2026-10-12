@@ -78,6 +78,7 @@ career:
    country: ca
    dates: 01.2018 - 05.2018
    duration: 5m
+   pdf-page-break-before: true
    summary: 'Contributed to development of PACS (Picture Archiving and Communication System). My primary focus was Tech Portal, a customization tool that allows technologists to create multiple worklists based on criteria such as exam status, date range, modality, organizations, locations, and rooms. Tech stack: GWT, CSS/SCSS, AngularJS.'
 
  - position: Java Developer / Consultant

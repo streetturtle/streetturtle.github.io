@@ -74,9 +74,14 @@ h1, h2{
   background: #fff;
   text-align: center;
   font-size: 2em;
+  text-decoration: none;
 }
 
 @media print {
+  #pdf-button {
+    display: none;
+  }
+
   .header {
     padding-top: 0;
     padding-bottom: 0;
