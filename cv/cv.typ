@@ -64,12 +64,21 @@
   out.join()
 }
 
-#let current-duration(dates) = {
-  let (month, year) = dates.split(" - ").first().split(".").map(int)
+#let muted = rgb("#777777")
+#let month-names = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+
+// Renders "MM.YYYY - MM.YYYY" or "MM.YYYY - current" as "Aug 2021 – Present · 2y 5m" (same as _includes/cv-dates.html)
+#let format-dates(dates) = {
+  let (from, to) = dates.split(" - ")
+  let (sm, sy) = from.split(".").map(int)
+  let current = to.contains("current")
   let today = datetime.today()
-  let total = (today.year() - year) * 12 + (today.month() - month)
+  let (em, ey) = if current { (today.month(), today.year()) } else { to.split(".").map(int) }
+  let total = (ey - sy) * 12 + (em - sm) + 1
   let (y, m) = (calc.floor(total / 12), calc.rem(total, 12))
-  if y > 0 and m > 0 { str(y) + "y " + str(m) + "m" } else if y > 0 { str(y) + "y" } else { str(m) + "m" }
+  let duration = (if y > 0 { str(y) + "y" }, if m > 0 or y == 0 { str(m) + "m" }).filter(p => p != none).join(" ")
+  let end = if current { "Present" } else { month-names.at(em - 1) + " " + str(ey) }
+  month-names.at(sm - 1) + " " + str(sy) + " – " + end + " · " + duration
 }
 
 #let h4(body) = block(above: 0.7em, below: 0.5em, sticky: true, text(size: 11pt, weight: "bold", body))
@@ -124,34 +133,53 @@
 )
 
 // ---------- Career ----------
+// Role timeline: a dot per role, joined by a vertical line (same as .positions on the web page)
+#let timeline(roles, show-dates) = {
+  let dot-x = 5pt
+  let cells = ()
+  for (i, r) in roles.enumerate() {
+    let last = i == roles.len() - 1
+    let current = r.dates.contains("current")
+    cells.push(grid.cell(colspan: 2, place(top + left, dx: dot-x - 4pt, dy: 1.5pt, circle(
+      radius: 4pt,
+      stroke: 1.5pt + link-color,
+      fill: if current { link-color } else { white },
+    ))))
+    cells.push(if show-dates {
+      grid(columns: (1fr, auto), strong(r.position), text(fill: muted, format-dates(r.dates)))
+    } else { strong(r.position) })
+    cells.push([])
+    cells.push(grid.cell(stroke: if last { none } else { (left: 1.5pt + rule-color) }, []))
+    cells.push(block(inset: (top: 4pt, bottom: if last { 0pt } else { 10pt }), {
+      let summary = r.at("summary", default: none)
+      if summary != none { par(rich(summary)) }
+      let accomplishments = r.at("accomplishments", default: ())
+      if accomplishments.len() > 0 { list(..accomplishments.map(a => rich(a.accomplishment))) }
+    }))
+  }
+  grid(columns: (dot-x, 14pt - dot-x, 1fr), ..cells)
+}
+
 #let job(item) = {
   let site = item.at("company-site", default: none)
-  let company = if site != none { link(site, item.company) } else { item.company }
-  let duration = if "duration" in item { item.duration } else if item.dates.contains("current") {
-    current-duration(item.dates)
-  }
-  let logo = image("/images/cv/" + item.logo, height: 24pt)
+  let logo = image("/images/cv/" + item.logo, height: 24pt, alt: "")
+  let name = grid(
+    columns: (auto, auto),
+    column-gutter: 6pt,
+    align: horizon,
+    logo, text(size: 11pt, weight: "bold", item.company),
+  )
   block(breakable: false, sticky: true, below: 6pt, grid(
     columns: (1fr, auto),
     align: horizon,
-    grid(
-      columns: (auto, auto),
-      column-gutter: 6pt,
-      align: horizon,
-      if site != none { link(site, logo) } else { logo },
-      [*#item.position* \ #company],
-    ),
-    align(right + horizon, [
+    if site != none { link(site, name) } else { name },
+    align(right + horizon, text(fill: muted, [
       #flag(item.country) #item.location \
-      #(item.dates + if duration != none { " / " + duration })
-    ]),
+      #format-dates(item.dates)
+    ])),
   ))
-  par(rich(item.summary))
-  let accomplishments = item.at("accomplishments", default: none)
-  if accomplishments != none and accomplishments.len() > 0 {
-    block(below: 0.4em, sticky: true, strong[Selected accomplishments:])
-    list(..accomplishments.map(a => rich(a.accomplishment)))
-  }
+  let roles = item.at("positions", default: none)
+  timeline(if roles != none { roles } else { (item,) }, roles != none)
 }
 
 // Jobs flagged with `pdf-page-break-before: true` in cv.yml start a new page
@@ -178,11 +206,12 @@
 #let skills = cv.technicalSkills.list.map(s => s.tr)
 #section("Technical skills", {
   h4[#fa("male") Key competencies:]
+  let half = calc.ceil(skills.len() / 2)
   grid(
     columns: (1fr, 1fr),
     column-gutter: gutter,
-    list(..skills.slice(0, 4)),
-    list(..skills.slice(4, 7)),
+    list(..skills.slice(0, half)),
+    list(..skills.slice(half)),
   )
 })
 
@@ -190,10 +219,16 @@
 #section("Talks", {
   for talk in cv.talks {
     h4(talk.title)
-    list(..talk.places.map(p => {
-      if "link" in p { link(p.link, p.name) } else { p.name }
-      if "year" in p [ (#p.year)]
-    }))
+    if "description" in talk { par(talk.description) }
+    list(marker: text(fill: text-color, sym.bullet), ..talk.places.map(p => grid(
+      columns: (1fr, auto),
+      column-gutter: 6pt,
+      {
+        if "link" in p { link(p.link, p.name) } else { p.name }
+        if "description" in p { text(fill: muted, [ — #p.description]) }
+      },
+      if "year" in p { text(fill: muted, (p.at("month", default: ""), str(p.year)).join(" ").trim()) },
+    )))
   }
 })
 

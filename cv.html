@@ -16,8 +16,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ site.data.cv.person.name }}'s CV</title>
-  <meta name="author" content="{{ site.data.cv.name }}"/>
-  <meta name="description" content="{{ site.data.cv.name }}'s CV"/>
+  <meta name="author" content="{{ site.data.cv.person.name }}"/>
+  <meta name="description" content="{{ site.data.cv.person.name }}'s CV"/>
   <link rel="shortcut icon" href="/favicon.png">
   <link href="{{site.url}}/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="{{site.url}}/css/cv1.css" rel="stylesheet">
@@ -62,7 +62,7 @@
       }
 
       var now = new Date();
-      var totalMonths = (now.getFullYear() - startYear) * 12 + (now.getMonth() - startMonth);
+      var totalMonths = (now.getFullYear() - startYear) * 12 + (now.getMonth() - startMonth) + 1;
       if (totalMonths < 0) {
         return '';
       }
@@ -113,12 +113,12 @@
 
 <div class="container">
   <div class="row header">
-    <div class="col-xs-9">
+    <div class="col-xs-12 col-sm-9">
       <h1 class="name">{{ site.data.cv.person.name }}</h1>
       <span class="profession">{{ site.data.cv.person.profession }}</span>
     </div>
 
-    <div class="col-xs-3">
+    <div class="col-xs-12 col-sm-3">
       <ul class="list-unstyled">
         <li><i class="fa fa-map-marker"></i> {{site.data.cv.person.location}}</li>
 
@@ -128,7 +128,7 @@
 
         <li><i class="fa fa-comments-o"></i> {{site.data.cv.person.spokenLanguages}}</li>
 
-        <li><i class="fa fa-envelope-o"></i> <a href="mailto: {{ site.data.cv.person.email }}">{{
+        <li><i class="fa fa-envelope-o"></i> <a href="mailto:{{ site.data.cv.person.email }}">{{
           site.data.cv.person.email }}</a></li>
 
         {% if site.data.cv.person.site %}
@@ -147,67 +147,58 @@
         <li><i class="fa fa-github"></i>
           <a href="https://github.com{{site.data.cv.person.github}}">{{site.data.cv.person.github}}</a></li>
         <li><i class="fa fa-stack-overflow"></i>
-          <a href="http://stackoverflow.com/users/1252056{{site.data.cv.person.stackoverflow}}">
+          <a href="https://stackoverflow.com/users/1252056{{site.data.cv.person.stackoverflow}}">
             {{site.data.cv.person.stackoverflow}}</a></li>
       </ul>
     </div>
   </div>
 
   <div class="row section">
-    <div class="col-xs-2">
+    <div class="col-xs-12 col-sm-2">
       <h2>Career</h2>
     </div>
 
-    <div class="col-xs-10">
+    <div class="col-xs-12 col-sm-10">
       {% for item in site.data.cv.career %}
       <div class="jd">
-        <div class="row" style="padding-bottom:20px">
-          <div class="col-xs-6">
-            <div>
-                <a href="{{item.company-site}}" style="text-decoration: none !important">
-                    <img style="height: 40px;display: inline-block;vertical-align: middle;"
-                         src="{{ site.url }}/images/cv/{{ item.logo }}">
-                </a>
-              <div style="display: inline-block; vertical-align: middle;">
-                <div><b>{{ item.position }}</b></div>
-                  <div>
-                      {% if item.company-site %}
-                        <a href="{{item.company-site}}">{{ item.company }}</a>
-                      {% else %}
-                        {{item.company}}
-                      {% endif %}
-                  </div>
-              </div>
-            </div>
+        <div class="row jd-header">
+          <div class="col-xs-12 col-sm-7">
+            {% if item.company-site %}<a class="company-link" href="{{ item.company-site }}">{% endif %}
+              <img class="company-logo" src="{{ site.url }}/images/cv/{{ item.logo }}" alt="">
+              <span class="company-info">
+                <span class="company-name">{{ item.company }}</span>
+              </span>
+            {% if item.company-site %}</a>{% endif %}
           </div>
-          <div class="col-xs-6">
-            <div class="pull-right" style="text-align: right;">
-              <div><i class="flag flag-{{item.country}}"></i> {{item.location}}</div>
-              <div class="pull-right">
-                {{ item.dates }}
-                {% if item.duration %}
-                / {{ item.duration }}
-                {% elsif item.dates contains 'current' %}
-                / <span class="js-current-duration" data-start="{{ item.dates | split: ' - ' | first }}"></span>
+          <div class="col-xs-12 col-sm-5 jd-meta">
+            <div><i class="flag flag-{{ item.country }}"></i> {{ item.location }}</div>
+            <div>{% include cv-dates.html dates=item.dates %}</div>
+          </div>
+        </div>
+        {% assign roles = item.positions %}
+        {% unless roles %}
+          {% assign roles = site.data.cv.career | where: "company", item.company %}
+        {% endunless %}
+        <div class="row">
+          <div class="col-xs-12">
+            <ul class="positions">
+              {% for pos in roles %}
+              <li class="{% if pos.dates contains 'current' %}current{% endif %}">
+                <b>{{ pos.position }}</b>
+                {% if item.positions %}
+                <span class="position-dates">{% include cv-dates.html dates=pos.dates %}</span>
                 {% endif %}
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12">
-            <p>{{ item.summary }}</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12">
-
-            {% if item.accomplishments.size > 0 %}
-            <b>Selected accomplishments:</b>
-            {% endif %}
-            <ul>
-              {% for itemm in item.accomplishments %}
-              <li>{{itemm.accomplishment}}</li>
+                {% if pos.summary %}
+                <p class="position-summary">{{ pos.summary }}</p>
+                {% endif %}
+                {% if pos.accomplishments.size > 0 %}
+                <ul class="position-accomplishments">
+                  {% for acc in pos.accomplishments %}
+                  <li>{{ acc.accomplishment }}</li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+              </li>
               {% endfor %}
             </ul>
           </div>
@@ -219,32 +210,26 @@
 
 
   <div class="row section">
-    <div class="col-xs-3">
+    <div class="col-xs-12 col-sm-3">
       <h2>Technical skills</h2>
     </div>
-    <div class="col-xs-9">
+    <div class="col-xs-12 col-sm-9">
       <div class="competencies">
         <h4><i class="fa fa-male"></i> Key competencies:</h4>
-          <div class="col-xs-6">
+        {% assign skills = site.data.cv.technicalSkills.list %}
+        {% assign half = skills.size | plus: 1 | divided_by: 2 %}
+          <div class="col-xs-12 col-sm-6">
             <ul>
-              <li>{{site.data.cv.technicalSkills.list[0].tr}}</li>
-              <li>{{site.data.cv.technicalSkills.list[1].tr}}</li>
-              <li>{{site.data.cv.technicalSkills.list[2].tr}}</li>
-              <li>{{site.data.cv.technicalSkills.list[3].tr}}</li>
-              <!-- {% for item in site.data.cv.technicalSkills.list %}
+              {% for item in skills limit: half %}
               <li>{{item.tr}}</li>
-              {% endfor %} -->
+              {% endfor %}
             </ul>
         </div>
-          <div class="col-xs-6">
+          <div class="col-xs-12 col-sm-6">
             <ul>
-              <li>{{site.data.cv.technicalSkills.list[4].tr}}</li>
-              <li>{{site.data.cv.technicalSkills.list[5].tr}}</li>
-              <li>{{site.data.cv.technicalSkills.list[6].tr}}</li>
-              <!-- <li>site.data.cv.technicalSkills[7]tr</li> -->
-              <!-- {% for item in site.data.cv.technicalSkills.list %}
+              {% for item in skills offset: half %}
               <li>{{item.tr}}</li>
-              {% endfor %} -->
+              {% endfor %}
             </ul>
         </div>
       </div>
@@ -253,11 +238,14 @@
 
 
   <div class="row section">
-    <div class="col-xs-3"><h2>Talks</h2></div>
-    <div class="col-xs-9">
+    <div class="col-xs-12 col-sm-3"><h2>Talks</h2></div>
+    <div class="col-xs-12 col-sm-9">
       {% for item in site.data.cv.talks %}
       <h4><b>{{ item.title }}</b></h4>
-      <ul>
+      {% if item.description %}
+      <p class="talk-description">{{ item.description }}</p>
+      {% endif %}
+      <ul class="talk-places">
         {% for place in item.places %}
         <li>
           {% if place.link %}
@@ -265,7 +253,8 @@
           {% else %}
           {{ place.name }}
           {% endif %}
-          {% if place.year %} ({{ place.year }}){% endif %}
+          {% if place.description %}<span class="talk-place-description">&mdash; {{ place.description }}</span>{% endif %}
+          {% if place.year %}<span class="talk-date">{{ place.month }} {{ place.year }}</span>{% endif %}
         </li>
         {% endfor %}
       </ul>
@@ -275,10 +264,10 @@
 
 
   <div class="row  section">
-    <div class="col-xs-3"><h2>Open Source Projects</h2></div>
-    <div class="col-xs-9">
+    <div class="col-xs-12 col-sm-3"><h2>Open Source Projects</h2></div>
+    <div class="col-xs-12 col-sm-9">
       {% for item in site.data.cv.sideProjects %}
-          <div class="github-cards col-xs-6">
+          <div class="github-cards col-xs-12 col-sm-6">
           <a href="https://github.com/{{item.link}}" class="github-card" data-github="{{item.link}}">
             <h3>{{item.name}}</h3>
             <p>{{item.description}}</p>
@@ -338,8 +327,8 @@
   {% endcomment %}
 
   <div class="row section">
-    <div class="col-xs-3"><h2>Education</h2></div>
-    <div class="col-xs-9">
+    <div class="col-xs-12 col-sm-3"><h2>Education</h2></div>
+    <div class="col-xs-12 col-sm-9">
 
       {% for item in site.data.cv.education %}
       <div class="row">

@@ -1,0 +1,41 @@
+{%- comment -%}
+  Renders a "MM.YYYY - MM.YYYY" or "MM.YYYY - current" range as "Aug 2021 – Present · 2y 5m".
+  Usage: {% include cv-dates.html dates=item.dates %}
+{%- endcomment -%}
+{%- assign month_names = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec" | split: "," -%}
+{%- assign range = include.dates | split: " - " -%}
+{%- assign start = range[0] | split: "." -%}
+{%- assign start_month = start[0] | plus: 0 -%}
+{%- assign start_year = start[1] | plus: 0 -%}
+{%- assign is_current = false -%}
+{%- if range[1] contains "current" -%}
+  {%- assign is_current = true -%}
+  {%- assign end_month = site.time | date: "%m" | plus: 0 -%}
+  {%- assign end_year = site.time | date: "%Y" | plus: 0 -%}
+{%- else -%}
+  {%- assign end = range[1] | split: "." -%}
+  {%- assign end_month = end[0] | plus: 0 -%}
+  {%- assign end_year = end[1] | plus: 0 -%}
+{%- endif -%}
+{%- assign total = end_year | times: 12 | plus: end_month | minus: start_month -%}
+{%- assign start_total = start_year | times: 12 -%}
+{%- assign total = total | minus: start_total | plus: 1 -%}
+{%- assign years = total | divided_by: 12 -%}
+{%- assign months = total | modulo: 12 -%}
+{%- capture duration -%}
+  {%- if years > 0 -%}{{ years }}y{%- endif -%}
+  {%- if years > 0 and months > 0 -%}{{ " " }}{%- endif -%}
+  {%- if months > 0 or years == 0 -%}{{ months }}m{%- endif -%}
+{%- endcapture -%}
+{%- assign start_index = start_month | minus: 1 -%}
+<span class="cv-dates">{{ month_names[start_index] }} {{ start_year }} &ndash;
+{%- if is_current %} Present
+{%- else -%}
+  {%- assign end_index = end_month | minus: 1 %} {{ month_names[end_index] }} {{ end_year }}
+{%- endif %} &middot;
+{% if is_current -%}
+<span class="js-current-duration" data-start="{{ range[0] }}">{{ duration }}</span>
+{%- else -%}
+{{ duration }}
+{%- endif -%}
+</span>

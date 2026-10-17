@@ -29,6 +29,86 @@ body{
     }
 }
 
+.jd-header{
+  padding-bottom: 20px;
+}
+
+.company-link{
+  text-decoration: none !important;
+}
+
+.company-logo{
+  height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.company-info{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.company-name{
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.jd-meta{
+  text-align: right;
+  color: #777;
+}
+
+.positions{
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 15px 0;
+  > li{
+    position: relative;
+    padding: 0 0 15px 22px;
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 2px solid #428bca;
+      background: #fff;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 17px;
+      bottom: 0;
+      width: 2px;
+      background: lightblue;
+    }
+    &:last-child{
+      padding-bottom: 0;
+      &::after{
+        display: none;
+      }
+    }
+    &.current::before{
+      background: #428bca;
+    }
+  }
+  .position-dates{
+    color: #777;
+    float: right;
+    margin-left: 8px;
+  }
+  .position-summary{
+    margin: 6px 0 0 0;
+  }
+  .position-accomplishments{
+    margin: 6px 0 0 0;
+    padding-left: 18px;
+  }
+}
+
 .progress{
   height: 8px !important;
   margin-bottom: 10px !important;
@@ -134,11 +214,45 @@ $gray: #ccc;
 $text: #555;
 $spacing: 20px;
 
+.talk-description{
+  margin: 0 0 6px 0;
+}
+
+.talk-places{
+  .talk-place-description{
+    color: #777;
+  }
+  .talk-date{
+    color: #777;
+    float: right;
+  }
+}
+
 .github-cards {
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
-  width: 900px;
+}
+
+@media (max-width: 767px) {
+  .header,
+  .section{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .jd-meta{
+    text-align: left;
+    margin-top: 4px;
+  }
+  .positions .position-dates{
+    display: block;
+    float: none;
+    margin-left: 0;
+  }
+  #pdf-button{
+    top: 10px;
+    right: 10px;
+  }
 }
 
 .github-card {
